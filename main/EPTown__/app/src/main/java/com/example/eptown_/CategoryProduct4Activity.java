@@ -83,7 +83,7 @@ public class CategoryProduct4Activity extends AppCompatActivity {
         });
 
         // 탭바에서 홈 아이콘 눌렀을때 메인으로 화면 이동
-        ImageView image1 = (ImageView) findViewById(R.id.btnCategoryProduct4Back);
+        ImageView image1 = (ImageView) findViewById(R.id.nowTapHomeIconCategorySnack4);
         image1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

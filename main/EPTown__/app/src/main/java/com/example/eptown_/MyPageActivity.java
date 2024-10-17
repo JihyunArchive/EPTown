@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -45,6 +46,26 @@ public class MyPageActivity extends AppCompatActivity {
             }
         });
 
+        //병원 텍스트 눌렀을때 병원으로 화면 이동
+        TextView hospitalMyPage= (TextView) findViewById(R.id.hospitalMyPage);
+        hospitalMyPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MyPageActivity.this, HospitalActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //커뮤니티 텍스트 눌렀을때 커뮤니티로 화면 이동
+        TextView communityMyPage= (TextView) findViewById(R.id.communityMyPage);
+        communityMyPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MyPageActivity.this, CommunityActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // 탭바에서 홈 아이콘 눌렀을때 메인으로 화면 이동
         ImageView image5_1 = (ImageView) findViewById(R.id.nowTapHomeIconMyPage);
         image5_1.setOnClickListener(new View.OnClickListener() {
@@ -56,7 +77,7 @@ public class MyPageActivity extends AppCompatActivity {
         });
 
         // 탭바에서 커뮤니티 아이콘을 눌렀을때 커뮤니티로 화면 이동
-        ImageView image5_2 = (ImageView) findViewById(R.id.tapCommunityIconMyPage);
+        ImageView image5_2 = (ImageView) findViewById(R.id.nowTapCommunityIconMyPage);
         image5_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,7 +97,7 @@ public class MyPageActivity extends AppCompatActivity {
         });
 
         // 탭바에서 병원 아이콘 눌렀을때 병원으로 화면 이동
-        ImageView image5_4 = (ImageView) findViewById(R.id.tapHostpitalIconMyPage);
+        ImageView image5_4 = (ImageView) findViewById(R.id.tapHospitalIconMyPage);
         image5_4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

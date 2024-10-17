@@ -1,110 +1,149 @@
 package com.example.eptown_;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.viewpager2.widget.ViewPager2;
 
 public class MainActivity extends AppCompatActivity {
+    private ViewPager2 viewPager;
+    private TextView bannerOrderText;
+    private BannerSliderAdapter bannerSliderAdapter;
+    private int[] bannerImages = {
+            R.drawable.image_banner_1,
+            R.drawable.image_banner_2,
+            R.drawable.image_banner_3,
+            R.drawable.image_banner_4,
+            R.drawable.image_banner_5
+    };
+    private Handler handler;
+    private Runnable runnable;
+    private int totalImages = bannerImages.length; // 총 배너 이미지 수
+    private int currentImageIndex = 0; // 현재 배너 이미지 인덱스
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        // View 인셋 설정
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-
         });
 
-        // 홈 아이콘 눌렀을때 메인으로 화면 이동
-        ImageView image1 = (ImageView) findViewById(R.id.nowTapHomeIcon);
-        image1.setOnClickListener(new View.OnClickListener() {
+        // 상태바 및 네비게이션바 설정
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.WHITE);
+            window.setNavigationBarColor(Color.WHITE);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                window.getDecorView().setSystemUiVisibility(
+                        View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR | View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
+                );
+            }
+        }
+
+        // 아이콘 클릭 시 다른 화면으로 이동하는 코드
+        setIconClickListeners();
+
+        // ViewPager2 배너 슬라이더 설정
+        viewPager = findViewById(R.id.bannerImg);
+        bannerOrderText = findViewById(R.id.bannerText);
+        bannerSliderAdapter = new BannerSliderAdapter(bannerImages);
+        viewPager.setAdapter(bannerSliderAdapter);
+        viewPager.setOffscreenPageLimit(1);
+        viewPager.setPageTransformer(new CustomPageTransformer());
+        viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, oh_MainActivity.class);
-                startActivity(intent);
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                currentImageIndex = position;
+                updateBannerOrderText();
             }
         });
-
-        // 커뮤니티 아이콘 눌렀을때 커뮤니티로 화면 이동
-        ImageView image2 = (ImageView) findViewById(R.id.tapCommunityIcon);
-        image2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, CommunityActivity.class);
-                startActivity(intent);
+        updateBannerOrderText();
+        handler = new Handler(Looper.getMainLooper());
+        runnable = () -> {
+            if (viewPager.getCurrentItem() == totalImages - 1) {
+                viewPager.setCurrentItem(0, false);
+            } else {
+                viewPager.setCurrentItem(viewPager.getCurrentItem() + 1, true);
             }
+            handler.postDelayed(runnable, 5000);
+        };
+        handler.postDelayed(runnable, 5000);
+
+        // 취소선 적용
+        setStrikeThroughOnPrices();
+    }
+
+    private void setIconClickListeners() {
+        // 홈 아이콘 눌렀을 때
+        findViewById(R.id.nowTapHomeIcon).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MainActivity.class);
+            startActivity(intent);
         });
 
-        // 카테고리 아이콘 눌렀을때 카테고리 메인으로 화면 이동
-        ImageView image3 = (ImageView) findViewById(R.id.tapCategoryIcon);
-        image3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, CategoryMainActivity.class);
-                startActivity(intent);
-            }
+        // 커뮤니티 아이콘 눌렀을 때
+        findViewById(R.id.tapCommunityIcon).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, CommunityActivity.class);
+            startActivity(intent);
         });
 
-        // 병원 아이콘 눌렀을때 병원으로 화면 이동
-        ImageView image4 = (ImageView) findViewById(R.id.tapHostpitalIcon);
-        image4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, HospitalActivity.class);
-                startActivity(intent);
-            }
+        // 카테고리 아이콘 눌렀을 때
+        findViewById(R.id.tapCategoryIcon).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, CategoryMainActivity.class);
+            startActivity(intent);
         });
 
-        // 내 정보 아이콘 눌렀을때 내 정보로 화면 이동
-        ImageView image5 = (ImageView) findViewById(R.id.tapMypageIcon);
-        image5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MyPageActivity.class);
-                startActivity(intent);
-            }
+        // 병원 아이콘 눌렀을 때
+        findViewById(R.id.tapHostpitalIcon).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, HospitalActivity.class);
+            startActivity(intent);
         });
 
-        // 알림 아이콘 눌렀을때 알림으로 화면 이동
-        ImageView image6 = (ImageView) findViewById(R.id.reminderIcon);
-        image6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, NoticeActivity.class);
-                startActivity(intent);
-            }
+        // 내 정보 아이콘 눌렀을 때
+        findViewById(R.id.tapMypageIcon).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MyPageActivity.class);
+            startActivity(intent);
         });
 
-        // 장바구니 아이콘 눌렀을때 장바구니로 화면 이동
-        ImageView image7 = (ImageView) findViewById(R.id.cartIconMain);
-        image7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, CartActivity.class);
-                startActivity(intent);
-            }
+        // 알림 아이콘 눌렀을 때
+        findViewById(R.id.reminderIcon).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, NoticeActivity.class);
+            startActivity(intent);
         });
 
-        // 검색 아이콘 눌렀을때 검색으로 화면 이동
-        ImageView image8 = (ImageView) findViewById(R.id.searchIcon);
-        image8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SearchActivity.class);
-                startActivity(intent);
-            }
+        // 장바구니 아이콘 눌렀을 때
+        findViewById(R.id.cartIconMain).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, CartActivity.class);
+            startActivity(intent);
+        });
+
+        // 검색 아이콘 눌렀을 때
+        findViewById(R.id.searchIcon).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+            startActivity(intent);
         });
 
         // 상품 이미지 눌렀을때 아이템 디테일로 화면 이동
@@ -126,5 +165,42 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void updateBannerOrderText() {
+        bannerOrderText.setText((currentImageIndex + 1) + " / " + totalImages);
+    }
+
+    private void setStrikeThroughOnPrices() {
+        int[] priceTextViewIds = {
+                R.id.costPriceOne, R.id.costPriceTwo, R.id.costPriceThree,
+                R.id.costPriceFour, R.id.costPriceFive, R.id.costPriceSix,
+                R.id.costPriceSeven, R.id.costPriceEight, R.id.costPriceNine,
+                R.id.costPriceTen, R.id.costPriceEleven, R.id.costPriceTwelve
+        };
+        for (int id : priceTextViewIds) {
+            TextView textView = findViewById(id);
+            textView.setPaintFlags(textView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacks(runnable);
+    }
+
+    private class CustomPageTransformer implements ViewPager2.PageTransformer {
+        @Override
+        public void transformPage(@NonNull View page, float position) {
+            if (position < -1) {
+                page.setAlpha(0);
+            } else if (position <= 1) {
+                page.setAlpha(1 - Math.abs(position));
+                page.setTranslationX(-position * page.getWidth());
+            } else {
+                page.setAlpha(0);
+            }
+        }
     }
 }

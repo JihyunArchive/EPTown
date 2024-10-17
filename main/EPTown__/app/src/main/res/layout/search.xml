@@ -426,7 +426,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="16dp"
         android:src="@drawable/bar_tap_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -439,18 +438,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="16dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <!-- 홈 아이콘 -->
     <ImageView
-        android:id="@+id/nowTapHomeIcon"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:src="@drawable/ic_tap_home"
-        android:layout_marginStart="30dp"
+        android:id="@+id/nowTapHomeIconCategorySnack4"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_home"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="13dp"
         app:layout_constraintStart_toStartOf="@id/homeRectangleBar"
         app:layout_constraintTop_toTopOf="@id/homeRectangleBar" />
@@ -462,11 +460,11 @@
         android:layout_height="wrap_content"
         android:text="홈"
         android:textSize="10sp"
-        android:textColor="@color/black"
+        android:textColor="#B9BEC1"
         android:layout_marginStart="38dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="3dp"
         app:layout_constraintStart_toStartOf="@id/homeRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/nowTapHomeIcon" />
+        app:layout_constraintTop_toBottomOf="@id/nowTapHomeIconCategorySnack4" />
 
     <!-- 탭바 커뮤니티 배경 하얀색 사각형 -->
     <ImageView
@@ -475,14 +473,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="16dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/homeRectangleBar" />
 
     <!-- 커뮤니티 아이콘 -->
     <ImageView
-        android:id="@+id/tapCommunityIcon"
+        android:id="@+id/tapCommunityIconCategorySnack3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_community"
@@ -502,7 +499,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="@id/communityRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/tapCommunityIcon" />
+        app:layout_constraintTop_toBottomOf="@id/tapCommunityIconCategorySnack3" />
 
     <!-- 탭바 카테고리 배경 하얀색 사각형 -->
     <ImageView
@@ -511,14 +508,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="16dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/communityRectangleBar" />
 
     <!-- 카테고리 아이콘 -->
     <ImageView
-        android:id="@+id/tapCategoryIcon"
+        android:id="@+id/tapCategoryIconCategorySnack3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_category"
@@ -538,7 +534,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="7dp"
         app:layout_constraintStart_toStartOf="@id/categoryRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/tapCategoryIcon" />
+        app:layout_constraintTop_toBottomOf="@id/tapCategoryIconCategorySnack3" />
 
     <!-- 탭바 병원 배경 하얀색 사각형 -->
     <ImageView
@@ -547,14 +543,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="16dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/categoryRectangleBar" />
 
     <!-- 병원 아이콘 -->
     <ImageView
-        android:id="@+id/tapHostpitalIcon"
+        android:id="@+id/tapHostpitalIconCategorySnack3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_hospital"
@@ -574,7 +569,7 @@
         android:layout_marginStart="33.5dp"
         android:layout_marginTop="3.5dp"
         app:layout_constraintStart_toStartOf="@id/hospitalRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/tapHostpitalIcon" />
+        app:layout_constraintTop_toBottomOf="@id/tapHostpitalIconCategorySnack3" />
 
     <!-- 탭바 내 정보 배경 하얀색 사각형 -->
     <ImageView
@@ -583,14 +578,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="16dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/hospitalRectangleBar" />
 
     <!-- 내 정보 아이콘 -->
     <ImageView
-        android:id="@+id/tapMypageIcon"
+        android:id="@+id/tapMypageIconCategorySnack3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_mypage"
@@ -610,12 +604,6 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="2.5dp"
         app:layout_constraintStart_toStartOf="@id/mypageRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/tapMypageIcon" />
-
-
-
-
-
-
+        app:layout_constraintTop_toBottomOf="@id/tapMypageIconCategorySnack3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

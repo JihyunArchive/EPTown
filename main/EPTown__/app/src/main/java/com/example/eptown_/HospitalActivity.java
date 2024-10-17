@@ -19,7 +19,7 @@ public class HospitalActivity extends AppCompatActivity {
         setContentView(R.layout.hospital);
 
         // 메인화면에서 병원 아이콘 눌렀을때 병원으로 화면 이동
-        ImageView image4 = (ImageView) findViewById(R.id.tapHostpitalIcon);
+        ImageView image4 = (ImageView) findViewById(R.id.tapHospitalIconHospital);
         image4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

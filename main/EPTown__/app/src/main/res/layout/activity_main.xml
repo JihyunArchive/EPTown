@@ -369,7 +369,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="15dp"
         android:src="@drawable/bar_tap_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -382,7 +382,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="15dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -418,7 +418,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="15dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/homeRectangleBar" />
@@ -426,8 +426,8 @@
     <!-- 커뮤니티 아이콘 -->
     <ImageView
         android:id="@+id/tapCommunityIcon"
-        android:layout_width="20dp"
-        android:layout_height="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="14dp"
         android:src="@drawable/ic_community"
@@ -454,7 +454,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="15dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/communityRectangleBar" />
@@ -490,7 +490,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="15dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/categoryRectangleBar" />
@@ -526,7 +526,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="15dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/hospitalRectangleBar" />

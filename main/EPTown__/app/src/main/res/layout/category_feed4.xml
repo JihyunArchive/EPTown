@@ -137,8 +137,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="69dp"
                 android:text="시니어"
-                android:textColor="#A1A9AD"
+                android:textColor="@color/black"
                 android:textSize="13sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.8"
@@ -2264,7 +2265,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="16dp"
         android:src="@drawable/bar_tap_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -2277,7 +2277,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="16dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -2285,10 +2284,10 @@
     <!-- 홈 아이콘 -->
     <ImageView
         android:id="@+id/nowTapHomeIconCategoryFeed4"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:src="@drawable/ic_tap_home"
-        android:layout_marginStart="30dp"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_home"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="13dp"
         app:layout_constraintStart_toStartOf="@id/homeRectangleBar"
         app:layout_constraintTop_toTopOf="@id/homeRectangleBar" />
@@ -2300,9 +2299,9 @@
         android:layout_height="wrap_content"
         android:text="홈"
         android:textSize="10sp"
-        android:textColor="@color/black"
+        android:textColor="#B9BEC1"
         android:layout_marginStart="38dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="3dp"
         app:layout_constraintStart_toStartOf="@id/homeRectangleBar"
         app:layout_constraintTop_toBottomOf="@id/nowTapHomeIconCategoryFeed4" />
 
@@ -2313,7 +2312,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="16dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/homeRectangleBar" />
@@ -2349,7 +2347,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="16dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/communityRectangleBar" />
@@ -2385,7 +2382,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="16dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/categoryRectangleBar" />
@@ -2421,7 +2417,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="16dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/hospitalRectangleBar" />
