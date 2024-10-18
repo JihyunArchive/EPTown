@@ -327,6 +327,19 @@
 
     </ScrollView>
 
+    <!-- 글쓰기 아이콘 -->
+    <ImageView
+        android:id="@+id/writing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="678dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_writing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <!-- 탭바 배경 하얀색 사각형 -->
     <ImageView
         android:id="@+id/mainTapFixBar"

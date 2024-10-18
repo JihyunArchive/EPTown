@@ -185,7 +185,9 @@
                 android:layout_marginTop="183dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_dumpling" />
+                app:srcCompat="@drawable/image_dumpling"
+                android:background="@drawable/ic_rounded_image"
+                android:clipToOutline="true" />
 
             <!-- 치킨1 이름 -->
             <TextView
@@ -242,9 +244,9 @@
 
             <!-- 치킨1 별점 -->
             <ImageView
-                android:id="@+id/firstImageStarOne"
-                android:layout_width="9dp"
-                android:layout_height="9dp"
+                android:id="@+id/firstStarOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="351dp"
                 android:src="@drawable/ic_star"
@@ -252,40 +254,40 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/firstImageStarTwo"
+                android:id="@+id/firstStarTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="29dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="351dp"
                 android:src="@drawable/ic_star"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/firstImageStarThree"
+                android:id="@+id/firstStarThree"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="39dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="351dp"
                 android:src="@drawable/ic_star"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/firstImageStarFour"
+                android:id="@+id/firstStarFour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="49dp"
+                android:layout_marginStart="50dp"
                 android:layout_marginTop="351dp"
                 android:src="@drawable/ic_star"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/firstImageStarFive"
+                android:id="@+id/firstStarFive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="59dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="351dp"
                 android:src="@drawable/ic_star"
                 app:layout_constraintStart_toStartOf="parent"
@@ -345,7 +347,9 @@
                 android:layout_marginTop="183dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_snack" />
+                app:srcCompat="@drawable/image_snack"
+                android:background="@drawable/ic_rounded_image"
+                android:clipToOutline="true"/>
 
             <!-- 츄르1 이름 -->
             <TextView
@@ -513,7 +517,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_tonic" />
+                app:srcCompat="@drawable/image_tonic"
+                android:background="@drawable/ic_rounded_image"
+                android:clipToOutline="true"/>
 
             <!-- 영양제1 이름 -->
             <TextView
@@ -706,7 +712,9 @@
                 android:layout_marginTop="411dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_dumpling" />
+                app:srcCompat="@drawable/image_dumpling"
+                android:background="@drawable/ic_rounded_image"
+                android:clipToOutline="true"/>
 
             <!-- 치킨2 이름 -->
             <TextView
@@ -864,7 +872,9 @@
                 android:layout_marginTop="411dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_snack" />
+                app:srcCompat="@drawable/image_snack"
+                android:background="@drawable/ic_rounded_image"
+                android:clipToOutline="true"/>
 
             <!-- 츄르2 이름 -->
             <TextView
@@ -1033,7 +1043,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/image_tonic" />
+                app:srcCompat="@drawable/image_tonic"
+                android:background="@drawable/ic_rounded_image"
+                android:clipToOutline="true"/>
 
             <!-- 영양제2 이름 -->
             <TextView
@@ -1226,7 +1238,9 @@
                 android:layout_marginTop="643dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_dumpling" />
+                app:srcCompat="@drawable/image_dumpling"
+                android:background="@drawable/ic_rounded_image"
+                android:clipToOutline="true"/>
 
             <!-- 치킨3 이름 -->
             <TextView
@@ -1384,7 +1398,9 @@
                 android:layout_marginTop="643dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_snack" />
+                app:srcCompat="@drawable/image_snack"
+                android:background="@drawable/ic_rounded_image"
+                android:clipToOutline="true"/>
 
             <!-- 츄르3 이름 -->
             <TextView
@@ -1553,7 +1569,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/image_tonic" />
+                app:srcCompat="@drawable/image_tonic"
+                android:background="@drawable/ic_rounded_image"
+                android:clipToOutline="true"/>
 
             <!-- 영양제3 이름 -->
             <TextView
@@ -1746,7 +1764,9 @@
                 android:layout_marginTop="875dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_dumpling" />
+                app:srcCompat="@drawable/image_dumpling"
+                android:background="@drawable/ic_rounded_image"
+                android:clipToOutline="true"/>
 
             <!-- 치킨4 이름 -->
             <TextView
@@ -1904,7 +1924,9 @@
                 android:layout_marginTop="875dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_snack" />
+                app:srcCompat="@drawable/image_snack"
+                android:background="@drawable/ic_rounded_image"
+                android:clipToOutline="true"/>
 
             <!-- 츄르4 이름 -->
             <TextView
@@ -2073,7 +2095,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/image_tonic" />
+                app:srcCompat="@drawable/image_tonic"
+                android:background="@drawable/ic_rounded_image"
+                android:clipToOutline="true"/>
 
             <!-- 영양제4 이름 -->
             <TextView
