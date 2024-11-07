@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- 뒤로가기 버튼 -->
+    <ImageView
+        android:id="@+id/btnCartBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 장바구니 -->
+    <ImageView
+        android:id="@+id/cartIconMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/ic_cart_icon_no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/shoppingBaket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="장바구니"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 전체선택 박스 -->
+    <View
+        android:id="@+id/uncheckRectOne"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="66dp"
+        android:background="@drawable/ic_uncheck_rect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 전체선택 -->
+    <TextView
+        android:id="@+id/totalCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="64dp"
+        android:text="전체선택"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/uncheckRectOne"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 상품삭제 -->
+    <TextView
+        android:id="@+id/deleteProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="50dp"
+        android:text="상품삭제"
+        android:textColor="#697175"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/uncheckRectOne"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 장바구니.이나바 사이 수평선 -->
+    <View
+        android:id="@+id/firstHorizon"
+        android:layout_width="321dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="95dp"
+        android:background="#E7E7E7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- 이나바 선택 박스 -->
+    <ImageView
+        android:id="@+id/colorRectOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="114dp"
+        android:src="@drawable/ic_color_rect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 이나바 선택 체크 -->
+    <ImageView
+        android:id="@+id/checkOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_check"
+        app:layout_constraintStart_toStartOf="@id/colorRectOne"
+        app:layout_constraintEnd_toEndOf="@id/colorRectOne"
+        app:layout_constraintTop_toTopOf="@id/colorRectOne"
+        app:layout_constraintBottom_toBottomOf="@id/colorRectOne" />
+
+    <!-- 이나바 -->
+    <TextView
+        android:id="@+id/productOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="113dp"
+        android:text="이나바"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/colorRectOne"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 이나바 사진 선택 박스 -->
+    <ImageView
+        android:id="@+id/colorRectTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="144dp"
+        android:src="@drawable/ic_color_rect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 이나바 사진 선택 체크 -->
+    <ImageView
+        android:id="@+id/checkTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_check"
+        app:layout_constraintStart_toStartOf="@id/colorRectTwo"
+        app:layout_constraintEnd_toEndOf="@id/colorRectTwo"
+        app:layout_constraintTop_toTopOf="@id/colorRectTwo"
+        app:layout_constraintBottom_toBottomOf="@id/colorRectTwo" />
+
+    <!-- 이나바 사진 -->
+    <ImageView
+        android:id="@+id/productOneImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="144dp"
+        app:layout_constraintStart_toStartOf="@+id/colorRectTwo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_cat" />
+
+    <!-- 이나바 이름 -->
+    <TextView
+        android:id="@+id/productOneName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="146dp"
+        android:text="이나바 캣 챠오 츄르 참치 14g * 40p"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/colorRectTwo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 개수 가격 -->
+    <TextView
+        android:id="@+id/productOnePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="167dp"
+        android:text="1개 (14,400원)"
+        android:textColor="#A1A9AD"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/colorRectTwo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 원래 가격 -->
+    <TextView
+        android:id="@+id/originalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="190dp"
+        android:text="18,000원"
+        android:textColor="#A1A9AD"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/colorRectTwo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 지금 가격 -->
+    <TextView
+        android:id="@+id/productOneNowPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="206dp"
+        android:text="14,400원"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/colorRectTwo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 옵션변경 박스 -->
+    <View
+        android:id="@+id/rectBoxOne"
+        android:layout_width="135dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="237dp"
+        android:background="@drawable/ic_rect_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 옵션변경 -->
+    <TextView
+        android:id="@+id/changeOptionOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="243dp"
+        android:text="옵션변경"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/rectBoxOne"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 쿠폰 받기 박스 -->
+    <View
+        android:id="@+id/grayBoxOne"
+        android:layout_width="135dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="219dp"
+        android:layout_marginTop="237dp"
+        android:background="@drawable/ic_gray_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 쿠폰 받기 -->
+    <TextView
+        android:id="@+id/get_coupon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="243dp"
+        android:text="쿠폰받기"
+        android:textColor="#8A8A8E"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/grayBoxOne"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 이나바.캣만두 사이 수평선 -->
+    <View
+        android:id="@+id/secondHorizon"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="296dp"
+        android:background="#F5F6F7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- 캣만두 선택 박스 -->
+    <View
+        android:id="@+id/uncheckRectTwo"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="321dp"
+        android:background="@drawable/ic_uncheck_rect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 캣만두 -->
+    <TextView
+        android:id="@+id/productTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="319dp"
+        android:text="캣만두"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/uncheckRectOne"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 캣만두 사진 체크 박스 -->
+    <View
+        android:id="@+id/uncheckRectThree"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="350dp"
+        android:background="@drawable/ic_uncheck_rect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 캣만두 사진 -->
+    <ImageView
+        android:id="@+id/productTwoImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="350dp"
+        app:layout_constraintStart_toStartOf="@id/uncheckRectThree"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_food" />
+
+    <!-- 캣만두 이름 -->
+    <TextView
+        android:id="@+id/productTwoName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="352dp"
+        android:text="캣만두 라이프 에센셜 치킨 142g"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/uncheckRectThree"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 치킨맛 -->
+    <TextView
+        android:id="@+id/porductTwoSmallName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="373dp"
+        android:text="치킨맛"
+        android:textColor="#A1A9AD"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/uncheckRectThree"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 캣만두 가격 -->
+    <TextView
+        android:id="@+id/productTwoPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="397dp"
+        android:text="30,000원"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/uncheckRectThree"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 옵션변경 박스 -->
+    <View
+        android:id="@+id/rectBoxThree"
+        android:layout_width="135dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="443dp"
+        android:background="@drawable/ic_rect_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 옵션 변경 -->
+    <TextView
+        android:id="@+id/changeOptionTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="450dp"
+        android:text="옵션변경"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/rectBoxThree"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 쿠폰제한 박스 -->
+    <View
+        android:id="@+id/grayBoxTwo"
+        android:layout_width="135dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="214dp"
+        android:layout_marginTop="443dp"
+        android:background="@drawable/ic_gray_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 쿠폰제한 -->
+    <TextView
+        android:id="@+id/getCouponTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="450dp"
+        android:text="쿠폰제한"
+        android:textColor="#8A8A8E"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/grayBoxTwo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 캣만두.결제 예상 금액 사이 수평선 -->
+    <View
+        android:id="@+id/thirdHorizon"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="488dp"
+        android:background="#F5F6F7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- 결제 예상 금액 -->
+    <TextView
+        android:id="@+id/expectionPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="516dp"
+        android:text="결제 예상 금액"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 상품금액 -->
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="553dp"
+        android:text="상품금액"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 상품금액 가격 -->
+    <TextView
+        android:id="@+id/priceOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="553dp"
+        android:layout_marginEnd="80dp"
+        android:text="14,400원"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/productPrice"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 할인금액 -->
+    <TextView
+        android:id="@+id/salePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="583dp"
+        android:text="할인금액"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 할인금액 가격 -->
+    <TextView
+        android:id="@+id/priceTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="583dp"
+        android:layout_marginEnd="80dp"
+        android:text="2,500원"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/salePrice"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 배송비 -->
+    <TextView
+        android:id="@+id/deliveryCharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="613dp"
+        android:text="배송비"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 배송비 가격 -->
+    <TextView
+        android:id="@+id/priceThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="613dp"
+        android:layout_marginEnd="80dp"
+        android:text="2,500원"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/deliveryCharge"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 쿠폰 주문/결제 박스 -->
+    <View
+        android:id="@+id/lowerGrayRect"
+        android:layout_width="320dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="648dp"
+        android:background="@drawable/ic_lower_gray_rect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 쿠폰 주문/결제 -->
+    <TextView
+        android:id="@+id/couponExplain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="654dp"
+        android:text="쿠폰은 주문/결제할 때 사용할 수 있어요"
+        android:textColor="#6C7478"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/lowerGrayRect"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 쿠폰 주문/결제.총 결제 금액 사이 수평선 -->
+    <View
+        android:id="@+id/fourthHorizon"
+        android:layout_width="321dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="698dp"
+        android:background="#E7E7E7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- 총 결제 금액 -->
+    <TextView
+        android:id="@+id/extendedPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="719dp"
+        android:text="총 결제 금액"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 총 결제 금액 가격 -->
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="719dp"
+        android:layout_marginEnd="80dp"
+        android:text="16,900원"
+        android:textColor="#F59701"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/extendedPrice"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 총 결제 금액.구매확정 사이 수평선 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="767dp"
+        android:background="#F5F6F7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- 화면 회색으로 만들기 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:layout_gravity="center" />
+
+    <!-- 수량변경 하얀 사각형 배경 -->
+    <ImageView
+        android:id="@+id/changeBox"
+        android:layout_width="match_parent"
+        android:layout_height="207dp"
+        android:src="@drawable/ic_cart_box"
+        app:layout_constraintBottom_toTopOf="@id/buyBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 수량변경 하얀 회색 막대 -->
+    <ImageView
+        android:id="@+id/grayStick"
+        android:layout_width="60dp"
+        android:layout_height="5dp"
+        android:src="@drawable/ic_cart_gray"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@id/grayBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 수량변경 하얀 회색 배경 -->
+    <ImageView
+        android:id="@+id/grayBox"
+        android:layout_width="320dp"
+        android:layout_height="85dp"
+        android:src="@drawable/ic_cart_graybox"
+        android:layout_marginBottom="135dp"
+        app:layout_constraintBottom_toBottomOf="@id/buyBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 상품 가격 -->
+    <TextView
+        android:id="@+id/productPriceTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="70dp"
+        android:text="1개 (14,400원)"
+        android:textSize="13sp"
+        android:textColor="#8A8A8E"
+        app:layout_constraintTop_toTopOf="@id/grayBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 구매하기 하얀 사각형 배경 -->
+    <ImageView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_cart_amount"
+        android:layout_marginBottom="18dp"
+        android:layout_marginStart="70dp"
+        app:layout_constraintBottom_toBottomOf="@id/grayBox"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!-- 최대 개수 -->
+    <TextView
+        android:id="@+id/theLargest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:layout_marginStart="146dp"
+        android:text="최대 10개"
+        android:textSize="13sp"
+        android:textColor="#8A8A8E"
+        app:layout_constraintBottom_toBottomOf="@id/grayBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 총 금액 -->
+    <TextView
+        android:id="@+id/totalPriceTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:layout_marginEnd="10dp"
+        android:text="14,400원"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/grayBox"
+        app:layout_constraintEnd_toEndOf="@id/grayBox"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 가격 아래줄 -->
+    <View
+        android:id="@+id/priceBar"
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="18dp"
+        android:background="#E7E7E7"
+        app:layout_constraintTop_toBottomOf="@id/grayBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- 총 수량 -->
+    <TextView
+        android:id="@+id/totalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="55dp"
+        android:text="총 수량 1개"
+        android:textSize="13sp"
+        android:textColor="#8A8A8E"
+        app:layout_constraintTop_toTopOf="@id/priceBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <!-- 총 금액 가격 -->
+    <TextView
+        android:id="@+id/totalPriceThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="55dp"
+        android:text="14,400원"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="@id/priceBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <!-- 구매하기 하얀 사각형 배경 -->
+    <ImageView
+        android:id="@+id/buyBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_buy_fix"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 구매하기 버튼 -->
+    <ImageView
+        android:id="@+id/buyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_alter_button"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

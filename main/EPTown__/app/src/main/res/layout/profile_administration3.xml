@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 나가기 버튼 -->
+    <ImageView
+        android:id="@+id/btnLoginBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 반려동물 프로필 관리 -->
+    <TextView
+        android:id="@+id/profile_administration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="반려동물 프로필 관리"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 반려동물 프로필 관리 아래 수평선 -->
+    <View
+        android:id="@+id/Horizon"
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:layout_marginTop="56dp"
+        android:background="#F5F6F7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- 이름 -->
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름"
+        android:textSize="13sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="105dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 입력창 -->
+    <ImageView
+        android:id="@+id/enterBoxOne"
+        android:layout_width="254dp"
+        android:layout_height="34dp"
+        android:src="@drawable/ic_profile_administration_box"
+        android:layout_marginTop="98dp"
+        android:layout_marginStart="86dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 반려동물 이름 -->
+    <TextView
+        android:id="@+id/nameEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="플목이"
+        android:textSize="12sp"
+        android:layout_marginStart="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/enterBoxOne"
+        app:layout_constraintBottom_toBottomOf="@id/enterBoxOne" />
+
+    <!-- 생일 -->
+    <TextView
+        android:id="@+id/birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="생일"
+        android:textSize="13sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="158dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 입력창 -->
+    <ImageView
+        android:id="@+id/enterBoxTwo"
+        android:layout_width="254dp"
+        android:layout_height="34dp"
+        android:src="@drawable/ic_profile_administration_box"
+        android:layout_marginTop="151dp"
+        android:layout_marginStart="86dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 반려동물 생일 -->
+    <TextView
+        android:id="@+id/birthdayEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2023년 07월 15일"
+        android:textSize="12sp"
+        android:layout_marginStart="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/enterBoxTwo"
+        app:layout_constraintBottom_toBottomOf="@id/enterBoxTwo" />
+
+    <!-- 나이 -->
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="나이"
+        android:textSize="13sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="211dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 입력창 -->
+    <ImageView
+        android:id="@+id/enterBoxThree"
+        android:layout_width="254dp"
+        android:layout_height="34dp"
+        android:src="@drawable/ic_profile_administration_box"
+        android:layout_marginTop="204dp"
+        android:layout_marginStart="86dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 반려동물 나이 -->
+    <TextView
+        android:id="@+id/ageEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3살"
+        android:textSize="12sp"
+        android:layout_marginStart="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/enterBoxThree"
+        app:layout_constraintBottom_toBottomOf="@id/enterBoxThree" />
+
+    <!-- 성별 -->
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="성별"
+        android:textSize="13sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="264dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 입력창 -->
+    <ImageView
+        android:id="@+id/enterBoxFour"
+        android:layout_width="254dp"
+        android:layout_height="34dp"
+        android:src="@drawable/ic_profile_administration_box"
+        android:layout_marginTop="257dp"
+        android:layout_marginStart="86dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 반려동물 성별 -->
+    <TextView
+        android:id="@+id/genderEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="중성화"
+        android:textSize="12sp"
+        android:layout_marginStart="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/enterBoxFour"
+        app:layout_constraintBottom_toBottomOf="@id/enterBoxFour" />
+
+    <!-- 품종 -->
+    <TextView
+        android:id="@+id/kind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="품종"
+        android:textSize="13sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="317dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 입력창 -->
+    <ImageView
+        android:id="@+id/enterBoxFive"
+        android:layout_width="254dp"
+        android:layout_height="34dp"
+        android:src="@drawable/ic_profile_administration_box"
+        android:layout_marginTop="310dp"
+        android:layout_marginStart="86dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 반려동물 품종 -->
+    <TextView
+        android:id="@+id/kindEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="요크셔테리어"
+        android:textSize="12sp"
+        android:layout_marginStart="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/enterBoxFive"
+        app:layout_constraintBottom_toBottomOf="@id/enterBoxFive" />
+
+    <!-- 저장하기 버튼 -->
+    <ImageView
+        android:id="@+id/buyFixButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_modify2"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

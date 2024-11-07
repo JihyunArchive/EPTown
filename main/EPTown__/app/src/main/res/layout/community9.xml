@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 나가기 버튼 -->
+    <ImageView
+        android:id="@+id/btnCommunityClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 게시 버튼 -->
+    <ImageView
+        android:id="@+id/btnPost"
+        android:layout_width="52dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_community_post"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 게시 -->
+    <TextView
+        android:id="@+id/post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="게시"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#ffff"
+        android:layout_marginEnd="34dp"
+        android:layout_marginTop="27dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 글쓰기 -->
+    <TextView
+        android:id="@+id/writeTilte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="글쓰기"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="27dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@id/btnCommunityClose"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 글쓰기 제목 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="우리 고양이 뒷태 어떤가요?"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#33363F"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="78dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/thirdtHorizon"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="20dp"
+        android:background="#D2D5D6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- 내용 입력 -->
+    <TextView
+        android:id="@+id/communityOneContent"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="126dp"
+        android:text="너무 귀엽지않나요?ㅎㅎ 너무 귀여워보여서 공유합니다. 여러분들의 반려동물 사진도 궁금하네요!"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- 사진 올리는 버튼 -->
+    <ImageView
+        android:id="@+id/camera"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="605dp"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/ic_community_camera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 체크된 원 -->
+    <ImageView
+        android:id="@+id/checkedCircle"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="603dp"
+        android:layout_marginEnd="44dp"
+        android:src="@drawable/ic_checked_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 익명 -->
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="605dp"
+        android:text="익명"
+        android:textSize="12dp"
+        android:textColor="#F59701"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

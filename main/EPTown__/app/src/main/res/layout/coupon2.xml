@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 상태바 아래 하얀 사각형 배경 -->
+    <ImageView
+        android:id="@+id/getCouponFixBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 왼쪽 뒤로가기 아이콘 -->
+    <ImageView
+        android:id="@+id/getCouponBackIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/getCouponFixBar" />
+
+    <!-- 쿠폰받기 -->
+    <TextView
+        android:id="@+id/getCoupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="쿠폰받기"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/getCouponFixBar"
+        android:layout_marginTop="16dp"/>
+
+    <!-- 쿠폰받기 아래 구분바 -->
+    <View
+        android:id="@+id/divideGetCouponFixBar"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:background="@drawable/bar_rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/getCouponFixBar" />
+
+    <!-- 가운데에 위치할 퍼센트 아이콘 -->
+    <ImageView
+        android:id="@+id/textIcon"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:src="@drawable/image_coupon_discount"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 쿠폰 글씨 -->
+    <TextView
+        android:id="@+id/noCouponText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="보유한\n쿠폰이 없어요"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/textIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

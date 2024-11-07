@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 나가기 버튼 -->
+    <ImageView
+        android:id="@+id/btnLoginBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 회원가입 -->
+    <TextView
+        android:id="@+id/join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/btnLoginBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 본인 인증 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="본인 인증"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#33363F"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- 이메일 입력칸 -->
+    <TextView
+        android:id="@+id/emailSpaces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이메일 입력"
+        android:textSize="12sp"
+        android:textColor="#A1A9AD"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="164dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 이메일 입력줄 -->
+    <View
+        android:id="@+id/emailBar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="195dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="120dp"
+        android:background="#D2D5D6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/verificationTransmit"
+        tools:ignore="MissingConstraints" />
+
+    <!-- 인증번호 전송 -->
+    <ImageView
+        android:id="@+id/verificationTransmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/btn_login_verification_transmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 인증번호 입력칸 -->
+    <TextView
+        android:id="@+id/verificationSpaces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="인증번호 입력"
+        android:textSize="12sp"
+        android:textColor="#A1A9AD"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="226dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 인증번호 입력줄 -->
+    <View
+        android:id="@+id/verificationBar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="257dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="120dp"
+        android:background="#D2D5D6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/verificationCheck"
+        tools:ignore="MissingConstraints" />
+
+    <!-- 인증번호 확인 -->
+    <ImageView
+        android:id="@+id/verificationCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="226dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/btn_login_verification_transmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 다음이 마지막 단계라는 설명 -->
+    <TextView
+        android:id="@+id/explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="다음이 마지막 단계입니다!"
+        android:textSize="11sp"
+        android:textColor="#A1A9AD"
+        android:layout_marginTop="75dp"
+        app:layout_constraintTop_toBottomOf="@id/verificationBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    <!-- 로그인 버튼 -->
+    <ImageView
+        android:id="@+id/btnContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_login_continue"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toBottomOf="@id/verificationBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
