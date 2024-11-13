@@ -80,6 +80,7 @@
         android:layout_height="28dp"
         android:text="우편번호 찾기"
         android:textSize="10dp"
+        android:backgroundTint="#E7E7E7"
         android:textColor="#A1A9AD"
         android:layout_marginTop="164dp"
         android:layout_marginEnd="20dp"
@@ -87,7 +88,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- 우편번호 찾기 버튼 -->
+<!--    &lt;!&ndash; 우편번호 찾기 버튼 &ndash;&gt;
     <Button
         android:id="@+id/verificationTransmitTwo"
         android:layout_width="80dp"
@@ -100,7 +101,7 @@
         android:background="@drawable/btn_login3_zip_code_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:visibility="gone"/>
+        android:visibility="gone"/>-->
 
     <!-- 주소 입력칸 -->
     <EditText
@@ -251,38 +252,30 @@
     <!-- 회원가입 버튼 -->
     <Button
         android:id="@+id/btnJoin"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="50dp"
-        android:text="회원가입"
-        android:textSize="13dp"
+        android:src="@drawable/btn_login_join"
+        android:layout_marginTop="60dp"
+        android:text="회원가입 완료"
+        android:backgroundTint="#E7E7E7"
         android:textColor="#A1A9AD"
-        android:textStyle="bold"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/btn_login1"
         app:layout_constraintTop_toBottomOf="@id/genderSelectBar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button
-        android:id="@+id/btnJoinTwo"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
-        android:text="회원가입"
-        android:textSize="13dp"
-        android:textColor="#FFFF"
-        android:textStyle="bold"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/btn_login3_join"
-        app:layout_constraintTop_toBottomOf="@id/genderSelectBar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:visibility="gone"/>
-
-
-
-
-
-
-
+<!--    <Button-->
+<!--        android:id="@+id/btnJoinTwo"-->
+<!--        android:layout_width="370dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:text="회원가입"-->
+<!--        android:textSize="13dp"-->
+<!--        android:textColor="#FFFF"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:background="@drawable/btn_login3_join"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/genderSelectBar"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:visibility="gone"/>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
