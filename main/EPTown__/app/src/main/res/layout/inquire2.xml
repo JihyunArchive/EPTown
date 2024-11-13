@@ -2,6 +2,7 @@
 <!-- 상품 상세 화면 -->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -241,13 +242,16 @@
                 app:layout_constraintStart_toEndOf="@id/freeDelivery" />
 
             <!-- 쿠폰받기 -->
-            <ImageView
+            <Button
                 android:id="@+id/getCoupon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="78dp"
+                android:layout_height="23dp"
+                android:text="쿠폰받기"
+                android:textSize="12dp"
+                android:textColor="#FFFFFF"
                 android:layout_marginTop="110dp"
                 android:layout_marginEnd="20dp"
-                android:src="@drawable/ic_get_coupon"
+                android:background="@drawable/btn_review_higher_receive_coupon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/itemName"/>
 
@@ -468,9 +472,9 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <!-- 구매하기 하얀 사각형 배경 -->
+    <!-- 저장하기 하얀 사각형 배경 -->
     <ImageView
-        android:id="@+id/buyFixBar"
+        android:id="@+id/buyBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/bar_buy_fix"
@@ -479,12 +483,16 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- 구매하기 버튼 -->
-    <ImageView
+    <Button
         android:id="@+id/buyFixButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_buy_button"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:text="구매하기"
+        android:textSize="15dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_coupon3_receive"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

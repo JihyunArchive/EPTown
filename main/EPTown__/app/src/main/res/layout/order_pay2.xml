@@ -16,21 +16,18 @@
             android:layout_height="match_parent"
             tools:context=".MainActivity">
 
-            <!-- 주문 타이틀 -->
+            <!-- 주문/결제 -->
             <TextView
                 android:id="@+id/snack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="주문"
+                android:text="주문/결제"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="@id/btnOrderPayBack"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <!-- 뒤로가기 버튼 -->
             <ImageView
@@ -351,33 +348,58 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <!-- 배송시 요청사항 -->
-            <TextView
-                android:id="@+id/request"
-                android:layout_width="wrap_content"
+            <!-- 배송시 요청사항 사각형2 -->
+            <View
+                android:id="@+id/rectBoxFive"
+                android:layout_width="328dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/ic_rect_box"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rectBoxOne" />
+
+            <!-- 직접 작성하기 -->
+            <EditText
+                android:id="@+id/requestTwo"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="520dp"
-                android:text="배송 시 요청사항을 선택해주세요"
-                android:textColor="#AFAFAF"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="555dp"
+                android:layout_marginEnd="120dp"
+                android:background="@null"
+                android:hint="직접 작성하기"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                android:textColorHint="#AFAFAF"
+                app:layout_constraintStart_toStartOf="@id/rectBoxFive"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <!-- 배송 시 요청사항을 선택해주세요 -->
+            <EditText
+                android:id="@+id/request"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="520dp"
+                android:layout_marginEnd="120dp"
+                android:background="@null"
+                android:hint="배송 시 요청사항을 선택해주세요"
+                android:textSize="12sp"
+                android:textColorHint="#AFAFAF"
                 app:layout_constraintStart_toStartOf="@id/rectBoxOne"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <!-- 배송시 요청사항 선택 화살표 -->
-            <ImageView
+            <ImageButton
                 android:id="@+id/underArrow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="10dp"
+                android:layout_height="6dp"
                 android:layout_marginStart="295dp"
                 android:layout_marginTop="525dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_under_arrow"
                 app:layout_constraintStart_toStartOf="@id/rectBoxOne"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_under_arrow" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <!-- 배송지.할인 사이 수평선 -->
             <View
@@ -511,20 +533,18 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <!-- 주문자 정보 이름 적기 -->
-            <TextView
+            <EditText
                 android:id="@+id/userName"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="65dp"
+                android:layout_marginStart="85dp"
                 android:layout_marginTop="779dp"
+                android:layout_marginEnd="35dp"
+                android:background="@null"
                 android:text="오지현"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@id/nameTitle"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <!-- 주문자 정보 이메일 -->
             <TextView
@@ -554,20 +574,18 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <!-- 주문자 정보 이메일 적기 -->
-            <TextView
+            <EditText
                 android:id="@+id/userEmail"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="65dp"
+                android:layout_marginStart="85dp"
                 android:layout_marginTop="822dp"
+                android:layout_marginEnd="35dp"
+                android:background="@null"
                 android:text="ojhyeon930@naver.com"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@id/email"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintStart_toStartOf="@id/nameTitle"
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <!-- 주문자 정보 전화번호 -->
             <TextView
@@ -597,20 +615,18 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <!-- 주문자 정보 전화번호 적기 -->
-            <TextView
+            <EditText
                 android:id="@+id/userNumber"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="65dp"
+                android:layout_marginStart="85dp"
                 android:layout_marginTop="865dp"
+                android:layout_marginEnd="35dp"
+                android:background="@null"
                 android:text="010-9198-1675"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@id/numberTitle"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <!-- 주문자 정보.결제 수단 사이 수평선 -->
             <View
@@ -640,25 +656,16 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
 
-            <!-- 신용/체크카드 선택 색깔 박스 -->
-            <View
-                android:id="@+id/circleColorOne"
+            <!-- 신용/체크카드 선택 박스 -->
+            <ImageButton
+                android:id="@+id/circleOne"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="993dp"
-                android:background="@drawable/ic_oder_pay_circle"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 신용/체크카드 선택 박스 -->
-            <View
-                android:id="@+id/circleOne"
-                android:layout_width="12dp"
-                android:layout_height="12dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="997dp"
-                android:background="@drawable/ic_circle"
+                android:src="@drawable/ic_order_pay_circle_check"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -679,13 +686,15 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <!-- 무통장 입금 선택 박스1 -->
-            <View
+            <ImageButton
                 android:id="@+id/circleTwo"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="1026dp"
-                android:background="@drawable/ic_circle"
+                android:src="@drawable/ic_circle"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -895,13 +904,15 @@
                 tools:ignore="MissingConstraints" />
 
             <!-- 주문 내용 확인 및 결제 동의서 체크 박스 -->
-            <View
+            <ImageButton
                 android:id="@+id/circleThree"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="1343dp"
-                android:background="@drawable/ic_checked_circle"
+                android:src="@drawable/ic_checked_circle"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -922,13 +933,15 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <!-- 첫번째 동의 체크 -->
-            <View
+            <ImageButton
                 android:id="@+id/checkOne"
                 android:layout_width="11dp"
                 android:layout_height="13dp"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="1381dp"
-                android:background="@drawable/ic_community_check_color"
+                android:src="@drawable/ic_community_check_color"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -950,13 +963,15 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <!-- 두번째 동의 체크 -->
-            <View
+            <ImageButton
                 android:id="@+id/checkTwo"
                 android:layout_width="11dp"
                 android:layout_height="13dp"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="1402dp"
-                android:background="@drawable/ic_community_check_color"
+                android:src="@drawable/ic_community_check_color"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -978,13 +993,15 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <!-- 세번째 동의 체크 -->
-            <View
+            <ImageButton
                 android:id="@+id/checkThree"
                 android:layout_width="11dp"
                 android:layout_height="13dp"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="1423dp"
-                android:background="@drawable/ic_community_check_color"
+                android:src="@drawable/ic_community_check_color"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

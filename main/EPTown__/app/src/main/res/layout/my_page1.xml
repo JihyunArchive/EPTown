@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -523,6 +524,7 @@
 
     <!-- 화면 회색으로 만들기 -->
     <View
+        android:id="@+id/grayScreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#80000000"
@@ -553,24 +555,29 @@
         android:gravity="center"/>
 
     <!-- 취소버튼 -->
-    <ImageView
+    <Button
         android:id="@+id/cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_width="104dp"
+        android:layout_height="23dp"
         android:layout_marginStart="30dp"
-        android:src="@drawable/ic_community_cancel"
-        app:layout_constraintTop_toTopOf="@id/deleteBox"
-        app:layout_constraintStart_toStartOf="@id/deleteBox" />
+        android:layout_marginTop="70dp"
+        android:background="@drawable/btn_my_page_cancel"
+        android:text="취소"
+        android:textSize="11dp"
+        app:layout_constraintStart_toStartOf="@id/deleteBox"
+        app:layout_constraintTop_toTopOf="@id/deleteBox" />
 
     <!-- 확인버튼 -->
-    <ImageView
+    <Button
         android:id="@+id/check"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="105dp"
+        android:layout_height="25dp"
+        android:text="확인"
+        android:textSize="11dp"
+        android:textColor="#FFFFFF"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="30dp"
-        android:src="@drawable/ic_community_check"
+        android:background="@drawable/btn_my_page_check"
         app:layout_constraintTop_toTopOf="@id/deleteBox"
         app:layout_constraintEnd_toEndOf="@id/deleteBox" />
 

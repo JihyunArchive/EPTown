@@ -13,13 +13,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
         android:text="문의"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@id/btnCategoryFeed1Back"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 뒤로가기 버튼 -->
@@ -105,14 +103,16 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <!-- 체크됨 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/checked"
         android:layout_width="18dp"
         android:layout_height="18dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="175dp"
         android:src="@drawable/ic_checked_circle"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 상품1 -->
@@ -133,7 +133,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="90dp"
         android:layout_marginTop="195dp"
-        android:layout_marginstart="90dp"
         android:text="이나바 캣 챠오 츄르 참치 14g*40p"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@id/catImageOne"
@@ -152,15 +151,17 @@
         app:layout_constraintStart_toStartOf="@id/catImageOne"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- 체크됨 -->
-    <ImageView
+    <!-- 체크 안됨 -->
+    <ImageButton
         android:id="@+id/unchecked"
         android:layout_width="18dp"
         android:layout_height="18dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="280dp"
         android:src="@drawable/ic_uncolor_rect"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 상품2 -->
@@ -181,7 +182,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="90dp"
         android:layout_marginTop="300dp"
-        android:layout_marginstart="90dp"
         android:text="이나바 캣 챠오 츄르 참치 14g*40p"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@id/catImageTwo"

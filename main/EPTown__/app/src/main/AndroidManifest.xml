@@ -179,6 +179,258 @@
             android:name=".CategoryProduct4Activity"
             android:exported="true" />
 
+        <activity
+            android:name=".cart_amountActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".cart_deleteActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".community2Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".community3Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".community4Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".community5Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".community6Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".community8Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".community9Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".community_commentActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".community_declareActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".community_declare_completeActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".community_registerActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".coupon1Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".coupon2Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".coupon3Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".coupon5Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".health_informationActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".health_information3Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".inquire1Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".inquire2Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".inquire3Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".inquire4Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".inquire5Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".inquire6Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".inquire7Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".inquire8Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".inquire9Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".inquire10Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".inquire11Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".inquire12Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".inquire13Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".login1Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".login3Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".my_page1Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".mypage_no_loginActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".notice2Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".notice3Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".order_detailsActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".order_details2Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".order_pay2Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".order_pay3Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".order_pay4Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".order_pay5Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".order_pay6Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".order_pay7Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".order_pay8Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".personal_informationActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".profile_administrationActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".profile_administration3Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".review1Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".review2Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".review3Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".review4Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".review5Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".review6Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".review_1Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".review_2Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".review_3Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".review_4Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".review_5Activity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".review_higherActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".review_lowerActivity"
+            android:exported="true"/>
+
     </application>
 
 </manifest>

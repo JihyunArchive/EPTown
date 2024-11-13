@@ -14,13 +14,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
         android:text="주문 내역"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@id/btnCategoryFeed1Back"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 뒤로가기 버튼 -->
@@ -166,28 +164,44 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <!-- 입력창 안 내용 -->
-    <TextView
+    <EditText
         android:id="@+id/contentInformation"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="교환 사유 내용을 입력해 주세요"
-        android:textSize="11sp"
-        android:textColor="#565C65"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="35dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="83dp"
+        android:background="@null"
+        android:backgroundTint="#565C65"
+        android:hint="교환 사유 내용을 입력해 주세요"
+        android:textSize="11sp"
         app:layout_constraintStart_toStartOf="@id/enterBoxFour"
-        app:layout_constraintTop_toTopOf="@id/enterBoxFour"/>
+        app:layout_constraintTop_toTopOf="@id/enterBoxFour" />
 
-    <!-- 접수하기 -->
+    <!-- 구매하기 하얀 사각형 배경 -->
     <ImageView
-        android:id="@+id/acceptButton"
+        android:id="@+id/buyFixBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="20dp"
-        android:src="@drawable/ic_accept_button"
+        android:src="@drawable/bar_buy_fix"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 접수하기 버튼 -->
+    <Button
+        android:id="@+id/buyFixButton"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:text="접수하기"
+        android:textSize="15dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_coupon3_receive"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 
 

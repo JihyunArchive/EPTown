@@ -144,15 +144,18 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <!-- 쿠폰받기 -->
-    <ImageView
+    <Button
         android:id="@+id/btnGetCouponTwo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="68dp"
+        android:layout_height="22dp"
+        android:text="쿠폰받기"
+        android:textSize="10dp"
+        android:textColor="#F59701"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
-        android:src="@drawable/ic_get_coupon_small"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/divideCouponListBarOne" />
+        android:background="@drawable/btn_coupon3_receive1"
+        app:layout_constraintTop_toBottomOf="@id/divideCouponListBarOne"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- 쿠폰 구분바 -->
     <ImageView
@@ -207,15 +210,18 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <!-- 쿠폰받기 -->
-    <ImageView
+    <Button
         android:id="@+id/btnGetCouponThree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="68dp"
+        android:layout_height="22dp"
+        android:text="쿠폰받기"
+        android:textSize="10dp"
+        android:textColor="#F59701"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
-        android:src="@drawable/ic_get_coupon_small"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/divideCouponListBarTwo" />
+        android:background="@drawable/btn_coupon3_receive1"
+        app:layout_constraintTop_toBottomOf="@id/divideCouponListBarTwo"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- 쿠폰 구분바 -->
     <ImageView
@@ -270,15 +276,18 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <!-- 쿠폰받기 -->
-    <ImageView
+    <Button
         android:id="@+id/btnGetCouponFour"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="68dp"
+        android:layout_height="22dp"
+        android:text="발급완료"
+        android:textSize="10dp"
+        android:textColor="#FFFFFF"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
-        android:src="@drawable/ic_get_coupon_complete"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/divideCouponListBarThree" />
+        android:background="@drawable/btn_coupon3_receive_complete"
+        app:layout_constraintTop_toBottomOf="@id/divideCouponListBarThree"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- 쿠폰 구분바 -->
     <ImageView
@@ -333,15 +342,18 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <!-- 쿠폰받기 -->
-    <ImageView
+    <Button
         android:id="@+id/btnGetCouponFive"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="68dp"
+        android:layout_height="22dp"
+        android:text="발급완료"
+        android:textSize="10dp"
+        android:textColor="#FFFFFF"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
-        android:src="@drawable/ic_get_coupon_complete"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/divideCouponListBarFour" />
+        android:background="@drawable/btn_coupon3_receive_complete"
+        app:layout_constraintTop_toBottomOf="@id/divideCouponListBarFour"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

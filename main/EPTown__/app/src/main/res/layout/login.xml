@@ -67,15 +67,17 @@
         app:layout_constraintTop_toBottomOf="@id/getCouponFixBar" />
 
     <!-- 아이디 입력 -->
-    <TextView
+    <EditText
         android:id="@+id/idText"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="아이디 입력"
-        android:textColor="#A1A9AD"
+        android:hint="아이디 입력"
         android:textSize="14sp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="100dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#A1A9AD"
+        android:background="@null"
         app:layout_constraintTop_toBottomOf="@id/loginEPTownSubText"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -91,15 +93,17 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <!-- 비밀번호 입력 -->
-    <TextView
+    <EditText
         android:id="@+id/passwordText"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="비밀번호 입력"
-        android:textColor="#A1A9AD"
+        android:hint="비밀번호 입력"
         android:textSize="14sp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#A1A9AD"
+        android:background="@null"
         app:layout_constraintTop_toBottomOf="@id/idBar"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -115,15 +119,34 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <!-- 로그인 버튼 -->
-    <ImageView
+    <Button
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/btn_login_orange"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:text="로그인"
+        android:textSize="13dp"
+        android:textColor="#A1A9AD"
+        android:textStyle="bold"
         android:layout_marginTop="60dp"
+        android:background="@drawable/btn_login1"
         app:layout_constraintTop_toBottomOf="@id/passwordBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnContinueColorButton"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:text="로그인"
+        android:textSize="13dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn_login1_color"
+        app:layout_constraintTop_toBottomOf="@id/passwordBar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:visibility="gone"/>
 
     <!-- 아이디 찾기 -->
     <TextView

@@ -4,6 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -52,23 +53,24 @@
         android:text="글쓰기"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="27dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@id/btnCommunityClose"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <!-- 글쓰기 제목 -->
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/titleInput"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="제목"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:textColor="#8A8A8E"
         android:layout_marginStart="24dp"
         android:layout_marginTop="78dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        android:backgroundTint="#8A8A8E"
+        android:hint="제목"
+        android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -85,14 +87,17 @@
         tools:ignore="MissingConstraints" />
 
     <!-- 내용 입력 -->
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="내용을 입력하세요."
-        android:textSize="13sp"
-        android:textColor="#8A8A8E"
         android:layout_marginStart="24dp"
         android:layout_marginTop="126dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        android:backgroundTint="#8A8A8E"
+        android:hint="내용을 입력하세요."
+        android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -109,13 +114,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 체크된 원 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/checkedCircle"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginTop="603dp"
         android:layout_marginEnd="44dp"
         android:src="@drawable/ic_checked_circle"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintTop_toTopOf="parent" />
@@ -132,10 +138,5 @@
         android:textColor="#F59701"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

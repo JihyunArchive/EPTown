@@ -4,8 +4,22 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <!-- 리뷰 -->
+    <TextView
+        android:id="@+id/review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="리뷰"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 뒤로가기 버튼 -->
     <ImageView
@@ -102,7 +116,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="38dp"
-                android:layout_marginstart="90dp"
                 android:text="이나바 캣 챠오 츄르 참치 14g*40p"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -316,7 +329,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="275dp"
-                android:layout_marginstart="90dp"
                 android:text="이나바 캣 챠오 츄르 참치 14g*40p"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -530,7 +542,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="512dp"
-                android:layout_marginstart="90dp"
                 android:text="이나바 캣 챠오 츄르 참치 14g*40p"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -744,7 +755,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="749dp"
-                android:layout_marginstart="90dp"
                 android:text="이나바 캣 챠오 츄르 참치 14g*40p"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"

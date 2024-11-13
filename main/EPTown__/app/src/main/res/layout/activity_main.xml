@@ -91,13 +91,15 @@
                 app:layout_constraintTop_toTopOf="@id/searchBar" />
 
             <!-- 검색어 입력 텍스트를 searchBar 위에 겹치게 배치 -->
-            <TextView
+            <EditText
                 android:id="@+id/searchText"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="검색어 입력"
-                android:textColor="#8A8A8E"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="70dp"
+                android:background="@null"
+                android:backgroundTint="#8A8A8E"
+                android:hint="검색어 입력"
                 android:textSize="13sp"
                 app:layout_constraintBottom_toBottomOf="@id/searchBar"
                 app:layout_constraintStart_toStartOf="@id/searchBar"

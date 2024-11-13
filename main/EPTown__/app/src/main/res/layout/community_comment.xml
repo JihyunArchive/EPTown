@@ -4,6 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -141,19 +142,20 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <!-- 하트 -->
-            <ImageView
+            <ImageButton
                 android:id="@+id/heart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="486dp"
                 android:layout_marginStart="20dp"
                 android:src="@drawable/ic_heart_fill"
+                android:background="?attr/selectableItemBackgroundBorderless"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <!-- 하트 개수 -->
             <TextView
-                android:id="@+id/heartNumber"
+                android:id="@+id/heartCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="46dp"
@@ -369,16 +371,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- 댓글 달기 -->
-    <TextView
+    <!-- 댓글 달기 입력칸 -->
+    <EditText
         android:id="@+id/chatHint"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="댓글 달기..."
+        android:textSize="12sp"
         android:layout_marginStart="125dp"
+        android:layout_marginEnd="60dp"
         android:layout_marginBottom="88dp"
-        android:text="댓글 달기..."
-        android:textSize="12dp"
-        android:textColor="#A1A9AD"
+        android:backgroundTint="#A1A9AD"
+        android:background="@null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 

@@ -4,6 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -41,19 +42,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
             <!-- 이름 입력칸 -->
-            <TextView
+            <EditText
                 android:id="@+id/zipCodeSpaces"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="정여진"
-                android:textSize="12sp"
-                android:textColor="#A1A9AD"
                 android:layout_marginStart="34dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="34dp"
+                android:background="@null"
+                android:hint="정여진"
+                android:textSize="12sp"
+                android:textColorHint="#A1A9AD"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"  />
 
             <!-- 이름 입력줄 -->
             <View
@@ -68,17 +70,19 @@
                 tools:ignore="MissingConstraints" />
 
             <!-- 아이디 입력칸 -->
-            <TextView
+            <EditText
                 android:id="@+id/addressSpaces"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="yeojin565"
-                android:textSize="12sp"
-                android:textColor="#A1A9AD"
                 android:layout_marginStart="34dp"
                 android:layout_marginTop="82dp"
+                android:layout_marginEnd="34dp"
+                android:background="@null"
+                android:hint="yeojin565"
+                android:textSize="12sp"
+                android:textColorHint="#A1A9AD"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"  />
 
             <!-- 아이디 입력줄 -->
             <View
@@ -93,16 +97,18 @@
                 tools:ignore="MissingConstraints" />
 
             <!-- 비밀번호 입력칸 -->
-            <TextView
+            <EditText
                 android:id="@+id/addressDetailSpaces"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="비밀번호 입력"
-                android:textSize="12sp"
                 android:layout_marginStart="34dp"
                 android:layout_marginTop="144dp"
+                android:layout_marginEnd="34dp"
+                android:background="@null"
+                android:text="비밀번호 입력"
+                android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"  />
 
             <!-- 비밀번호 입력줄 -->
             <View
@@ -117,16 +123,18 @@
                 tools:ignore="MissingConstraints" />
 
             <!-- 비밀번호 확인칸 -->
-            <TextView
+            <EditText
                 android:id="@+id/phoneNumberSpaces"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="비밀번호 확인"
-                android:textSize="12sp"
                 android:layout_marginStart="34dp"
                 android:layout_marginTop="206dp"
+                android:layout_marginEnd="34dp"
+                android:background="@null"
+                android:text="비밀번호 확인"
+                android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"  />
 
             <!-- 비밀번호 입력줄 -->
             <View
@@ -141,16 +149,18 @@
                 tools:ignore="MissingConstraints" />
 
             <!-- 전화번호 입력칸 -->
-            <TextView
+            <EditText
                 android:id="@+id/birthdayDateSpaces"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="010-1234-5678"
-                android:textSize="12sp"
                 android:layout_marginStart="34dp"
                 android:layout_marginTop="268dp"
+                android:layout_marginEnd="34dp"
+                android:background="@null"
+                android:text="010-1234-5678"
+                android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"  />
 
             <!-- 전화번호 입력줄 -->
             <View
@@ -165,27 +175,47 @@
                 tools:ignore="MissingConstraints" />
 
             <!-- 이메일 입력칸 -->
-            <TextView
+            <EditText
                 android:id="@+id/genderSelectSpaces"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="jyeojin565@gmail.com"
-                android:textSize="12sp"
                 android:layout_marginStart="34dp"
                 android:layout_marginTop="330dp"
+                android:layout_marginEnd="140dp"
+                android:background="@null"
+                android:text="jyeojin565@gmail.com"
+                android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"  />
 
             <!-- 인증번호 전송 버튼 -->
-            <ImageView
+            <Button
                 android:id="@+id/verificationTransmit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:layout_height="28dp"
+                android:text="인증번호 전송"
+                android:textSize="10dp"
+                android:textColor="#A1A9AD"
                 android:layout_marginTop="330dp"
                 android:layout_marginEnd="20dp"
-                android:src="@drawable/ic_verification_transmit"
+                android:background="@drawable/btn_login3_zip_code"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <!-- 인증번호 전송 버튼 -->
+            <Button
+                android:id="@+id/verificationTransmitTwo"
+                android:layout_width="80dp"
+                android:layout_height="28dp"
+                android:text="인증번호 전송"
+                android:textSize="10dp"
+                android:textColor="#FFFF"
+                android:layout_marginTop="330dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/btn_login3_zip_code_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone"/>
 
             <!-- 이메일 입력줄 -->
             <View
@@ -201,27 +231,47 @@
                 tools:ignore="MissingConstraints" />
 
             <!-- 인증번호 입력칸 -->
-            <TextView
+            <EditText
                 android:id="@+id/verificationEnter"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="인증번호 입력"
-                android:textSize="12sp"
                 android:layout_marginStart="34dp"
                 android:layout_marginTop="392dp"
+                android:layout_marginEnd="140dp"
+                android:background="@null"
+                android:text="인증번호 입력"
+                android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"  />
 
             <!-- 인증번호 확인 버튼 -->
-            <ImageView
+            <Button
                 android:id="@+id/verificationEnterButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:layout_height="28dp"
+                android:text="인증번호 확인"
+                android:textSize="10dp"
+                android:textColor="#A1A9AD"
                 android:layout_marginTop="392dp"
                 android:layout_marginEnd="20dp"
-                android:src="@drawable/ic_verification_enter"
+                android:background="@drawable/btn_login3_zip_code"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <!-- 인증번호 확인 버튼 -->
+            <Button
+                android:id="@+id/verificationEnterButtonTwo"
+                android:layout_width="80dp"
+                android:layout_height="28dp"
+                android:text="인증번호 확인"
+                android:textSize="10dp"
+                android:textColor="#FFFF"
+                android:layout_marginTop="392dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/btn_login3_zip_code_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone"/>
 
             <!-- 인증번호 입력줄 -->
             <View
@@ -237,27 +287,47 @@
                 tools:ignore="MissingConstraints" />
 
             <!-- 우편번호 입력칸 -->
-            <TextView
+            <EditText
                 android:id="@+id/zipCodeEnter"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="54355"
-                android:textSize="12sp"
                 android:layout_marginStart="34dp"
                 android:layout_marginTop="454dp"
+                android:layout_marginEnd="140dp"
+                android:background="@null"
+                android:text="54355"
+                android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"  />
+
+            <!-- 우편번호 찾기 버튼 -->
+            <Button
+                android:id="@+id/zipCodeButton"
+                android:layout_width="80dp"
+                android:layout_height="28dp"
+                android:text="우편번호 찾기"
+                android:textSize="10dp"
+                android:textColor="#A1A9AD"
+                android:layout_marginTop="454dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/btn_login3_zip_code"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <!-- 우편번호 찾기 버튼 -->
-            <ImageView
-                android:id="@+id/zipCodeButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <Button
+                android:id="@+id/zipCodeButtonTwo"
+                android:layout_width="80dp"
+                android:layout_height="28dp"
+                android:text="우편번호 찾기"
+                android:textSize="10dp"
+                android:textColor="#FFFF"
                 android:layout_marginTop="454dp"
                 android:layout_marginEnd="20dp"
-                android:src="@drawable/btn_login_zip_code"
+                android:background="@drawable/btn_login3_zip_code_color"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone"/>
 
             <!-- 우편번호 입력줄 -->
             <View
@@ -273,16 +343,19 @@
                 tools:ignore="MissingConstraints" />
 
             <!-- 주소 입력칸 -->
-            <TextView
+            <EditText
                 android:id="@+id/addressEnter"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="인천광역시 남동구 남동대로 726번길 15-33"
-                android:textSize="12sp"
                 android:layout_marginStart="34dp"
                 android:layout_marginTop="516dp"
+                android:layout_marginEnd="34dp"
+                android:background="@null"
+                android:text="인천광역시 남동구 남동대로 726번길 15-33"
+                android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"  />
+
 
             <!-- 주소 입력줄 -->
             <View
@@ -297,16 +370,18 @@
                 tools:ignore="MissingConstraints" />
 
             <!-- 디테일 주소 입력칸 -->
-            <TextView
+            <EditText
                 android:id="@+id/detailAddressEnter"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="아이원파크 103동 301호"
-                android:textSize="12sp"
                 android:layout_marginStart="34dp"
                 android:layout_marginTop="578dp"
+                android:layout_marginEnd="34dp"
+                android:background="@null"
+                android:text="아이원파크 103동 301호"
+                android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"  />
 
             <!-- 디테일 주소 입력줄 -->
             <View
@@ -321,17 +396,19 @@
                 tools:ignore="MissingConstraints" />
 
             <!-- 생년월일 입력칸 -->
-            <TextView
+            <EditText
                 android:id="@+id/birthdayEnter"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="2004-11-12"
-                android:textSize="12sp"
-                android:textColor="#A1A9AD"
                 android:layout_marginStart="34dp"
                 android:layout_marginTop="640dp"
+                android:layout_marginEnd="34dp"
+                android:background="@null"
+                android:hint="2004-11-12"
+                android:textSize="12sp"
+                android:textColorHint="#A1A9AD"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"  />
 
             <!-- 생년월일 입력줄 -->
             <View
@@ -346,17 +423,19 @@
                 tools:ignore="MissingConstraints" />
 
             <!-- 성별 입력칸 -->
-            <TextView
+            <EditText
                 android:id="@+id/genderEnter"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="여성"
-                android:textSize="12sp"
-                android:textColor="#A1A9AD"
                 android:layout_marginStart="34dp"
                 android:layout_marginTop="702dp"
+                android:layout_marginEnd="34dp"
+                android:background="@null"
+                android:hint="여성"
+                android:textSize="12sp"
+                android:textColorHint="#A1A9AD"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"  />
 
             <!-- 성별 입력줄 -->
             <View
@@ -373,6 +452,32 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
+    <!-- 회원정보 수정하고나서 뜨는 창 -->
+    <ImageView
+        android:id="@+id/registerBox"
+        android:layout_width="230dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_community_register_box"
+        android:layout_marginBottom="87dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 회원정보가 수정되었습니다 -->
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원정보가 수정되었습니다"
+        android:textSize="10dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@id/registerBox"
+        app:layout_constraintStart_toStartOf="@id/registerBox"
+        app:layout_constraintTop_toTopOf="@id/registerBox"
+        app:layout_constraintBottom_toBottomOf="@id/registerBox"
+        android:visibility="gone"/>
+
     <!-- 수정하기 하얀 사각형 배경 -->
     <ImageView
         android:id="@+id/buyFixBar"
@@ -384,15 +489,21 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- 수정하기 버튼 -->
-    <ImageView
+    <Button
         android:id="@+id/buyFixButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_personal_information_button"
-        android:layout_marginBottom="20dp"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:text="수정하기"
+        android:textSize="15dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_coupon3_receive"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

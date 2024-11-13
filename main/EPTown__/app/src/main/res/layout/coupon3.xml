@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 상태바 아래 하얀 사각형 배경 -->
+    <ImageView
+        android:id="@+id/getCouponFixBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 왼쪽 뒤로가기 아이콘 -->
+    <ImageView
+        android:id="@+id/getCouponBackIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/getCouponFixBar" />
+
+    <!-- 쿠폰받기 -->
+    <TextView
+        android:id="@+id/getCoupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="쿠폰받기"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/getCouponFixBar"
+        android:layout_marginTop="16dp"/>
+
+    <!-- 쿠폰받기 아래 구분바 -->
+    <View
+        android:id="@+id/divideGetCouponFixBar"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:background="@drawable/bar_rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/getCouponFixBar" />
+
+    <!-- 첫 번째 쿠폰리스트 -->
+    <!-- 할인 퍼센트 -->
+    <TextView
+        android:id="@+id/couponDiscountOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30%"
+        android:textColor="@color/orange"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/divideGetCouponFixBar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰명 -->
+    <Button
+        android:id="@+id/receiveCouponOne"
+        android:layout_width="68dp"
+        android:layout_height="22dp"
+        android:text="쿠폰받기"
+        android:textSize="10dp"
+        android:textColor="#F59701"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_coupon3_receive1"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountOne"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 발급완료 버튼1 -->
+    <Button
+        android:id="@+id/receiveComplete"
+        android:layout_width="68dp"
+        android:layout_height="22dp"
+        android:text="발급완료"
+        android:textSize="10dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_coupon3_receive_complete"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountOne"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/couponNameOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[ 추석 선물 ] 간식 30% 쿠폰"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountOne"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰설명 -->
+    <TextView
+        android:id="@+id/couponTextOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50,000원 이상 구매 시 최대 15,000원 할인"
+        android:textColor="#9E9E9E"
+        android:textSize="13sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@id/couponNameOne"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰 구분바 -->
+    <ImageView
+        android:id="@+id/divideCouponListBarOne"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/couponTextOne"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 두 번째 쿠폰리스트 -->
+    <!-- 할인 퍼센트 -->
+    <TextView
+        android:id="@+id/couponDiscountTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25%"
+        android:textColor="@color/orange"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/divideCouponListBarOne"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰받기 버튼2 -->
+    <Button
+        android:id="@+id/receiveCouponTwo"
+        android:layout_width="68dp"
+        android:layout_height="22dp"
+        android:text="쿠폰받기"
+        android:textSize="10dp"
+        android:textColor="#F59701"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_coupon3_receive1"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountTwo"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 발급완료 버튼2 -->
+    <Button
+        android:id="@+id/receiveCompleteTwo"
+        android:layout_width="68dp"
+        android:layout_height="22dp"
+        android:text="발급완료"
+        android:textSize="10dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_coupon3_receive_complete"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountTwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 쿠폰명 -->
+    <TextView
+        android:id="@+id/couponNameTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[ 10월 할인 특별전 ] 간식 25% 쿠폰"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountTwo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰설명 -->
+    <TextView
+        android:id="@+id/couponTextTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50,000원 이상 구매 시 최대 10,000원 할인"
+        android:textColor="#9E9E9E"
+        android:textSize="13sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@id/couponNameTwo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰 구분바 -->
+    <ImageView
+        android:id="@+id/divideCouponListBarTwo"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/couponTextTwo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 세 번째 쿠폰리스트 -->
+    <!-- 할인 퍼센트 -->
+    <TextView
+        android:id="@+id/couponDiscountThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20%"
+        android:textColor="@color/orange"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/divideCouponListBarTwo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 발급완료 버튼1 -->
+    <Button
+        android:id="@+id/issueCompleteOne"
+        android:layout_width="68dp"
+        android:layout_height="22dp"
+        android:text="발급완료"
+        android:textSize="10dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_coupon3_receive_complete"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountThree"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 쿠폰명 -->
+    <TextView
+        android:id="@+id/couponNameThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[ 10월 할인 특별전 ] 간식 20% 쿠폰"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountThree"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰설명 -->
+    <TextView
+        android:id="@+id/couponTextThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50,000원 이상 구매 시 최대 8,000원 할인"
+        android:textColor="#9E9E9E"
+        android:textSize="13sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@id/couponNameThree"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰 구분바 -->
+    <ImageView
+        android:id="@+id/divideCouponListBarThree"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/couponTextThree"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 네 번째 쿠폰리스트 -->
+    <!-- 할인 퍼센트 -->
+    <TextView
+        android:id="@+id/couponDiscountFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15%"
+        android:textColor="@color/orange"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/divideCouponListBarThree"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 발급완료 버튼2 -->
+    <Button
+        android:id="@+id/issueCompleteTwo"
+        android:layout_width="68dp"
+        android:layout_height="22dp"
+        android:text="발급완료"
+        android:textSize="10dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_coupon3_receive_complete"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountFour"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 쿠폰명 -->
+    <TextView
+        android:id="@+id/couponNameFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[ 10월 할인 특별전 ] 간식 15% 쿠폰"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountFour"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰설명 -->
+    <TextView
+        android:id="@+id/couponTextFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50,000원 이상 구매 시 최대 7,000원 할인"
+        android:textColor="#9E9E9E"
+        android:textSize="13sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@id/couponNameFour"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰 구분바 -->
+    <ImageView
+        android:id="@+id/divideCouponListBarFour"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/couponTextFour"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 다섯번째 쿠폰리스트 -->
+    <!-- 할인 퍼센트 -->
+    <TextView
+        android:id="@+id/couponDiscountFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15%"
+        android:textColor="@color/orange"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/divideCouponListBarFour"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 발급완료 버튼3 -->
+    <Button
+        android:id="@+id/issueCompleteThree"
+        android:layout_width="68dp"
+        android:layout_height="22dp"
+        android:text="발급완료"
+        android:textSize="10dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_coupon3_receive_complete"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountFive"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 쿠폰명 -->
+    <TextView
+        android:id="@+id/couponNameFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[ 10월 할인 특별전 ] 간식 15% 쿠폰"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountFive"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰설명 -->
+    <TextView
+        android:id="@+id/couponTextFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50,000원 이상 구매 시 최대 7,000원 할인"
+        android:textColor="#9E9E9E"
+        android:textSize="13sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@id/couponNameFive"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰 구분바 -->
+    <ImageView
+        android:id="@+id/divideCouponListBarFive"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/couponTextFive"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 여섯번째 쿠폰리스트 -->
+    <!-- 할인 퍼센트 -->
+    <TextView
+        android:id="@+id/couponDiscountSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15%"
+        android:textColor="@color/orange"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/divideCouponListBarFive"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 발급완료 버튼4 -->
+    <Button
+        android:id="@+id/issueCompleteFour"
+        android:layout_width="68dp"
+        android:layout_height="22dp"
+        android:text="발급완료"
+        android:textSize="10dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_coupon3_receive_complete"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountSix"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 쿠폰명 -->
+    <TextView
+        android:id="@+id/couponNameSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[ 10월 할인 특별전 ] 간식 15% 쿠폰"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountSix"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰설명 -->
+    <TextView
+        android:id="@+id/couponTextSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50,000원 이상 구매 시 최대 7,000원 할인"
+        android:textColor="#9E9E9E"
+        android:textSize="13sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@id/couponNameSix"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰 구분바 -->
+    <ImageView
+        android:id="@+id/divideCouponListBarSix"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/couponTextSix"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰을 받고나서 뜨는 창 -->
+    <ImageView
+        android:id="@+id/registerBox"
+        android:layout_width="230dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_community_register_box"
+        android:layout_marginBottom="87dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 쿠폰을 받았어요 -->
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="쿠폰을 받았어요"
+        android:textSize="10dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@id/registerBox"
+        app:layout_constraintStart_toStartOf="@id/registerBox"
+        app:layout_constraintTop_toTopOf="@id/registerBox"
+        app:layout_constraintBottom_toBottomOf="@id/registerBox"
+        android:visibility="gone"/>
+
+    <!-- 취소/등록 하얀 사각형 배경 -->
+    <ImageView
+        android:id="@+id/buyBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_buy_fix"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 구매하기 버튼 -->
+    <Button
+        android:id="@+id/buyFixButton"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:text="쿠폰받기"
+        android:textSize="15dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_coupon3_receive"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

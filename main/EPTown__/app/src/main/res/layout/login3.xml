@@ -4,6 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -26,9 +27,8 @@
         android:text="회원가입"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@id/btnLoginBack"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -45,17 +45,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <!-- 우편번호 입력칸 -->
-    <TextView
+    <EditText
         android:id="@+id/zipCodeSpaces"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="우편번호 입력"
-        android:textSize="12sp"
-        android:textColor="#A1A9AD"
-        android:layout_marginStart="34dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="164dp"
+        android:layout_marginEnd="120dp"
+        android:background="@null"
+        android:backgroundTint="#A1A9AD"
+        android:hint="우편번호 입력"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -72,27 +73,47 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <!-- 우편번호 찾기 -->
-    <ImageView
+    <!-- 우편번호 찾기 버튼 -->
+    <Button
         android:id="@+id/verificationTransmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="28dp"
+        android:text="우편번호 찾기"
+        android:textSize="10dp"
+        android:textColor="#A1A9AD"
         android:layout_marginTop="164dp"
         android:layout_marginEnd="20dp"
-        android:src="@drawable/btn_login_zip_code"
+        android:background="@drawable/btn_login3_zip_code"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- 우편번호 찾기 버튼 -->
+    <Button
+        android:id="@+id/verificationTransmitTwo"
+        android:layout_width="80dp"
+        android:layout_height="28dp"
+        android:text="우편번호 찾기"
+        android:textSize="10dp"
+        android:textColor="#FFFF"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_login3_zip_code_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
     <!-- 주소 입력칸 -->
-    <TextView
+    <EditText
         android:id="@+id/addressSpaces"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="주소 입력"
-        android:textSize="12sp"
-        android:textColor="#A1A9AD"
-        android:layout_marginStart="34dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="226dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        android:backgroundTint="#A1A9AD"
+        android:hint="주소 입력"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -109,15 +130,17 @@
         tools:ignore="MissingConstraints" />
 
     <!-- 상세주소 입력칸 -->
-    <TextView
+    <EditText
         android:id="@+id/addressDetailSpaces"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="상세주소 입력"
-        android:textSize="12sp"
-        android:textColor="#A1A9AD"
-        android:layout_marginStart="34dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="286dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        android:backgroundTint="#A1A9AD"
+        android:hint="상세주소 입력"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -134,15 +157,17 @@
         tools:ignore="MissingConstraints" />
 
     <!-- 전화번호 입력칸 -->
-    <TextView
+    <EditText
         android:id="@+id/phoneNumberSpaces"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="전화번호 입력"
-        android:textSize="12sp"
-        android:textColor="#A1A9AD"
-        android:layout_marginStart="34dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="348dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        android:backgroundTint="#A1A9AD"
+        android:hint="전화번호 입력"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -159,15 +184,17 @@
         tools:ignore="MissingConstraints" />
 
     <!-- 생년월일 입력칸 -->
-    <TextView
+    <EditText
         android:id="@+id/birthdayDateSpaces"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="생년월일"
-        android:textSize="12sp"
-        android:textColor="#A1A9AD"
-        android:layout_marginStart="34dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="410dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        android:backgroundTint="#A1A9AD"
+        android:hint="생년월일"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -184,15 +211,17 @@
         tools:ignore="MissingConstraints" />
 
     <!-- 성별 선택 입력칸 -->
-    <TextView
+    <EditText
         android:id="@+id/genderSelectSpaces"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="성별 선택"
-        android:textSize="12sp"
-        android:textColor="#A1A9AD"
-        android:layout_marginStart="34dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="472dp"
+        android:layout_marginEnd="30dp"
+        android:background="@null"
+        android:backgroundTint="#A1A9AD"
+        android:hint="성별 선택"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -220,15 +249,38 @@
         tools:ignore="MissingConstraints" />
 
     <!-- 회원가입 버튼 -->
-    <ImageView
+    <Button
         android:id="@+id/btnJoin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/btn_login_join"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:text="회원가입"
+        android:textSize="13dp"
+        android:textColor="#A1A9AD"
+        android:textStyle="bold"
         android:layout_marginTop="60dp"
+        android:background="@drawable/btn_login1"
         app:layout_constraintTop_toBottomOf="@id/genderSelectBar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnJoinTwo"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:text="회원가입"
+        android:textSize="13dp"
+        android:textColor="#FFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn_login3_join"
+        app:layout_constraintTop_toBottomOf="@id/genderSelectBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+
+
+
 
 
 
