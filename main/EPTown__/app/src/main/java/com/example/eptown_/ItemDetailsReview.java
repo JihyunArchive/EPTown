@@ -1,103 +1,25 @@
 package com.example.eptown_;
 
-import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Paint;
+import android.graphics.Paint; // Paint 임포트 추가
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
+import android.widget.Button; // Button 임포트 추가
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.view.Window;
+import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ItemDetailsReview extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.item_details_review);
-
-        // 뒤로가기 눌렀을때 메인으로 화면 이동
-        ImageView image = (ImageView) findViewById(R.id.itemDetailsBackIcon);
-        image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ItemDetailsReview.this,MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // 홈 아이콘 눌렀을때 메인으로 화면 이동
-        ImageView image1 = (ImageView) findViewById(R.id.homeIcon);
-        image1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ItemDetailsReview.this,MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // 알림 아이콘 눌렀을때 알림으로 화면 이동
-        ImageView image2 = (ImageView) findViewById(R.id.reminderIcon);
-        image2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ItemDetailsReview.this,NoticeActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // 장바구니 눌렀을때 메인으로 화면 이동
-        ImageView image3 = (ImageView) findViewById(R.id.cartIcon);
-        image3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ItemDetailsReview.this,CartActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // 구매하기 눌렀을때 주문/결제으로 화면 이동
-        ImageView image4 = (ImageView) findViewById(R.id.buyFixButton);
-        image4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ItemDetailsReview.this,OrderPayActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        //문의 눌렀을때 디테일 문의로 화면 이동
-        TextView textDetails1 = findViewById(R.id.itemInquiryTabText);
-        textDetails1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ItemDetailsReview.this, ItemDetailsInquiry.class);
-                startActivity(intent);
-            }
-        });
-
-        //상품정보 눌렀을때 디테일 상품정보로 화면 이동
-        TextView textDetails2 = findViewById(R.id.itemInfoTabText);
-        textDetails2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ItemDetailsReview.this, ItemDetails.class);
-                startActivity(intent);
-            }
-        });
-
-        // 쿠폰받기눌렀을때 디테일 쿠폰으로 화면 이동
-        ImageView image5 = (ImageView) findViewById(R.id.getCoupon);
-        image5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ItemDetailsReview.this, ItemDetailsCoupon.class);
-                startActivity(intent);
-            }
-        });
 
         // 상태바 및 네비게이션 바 배경을 흰색으로, 아이콘 색상을 검정으로 설정 (API 21 이상)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -122,5 +44,53 @@ public class ItemDetailsReview extends AppCompatActivity {
         // ItemCostPrice에 취소선 적용
         TextView ItemCostPriceTextView = findViewById(R.id.itemCostPrice);
         ItemCostPriceTextView.setPaintFlags(ItemCostPriceTextView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+        // 필터 아이콘 클릭 리스너 추가
+        ImageButton choiceIcon = findViewById(R.id.choiceIcon);
+        choiceIcon.setOnClickListener(view -> {
+            // 필터 관련 UI 요소들을 보여주기
+            ImageView changeBox = findViewById(R.id.changeBox);
+            ImageView grayStick = findViewById(R.id.grayStick);
+            TextView reviewText = findViewById(R.id.reviewText);
+            TextView theLatest = findViewById(R.id.theLatest);
+            TextView reviewHighest = findViewById(R.id.reviewHighest);
+            TextView reviewLowerest = findViewById(R.id.reviewLowerest);
+
+            // 필터 관련 UI 요소들을 VISIBLE로 설정
+            changeBox.setVisibility(View.VISIBLE);
+            grayStick.setVisibility(View.VISIBLE);
+            reviewText.setVisibility(View.VISIBLE);
+            theLatest.setVisibility(View.VISIBLE);
+            reviewHighest.setVisibility(View.VISIBLE);
+            reviewLowerest.setVisibility(View.VISIBLE);
+
+            // '구매하기' 하얀 사각형 배경과 '구매하기' 버튼을 GONE으로 설정하여 숨김
+            ImageView buyFixBar = findViewById(R.id.buyFixBar);
+            Button buyFixButton = findViewById(R.id.buyFixButton);
+
+            buyFixBar.setVisibility(View.GONE);
+            buyFixButton.setVisibility(View.GONE);
+        });
+
+        // '평점 높은 순' 클릭 리스너 추가
+        TextView reviewHighestText = findViewById(R.id.reviewHighest);
+        reviewHighestText.setOnClickListener(view -> {
+            // '평점 높은 순' 글자색을 오렌지색으로 변경
+            reviewHighestText.setTextColor(Color.parseColor("#F59701"));
+        });
+
+        // '평점 낮은 순' 클릭 리스너 추가
+        TextView reviewLowerestText = findViewById(R.id.reviewLowerest);
+        reviewLowerestText.setOnClickListener(view -> {
+            // '평점 높은 순' 글자색을 오렌지색으로 변경
+            reviewLowerestText.setTextColor(Color.parseColor("#F59701"));
+        });
+
+        // '최신 순' 클릭 리스너 추가
+        TextView theLatestText = findViewById(R.id.theLatest);
+        theLatestText.setOnClickListener(view -> {
+            // '평점 높은 순' 글자색을 오렌지색으로 변경
+            theLatestText.setTextColor(Color.parseColor("#F59701"));
+        });
     }
 }

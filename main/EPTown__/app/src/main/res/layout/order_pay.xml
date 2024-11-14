@@ -260,18 +260,17 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <!-- 배송지 수정 화살표 -->
-            <ImageView
+            <ImageButton
                 android:id="@+id/rightArrowOne"
                 android:layout_width="7dp"
                 android:layout_height="12dp"
                 android:layout_marginStart="356dp"
                 android:layout_marginTop="375dp"
                 android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_right_arrow"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@id/deliveryAddress"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_right_arrow" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
 
             <!-- 고객 이름 -->
@@ -352,32 +351,30 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <!-- 배송시 요청사항 -->
-            <TextView
+            <EditText
                 android:id="@+id/request"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
+                android:layout_marginStart="45dp"
                 android:layout_marginTop="520dp"
-                android:text="배송 시 요청사항을 선택해주세요"
-                android:textColor="#AFAFAF"
+                android:layout_marginEnd="120dp"
+                android:background="@null"
+                android:hint="배송 시 요청사항을 선택해주세요"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                android:textColorHint="#AFAFAF"
                 app:layout_constraintStart_toStartOf="@id/rectBoxOne"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <!-- 배송시 요청사항 선택 화살표 -->
-            <ImageView
+            <ImageButton
                 android:id="@+id/underArrow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="7dp"
+                android:layout_height="6dp"
                 android:layout_marginStart="295dp"
                 android:layout_marginTop="525dp"
+                android:src="@drawable/ic_under_arrow"
                 app:layout_constraintStart_toStartOf="@id/rectBoxOne"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_under_arrow" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <!-- 배송지.할인 사이 수평선 -->
             <View
@@ -440,18 +437,18 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <!-- 적용하려는 쿠폰 선택 화살표 -->
-            <ImageView
+            <ImageButton
                 android:id="@+id/rightArrowTwo"
                 android:layout_width="7dp"
                 android:layout_height="12dp"
                 android:layout_marginStart="336dp"
                 android:layout_marginTop="653dp"
                 android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_right_arrow"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@id/coupon"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_right_arrow" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
 
             <!-- 할인.주문자 정보 사이 수평선 -->
@@ -510,20 +507,18 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <!-- 주문자 정보 이름 적기 -->
-            <TextView
+            <EditText
                 android:id="@+id/userName"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="65dp"
+                android:layout_marginStart="85dp"
                 android:layout_marginTop="779dp"
+                android:layout_marginEnd="35dp"
+                android:background="@null"
                 android:text="오지현"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@id/nameTitle"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <!-- 주문자 정보 이메일 -->
             <TextView
@@ -553,20 +548,18 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <!-- 주문자 정보 이메일 적기 -->
-            <TextView
+            <EditText
                 android:id="@+id/userEmail"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="65dp"
+                android:layout_marginStart="85dp"
                 android:layout_marginTop="822dp"
+                android:layout_marginEnd="35dp"
+                android:background="@null"
                 android:text="ojhyeon930@naver.com"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@id/email"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintStart_toStartOf="@id/nameTitle"
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <!-- 주문자 정보 전화번호 -->
             <TextView
@@ -596,20 +589,18 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <!-- 주문자 정보 전화번호 적기 -->
-            <TextView
+            <EditText
                 android:id="@+id/userNumber"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="65dp"
+                android:layout_marginStart="85dp"
                 android:layout_marginTop="865dp"
+                android:layout_marginEnd="35dp"
+                android:background="@null"
                 android:text="010-9198-1675"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@id/numberTitle"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <!-- 주문자 정보.결제 수단 사이 수평선 -->
             <View
@@ -640,7 +631,7 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <!-- 신용/체크카드 선택 박스 -->
-            <View
+            <ImageButton
                 android:id="@+id/circleOne"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -648,7 +639,7 @@
                 android:layout_marginTop="993dp"
                 android:background="@drawable/ic_circle"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <!-- 신용/체크카드 -->
             <TextView
@@ -667,7 +658,7 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <!-- 무통장 입금 선택 박스1 -->
-            <View
+            <ImageButton
                 android:id="@+id/circleTwo"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -675,7 +666,7 @@
                 android:layout_marginTop="1026dp"
                 android:background="@drawable/ic_circle"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <!-- 무통장 입금 -->
             <TextView
@@ -883,7 +874,7 @@
                 tools:ignore="MissingConstraints" />
 
             <!-- 주문 내용 확인 및 결제 동의서 체크 박스 -->
-            <View
+            <ImageButton
                 android:id="@+id/circleThree"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -891,7 +882,7 @@
                 android:layout_marginTop="1343dp"
                 android:background="@drawable/ic_circle"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <!-- 주문내용 확인 및 결제 동의 -->
             <TextView
@@ -910,7 +901,7 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <!-- 첫번째 동의 체크 -->
-            <View
+            <ImageButton
                 android:id="@+id/checkOne"
                 android:layout_width="11dp"
                 android:layout_height="13dp"
@@ -938,7 +929,7 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <!-- 두번째 동의 체크 -->
-            <View
+            <ImageButton
                 android:id="@+id/checkTwo"
                 android:layout_width="11dp"
                 android:layout_height="13dp"
@@ -966,12 +957,11 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <!-- 세번째 동의 체크 -->
-            <View
+            <ImageButton
                 android:id="@+id/checkThree"
                 android:layout_width="11dp"
                 android:layout_height="13dp"
                 android:layout_marginStart="25dp"
-                android:layout_marginTop="1423dp"
                 android:background="@drawable/ic_check"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -993,23 +983,33 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
 
-            <!-- 구매하기 버튼 -->
-            <android.widget.Button
-                android:layout_width="320dp"
-                android:layout_height="46dp"
-                android:layout_marginStart="45dp"
-                android:layout_marginTop="1493dp"
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/ic_button"
-                android:text="구매하기"
-                android:textColor="#8A8A8E"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <!-- 구매하기 하얀 사각형 배경 -->
+    <ImageView
+        android:id="@+id/buyFixBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_buy_fix"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 구매하기 버튼 -->
+    <Button
+        android:id="@+id/buyFixButton"
+        android:layout_width="320dp"
+        android:layout_height="46dp"
+        android:text="구매하기"
+        android:textSize="15dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_coupon3_receive"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

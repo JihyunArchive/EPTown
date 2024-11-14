@@ -46,20 +46,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 인기상품 검색 -->
-    <TextView
+    <EditText
         android:id="@+id/popularProductSearch"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="95dp"
-        android:layout_marginTop="26dp"
-        android:text="인기 상품 검색"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="80dp"
+        android:background="@null"
+        android:backgroundTint="#8A8A8E"
+        android:hint="인기 상품 검색"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 검색 아이콘 -->
     <ImageView

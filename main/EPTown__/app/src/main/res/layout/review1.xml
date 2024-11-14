@@ -501,12 +501,16 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- 구매하기 버튼 -->
-    <ImageView
+    <Button
         android:id="@+id/buyFixButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_buy_button"
+        android:layout_width="320dp"
+        android:layout_height="46dp"
+        android:text="구매하기"
+        android:textSize="15dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_coupon3_receive"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

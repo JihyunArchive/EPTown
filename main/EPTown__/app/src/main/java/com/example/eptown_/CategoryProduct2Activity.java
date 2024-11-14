@@ -58,26 +58,6 @@ public class CategoryProduct2Activity extends AppCompatActivity {
             }
         });
 
-        //상품 이름1 눌렀을때 아이템 디테일로 화면 이동
-        TextView textFeed4 = findViewById(R.id.firstNameOne);
-        textFeed4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CategoryProduct2Activity.this, ItemDetails.class);
-                startActivity(intent);
-            }
-        });
-
-        //상품 이름2 눌렀을때 아이템 디테일로 화면 이동
-        TextView textFeed5 = findViewById(R.id.firstNameTwo);
-        textFeed5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CategoryProduct2Activity.this, ItemDetails.class);
-                startActivity(intent);
-            }
-        });
-
         // 탭바에서 홈 아이콘 눌렀을때 메인으로 화면 이동
         ImageView image1 = (ImageView) findViewById(R.id.nowTapHomeIconCategoryProduct2);
         image1.setOnClickListener(new View.OnClickListener() {
@@ -144,16 +124,6 @@ public class CategoryProduct2Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategoryProduct2Activity.this,CartActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // 상품 이미지 눌렀을때 아이템 디테일로 화면 이동
-        ImageView image8 = (ImageView) findViewById(R.id.firstImage);
-        image8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CategoryProduct2Activity.this,ItemDetails.class);
                 startActivity(intent);
             }
         });

@@ -328,17 +328,18 @@
     </ScrollView>
 
     <!-- 글쓰기 아이콘 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/writing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="678dp"
         android:layout_marginEnd="20dp"
         android:src="@drawable/ic_writing"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <!-- 탭바 배경 하얀색 사각형 -->
     <ImageView
@@ -525,5 +526,149 @@
         android:layout_marginTop="2.5dp"
         app:layout_constraintStart_toStartOf="@id/mypageRectangleBar"
         app:layout_constraintTop_toBottomOf="@id/tapMypageIconCommunity" />
+
+    <!-- 화면 회색으로 만들기 -->
+    <View
+        android:id="@+id/grayScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <!-- 삭제 상자 -->
+    <LinearLayout
+        android:id="@+id/deleteBoxTwo"
+        android:layout_width="280dp"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        android:background="@drawable/ic_community_delte_box"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 신고 -->
+    <TextView
+        android:id="@+id/declare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="신고"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="@id/deleteBoxTwo"
+        app:layout_constraintStart_toStartOf="@id/deleteBoxTwo"
+        app:layout_constraintEnd_toEndOf="@id/deleteBoxTwo"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <!-- 선택지1 -->
+    <TextView
+        android:id="@+id/choiceOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="음란물 / 불건전한 만남 및 대화"
+        android:textSize="14sp"
+        android:layout_marginTop="63dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@id/deleteBoxTwo"
+        app:layout_constraintStart_toStartOf="@id/deleteBoxTwo"
+        android:visibility="gone"/>
+
+    <!-- 선택지2 -->
+    <TextView
+        android:id="@+id/choiceTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="욕설 / 비하"
+        android:textSize="14sp"
+        android:layout_marginTop="92dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@id/deleteBoxTwo"
+        app:layout_constraintStart_toStartOf="@id/deleteBoxTwo"
+        android:visibility="gone"/>
+
+    <!-- 선택지3 -->
+    <TextView
+        android:id="@+id/choiceThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상업적 광고 및 판매"
+        android:textSize="14sp"
+        android:layout_marginTop="121dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@id/deleteBoxTwo"
+        app:layout_constraintStart_toStartOf="@id/deleteBoxTwo"
+        android:visibility="gone"/>
+
+    <!-- 선택지4 -->
+    <TextView
+        android:id="@+id/choiceFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기타"
+        android:textSize="14sp"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@id/deleteBoxTwo"
+        app:layout_constraintStart_toStartOf="@id/deleteBoxTwo"
+        android:visibility="gone"/>
+
+    <!-- 취소버튼 -->
+    <Button
+        android:id="@+id/cancelTwo"
+        android:layout_width="105dp"
+        android:layout_height="25dp"
+        android:text="취소"
+        android:textSize="11dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/btn_my_page_cancel"
+        app:layout_constraintBottom_toBottomOf="@id/deleteBoxTwo"
+        app:layout_constraintStart_toStartOf="@id/deleteBoxTwo"
+        android:visibility="gone"/>
+
+    <!-- 확인버튼 -->
+    <Button
+        android:id="@+id/checkTwo"
+        android:layout_width="105dp"
+        android:layout_height="25dp"
+        android:text="확인"
+        android:textSize="11dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/btn_my_page_check"
+        app:layout_constraintBottom_toBottomOf="@id/deleteBoxTwo"
+        app:layout_constraintEnd_toEndOf="@id/deleteBoxTwo"
+        android:visibility="gone"/>
+
+    <!-- 신고하고나서 뜨는 창 -->
+    <LinearLayout
+        android:id="@+id/registerBox"
+        android:layout_width="170dp"
+        android:layout_height="30dp"
+        android:orientation="vertical"
+        android:background="@drawable/ic_community_register_box"
+        android:layout_marginBottom="131dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 신고되었습니다 -->
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="139dp"
+        android:text="신고되었습니다."
+        android:textSize="10dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@id/registerBox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

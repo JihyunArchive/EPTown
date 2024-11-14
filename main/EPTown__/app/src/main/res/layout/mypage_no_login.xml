@@ -522,6 +522,7 @@
         app:layout_constraintStart_toStartOf="@id/mypageRectangleBar"
         app:layout_constraintTop_toBottomOf="@id/tapMypageIcon" />
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

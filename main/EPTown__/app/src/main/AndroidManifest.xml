@@ -13,7 +13,7 @@
         android:theme="@style/Theme.EPTown_"
         tools:targetApi="31">
 
-<!--        &lt;!&ndash; 스플래시 스크린 액티비티에 전용 테마 적용 &ndash;&gt;
+        <!-- 스플래시 스크린 액티비티에 전용 테마 적용 -->
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -22,48 +22,21 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>-->
+        </activity>
 
         <!-- 로그인 -->
         <activity
             android:name=".Login"
-            android:exported="true"/>
-
-        <!-- 회원가입 -->
-        <activity
-            android:name=".login1Activity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".login3Activity"
-            android:exported="true"/>
+            android:exported="true" />
 
         <!-- 메인화면 -->
         <activity
             android:name=".MainActivity"
             android:exported="true" />
 
-        <!-- 상품 상세 / 상품 정보-->
-        <activity
-            android:name=".ItemDetails"
-            android:exported="true" />
-
         <!-- 상품 상세 / 리뷰 -->
         <activity
             android:name=".ItemDetailsReview"
-            android:exported="true" />
-
-        <!-- 상품 상세 / 문의 -->
-        <activity
-            android:name=".ItemDetailsInquiry"
-            android:exported="true" />
-
-        <!-- 상품 상세 / 쿠폰 -->
-        <activity
-            android:name=".ItemDetailsCoupon"
             android:exported="true" />
 
         <!-- 내정보 -->
@@ -228,22 +201,6 @@
             android:exported="true"/>
 
         <activity
-            android:name=".community_commentActivity"
-            android:exported="true"/>
-
-        <activity
-            android:name=".community_declareActivity"
-            android:exported="true"/>
-
-        <activity
-            android:name=".community_declare_completeActivity"
-            android:exported="true"/>
-
-        <activity
-            android:name=".community_registerActivity"
-            android:exported="true"/>
-
-        <activity
             android:name=".coupon1Activity"
             android:exported="true"/>
 
@@ -319,16 +276,12 @@
             android:name=".inquire13Activity"
             android:exported="true"/>
 
-<!--        <activity-->
-<!--            android:name=".login1Activity"-->
-<!--            android:exported="true"/>-->
-
-<!--        <activity-->
-<!--            android:name=".login3Activity"-->
-<!--            android:exported="true"/>-->
+        <activity
+            android:name=".login1Activity"
+            android:exported="true"/>
 
         <activity
-            android:name=".my_page1Activity"
+            android:name=".login3Activity"
             android:exported="true"/>
 
         <activity
@@ -409,10 +362,6 @@
 
         <activity
             android:name=".review5Activity"
-            android:exported="true"/>
-
-        <activity
-            android:name=".review6Activity"
             android:exported="true"/>
 
         <activity

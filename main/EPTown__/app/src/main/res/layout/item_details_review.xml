@@ -457,14 +457,16 @@
                 android:includeFontPadding="false" />
 
             <!-- 오른쪽 필터 선택 아이콘 -->
-            <ImageView
+            <ImageButton
                 android:id="@+id/choiceIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="38dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="30dp"
                 android:src="@drawable/ic_under_arrow"
+                android:background="?attr/selectableItemBackgroundBorderless"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintTop_toBottomOf="@id/itemInfoReviewInquiryBar" />
 
 
@@ -530,5 +532,99 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 수량변경 하얀 사각형 배경 -->
+    <ImageView
+        android:id="@+id/changeBox"
+        android:layout_width="match_parent"
+        android:layout_height="207dp"
+        android:src="@drawable/ic_cart_box"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 수량변경 하얀 회색 막대 -->
+    <ImageView
+        android:id="@+id/grayStick"
+        android:layout_width="60dp"
+        android:layout_height="5dp"
+        android:src="@drawable/ic_cart_gray"
+        android:layout_marginTop="22dp"
+        app:layout_constraintTop_toTopOf="@id/changeBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 리뷰필터 -->
+    <TextView
+        android:id="@+id/reviewText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="리뷰필터"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="44dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@id/changeBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:includeFontPadding="false"
+        android:visibility="gone"/>
+
+    <!-- 최신순 -->
+    <TextView
+        android:id="@+id/theLatest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="최신순"
+        android:textSize="14sp"
+        android:layout_marginTop="83dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@id/changeBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:includeFontPadding="false"
+        android:visibility="gone"/>
+
+    <!-- 평점 높은 순 -->
+    <TextView
+        android:id="@+id/reviewHighest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="평점 높은 순"
+        android:textSize="14sp"
+        android:layout_marginTop="123dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@id/changeBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:includeFontPadding="false"
+        android:visibility="gone"/>
+
+    <!-- 평점 높은 순 체크 -->
+    <ImageView
+        android:id="@+id/checkColor"
+        android:layout_width="11dp"
+        android:layout_height="13dp"
+        android:src="@drawable/ic_community_check_color"
+        android:layout_marginTop="123dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="#F59701"
+        app:layout_constraintTop_toTopOf="@id/changeBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 평점 낮은 순 -->
+    <TextView
+        android:id="@+id/reviewLowerest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="평점 낮은 순"
+        android:textSize="14sp"
+        android:layout_marginTop="163dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@id/changeBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:includeFontPadding="false"
+        android:visibility="gone"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -468,6 +468,7 @@
                 android:layout_height="wrap_content"
                 android:text="리뷰필터"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 android:layout_marginTop="44dp"
                 android:layout_marginStart="30dp"
                 app:layout_constraintTop_toTopOf="@id/changeBox"

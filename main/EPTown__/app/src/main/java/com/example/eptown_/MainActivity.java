@@ -145,26 +145,6 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, SearchActivity.class);
             startActivity(intent);
         });
-
-        // 상품 이미지 눌렀을때 아이템 디테일로 화면 이동
-        ImageView image9 = (ImageView) findViewById(R.id.firstImage);
-        image9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,ItemDetails.class);
-                startActivity(intent);
-            }
-        });
-
-        //상품 이름1 눌렀을때 아이템 디테일로 화면 이동
-        TextView textFeed4 = findViewById(R.id.productName);
-        textFeed4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ItemDetails.class);
-                startActivity(intent);
-            }
-        });
     }
 
     private void updateBannerOrderText() {
