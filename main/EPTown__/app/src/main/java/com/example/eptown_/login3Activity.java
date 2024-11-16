@@ -29,12 +29,12 @@ public class login3Activity extends AppCompatActivity {
         });
 
         // 우편번호 입력란과 버튼 참조
-        EditText zipCodeSpaces = findViewById(R.id.zipCodeSpaces);
+        EditText zipCodeInput = findViewById(R.id.zipCodeInput);
         Button verificationTransmit = findViewById(R.id.verificationTransmit);  // 기본 우편번호 찾기 버튼
         Button verificationTransmitTwo = findViewById(R.id.verificationTransmitTwo);  // 활성화된 우편번호 찾기 버튼
 
         // zipCodeSpaces 입력란에 텍스트가 변경될 때마다 버튼의 가시성 변경
-        zipCodeSpaces.addTextChangedListener(new TextWatcher() {
+        zipCodeInput.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
@@ -56,13 +56,13 @@ public class login3Activity extends AppCompatActivity {
         });
 
         // 성별 입력란과 회원가입 버튼 참조
-        EditText genderSelectInput = findViewById(R.id.genderSelectSpaces);
+        EditText genderSelectInput = findViewById(R.id.genderSelectInput);
         Button btnJoin = findViewById(R.id.btnJoin);  // 기본 회원가입 버튼
 
         // 나머지 EditText 글씨만 표시
-        EditText addressInput = findViewById(R.id.addressSpaces);
-        EditText addressDetailInput = findViewById(R.id.addressDetailSpaces);
-        EditText phoneInput = findViewById(R.id.phoneNumberSpaces);
-        EditText birthdayInput = findViewById(R.id.birthdayDateSpaces);
+        EditText addressInput = findViewById(R.id.addressInput);
+        EditText addressDetailInput = findViewById(R.id.addressDetailInput);
+        EditText phoneNumberInput = findViewById(R.id.phoneNumberInput);
+        EditText birthdayDateInput = findViewById(R.id.birthdayDateInput);
     }
 }

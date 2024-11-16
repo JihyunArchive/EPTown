@@ -366,18 +366,18 @@
                 app:layout_constraintTop_toTopOf="@id/secondHorizon"/>
 
             <!-- 배송지 수정 화살표 -->
-            <ImageView
+
+            <ImageButton
                 android:id="@+id/rightArrowOne"
                 android:layout_width="7dp"
                 android:layout_height="12dp"
                 android:layout_marginStart="356dp"
                 android:layout_marginTop="42dp"
                 android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_right_arrow"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/secondHorizon"
-                app:srcCompat="@drawable/ic_right_arrow" />
+                app:layout_constraintTop_toTopOf="@id/secondHorizon"/>
 
             <!-- 주문상품.상품 사이 수평선 -->
             <View

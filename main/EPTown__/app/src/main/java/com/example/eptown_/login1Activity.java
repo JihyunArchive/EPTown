@@ -21,6 +21,12 @@ public class login1Activity extends AppCompatActivity {
             EdgeToEdge.enable(this);
             setContentView(R.layout.login1);
 
+
+            EditText nameInput = findViewById(R.id.nameInput);
+            EditText idInput = findViewById(R.id.idInput);
+            EditText passwordInput = findViewById(R.id.passwordInput);
+            EditText passwordCheckInput = findViewById(R.id.passwordCheckInput);
+
             Button button = (Button) findViewById(R.id.btnContinueColorButton);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override

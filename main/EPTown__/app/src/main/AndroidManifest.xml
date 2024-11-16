@@ -177,27 +177,7 @@
             android:exported="true"/>
 
         <activity
-            android:name=".community3Activity"
-            android:exported="true"/>
-
-        <activity
-            android:name=".community4Activity"
-            android:exported="true"/>
-
-        <activity
-            android:name=".community5Activity"
-            android:exported="true"/>
-
-        <activity
-            android:name=".community6Activity"
-            android:exported="true"/>
-
-        <activity
             android:name=".community8Activity"
-            android:exported="true"/>
-
-        <activity
-            android:name=".community9Activity"
             android:exported="true"/>
 
         <activity
@@ -302,18 +282,6 @@
 
         <activity
             android:name=".order_details2Activity"
-            android:exported="true"/>
-
-        <activity
-            android:name=".order_pay2Activity"
-            android:exported="true"/>
-
-        <activity
-            android:name=".order_pay3Activity"
-            android:exported="true"/>
-
-        <activity
-            android:name=".order_pay4Activity"
             android:exported="true"/>
 
         <activity

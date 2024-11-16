@@ -35,16 +35,6 @@ public class CartActivity extends AppCompatActivity {
             }
         });
 
-        // 구매하기 버튼 눌렀을때 주문/결제로 화면 이동
-        ImageView image7__ = (ImageView) findViewById(R.id.buyButton);
-        image7__.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CartActivity.this, OrderPayActivity.class);
-                startActivity(intent);
-            }
-        });
-
     }
 
 }
