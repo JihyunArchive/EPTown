@@ -56,6 +56,7 @@
         android:background="@null"
         android:backgroundTint="#A1A9AD"
         android:hint="우편번호 입력"
+        android:inputType="number"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -113,6 +114,7 @@
         android:background="@null"
         android:backgroundTint="#A1A9AD"
         android:hint="주소 입력"
+        android:inputType="textPostalAddress"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -140,6 +142,7 @@
         android:background="@null"
         android:backgroundTint="#A1A9AD"
         android:hint="상세주소 입력"
+        android:inputType="textPostalAddress"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -167,6 +170,7 @@
         android:background="@null"
         android:backgroundTint="#A1A9AD"
         android:hint="전화번호 입력"
+        android:inputType="phone"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -194,6 +198,7 @@
         android:background="@null"
         android:backgroundTint="#A1A9AD"
         android:hint="생년월일"
+        android:inputType="date"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -221,6 +226,7 @@
         android:background="@null"
         android:backgroundTint="#A1A9AD"
         android:hint="성별 선택"
+        android:inputType="text"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -251,7 +257,7 @@
     <!-- 회원가입 버튼 -->
     <Button
         android:id="@+id/btnJoin"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="50dp"
         android:text="회원가입"
         android:textSize="13dp"

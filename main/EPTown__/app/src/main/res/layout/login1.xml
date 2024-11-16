@@ -63,6 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="이름 입력"
+        android:inputType="textPersonName"
         android:textSize="12sp"
         android:layout_marginStart="34dp"
         android:layout_marginTop="188dp"
@@ -86,10 +87,11 @@
 
     <!-- 아이디 입력칸 -->
     <EditText
-        android:id="@+id/idInput"
+        android:id="@+id/emailInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="아이디 입력"
+        android:hint="example@example.com"
+        android:inputType="textEmailAddress"
         android:textSize="12sp"
         android:layout_marginStart="34dp"
         android:layout_marginTop="248dp"
@@ -116,7 +118,8 @@
         android:id="@+id/passwordInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="비밀번호 입력"
+        android:hint="대소문자, 숫자, 특수문자가 포함된 8~15자리"
+        android:inputType="textPassword"
         android:textSize="12sp"
         android:layout_marginStart="34dp"
         android:layout_marginTop="308dp"
@@ -144,6 +147,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="비밀번호 확인 입력"
+        android:inputType="textPassword"
         android:textSize="12sp"
         android:layout_marginStart="34dp"
         android:layout_marginTop="368dp"
@@ -168,7 +172,7 @@
     <!-- 계속하기 버튼-->
     <Button
         android:id="@+id/btnContinueColorButton"
-        android:layout_width="320dp"
+        android:layout_width="370dp"
         android:layout_height="50dp"
         android:text="계속하기"
         android:textSize="13dp"
