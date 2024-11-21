@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 public class community8Activity extends AppCompatActivity {
 
@@ -25,16 +24,17 @@ public class community8Activity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // 확인 눌렀을때 커뮤니티로 이동
-        Button button = findViewById(R.id.check);  // Button
-        button.setOnClickListener(view -> {
-            Intent intent = new Intent(community8Activity.this, CommunityActivity.class);
-            startActivity(intent);
+        // 게시하고 확인버튼 눌렀을때 커뮤니티로 이동
+        Button button = (Button) findViewById(R.id.check);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(community8Activity.this, CommunityAddActivity.class);
+                startActivity(intent);
+            }
         });
 
         // UI 요소들 참조
-        ImageButton checkedCircle = findViewById(R.id.checkedCircle);  // ImageButton
-        TextView userName = findViewById(R.id.userName);
         ImageButton cameraButton = findViewById(R.id.camera);  // 사진 올리는 버튼
         ImageView postCatImage = findViewById(R.id.postCat);  // 게시물 고양이 사진
 
@@ -47,26 +47,6 @@ public class community8Activity extends AppCompatActivity {
 
         // 버튼 객체 선언 (이전 코드에서 button 변수 선언 누락)
         Button postButton = findViewById(R.id.btnPost);  // Button
-
-        // 초기 상태 설정: "checked" 상태로 시작
-        checkedCircle.setTag("checked");
-
-        // ImageButton 클릭 리스너 설정
-        checkedCircle.setOnClickListener(v -> {
-            // 현재 상태를 확인하고 이미지 변경
-            if ("checked".equals(checkedCircle.getTag())) {
-                checkedCircle.setImageResource(R.drawable.ic_unchecked_circle);  // ic_unchecked_circle로 변경
-                checkedCircle.setTag("unchecked");  // 상태 변경
-                // 체크되지 않은 상태일 때 익명 텍스트 표시 및 색상 변경
-                userName.setText("익명");  // 텍스트 변경
-                userName.setTextColor(ContextCompat.getColor(this, R.color.gray));  // 텍스트 색상 변경
-            } else {
-                checkedCircle.setImageResource(R.drawable.ic_checked_circle);  // ic_checked_circle로 변경
-                checkedCircle.setTag("checked");  // 상태 변경
-                // 체크된 상태일 때 익명 텍스트 숨기기 및 색상 원래대로 변경
-                userName.setTextColor(ContextCompat.getColor(this, R.color.orange));  // 색상 원래대로
-            }
-        });
 
         // 사진 올리는 버튼 클릭 리스너 설정
         cameraButton.setOnClickListener(v -> {
@@ -108,6 +88,20 @@ public class community8Activity extends AppCompatActivity {
 
             // 삭제 완료 후 UI
             // (여기서 삭제 완료 메시지나 동작을 처리하면 됩니다)
+        });
+
+        // 회색 배경 클릭 시 화면이 사라지게 하기
+        grayScreen.setOnClickListener(v -> {
+            grayScreen.setVisibility(View.GONE);
+            deleteBox.setVisibility(View.GONE);
+            deleteText.setVisibility(View.GONE);
+            cancelButton.setVisibility(View.GONE);
+            checkButton.setVisibility(View.GONE);
+        });
+
+        // deleteBox 클릭 시 화면이 사라지지 않도록 하기 위한 리스너
+        deleteBox.setOnClickListener(v -> {
+            // 아무 동작도 하지 않음, 화면 사라지지 않도록
         });
     }
 }

@@ -9,13 +9,14 @@
     android:layout_height="match_parent">
 
     <!-- 나가기 버튼 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/btnLoginBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/ic_left_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -215,30 +216,28 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <!-- 성별 선택 입력칸 -->
-    <EditText
-        android:id="@+id/genderSelectInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="472dp"
-        android:layout_marginEnd="30dp"
-        android:background="@null"
-        android:backgroundTint="#A1A9AD"
-        android:hint="성별 선택"
-        android:inputType="text"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <!-- 성별 선택 -->
-    <ImageView
-        android:id="@+id/underArrow"
+    <TextView
+        android:id="@+id/genderSelectInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="성별 선택"
+        android:textSize="12sp"
+        android:textColor="#A1A9AD"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="472dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 성별 선택 -->
+    <ImageButton
+        android:id="@+id/underArrow"
+        android:layout_width="10dp"
+        android:layout_height="16dp"
         android:layout_marginTop="474dp"
         android:layout_marginEnd="30dp"
         android:src="@drawable/ic_inquiry_under_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -254,6 +253,62 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <!-- 여성 선택 박스 -->
+    <View
+        android:id="@+id/rectBox"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/ic_rect_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/genderSelectBar"
+        android:contentDescription="여성"
+        android:visibility="gone"/>
+
+    <!-- 여성 -->
+    <TextView
+        android:id="@+id/genderChoiceOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="여성"
+        android:textSize="12sp"
+        android:textColor="#A1A9AD"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="@id/rectBox"
+        app:layout_constraintTop_toTopOf="@id/rectBox"
+        android:visibility="gone"/>
+
+    <!-- 남성 선택 박스 -->
+    <View
+        android:id="@+id/rectBoxTwo"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/ic_rect_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rectBox"
+        android:contentDescription="남성"
+        android:visibility="gone"/>
+
+    <!-- 남성 -->
+    <TextView
+        android:id="@+id/genderChoiceTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="남성"
+        android:textSize="12sp"
+        android:textColor="#A1A9AD"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="@id/rectBoxTwo"
+        app:layout_constraintTop_toTopOf="@id/rectBoxTwo"
+        android:visibility="gone"/>
+
     <!-- 회원가입 버튼 -->
     <Button
         android:id="@+id/btnJoin"
@@ -265,7 +320,7 @@
         android:textStyle="bold"
         android:layout_marginTop="60dp"
         android:background="@drawable/btn_login3_join"
-        app:layout_constraintTop_toBottomOf="@id/genderSelectBar"
+        app:layout_constraintTop_toBottomOf="@id/rectBoxTwo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 

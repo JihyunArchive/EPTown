@@ -21,13 +21,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 뒤로가기 버튼 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/btnCategoryFeed1Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="23dp"
         android:src="@drawable/ic_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -145,15 +146,16 @@
         android:includeFontPadding="false" />
 
     <!-- 오른쪽 더보기 닫기 아이콘 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/inquirySeeMoreIconOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="15dp"
         android:src="@drawable/ic_inquiry_top_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inquiryCreatedOne" />
+        app:layout_constraintTop_toBottomOf="@id/inquiryCreatedOne"/>
 
     <!-- 문의 더보기 배경 사각형 -->
     <ImageView
@@ -250,15 +252,44 @@
         android:includeFontPadding="false" />
 
     <!-- 오른쪽 더보기 열기 아이콘 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/inquirySeeMoreIconTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="15dp"
         android:src="@drawable/ic_inquiry_under_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inquiryCreatedTwo" />
+        app:layout_constraintTop_toBottomOf="@id/inquiryCreatedTwo"/>
+
+    <!-- 문의 더보기 배경 사각형 -->
+    <ImageView
+        android:id="@+id/inquirySeeMoreBarTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/bar_inquiry_see_more"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryTitleTwo"
+        android:visibility="gone"/>
+
+    <!-- 문의 텍스트 -->
+    <TextView
+        android:id="@+id/inquirySeeMoreTextTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘 주문했는데 언제 배송 시작하나요?"
+        android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarTwo"
+        app:layout_constraintTop_toTopOf="@id/inquirySeeMoreBarTwo"
+        android:visibility="gone"/>
 
     <!-- 문의 구분바 -->
     <ImageView
@@ -268,7 +299,7 @@
         android:src="@drawable/bar_item_detail_delivery_divide"
         android:layout_marginTop="25dp"
         android:layout_marginStart="20dp"
-        app:layout_constraintTop_toBottomOf="@id/inquiryTitleTwo"
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreBarTwo"
         app:layout_constraintStart_toStartOf="parent" />
 
     <!-- 세 번째 문의 -->
@@ -329,15 +360,44 @@
         android:includeFontPadding="false" />
 
     <!-- 오른쪽 더보기 열기 아이콘 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/inquirySeeMoreIconThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="15dp"
         android:src="@drawable/ic_inquiry_under_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inquiryCreatedThree" />
+
+    <!-- 문의 더보기 배경 사각형 -->
+    <ImageView
+        android:id="@+id/inquirySeeMoreBarThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/bar_inquiry_see_more"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryTitleThree"
+        android:visibility="gone"/>
+
+    <!-- 문의 텍스트 -->
+    <TextView
+        android:id="@+id/inquirySeeMoreTextThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘 주문했는데 언제 배송 시작하나요?"
+        android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarThree"
+        app:layout_constraintTop_toTopOf="@id/inquirySeeMoreBarThree"
+        android:visibility="gone"/>
 
     <!-- 문의 구분바 -->
     <ImageView
@@ -347,7 +407,7 @@
         android:src="@drawable/bar_item_detail_delivery_divide"
         android:layout_marginTop="25dp"
         android:layout_marginStart="20dp"
-        app:layout_constraintTop_toBottomOf="@id/inquiryTitleThree"
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreBarThree"
         app:layout_constraintStart_toStartOf="parent" />
 
 

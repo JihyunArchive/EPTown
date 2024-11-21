@@ -8,23 +8,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- 나가기 버튼 -->
-    <ImageView
-        android:id="@+id/btnLoginBack"
+    <!-- 왼쪽 뒤로가기 아이콘 -->
+    <ImageButton
+        android:id="@+id/btnCategoryFeed1Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/ic_left_arrow"
+        android:src="@drawable/ic_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- 반려동물 프로필 관리 -->
+    <!-- 건강 정보 관리 -->
     <TextView
         android:id="@+id/profile_administration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="반려동물 프로필 관리"
+        android:text="건강 정보 관리"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
@@ -32,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <!-- 반려동물 프로필 관리 아래 수평선 -->
+    <!-- 건강 정보 관리 아래 수평선 -->
     <View
         android:id="@+id/Horizon"
         android:layout_width="wrap_content"
@@ -44,13 +45,16 @@
         tools:ignore="MissingConstraints" />
 
     <!-- 플목이 버튼 -->
-    <ImageView
+    <Button
         android:id="@+id/choiceButtonOne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_profile_administration_button1"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:text="플목이"
+        android:textSize="11dp"
+        android:textColor="#FFFFFF"
         android:layout_marginTop="81dp"
         android:layout_marginStart="21dp"
+        android:background="@drawable/btn_community8_post"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
@@ -304,32 +308,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/enterBoxSix"
         app:layout_constraintBottom_toBottomOf="@id/enterBoxSix"/>
-
-    <!-- 반려동물 건강정보 저장하고나서 뜨는 창 -->
-    <ImageView
-        android:id="@+id/registerBox"
-        android:layout_width="230dp"
-        android:layout_height="30dp"
-        android:src="@drawable/ic_community_register_box"
-        android:layout_marginBottom="87dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"/>
-
-    <!-- 반려동물의 건강정보가 저장되었습니다 -->
-    <TextView
-        android:id="@+id/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="반려동물의 건강정보가 저장되었습니다"
-        android:textSize="10dp"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="@id/registerBox"
-        app:layout_constraintStart_toStartOf="@id/registerBox"
-        app:layout_constraintTop_toTopOf="@id/registerBox"
-        app:layout_constraintBottom_toBottomOf="@id/registerBox"
-        android:visibility="gone"/>
 
     <!-- 취소/등록 하얀 사각형 배경 -->
     <ImageView

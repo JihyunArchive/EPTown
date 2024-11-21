@@ -11,13 +11,14 @@
         android:padding="20dp">
 
         <!-- 뒤로가기-->
-        <ImageView
+        <ImageButton
             android:id="@+id/btnNoticeBack"
             android:layout_width="21dp"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_left"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:background="?attr/selectableItemBackgroundBorderless" />
 
         <!-- 알림 글씨 -->
         <TextView

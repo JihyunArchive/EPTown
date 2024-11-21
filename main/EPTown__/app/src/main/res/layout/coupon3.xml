@@ -18,16 +18,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 왼쪽 뒤로가기 아이콘 -->
-    <ImageView
-        android:id="@+id/getCouponBackIcon"
+    <ImageButton
+        android:id="@+id/btnCategoryFeed1Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/ic_left_arrow"
+        android:src="@drawable/ic_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/getCouponFixBar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 쿠폰받기 -->
     <TextView
@@ -476,32 +476,6 @@
         android:layout_marginStart="20dp"
         app:layout_constraintTop_toBottomOf="@id/couponTextSix"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <!-- 쿠폰을 받고나서 뜨는 창 -->
-    <ImageView
-        android:id="@+id/registerBox"
-        android:layout_width="230dp"
-        android:layout_height="30dp"
-        android:src="@drawable/ic_community_register_box"
-        android:layout_marginBottom="87dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"/>
-
-    <!-- 쿠폰을 받았어요 -->
-    <TextView
-        android:id="@+id/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="쿠폰을 받았어요"
-        android:textSize="10dp"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="@id/registerBox"
-        app:layout_constraintStart_toStartOf="@id/registerBox"
-        app:layout_constraintTop_toTopOf="@id/registerBox"
-        app:layout_constraintBottom_toBottomOf="@id/registerBox"
-        android:visibility="gone"/>
 
     <!-- 취소/등록 하얀 사각형 배경 -->
     <ImageView

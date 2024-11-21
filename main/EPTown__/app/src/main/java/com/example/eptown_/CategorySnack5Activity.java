@@ -5,7 +5,9 @@ import static android.app.ProgressDialog.show;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,8 +21,8 @@ public class CategorySnack5Activity extends AppCompatActivity {
         setContentView(R.layout.category_snack5);
 
         // 뒤로가기 눌렀을때 메인으로 화면 이동
-        ImageView image = (ImageView) findViewById(R.id.btnCategorySnack5Back);
-        image.setOnClickListener(new View.OnClickListener() {
+        ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
+        imagebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategorySnack5Activity.this, MainActivity.class);
@@ -89,8 +91,8 @@ public class CategorySnack5Activity extends AppCompatActivity {
         });
 
         // 탭바에서 홈 아이콘 눌렀을때 메인으로 화면 이동
-        ImageView image1 = (ImageView) findViewById(R.id.nowTapHomeIconCategorySnack5);
-        image1.setOnClickListener(new View.OnClickListener() {
+        ImageButton imagebutton1 = findViewById(R.id.tapHomeIconCategoryFeed1);
+        imagebutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategorySnack5Activity.this, MainActivity.class);
@@ -99,8 +101,8 @@ public class CategorySnack5Activity extends AppCompatActivity {
         });
 
         // 탭바에서 커뮤니티 아이콘 눌렀을때 커뮤니티로 화면 이동
-        ImageView image2 = (ImageView) findViewById(R.id.tapCommunityIconCategorySnack5);
-        image2.setOnClickListener(new View.OnClickListener() {
+        ImageButton imagebutton2 = findViewById(R.id.tapCommunityIconCategoryFeed1);
+        imagebutton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategorySnack5Activity.this, CommunityActivity.class);
@@ -109,8 +111,8 @@ public class CategorySnack5Activity extends AppCompatActivity {
         });
 
         // 탭바에서 카테고리 아이콘 눌렀을때 카테고리 메인으로 화면 이동
-        ImageView image3 = (ImageView) findViewById(R.id.tapCategoryIconCategorySnack5);
-        image3.setOnClickListener(new View.OnClickListener() {
+        ImageButton imagebutton3 = findViewById(R.id.tapCategoryIconCategoryFeed1);
+        imagebutton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategorySnack5Activity.this, CategoryMainActivity.class);
@@ -119,8 +121,8 @@ public class CategorySnack5Activity extends AppCompatActivity {
         });
 
         // 탭바에서 병원 아이콘 눌렀을때 병원으로 화면 이동
-        ImageView image4 = (ImageView) findViewById(R.id.tapHostpitalIconCategorySnack5);
-        image4.setOnClickListener(new View.OnClickListener() {
+        ImageButton imagebutton4 = findViewById(R.id.tapHostpitalIconCategoryFeed1);
+        imagebutton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategorySnack5Activity.this, HospitalDetailsActivity.class);
@@ -129,8 +131,8 @@ public class CategorySnack5Activity extends AppCompatActivity {
         });
 
         // 탭바에서 내 정보 아이콘 눌렀을때 내 정보로 화면 이동
-        ImageView image5 = (ImageView) findViewById(R.id.tapMypageIconCategorySnack5);
-        image5.setOnClickListener(new View.OnClickListener() {
+        ImageButton imagebutton5 = findViewById(R.id.tapMypageIconCategoryFeed1);
+        imagebutton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategorySnack5Activity.this, MyPageActivity.class);
@@ -138,24 +140,31 @@ public class CategorySnack5Activity extends AppCompatActivity {
             }
         });
 
-        // 알림 아이콘 눌렀을때 알림으로 화면 이동
-        ImageView image6 = (ImageView) findViewById(R.id.search);
-        image6.setOnClickListener(new View.OnClickListener() {
+        // 검색 아이콘 눌렀을때 검색으로 화면 이동
+        ImageButton imagebutton6 = findViewById(R.id.search);
+        imagebutton6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CategorySnack5Activity.this,NoticeActivity.class);
+                Intent intent = new Intent(CategorySnack5Activity.this,SearchActivity.class);
                 startActivity(intent);
             }
         });
 
         // 장바구니 눌렀을때 장바구니로 화면 이동
-        ImageView image7 = (ImageView) findViewById(R.id.cart);
-        image7.setOnClickListener(new View.OnClickListener() {
+        ImageButton imagebutton7 = findViewById(R.id.cart);
+        imagebutton7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategorySnack5Activity.this,CartActivity.class);
                 startActivity(intent);
             }
+        });
+
+        // 첫번째 상품 누르면 itemDetail로 화면 이동
+        LinearLayout layout = findViewById(R.id.userRecommendedItemOne);
+        layout.setOnClickListener(view -> {
+            Intent intent = new Intent(CategorySnack5Activity.this, ItemDetails.class);
+            startActivity(intent);
         });
     }
 }

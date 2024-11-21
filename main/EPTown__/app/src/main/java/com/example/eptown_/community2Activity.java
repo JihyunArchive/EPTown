@@ -3,19 +3,20 @@ package com.example.eptown_;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class community2Activity extends AppCompatActivity {
 
-    private int heartCount = 0;
-    private static final String DEFAULT_TEXT_COLOR = "#F59701";
+    private static final String DEFAULT_TEXT_COLOR = "#000000";
     private static final String SELECTED_TEXT_COLOR = "#F59701";
 
     private TextView choiceOne, choiceTwo, choiceThree, choiceFour, declare, register, deleteText;
@@ -29,26 +30,68 @@ public class community2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.community2);
 
-        // 뒤로가기 눌렀을때 커뮤니티로 이동
+        // 뒤로가기 눌렀을 때 커뮤니티로 이동
         ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
         imagebutton.setOnClickListener(view -> {
             Intent intent = new Intent(community2Activity.this, CommunityActivity.class);
             startActivity(intent);
         });
 
-        // UI 요소들 참조
-        ImageButton heart = findViewById(R.id.heart);
-        TextView heartCountTextView = findViewById(R.id.heartCount);
-        ImageButton checkedCircle = findViewById(R.id.checkedCircle);
-        ImageButton checkedCircleGray = findViewById(R.id.checkedCircleGray);
-        TextView userName = findViewById(R.id.userName);
+        // 탭바 버튼 설정
+        ImageButton imagebutton1 = findViewById(R.id.tapHomeIconCategoryFeed1);
+        imagebutton1.setOnClickListener(view -> startActivity(new Intent(this, MainActivity.class)));
 
-        // 신고 버튼들 참조
-        TextView reportButton1 = findViewById(R.id.reportButton);
-        TextView reportButton2 = findViewById(R.id.reportButtonTwo);
-        TextView reportButton3 = findViewById(R.id.reportButtonThree);
+        ImageButton imagebutton2 = findViewById(R.id.tapCategoryIconCategoryFeed1);
+        imagebutton2.setOnClickListener(view -> startActivity(new Intent(this, CategoryMainActivity.class)));
 
-        // 신고 UI 요소들 참조
+        ImageButton imagebutton3 = findViewById(R.id.tapHostpitalIconCategoryFeed1);
+        imagebutton3.setOnClickListener(view -> startActivity(new Intent(this, HospitalActivity.class)));
+
+        ImageButton imagebutton4 = findViewById(R.id.tapMypageIconCategoryFeed1);
+        imagebutton4.setOnClickListener(view -> startActivity(new Intent(this, MyPageActivity.class)));
+
+        // 삭제 상자에서 확인 버튼 눌렀을 때
+        Button button = findViewById(R.id.check);
+        button.setOnClickListener(view -> startActivity(new Intent(this, CommunityDeleteActivity.class)));
+
+        // UI 요소 초기화
+        initializeUI();
+
+        // 삭제 버튼 클릭 리스너 설정
+        deleteButton.setOnClickListener(v -> showDeleteUI());
+
+        // 신고 버튼 클릭 리스너 설정
+        View.OnClickListener reportClickListener = v -> showReportUI();
+        findViewById(R.id.reportButton).setOnClickListener(reportClickListener);
+        findViewById(R.id.reportButtonTwo).setOnClickListener(reportClickListener);
+        findViewById(R.id.reportButtonThree).setOnClickListener(reportClickListener);
+
+        // 회색 화면 클릭 시 신고 UI를 숨김
+        grayScreen.setOnClickListener(v -> hideReportUI());
+
+        // 취소 버튼 클릭 시 UI 원상복구
+        cancel.setOnClickListener(v -> resetUI());
+        cancelTwo.setOnClickListener(v -> resetUI());
+
+        // 신고 확인 버튼 클릭 시 토스트 메시지
+        checkTwo.setOnClickListener(v -> {
+            showCustomToast("신고되었습니다.");
+            hideReportUI();
+        });
+
+        // deleteBox 클릭 시 화면이 사라지지 않도록 하기 위한 리스너
+        deleteBox.setOnClickListener(v -> {
+            // 아무 동작도 하지 않음, 화면 사라지지 않도록
+        });
+
+        // 선택지 클릭 시 색상 변경
+        choiceOne.setOnClickListener(v -> toggleColor(choiceOne));
+        choiceTwo.setOnClickListener(v -> toggleColor(choiceTwo));
+        choiceThree.setOnClickListener(v -> toggleColor(choiceThree));
+        choiceFour.setOnClickListener(v -> toggleColor(choiceFour));
+    }
+
+    private void initializeUI() {
         grayScreen = findViewById(R.id.grayScreen);
         deleteBoxTwo = findViewById(R.id.deleteBoxTwo);
         cancelTwo = findViewById(R.id.cancelTwo);
@@ -58,159 +101,87 @@ public class community2Activity extends AppCompatActivity {
         choiceTwo = findViewById(R.id.choiceTwo);
         choiceThree = findViewById(R.id.choiceThree);
         choiceFour = findViewById(R.id.choiceFour);
-
-        // 신고 후 뜨는 UI 요소들
-        registerBox = findViewById(R.id.registerBox);
-        register = findViewById(R.id.register);
-
-        // 삭제 관련 UI 요소들
         cancel = findViewById(R.id.cancel);
         check = findViewById(R.id.check);
         deleteBox = findViewById(R.id.deleteBox);
-        deleteText = findViewById(R.id.deleteText); // 추가된 부분
-
+        deleteText = findViewById(R.id.deleteText);
         deleteButton = findViewById(R.id.deleteButton);
-
-        // 하트 클릭 시 하트 상태 변경 및 클릭 수 증가/감소
-        heart.setTag("empty");
-        heart.setOnClickListener(v -> {
-            if ("empty".equals(heart.getTag())) {
-                heart.setImageResource(R.drawable.ic_heart_fill);
-                heart.setTag("filled");
-                heartCount++;
-            } else {
-                heart.setImageResource(R.drawable.ic_heart_no_fill);
-                heart.setTag("empty");
-                heartCount--;
-            }
-            heartCountTextView.setText(String.valueOf(heartCount));
-        });
-
-        // checkedCircle 클릭 시 이름 색상 변경
-        checkedCircle.setOnClickListener(v -> {
-            checkedCircle.setVisibility(View.GONE);
-            checkedCircleGray.setVisibility(View.VISIBLE);
-            userName.setTextColor(Color.parseColor("#8A8A8E"));
-        });
-
-        // checkedCircleGray 클릭 시 원상복구
-        checkedCircleGray.setOnClickListener(v -> {
-            checkedCircleGray.setVisibility(View.GONE);
-            checkedCircle.setVisibility(View.VISIBLE);
-            userName.setTextColor(Color.parseColor(DEFAULT_TEXT_COLOR));
-        });
-
-        // 삭제 버튼 클릭 시 회색 배경, 삭제 상자 및 삭제 여부, 취소/확인 버튼 보이기
-        deleteButton.setOnClickListener(v -> {
-            grayScreen.setVisibility(View.VISIBLE);
-            deleteBox.setVisibility(View.VISIBLE);
-            deleteText.setVisibility(View.VISIBLE); // 삭제 메시지 보이기
-            cancel.setVisibility(View.VISIBLE);
-            check.setVisibility(View.VISIBLE);
-        });
-
-        // 취소 버튼 클릭 시 화면 원상복귀
-        cancel.setOnClickListener(v -> {
-            grayScreen.setVisibility(View.GONE);
-            deleteBox.setVisibility(View.GONE);
-            deleteText.setVisibility(View.GONE); // 삭제 메시지 숨기기
-            cancel.setVisibility(View.GONE);
-            check.setVisibility(View.GONE);
-        });
-
-        // 확인 버튼 클릭 시 삭제 처리 및 UI 변경
-        check.setOnClickListener(v -> {
-            // 삭제 처리 후 UI 변경
-            grayScreen.setVisibility(View.GONE);
-            deleteBox.setVisibility(View.GONE);
-            deleteText.setVisibility(View.GONE); // 삭제 메시지 숨기기
-            cancel.setVisibility(View.GONE);
-            check.setVisibility(View.GONE);
-
-            // 삭제 완료 후 UI
-            registerBox.setVisibility(View.VISIBLE);
-            register.setVisibility(View.VISIBLE);
-
-            // 3초 후 삭제 완료 메시지 숨기기
-            new Handler().postDelayed(() -> {
-                registerBox.setVisibility(View.GONE);
-                register.setVisibility(View.GONE);
-            }, 3000);  // 3000ms = 3초 후 실행
-        });
-
-        // 신고 버튼 클릭 시 회색 배경과 삭제 상자 및 선택지, 신고 텍스트 보이기
-        View.OnClickListener reportClickListener = v -> {
-            grayScreen.setVisibility(View.VISIBLE);
-            deleteBoxTwo.setVisibility(View.VISIBLE);
-            declare.setVisibility(View.VISIBLE);
-            choiceOne.setVisibility(View.VISIBLE);
-            choiceTwo.setVisibility(View.VISIBLE);
-            choiceThree.setVisibility(View.VISIBLE);
-            choiceFour.setVisibility(View.VISIBLE);
-            cancelTwo.setVisibility(View.VISIBLE);
-            checkTwo.setVisibility(View.VISIBLE);
-        };
-
-        reportButton1.setOnClickListener(reportClickListener);
-        reportButton2.setOnClickListener(reportClickListener);
-        reportButton3.setOnClickListener(reportClickListener);
-
-        // 취소 버튼 클릭 시 화면 원상복귀 (신고 화면)
-        cancelTwo.setOnClickListener(v -> {
-            grayScreen.setVisibility(View.GONE);
-            deleteBoxTwo.setVisibility(View.GONE);
-            declare.setVisibility(View.GONE);
-            choiceOne.setVisibility(View.GONE);
-            choiceTwo.setVisibility(View.GONE);
-            choiceThree.setVisibility(View.GONE);
-            choiceFour.setVisibility(View.GONE);
-            cancelTwo.setVisibility(View.GONE);
-            checkTwo.setVisibility(View.GONE);
-        });
-
-        // 확인 버튼 클릭 시 신고 처리 및 UI 변경
-        checkTwo.setOnClickListener(v -> {
-            // 신고 처리 후 UI 변경
-            grayScreen.setVisibility(View.GONE);
-            deleteBoxTwo.setVisibility(View.GONE);
-            declare.setVisibility(View.GONE);
-            choiceOne.setVisibility(View.GONE);
-            choiceTwo.setVisibility(View.GONE);
-            choiceThree.setVisibility(View.GONE);
-            choiceFour.setVisibility(View.GONE);
-            cancelTwo.setVisibility(View.GONE);
-            checkTwo.setVisibility(View.GONE);
-
-            // 신고 완료 후 UI
-            registerBox.setVisibility(View.VISIBLE);
-            register.setVisibility(View.VISIBLE);
-
-            // 3초 후 신고 완료 메시지 숨기기
-            new Handler().postDelayed(() -> {
-                registerBox.setVisibility(View.GONE);
-                register.setVisibility(View.GONE);
-            }, 3000);  // 3000ms = 3초 후 실행
-        });
-
-        // 선택지 1 클릭 시 색상 변경
-        choiceOne.setOnClickListener(v -> toggleColor(choiceOne));
-
-        // 선택지 2 클릭 시 색상 변경
-        choiceTwo.setOnClickListener(v -> toggleColor(choiceTwo));
-
-        // 선택지 3 클릭 시 색상 변경
-        choiceThree.setOnClickListener(v -> toggleColor(choiceThree));
-
-        // 선택지 4 클릭 시 색상 변경
-        choiceFour.setOnClickListener(v -> toggleColor(choiceFour));
     }
 
-    // 색상 변경을 위한 메소드
+    private void resetUI() {
+        grayScreen.setVisibility(View.GONE);
+        deleteBox.setVisibility(View.GONE);
+        deleteBoxTwo.setVisibility(View.GONE);
+        deleteText.setVisibility(View.GONE);
+        declare.setVisibility(View.GONE);
+        choiceOne.setVisibility(View.GONE);
+        choiceTwo.setVisibility(View.GONE);
+        choiceThree.setVisibility(View.GONE);
+        choiceFour.setVisibility(View.GONE);
+        cancel.setVisibility(View.GONE);
+        cancelTwo.setVisibility(View.GONE);
+        check.setVisibility(View.GONE);
+        checkTwo.setVisibility(View.GONE);
+    }
+
+    private void showReportUI() {
+        grayScreen.setVisibility(View.VISIBLE);
+        deleteBoxTwo.setVisibility(View.VISIBLE);
+        declare.setVisibility(View.VISIBLE);
+        choiceOne.setVisibility(View.VISIBLE);
+        choiceTwo.setVisibility(View.VISIBLE);
+        choiceThree.setVisibility(View.VISIBLE);
+        choiceFour.setVisibility(View.VISIBLE);
+        cancelTwo.setVisibility(View.VISIBLE);
+        checkTwo.setVisibility(View.VISIBLE);
+    }
+
+    private void showDeleteUI() {
+        grayScreen.setVisibility(View.VISIBLE);
+        deleteBox.setVisibility(View.VISIBLE);
+        deleteText.setVisibility(View.VISIBLE);
+        cancel.setVisibility(View.VISIBLE);
+        check.setVisibility(View.VISIBLE);
+    }
+
     private void toggleColor(TextView choice) {
         if (choice.getCurrentTextColor() == Color.parseColor(SELECTED_TEXT_COLOR)) {
-            choice.setTextColor(Color.parseColor("#000000")); // 기본 색상
+            choice.setTextColor(Color.parseColor(DEFAULT_TEXT_COLOR));
         } else {
-            choice.setTextColor(Color.parseColor(SELECTED_TEXT_COLOR)); // 선택된 색상
+            choice.setTextColor(Color.parseColor(SELECTED_TEXT_COLOR));
         }
+    }
+
+    private void hideReportUI() {
+        grayScreen.setVisibility(View.GONE);
+        deleteBoxTwo.setVisibility(View.GONE);
+        declare.setVisibility(View.GONE);
+        choiceOne.setVisibility(View.GONE);
+        choiceTwo.setVisibility(View.GONE);
+        choiceThree.setVisibility(View.GONE);
+        choiceFour.setVisibility(View.GONE);
+        cancelTwo.setVisibility(View.GONE);
+        checkTwo.setVisibility(View.GONE);
+    }
+
+    private void showCustomToast(String message) {
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.toast, null);
+
+        TextView textView = layout.findViewById(R.id.custom_toast_message);
+        textView.setText(message);
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(layout);
+
+        int yOffset = dpToPx(87); // 87dp를 px로 변환
+        toast.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, yOffset);
+        toast.show();
+    }
+
+    private int dpToPx(int dp) {
+        float density = getResources().getDisplayMetrics().density;
+        return (int) (dp * density);
     }
 }

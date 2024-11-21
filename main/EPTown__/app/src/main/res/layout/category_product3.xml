@@ -7,157 +7,156 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
+    <!-- 용품 타이틀 -->
+    <TextView
+        android:id="@+id/feed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="용품"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 뒤로가기 버튼 -->
+    <ImageButton
+        android:id="@+id/btnCategoryFeed1Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="23dp"
+        android:src="@drawable/ic_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 검색 아이콘 -->
+    <ImageButton
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="316dp"
+        android:layout_marginTop="23dp"
+        android:src="@drawable/ic_search"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="@id/btnCategoryFeed1Back"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 장바구니 아이콘 -->
+    <ImageButton
+        android:id="@+id/cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_cart"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/btnCategoryFeed1Back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 전체 -->
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="69dp"
+        android:text="전체"
+        android:textSize="13sp"
+        android:textColor="#A1A9AD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 위생용품 아래 수평선 -->
+    <View
+        android:id="@+id/shortHorizon"
+        android:layout_width="62dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="213dp"
+        android:layout_marginTop="95dp"
+        android:background="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+     <!-- 생활용품 -->
+    <TextView
+        android:id="@+id/lifeProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="69dp"
+        android:text="생활용품"
+        android:textSize="13sp"
+        android:textColor="#A1A9AD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 위생용품 -->
+    <TextView
+        android:id="@+id/washProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="69dp"
+        android:text="위생용품"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 기타 -->
+    <TextView
+        android:id="@+id/etc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="69dp"
+        android:text="기타"
+        android:textColor="#A1A9AD"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.806"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- 사료.랭킹 사이 수평선 -->
+    <View
+        android:id="@+id/firstHorizon"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="1dp"
+        android:layout_marginTop="113dp"
+        android:background="#E7E7E7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <ScrollView
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="114dp"
+        android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/main"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".MainActivity">
-
-            <!-- 용품 타이틀 -->
-            <TextView
-                android:id="@+id/product"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="용품"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 뒤로가기 버튼 -->
-            <ImageView
-                android:id="@+id/btnCategoryProduct3Back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="23dp"
-                android:src="@drawable/ic_arrow"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 검색 아이콘 -->
-            <ImageView
-                android:id="@+id/search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="316dp"
-                android:layout_marginTop="23dp"
-                android:src="@drawable/ic_search"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
-
-
-            <!-- 장바구니 아이콘 -->
-            <ImageView
-                android:id="@+id/cart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="356dp"
-                android:layout_marginTop="23dp"
-                android:layout_marginEnd="20dp"
-                android:src="@drawable/ic_cart"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 전체 -->
-            <TextView
-                android:id="@+id/total"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="69dp"
-                android:text="전체"
-                android:textSize="13sp"
-                android:textColor="#A1A9AD"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.15"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-
-            <!-- 위생용품 아래 수평선 -->
-            <View
-                android:id="@+id/shortHorizon"
-                android:layout_width="62dp"
-                android:layout_height="2dp"
-                android:layout_marginStart="213dp"
-                android:layout_marginTop="95dp"
-                android:background="#000000"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints" />
-
-            <!-- 생활용품 -->
-            <TextView
-                android:id="@+id/lifeProduct"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="69dp"
-                android:text="생활용품"
-                android:textSize="13sp"
-                android:textColor="#A1A9AD"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.348"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 위생용품 -->
-            <TextView
-                android:id="@+id/washProduct"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="69dp"
-                android:text="위생용품"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.604"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 기타 -->
-            <TextView
-                android:id="@+id/etc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="69dp"
-                android:text="기타"
-                android:textColor="#A1A9AD"
-                android:textSize="13sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.806"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 사료.랭킹 사이 수평선 -->
-            <View
-                android:id="@+id/firstHorizon"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="113dp"
-                android:background="#E7E7E7"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints" />
-
+            android:layout_height="match_parent">
 
             <!-- 랭킹 -->
             <TextView
@@ -165,7 +164,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="139dp"
+                android:layout_marginTop="30dp"
                 android:text="랭킹"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -176,2110 +175,18 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
 
-            <!-- 치킨1 사진 -->
-            <ImageView
-                android:id="@+id/firstImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="183dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_dumpling"
-                android:background="@drawable/ic_rounded_image"
-                android:clipToOutline="true" />
-
-            <!-- 치킨1 이름 -->
-            <TextView
-                android:id="@+id/firstNameOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="291dp"
-                android:text="캣만두 라이프 에센셜 치"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 치킨1 이름 -->
-            <TextView
-                android:id="@+id/firstNameTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="305dp"
-                android:text="킨 146g"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 치킨1 가격 -->
-            <TextView
-                android:id="@+id/firstPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="330dp"
-                android:text="33,000원"
-                android:textColor="#33363F"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-
-            <!-- 치킨1 별점 -->
-            <ImageView
-                android:id="@+id/firstStarOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="351dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/firstStarTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="351dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/firstStarThree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="351dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/firstStarFour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="351dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/firstStarFive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="351dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 치킨1 별점 개수 -->
-            <TextView
-                android:id="@+id/firstStarNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="75dp"
-                android:layout_marginTop="350dp"
-                android:text="(912)"
-                android:textColor="#A1A9AD"
-                android:textSize="8.5sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 무료배송 회색 사각형 -->
-            <View
-                android:id="@+id/firstGrayBox"
-                android:layout_width="33dp"
-                android:layout_height="13dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="368dp"
-                android:background="@drawable/ic_gray_rect"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 무료배송 -->
-            <TextView
-                android:id="@+id/freeDeliveryOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="369dp"
-                android:text="무료배송"
-                android:textColor="#FFFFFF"
-                android:textSize="7sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르1 사진 -->
-            <ImageView
-                android:id="@+id/secondImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="183dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_snack"
-                android:background="@drawable/ic_rounded_image"
-                android:clipToOutline="true"/>
-
-            <!-- 츄르1 이름 -->
-            <TextView
-                android:id="@+id/secondNameOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="291dp"
-                android:text="이나바 캣 챠오 츄르 참치"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르1 이름 -->
-            <TextView
-                android:id="@+id/secondNameTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="305dp"
-                android:text="버라이어트 14g + 40p"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르1 원래 가격 -->
-            <TextView
-                android:id="@+id/secondOriginalPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="333dp"
-                android:text="40,000원"
-                android:textColor="#A1A9AD"
-                android:textSize="9sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르1 할인 -->
-            <TextView
-                android:id="@+id/secondSale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="346dp"
-                android:text="50%"
-                android:textColor="#FF0000"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르1 할인 가격 -->
-            <TextView
-                android:id="@+id/secondNowPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="184dp"
-                android:layout_marginTop="346dp"
-                android:text="20,000원"
-                android:textColor="#33363F"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르1 별점 -->
-            <ImageView
-                android:id="@+id/secondStarOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="367dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/secondStarTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="163dp"
-                android:layout_marginTop="367dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/secondStarThree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="173dp"
-                android:layout_marginTop="367dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/secondStarFour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="183dp"
-                android:layout_marginTop="367dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/secondStarFive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="193dp"
-                android:layout_marginTop="367dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 츄르1 별점 개수 -->
-            <TextView
-                android:id="@+id/secondStarNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="209dp"
-                android:layout_marginTop="366dp"
-                android:text="(1715)"
-                android:textColor="#A1A9AD"
-                android:textSize="8.5sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제1 사진 -->
-            <ImageView
-                android:id="@+id/thirdImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="183dp"
-                android:layout_marginEnd="24dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_tonic"
-                android:background="@drawable/ic_rounded_image"
-                android:clipToOutline="true"/>
-
-            <!-- 영양제1 이름 -->
-            <TextView
-                android:id="@+id/thirdNameOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="291dp"
-                android:text="[최저가 도전] 인트라젠 "
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/thirdNameTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="305dp"
-                android:text="영양제 위장&amp;면역 50p"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제1 원래 가격 -->
-            <TextView
-                android:id="@+id/thirdOriginalPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="333dp"
-                android:text="18,000원"
-                android:textColor="#A1A9AD"
-                android:textSize="9sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제1 할인 -->
-            <TextView
-                android:id="@+id/thirdSale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="346dp"
-                android:text="20%"
-                android:textColor="#FF0000"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제1 할인 가격 -->
-            <TextView
-                android:id="@+id/thirdNowPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="319dp"
-                android:layout_marginTop="346dp"
-                android:text="14,400원"
-                android:textColor="#33363F"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제1 별점 -->
-            <ImageView
-                android:id="@+id/thirdStarOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="367dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/thirdStarTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="297dp"
-                android:layout_marginTop="367dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/thirdStarThree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="307dp"
-                android:layout_marginTop="367dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/thirdStarFour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="317dp"
-                android:layout_marginTop="367dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/thirdStarFive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="327dp"
-                android:layout_marginTop="367dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 영양제1 별점 개수 -->
-            <TextView
-                android:id="@+id/thirdStarNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="343dp"
-                android:layout_marginTop="366dp"
-                android:text="(5524)"
-                android:textColor="#A1A9AD"
-                android:textSize="8.5sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제1 회색 사각형 -->
-            <View
-                android:id="@+id/thirdGrayBox"
-                android:layout_width="40dp"
-                android:layout_height="13dp"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="382dp"
-                android:background="@drawable/ic_gray_rect"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 영양제1 최저가 도전 -->
-            <TextView
-                android:id="@+id/thirdChallenge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="290dp"
-                android:layout_marginTop="383dp"
-                android:text="최저가 도전"
-                android:textColor="#FFFFFF"
-                android:textSize="7sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 치킨2 이미지 -->
-            <ImageView
-                android:id="@+id/fourImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="411dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_dumpling"
-                android:background="@drawable/ic_rounded_image"
-                android:clipToOutline="true"/>
-
-            <!-- 치킨2 이름 -->
-            <TextView
-                android:id="@+id/fourNameOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="521dp"
-                android:text="캣만두 라이프 에센셜 치"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/fourNameTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="535dp"
-                android:text="킨 142g"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 치킨2 가격 -->
-            <TextView
-                android:id="@+id/fourPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="560dp"
-                android:text="33,000원"
-                android:textColor="#33363F"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 치킨2 별점 -->
-            <ImageView
-                android:id="@+id/fourStarOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="583dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/fourStarTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="583dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/fourStarThree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="583dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/fourStarFour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="583dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/fourStarFive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="583dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 치킨2 별점 개수 -->
-            <TextView
-                android:id="@+id/fourStarNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="76dp"
-                android:layout_marginTop="582dp"
-                android:text="(912)"
-                android:textColor="#A1A9AD"
-                android:textSize="8.5sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 치킨2 회색 사각형 -->
-            <View
-                android:id="@+id/fourGrayBox"
-                android:layout_width="33dp"
-                android:layout_height="13dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="600dp"
-                android:background="@drawable/ic_gray_rect"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 치킨2 무료배송 -->
-            <TextView
-                android:id="@+id/fourFreeDelivery"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="601dp"
-                android:text="무료배송"
-                android:textColor="#FFFFFF"
-                android:textSize="7sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르2 이미지 -->
-            <ImageView
-                android:id="@+id/fiveImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="411dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_snack"
-                android:background="@drawable/ic_rounded_image"
-                android:clipToOutline="true"/>
-
-            <!-- 츄르2 이름 -->
-            <TextView
-                android:id="@+id/fiveNameOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="521dp"
-                android:text="이나바 캣 챠오 츄르 참치"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/fiveNameTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="535dp"
-                android:text="버라이어트 14g * 40p"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르2 원래 가격 -->
-            <TextView
-                android:id="@+id/fiveOriginalPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="560dp"
-                android:text="40,000원"
-                android:textColor="#A1A9AD"
-                android:textSize="9sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르2 할인 -->
-            <TextView
-                android:id="@+id/fiveSale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="573dp"
-                android:text="50%"
-                android:textColor="#ff0000"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르2 할인 가격 -->
-            <TextView
-                android:id="@+id/fiveNowPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="184dp"
-                android:layout_marginTop="573dp"
-                android:text="20,000원"
-                android:textColor="#33363F"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르2 별점 -->
-            <ImageView
-                android:id="@+id/fiveStarOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="594dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/fiveStarTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="163dp"
-                android:layout_marginTop="594dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/fiveStarThree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="173dp"
-                android:layout_marginTop="594dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/fiveStarFour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="183dp"
-                android:layout_marginTop="594dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/fiveStarFive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="193dp"
-                android:layout_marginTop="594dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 츄르2 별점 개수 -->
-            <TextView
-                android:id="@+id/fiveStarNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="209dp"
-                android:layout_marginTop="593dp"
-                android:text="(1715)"
-                android:textColor="#A1A9AD"
-                android:textSize="8.5sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제2 이미지 -->
-            <ImageView
-                android:id="@+id/sixImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="411dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/image_tonic"
-                android:background="@drawable/ic_rounded_image"
-                android:clipToOutline="true"/>
-
-            <!-- 영양제2 이름 -->
-            <TextView
-                android:id="@+id/sixNameOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="521dp"
-                android:text="[최저가 도전] 인트라젠 "
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/sixNameTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="535dp"
-                android:text="영양제 위장&amp;면역 50p"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제2 원래 가격 -->
-            <TextView
-                android:id="@+id/sixOriginalPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="560dp"
-                android:text="18,800원"
-                android:textColor="#A1A9AD"
-                android:textSize="9sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제2 할인 -->
-            <TextView
-                android:id="@+id/sixSale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="573dp"
-                android:text="20%"
-                android:textColor="#FF0000"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제2 할인 가격 -->
-            <TextView
-                android:id="@+id/sixNowPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="318dp"
-                android:layout_marginTop="573dp"
-                android:text="14,400원"
-                android:textColor="#33363F"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제2 별점 -->
-            <ImageView
-                android:id="@+id/sixStarOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="594dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/sixStarTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="297dp"
-                android:layout_marginTop="594dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/sixStarThree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="307dp"
-                android:layout_marginTop="594dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/sixStarFour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="317dp"
-                android:layout_marginTop="594dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/sixStarFive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="327dp"
-                android:layout_marginTop="594dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 영양제2 별점 개수 -->
-            <TextView
-                android:id="@+id/sixdStarNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="343dp"
-                android:layout_marginTop="593dp"
-                android:text="(5524)"
-                android:textColor="#A1A9AD"
-                android:textSize="8.5sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제2 회색 사각형 -->
-            <View
-                android:id="@+id/sixGrayBox"
-                android:layout_width="40dp"
-                android:layout_height="13dp"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="608dp"
-                android:background="@drawable/ic_gray_rect"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 영양제2 최저가 도전 -->
-            <TextView
-                android:id="@+id/sixChallenge"
-                android:layout_width="wrap_content"
+            <!-- 유저 추천 상품 리스트 -->
+            <include
+                android:id="@+id/userRecommendedItemsList"
+                layout="@layout/category_items"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="290dp"
-                android:layout_marginTop="609dp"
-                android:text="최저가 도전"
-                android:textColor="#FFFFFF"
-                android:textSize="7sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 치킨3 이미지 -->
-            <ImageView
-                android:id="@+id/sevenImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="643dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_dumpling"
-                android:background="@drawable/ic_rounded_image"
-                android:clipToOutline="true"/>
-
-            <!-- 치킨3 이름 -->
-            <TextView
-                android:id="@+id/sevenNameOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="753dp"
-                android:text="캣만두 라이프 에센셜 치"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/sevenNameTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="767dp"
-                android:text="킨 142g"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 치킨3 가격 -->
-            <TextView
-                android:id="@+id/sevenPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="792dp"
-                android:text="33,000원"
-                android:textColor="#33363F"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 치킨3 별점 -->
-            <ImageView
-                android:id="@+id/sevenStarOne"
-                android:layout_width="9dp"
-                android:layout_height="9dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="813dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/seven_star2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="813dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/sevenStarThree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="813dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/sevenStarFour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="813dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/sevenStarFive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="813dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 치킨3 별점 개수 -->
-            <TextView
-                android:id="@+id/sevenStarNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="76dp"
-                android:layout_marginTop="812dp"
-                android:text="(912)"
-                android:textColor="#A1A9AD"
-                android:textSize="8.5sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 치킨3 회색 사각형 -->
-            <View
-                android:id="@+id/sevenGrayBox"
-                android:layout_width="33dp"
-                android:layout_height="13dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="830dp"
-                android:background="@drawable/ic_gray_rect"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 치킨3 무료배송 -->
-            <TextView
-                android:id="@+id/sevenFreeDelivery"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="831dp"
-                android:text="무료배송"
-                android:textColor="#FFFFFF"
-                android:textSize="7sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르3 이미지 -->
-            <ImageView
-                android:id="@+id/eightImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="643dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_snack"
-                android:background="@drawable/ic_rounded_image"
-                android:clipToOutline="true"/>
-
-            <!-- 츄르3 이름 -->
-            <TextView
-                android:id="@+id/eightNameOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="753dp"
-                android:text="이나바 캣 챠오 츄르 참치"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/eightNameTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="767dp"
-                android:text="버라이어트 14g * 40p"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르3 원래 가격 -->
-            <TextView
-                android:id="@+id/eightOriginalPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="795dp"
-                android:text="40,000원"
-                android:textColor="#A1A9AD"
-                android:textSize="9sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르3 할인 -->
-            <TextView
-                android:id="@+id/eightSale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="808dp"
-                android:text="50%"
-                android:textColor="#FF0000"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르3 할인 가격 -->
-            <TextView
-                android:id="@+id/eightNowPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="184dp"
-                android:layout_marginTop="808dp"
-                android:text="20,000원"
-                android:textColor="#33363F"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르3 별점 -->
-            <ImageView
-                android:id="@+id/eightStarOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="829dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/eightStarTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="163dp"
-                android:layout_marginTop="829dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/eightStarThree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="173dp"
-                android:layout_marginTop="829dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/eightStarFour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="183dp"
-                android:layout_marginTop="829dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/eightStarFive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="193dp"
-                android:layout_marginTop="829dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 츄르3 별점 개수 -->
-            <TextView
-                android:id="@+id/eightStarNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="209dp"
-                android:layout_marginTop="828dp"
-                android:text="(1715)"
-                android:textColor="#A1A9AD"
-                android:textSize="8.5sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제3 이미지 -->
-            <ImageView
-                android:id="@+id/nineImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="643dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/image_tonic"
-                android:background="@drawable/ic_rounded_image"
-                android:clipToOutline="true"/>
-
-            <!-- 영양제3 이름 -->
-            <TextView
-                android:id="@+id/nineNameOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="753dp"
-                android:text="[최저가 도전] 인트라젠 "
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/nineNameTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="767dp"
-                android:text="영양제 위장&amp;면역 50p"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제3 원래 가격 -->
-            <TextView
-                android:id="@+id/nineOriginalPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="793dp"
-                android:text="18,800원"
-                android:textColor="#A1A9AD"
-                android:textSize="9sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제3 할인 -->
-            <TextView
-                android:id="@+id/nineSale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="806dp"
-                android:text="20%"
-                android:textColor="#FF0000"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제3 할인 가격 -->
-            <TextView
-                android:id="@+id/nineNowPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="318dp"
-                android:layout_marginTop="806dp"
-                android:text="14,400원"
-                android:textColor="#33363F"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제3 별점 -->
-            <ImageView
-                android:id="@+id/nineStarOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="829dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/nineStarTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="297dp"
-                android:layout_marginTop="829dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/nineStarThree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="307dp"
-                android:layout_marginTop="829dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/nineStarFour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="317dp"
-                android:layout_marginTop="829dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/nineStarFive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="327dp"
-                android:layout_marginTop="829dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 영양제3 별점 개수 -->
-            <TextView
-                android:id="@+id/ninedStarNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="343dp"
-                android:layout_marginTop="828dp"
-                android:text="(5524)"
-                android:textColor="#A1A9AD"
-                android:textSize="8.5sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제3 회색 사각형 -->
-            <View
-                android:id="@+id/nineGrayBox"
-                android:layout_width="40dp"
-                android:layout_height="13dp"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="843dp"
-                android:background="@drawable/ic_gray_rect"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 영양제3 최저가 도전 -->
-            <TextView
-                android:id="@+id/nineChallenge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="290dp"
-                android:layout_marginTop="844dp"
-                android:text="최저가 도전"
-                android:textColor="#FFFFFF"
-                android:textSize="7sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 치킨4 이미지 -->
-            <ImageView
-                android:id="@+id/tenImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="875dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_dumpling"
-                android:background="@drawable/ic_rounded_image"
-                android:clipToOutline="true"/>
-
-            <!-- 치킨4 이름 -->
-            <TextView
-                android:id="@+id/tenNameOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="985dp"
-                android:text="캣만두 라이프 에센셜 치"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/tenNameTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="999dp"
-                android:text="킨 142g"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 치킨4 가격 -->
-            <TextView
-                android:id="@+id/tenPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="1024dp"
-                android:text="33,000원"
-                android:textColor="#33363F"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 치킨4 별점 -->
-            <ImageView
-                android:id="@+id/tenStarOne"
-                android:layout_width="9dp"
-                android:layout_height="9dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="1045dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/tenStarTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="1045dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/tenStarThree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="1045dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/tenStarFour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="1045dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/tenStarFive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="1045dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 치킨4 별점 개수 -->
-            <TextView
-                android:id="@+id/tenStarNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="76dp"
-                android:layout_marginTop="1044dp"
-                android:text="(912)"
-                android:textColor="#A1A9AD"
-                android:textSize="8.5sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 치킨4 회색 사각형 -->
-            <View
-                android:id="@+id/tenGrayBox"
-                android:layout_width="33dp"
-                android:layout_height="13dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="1062dp"
-                android:background="@drawable/ic_gray_rect"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 치킨4 무료배송 -->
-            <TextView
-                android:id="@+id/tenFreeDelivery"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="1063dp"
-                android:text="무료배송"
-                android:textColor="#FFFFFF"
-                android:textSize="7sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르4 이미지 -->
-            <ImageView
-                android:id="@+id/elevenImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="875dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/image_snack"
-                android:background="@drawable/ic_rounded_image"
-                android:clipToOutline="true"/>
-
-            <!-- 츄르4 이름 -->
-            <TextView
-                android:id="@+id/elevenNameOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="985dp"
-                android:text="이나바 캣 챠오 츄르 참치"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/elevenNameTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="999dp"
-                android:text="버라이어트 14g * 40p"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르4 원래 가격 -->
-            <TextView
-                android:id="@+id/elevenOriginalPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="1027dp"
-                android:text="40,000원"
-                android:textColor="#A1A9AD"
-                android:textSize="9sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르4 할인 -->
-            <TextView
-                android:id="@+id/elevenSale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="1040dp"
-                android:text="50%"
-                android:textColor="#FF0000"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르4 할인 가격 -->
-            <TextView
-                android:id="@+id/elevenNowPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="184dp"
-                android:layout_marginTop="1040dp"
-                android:text="20,000원"
-                android:textColor="#33363F"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 츄르4 별점 -->
-            <ImageView
-                android:id="@+id/elevenStarOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="153dp"
-                android:layout_marginTop="1061dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/elevenStarTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="163dp"
-                android:layout_marginTop="1061dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/elevenStarThree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="173dp"
-                android:layout_marginTop="1061dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/elevenStarFour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="183dp"
-                android:layout_marginTop="1061dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/elevenStarFive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="193dp"
-                android:layout_marginTop="1061dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 츄르4 별점 개수 -->
-            <TextView
-                android:id="@+id/elevenStarNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="209dp"
-                android:layout_marginTop="1060dp"
-                android:text="(1715)"
-                android:textColor="#A1A9AD"
-                android:textSize="8.5sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제4 이미지 -->
-            <ImageView
-                android:id="@+id/twelveImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="875dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/image_tonic"
-                android:background="@drawable/ic_rounded_image"
-                android:clipToOutline="true"/>
-
-            <!-- 영양제4 이름 -->
-            <TextView
-                android:id="@+id/twelveNameOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="985dp"
-                android:text="[최저가 도전] 인트라젠 "
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/twelveNameTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="999dp"
-                android:text="영양제 위장&amp;면역 50p"
-                android:textColor="#33363F"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제4 원래 가격 -->
-            <TextView
-                android:id="@+id/twelveOriginalPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="1025dp"
-                android:text="18,800원"
-                android:textColor="#A1A9AD"
-                android:textSize="9sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제4 할인 -->
-            <TextView
-                android:id="@+id/twelveSale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="1038dp"
-                android:text="20%"
-                android:textColor="#FF0000"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제4 할인 가격 -->
-            <TextView
-                android:id="@+id/twelveNowPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="318dp"
-                android:layout_marginTop="1038dp"
-                android:text="14,400원"
-                android:textColor="#33363F"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제4 별점 -->
-            <ImageView
-                android:id="@+id/twelveStarOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="1061dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/twelveStarTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="297dp"
-                android:layout_marginTop="1061dp"
-                android:src="@drawable/ic_star"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="92dp"
+                app:layout_constraintTop_toTopOf="@id/ranking"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/twelveStarThree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="307dp"
-                android:layout_marginTop="1061dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/twelveStarFour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="317dp"
-                android:layout_marginTop="1061dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/twelveStarFive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="327dp"
-                android:layout_marginTop="1061dp"
-                android:src="@drawable/ic_star"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 영양제4 별점 개수 -->
-            <TextView
-                android:id="@+id/twelveStarNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="343dp"
-                android:layout_marginTop="1060dp"
-                android:text="(5524)"
-                android:textColor="#A1A9AD"
-                android:textSize="8.5sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <!-- 영양제4 회색 사각형 -->
-            <View
-                android:id="@+id/twelveGrayBox"
-                android:layout_width="40dp"
-                android:layout_height="13dp"
-                android:layout_marginStart="287dp"
-                android:layout_marginTop="1075dp"
-                android:background="@drawable/ic_gray_rect"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 영양제4 최저가 도전 -->
-            <TextView
-                android:id="@+id/twelveChallenge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="290dp"
-                android:layout_marginTop="1076dp"
-                android:text="최저가 도전"
-                android:textColor="#FFFFFF"
-                android:textSize="7sp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
@@ -2307,13 +214,14 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <!-- 홈 아이콘 -->
-    <ImageView
-        android:id="@+id/nowTapHomeIconCategoryProduct3"
+    <ImageButton
+        android:id="@+id/tapHomeIconCategoryFeed1"
         android:layout_width="28dp"
         android:layout_height="28dp"
-        android:src="@drawable/ic_home"
         android:layout_marginStart="28dp"
         android:layout_marginTop="13dp"
+        android:src="@drawable/ic_home"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="@id/homeRectangleBar"
         app:layout_constraintTop_toTopOf="@id/homeRectangleBar" />
 
@@ -2328,7 +236,7 @@
         android:layout_marginStart="38dp"
         android:layout_marginTop="3dp"
         app:layout_constraintStart_toStartOf="@id/homeRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/nowTapHomeIconCategoryProduct3" />
+        app:layout_constraintTop_toBottomOf="@id/tapHomeIconCategoryFeed1" />
 
     <!-- 탭바 커뮤니티 배경 하얀색 사각형 -->
     <ImageView
@@ -2342,13 +250,14 @@
         app:layout_constraintStart_toEndOf="@id/homeRectangleBar" />
 
     <!-- 커뮤니티 아이콘 -->
-    <ImageView
-        android:id="@+id/tapCommunityIconCategoryProduct3"
+    <ImageButton
+        android:id="@+id/tapCommunityIconCategoryFeed1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_community"
         android:layout_marginStart="30dp"
         android:layout_marginTop="14dp"
+        android:src="@drawable/ic_community"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="@id/communityRectangleBar"
         app:layout_constraintTop_toTopOf="@id/communityRectangleBar" />
 
@@ -2363,7 +272,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="@id/communityRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/tapCommunityIconCategoryProduct3" />
+        app:layout_constraintTop_toBottomOf="@id/tapCommunityIconCategoryFeed1" />
 
     <!-- 탭바 카테고리 배경 하얀색 사각형 -->
     <ImageView
@@ -2377,13 +286,14 @@
         app:layout_constraintStart_toEndOf="@id/communityRectangleBar" />
 
     <!-- 카테고리 아이콘 -->
-    <ImageView
-        android:id="@+id/tapCategoryIconCategoryProduct3"
+    <ImageButton
+        android:id="@+id/tapCategoryIconCategoryFeed1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_category"
         android:layout_marginStart="30dp"
         android:layout_marginTop="16dp"
+        android:src="@drawable/ic_tap_category"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="@id/categoryRectangleBar"
         app:layout_constraintTop_toTopOf="@id/categoryRectangleBar" />
 
@@ -2394,11 +304,11 @@
         android:layout_height="wrap_content"
         android:text="카테고리"
         android:textSize="10sp"
-        android:textColor="#B9BEC1"
+        android:textColor="@color/black"
         android:layout_marginStart="25dp"
         android:layout_marginTop="7dp"
         app:layout_constraintStart_toStartOf="@id/categoryRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/tapCategoryIconCategoryProduct3" />
+        app:layout_constraintTop_toBottomOf="@id/tapCategoryIconCategoryFeed1" />
 
     <!-- 탭바 병원 배경 하얀색 사각형 -->
     <ImageView
@@ -2412,13 +322,14 @@
         app:layout_constraintStart_toEndOf="@id/categoryRectangleBar" />
 
     <!-- 병원 아이콘 -->
-    <ImageView
-        android:id="@+id/tapHostpitalIconCategoryProduct3"
+    <ImageButton
+        android:id="@+id/tapHostpitalIconCategoryFeed1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_hospital"
         android:layout_marginStart="30dp"
         android:layout_marginTop="14dp"
+        android:src="@drawable/ic_hospital"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="@id/hospitalRectangleBar"
         app:layout_constraintTop_toTopOf="@id/hospitalRectangleBar" />
 
@@ -2433,7 +344,7 @@
         android:layout_marginStart="33.5dp"
         android:layout_marginTop="3.5dp"
         app:layout_constraintStart_toStartOf="@id/hospitalRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/tapHostpitalIconCategoryProduct3" />
+        app:layout_constraintTop_toBottomOf="@id/tapHostpitalIconCategoryFeed1" />
 
     <!-- 탭바 내 정보 배경 하얀색 사각형 -->
     <ImageView
@@ -2447,13 +358,14 @@
         app:layout_constraintStart_toEndOf="@id/hospitalRectangleBar" />
 
     <!-- 내 정보 아이콘 -->
-    <ImageView
-        android:id="@+id/tapMypageIconCategoryProduct3"
+    <ImageButton
+        android:id="@+id/tapMypageIconCategoryFeed1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_mypage"
         android:layout_marginStart="30dp"
         android:layout_marginTop="14dp"
+        android:src="@drawable/ic_mypage"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="@id/mypageRectangleBar"
         app:layout_constraintTop_toTopOf="@id/mypageRectangleBar" />
 
@@ -2468,6 +380,6 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="2.5dp"
         app:layout_constraintStart_toStartOf="@id/mypageRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/tapMypageIconCategoryProduct3" />
+        app:layout_constraintTop_toBottomOf="@id/tapMypageIconCategoryFeed1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

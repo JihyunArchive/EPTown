@@ -3,6 +3,7 @@ package com.example.eptown_;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,7 +11,9 @@ import android.os.Looper;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -99,37 +102,38 @@ public class MainActivity extends AppCompatActivity {
 
     private void setIconClickListeners() {
         // 홈 아이콘 눌렀을 때
-        findViewById(R.id.nowTapHomeIcon).setOnClickListener(v -> {
+        findViewById(R.id.tapHomeIconCategoryFeed1).setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
         });
 
         // 커뮤니티 아이콘 눌렀을 때
-        findViewById(R.id.tapCommunityIcon).setOnClickListener(v -> {
+        findViewById(R.id.tapCommunityIconCategoryFeed1).setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, CommunityActivity.class);
             startActivity(intent);
         });
 
         // 카테고리 아이콘 눌렀을 때
-        findViewById(R.id.tapCategoryIcon).setOnClickListener(v -> {
+        findViewById(R.id.tapCategoryIconCategoryFeed1).setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, CategoryMainActivity.class);
             startActivity(intent);
         });
 
         // 병원 아이콘 눌렀을 때
-        findViewById(R.id.tapHostpitalIcon).setOnClickListener(v -> {
+        findViewById(R.id.tapHostpitalIconCategoryFeed1).setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, HospitalActivity.class);
             startActivity(intent);
         });
 
         // 내 정보 아이콘 눌렀을 때
-        findViewById(R.id.tapMypageIcon).setOnClickListener(v -> {
+        findViewById(R.id.tapMypageIconCategoryFeed1).setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, MyPageActivity.class);
             startActivity(intent);
         });
 
-        // 알림 아이콘 눌렀을 때
-        findViewById(R.id.reminderIcon).setOnClickListener(v -> {
+        // 알림 아이콘 누르면 알림로 화면 이동
+        ImageButton imagebutton = findViewById(R.id.reminderIcon);
+        imagebutton.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, NoticeActivity.class);
             startActivity(intent);
         });
@@ -143,6 +147,13 @@ public class MainActivity extends AppCompatActivity {
         // 검색 아이콘 눌렀을 때
         findViewById(R.id.searchIcon).setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+            startActivity(intent);
+        });
+
+        // 첫번째 상품 누르면 itemDetail로 화면 이동
+        LinearLayout layout = findViewById(R.id.userRecommendedItemOne);
+        layout.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, ItemDetails.class);
             startActivity(intent);
         });
     }

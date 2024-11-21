@@ -9,27 +9,16 @@
 
 
     <!-- 뒤로가기 버튼 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/btnSearchBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="27dp"
         android:src="@drawable/ic_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- 검색 아이콘 -->
-    <ImageView
-        android:id="@+id/searchIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="330dp"
-        android:layout_marginTop="25dp"
-        android:src="@drawable/ic_search_no"
-        app:layout_constraintStart_toStartOf="@id/btnSearchBack"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
     <!-- 인기상품 검색 박스 -->
     <View
@@ -61,16 +50,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 검색 아이콘 -->
-    <ImageView
-        android:id="@+id/searchIcon_"
+    <ImageButton
+        android:id="@+id/searchIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="330dp"
         android:layout_marginTop="25dp"
         android:src="@drawable/ic_search"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="@id/btnSearchBack"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <!-- 인기 검색어 -->
     <TextView
@@ -442,13 +431,14 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <!-- 홈 아이콘 -->
-    <ImageView
-        android:id="@+id/nowTapHomeIconCategorySnack4"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:src="@drawable/ic_home"
+    <ImageButton
+        android:id="@+id/tapHomeIconCategoryFeed1"
+        android:layout_width="25dp"
+        android:layout_height="24dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="13dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_home"
         app:layout_constraintStart_toStartOf="@id/homeRectangleBar"
         app:layout_constraintTop_toTopOf="@id/homeRectangleBar" />
 
@@ -463,7 +453,7 @@
         android:layout_marginStart="38dp"
         android:layout_marginTop="3dp"
         app:layout_constraintStart_toStartOf="@id/homeRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/nowTapHomeIconCategorySnack4" />
+        app:layout_constraintTop_toBottomOf="@id/tapHomeIconCategoryFeed1" />
 
     <!-- 탭바 커뮤니티 배경 하얀색 사각형 -->
     <ImageView
@@ -477,13 +467,14 @@
         app:layout_constraintStart_toEndOf="@id/homeRectangleBar" />
 
     <!-- 커뮤니티 아이콘 -->
-    <ImageView
-        android:id="@+id/tapCommunityIconCategorySnack3"
+    <ImageButton
+        android:id="@+id/tapCommunityIconCategoryFeed1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_community"
         android:layout_marginStart="30dp"
         android:layout_marginTop="14dp"
+        android:src="@drawable/ic_community"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="@id/communityRectangleBar"
         app:layout_constraintTop_toTopOf="@id/communityRectangleBar" />
 
@@ -498,7 +489,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="@id/communityRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/tapCommunityIconCategorySnack3" />
+        app:layout_constraintTop_toBottomOf="@id/tapCommunityIconCategoryFeed1" />
 
     <!-- 탭바 카테고리 배경 하얀색 사각형 -->
     <ImageView
@@ -512,13 +503,14 @@
         app:layout_constraintStart_toEndOf="@id/communityRectangleBar" />
 
     <!-- 카테고리 아이콘 -->
-    <ImageView
-        android:id="@+id/tapCategoryIconCategorySnack3"
+    <ImageButton
+        android:id="@+id/tapCategoryIconCategoryFeed1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_category"
         android:layout_marginStart="30dp"
         android:layout_marginTop="16dp"
+        android:src="@drawable/ic_category"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="@id/categoryRectangleBar"
         app:layout_constraintTop_toTopOf="@id/categoryRectangleBar" />
 
@@ -533,7 +525,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="7dp"
         app:layout_constraintStart_toStartOf="@id/categoryRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/tapCategoryIconCategorySnack3" />
+        app:layout_constraintTop_toBottomOf="@id/tapCategoryIconCategoryFeed1" />
 
     <!-- 탭바 병원 배경 하얀색 사각형 -->
     <ImageView
@@ -547,13 +539,14 @@
         app:layout_constraintStart_toEndOf="@id/categoryRectangleBar" />
 
     <!-- 병원 아이콘 -->
-    <ImageView
-        android:id="@+id/tapHostpitalIconCategorySnack3"
+    <ImageButton
+        android:id="@+id/tapHostpitalIconCategoryFeed1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_hospital"
         android:layout_marginStart="30dp"
         android:layout_marginTop="14dp"
+        android:src="@drawable/ic_hospital"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="@id/hospitalRectangleBar"
         app:layout_constraintTop_toTopOf="@id/hospitalRectangleBar" />
 
@@ -568,7 +561,7 @@
         android:layout_marginStart="33.5dp"
         android:layout_marginTop="3.5dp"
         app:layout_constraintStart_toStartOf="@id/hospitalRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/tapHostpitalIconCategorySnack3" />
+        app:layout_constraintTop_toBottomOf="@id/tapHostpitalIconCategoryFeed1" />
 
     <!-- 탭바 내 정보 배경 하얀색 사각형 -->
     <ImageView
@@ -582,13 +575,14 @@
         app:layout_constraintStart_toEndOf="@id/hospitalRectangleBar" />
 
     <!-- 내 정보 아이콘 -->
-    <ImageView
-        android:id="@+id/tapMypageIconCategorySnack3"
+    <ImageButton
+        android:id="@+id/tapMypageIconCategoryFeed1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_mypage"
         android:layout_marginStart="30dp"
         android:layout_marginTop="14dp"
+        android:src="@drawable/ic_mypage"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="@id/mypageRectangleBar"
         app:layout_constraintTop_toTopOf="@id/mypageRectangleBar" />
 
@@ -603,6 +597,6 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="2.5dp"
         app:layout_constraintStart_toStartOf="@id/mypageRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/tapMypageIconCategorySnack3" />
+        app:layout_constraintTop_toBottomOf="@id/tapMypageIconCategoryFeed1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,61 +18,64 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 왼쪽 뒤로가기 아이콘 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/itemDetailsBackIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/ic_left_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintTop_toBottomOf="@id/itemDetailsFixBar" />
 
     <!-- 오른쪽 카트 아이콘 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/cartIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:src="@drawable/ic_cart"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/itemDetailsBackIcon"
         app:layout_constraintTop_toBottomOf="@id/itemDetailsFixBar" />
 
     <!-- 카트 아이콘 왼쪽에 위치한 알림 아이콘 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/reminderIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:src="@drawable/ic_reminder"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toStartOf="@id/cartIcon"
         app:layout_constraintTop_toTopOf="@id/itemDetailsBackIcon"
-        app:layout_constraintTop_toBottomOf="@id/itemDetailsFixBar"/>
+        app:layout_constraintTop_toBottomOf="@id/itemDetailsFixBar" />
 
     <!-- 알림 아이콘 왼쪽에 위치한 홈 아이콘 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/homeIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="13dp"
         android:src="@drawable/ic_item_details_home"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toStartOf="@id/reminderIcon"
         app:layout_constraintTop_toTopOf="@id/itemDetailsBackIcon"
         app:layout_constraintTop_toBottomOf="@id/itemDetailsFixBar" />
 
     <ScrollView
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="58dp"
         android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            xmlns:app="http://schemas.android.com/apk/res-auto">
+            android:layout_height="match_parent">
 
             <!-- 상품이미지 -->
             <ImageView
@@ -369,15 +372,15 @@
             <!-- 상품 정보 -->
             <TextView
                 android:id="@+id/itemInfoTabText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="63dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:includeFontPadding="false"
                 android:text="상품 정보"
                 android:textSize="15sp"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="50dp"
-                app:layout_constraintTop_toBottomOf="@id/itemDetailInfoyDivideBar"
                 app:layout_constraintStart_toStartOf="parent"
-                android:includeFontPadding="false" />
+                app:layout_constraintTop_toBottomOf="@id/itemDetailInfoyDivideBar" />
 
             <!-- 미선택 바 (투명) -->
             <ImageView
@@ -508,31 +511,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <!-- 구매하기 하얀 사각형 배경 -->
-    <ImageView
-        android:id="@+id/buyFixBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/bar_buy_fix"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <!-- 구매하기 버튼 -->
-    <Button
-        android:id="@+id/buyFixButton"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
-        android:text="구매하기"
-        android:textSize="15dp"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/btn_coupon3_receive"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
     <!-- 수량변경 하얀 사각형 배경 -->
     <ImageView
         android:id="@+id/changeBox"
@@ -586,6 +564,19 @@
         android:includeFontPadding="false"
         android:visibility="gone"/>
 
+    <!-- 최신순 체크 -->
+    <ImageView
+        android:id="@+id/checkColorOne"
+        android:layout_width="11dp"
+        android:layout_height="13dp"
+        android:src="@drawable/ic_community_check_color"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="#F59701"
+        app:layout_constraintTop_toTopOf="@id/changeBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
     <!-- 평점 높은 순 -->
     <TextView
         android:id="@+id/reviewHighest"
@@ -602,7 +593,7 @@
 
     <!-- 평점 높은 순 체크 -->
     <ImageView
-        android:id="@+id/checkColor"
+        android:id="@+id/checkColorTwo"
         android:layout_width="11dp"
         android:layout_height="13dp"
         android:src="@drawable/ic_community_check_color"
@@ -626,5 +617,226 @@
         app:layout_constraintStart_toStartOf="parent"
         android:includeFontPadding="false"
         android:visibility="gone"/>
+
+    <!-- 평점 낮은 순 체크 -->
+    <ImageView
+        android:id="@+id/checkColorThree"
+        android:layout_width="11dp"
+        android:layout_height="13dp"
+        android:src="@drawable/ic_community_check_color"
+        android:layout_marginTop="163dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="#F59701"
+        app:layout_constraintTop_toTopOf="@id/changeBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 화면 회색으로 만들기 -->
+    <View
+        android:id="@+id/grayScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <!-- 수량변경 하얀 사각형 배경 -->
+    <ImageView
+        android:id="@+id/changeBoxTwo"
+        android:layout_width="match_parent"
+        android:layout_height="207dp"
+        android:src="@drawable/ic_cart_box"
+        app:layout_constraintBottom_toTopOf="@id/buyFixBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 수량변경 하얀 회색 막대 -->
+    <ImageView
+        android:id="@+id/grayStickTwo"
+        android:layout_width="60dp"
+        android:layout_height="5dp"
+        android:src="@drawable/ic_cart_gray"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@id/grayBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 수량변경 하얀 회색 배경 -->
+    <ImageView
+        android:id="@+id/grayBox"
+        android:layout_width="320dp"
+        android:layout_height="85dp"
+        android:src="@drawable/ic_cart_graybox"
+        android:layout_marginBottom="135dp"
+        app:layout_constraintBottom_toBottomOf="@id/buyFixBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 상품 가격 -->
+    <TextView
+        android:id="@+id/productPriceTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="70dp"
+        android:text="1개 (14,400원)"
+        android:textSize="13sp"
+        android:textColor="#8A8A8E"
+        app:layout_constraintTop_toTopOf="@id/grayBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:visibility="gone"/>
+
+    <!-- 수량 박스 -->
+    <ImageView
+        android:id="@+id/amount"
+        android:layout_width="68dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_cart_amount_box"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="70dp"
+        app:layout_constraintBottom_toBottomOf="@id/grayBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 마이너스 -->
+    <ImageButton
+        android:id="@+id/btnMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_cart_minus"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="@id/amount"
+        app:layout_constraintTop_toTopOf="@id/amount"
+        app:layout_constraintStart_toStartOf="@id/amount"
+        android:visibility="gone"/>
+
+    <!-- 플러스 -->
+    <ImageButton
+        android:id="@+id/btnPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_cart_amount_plus"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="@id/amount"
+        app:layout_constraintTop_toTopOf="@id/amount"
+        app:layout_constraintEnd_toEndOf="@id/amount"
+        android:visibility="gone"/>
+
+    <!-- 최대 개수 -->
+    <TextView
+        android:id="@+id/theLargest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:layout_marginStart="146dp"
+        android:text="최대 10개"
+        android:textSize="13sp"
+        android:textColor="#8A8A8E"
+        app:layout_constraintBottom_toBottomOf="@id/grayBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 숫자 -->
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:text="1"
+        android:textSize="13sp"
+        android:textColor="#8A8A8E"
+        app:layout_constraintBottom_toBottomOf="@id/grayBox"
+        app:layout_constraintStart_toStartOf="@id/amount"
+        app:layout_constraintEnd_toEndOf="@id/amount"
+        android:visibility="gone"/>
+
+    <!-- 총 금액 -->
+    <TextView
+        android:id="@+id/totalPriceTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:layout_marginEnd="10dp"
+        android:text="14,400원"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/grayBox"
+        app:layout_constraintEnd_toEndOf="@id/grayBox"
+        app:layout_constraintVertical_bias="0.0"
+        android:visibility="gone" />
+
+    <!-- 가격 아래줄 -->
+    <View
+        android:id="@+id/priceBar"
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="18dp"
+        android:background="#E7E7E7"
+        app:layout_constraintTop_toBottomOf="@id/grayBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 총 수량 -->
+    <TextView
+        android:id="@+id/totalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="55dp"
+        android:text="총 수량 1개"
+        android:textSize="13sp"
+        android:textColor="#8A8A8E"
+        app:layout_constraintTop_toTopOf="@id/priceBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:visibility="gone"/>
+
+
+    <!-- 총 금액 가격 -->
+    <TextView
+        android:id="@+id/totalPriceThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="55dp"
+        android:text="14,400원"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="@id/priceBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:visibility="gone"/>
+
+    <!-- 구매하기 하얀 사각형 배경 -->
+    <ImageView
+        android:id="@+id/buyFixBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_buy_fix"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 구매하기 버튼 -->
+    <Button
+        android:id="@+id/buyFixButton"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:text="구매하기"
+        android:textSize="15dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_coupon3_receive"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

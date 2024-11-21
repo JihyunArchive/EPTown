@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -16,16 +18,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 왼쪽 뒤로가기 아이콘 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/getCouponBackIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/ic_left_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/getCouponFixBar" />
+        app:layout_constraintTop_toBottomOf="@id/getCouponFixBar"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 에펫타운 -->
     <TextView
@@ -72,7 +75,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="아이디 입력"
-        android:inputType="textEmailAddress"
         android:textSize="14sp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="100dp"
@@ -99,7 +101,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="비밀번호 입력"
-        android:inputType="textPassword"
         android:textSize="14sp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
@@ -123,7 +124,7 @@
     <!-- 로그인 버튼 -->
     <Button
         android:id="@+id/btnContinueColorButton"
-        android:layout_width="370dp"
+        android:layout_width="320dp"
         android:layout_height="50dp"
         android:text="로그인"
         android:textSize="13dp"

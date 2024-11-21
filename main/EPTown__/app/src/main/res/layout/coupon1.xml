@@ -17,16 +17,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 왼쪽 뒤로가기 아이콘 -->
-    <ImageView
-        android:id="@+id/getCouponBackIcon"
+    <ImageButton
+        android:id="@+id/btnCategoryFeed1Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/ic_left_arrow"
+        android:src="@drawable/ic_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/getCouponFixBar" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <!-- 쿠폰받기 -->
     <TextView

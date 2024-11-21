@@ -118,32 +118,6 @@
         app:layout_constraintTop_toTopOf="parent"
         android:visibility="gone"/>
 
-    <!-- 체크된 원 -->
-    <ImageButton
-        android:id="@+id/checkedCircle"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="603dp"
-        android:layout_marginEnd="44dp"
-        android:src="@drawable/ic_checked_circle"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- 익명 -->
-    <TextView
-        android:id="@+id/userName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="605dp"
-        android:text="익명"
-        android:textSize="12dp"
-        android:textColor="#F59701"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <!-- 화면 회색으로 만들기 -->
     <View
         android:id="@+id/grayScreen"

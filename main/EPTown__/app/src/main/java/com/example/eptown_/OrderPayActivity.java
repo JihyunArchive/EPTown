@@ -21,20 +21,21 @@ public class OrderPayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order_pay);
 
-        // 뒤로가기 눌렀을때 커뮤니티로 이동
+        // 뒤로가기 눌렀을때 메인으로 화면 이동
         ImageButton imagebutton = findViewById(R.id.btnOrderPayBack);
         imagebutton.setOnClickListener(view -> {
             Intent intent = new Intent(OrderPayActivity.this, MainActivity.class);
             startActivity(intent);
         });
 
-        // 적용하려는 쿠폰 선택했을때 커뮤니티로 이동
+        // 적용하려는 쿠폰 선택했을때 coupon5로 화면 이동
         ImageButton imagebutton1 = findViewById(R.id.rightArrowTwo);
         imagebutton1.setOnClickListener(view -> {
             Intent intent = new Intent(OrderPayActivity.this, coupon5Activity.class);
             startActivity(intent);
         });
 
+        // 구매하기 눌렀을때 order_pay5로 화면 이동
         Button button = (Button) findViewById(R.id.buyFixButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

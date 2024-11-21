@@ -5,6 +5,7 @@ import static android.app.ProgressDialog.show;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -18,8 +19,8 @@ public class HospitalDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.hospital_detail);
 
         // 뒤로가기 눌렀을때 병원으로 화면 이동
-        ImageView image = (ImageView) findViewById(R.id.btnHospitalDetailBack);
-        image.setOnClickListener(new View.OnClickListener() {
+        ImageButton imagebutton = findViewById(R.id.btnHospitalDetailBack);
+        imagebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HospitalDetailsActivity.this, HospitalActivity.class);

@@ -21,13 +21,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 뒤로가기 버튼 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/btnCategoryFeed1Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="23dp"
         android:src="@drawable/ic_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,7 +42,6 @@
         android:text="내 문의 내역"
         android:textSize="14sp"
         android:textStyle="bold"
-        android:textColor="#F59701"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -59,6 +59,7 @@
         android:text="문의하기"
         android:textSize="14sp"
         android:textStyle="bold"
+        android:textColor="#F59701"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -71,7 +72,7 @@
         android:layout_height="2dp"
         android:layout_marginTop="105dp"
         android:background="#F59701"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.5"
         tools:ignore="MissingConstraints" />
@@ -109,7 +110,7 @@
         android:layout_height="18dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="175dp"
-        android:src="@drawable/ic_checked_circle"
+        android:src="@drawable/ic_uncolor_rect"
         android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -199,6 +200,21 @@
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@id/catImageTwo"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 문의하기 버튼 -->
+    <Button
+        android:id="@+id/btnInquire"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:text="문의하기"
+        android:textSize="15dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_inquire_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 
 

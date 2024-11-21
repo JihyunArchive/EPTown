@@ -5,6 +5,7 @@ import static android.app.ProgressDialog.show;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,16 +20,16 @@ public class CategoryMainActivity extends AppCompatActivity {
         setContentView(R.layout.category_main);
 
         // 메인화면에서 카테고리 아이콘을 눌렀을때 카테고리로 화면 이동
-        ImageView image3 = (ImageView) findViewById(R.id.tapCategoryIcon);
-        image3.setOnClickListener(new View.OnClickListener() {
+        ImageButton imagebutton = findViewById(R.id.tapCategoryIconCategoryFeed1);
+        imagebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
             }
         });
 
         // 뒤로가기 눌렀을때 메인으로 화면 이동
-        ImageView image3_ = (ImageView) findViewById(R.id.btnCategoryBack);
-        image3_.setOnClickListener(new View.OnClickListener() {
+        ImageButton imagebutton1 = findViewById(R.id.btnCategoryFeed1Back);
+        imagebutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategoryMainActivity.this, MainActivity.class);
@@ -37,8 +38,8 @@ public class CategoryMainActivity extends AppCompatActivity {
         });
 
         // 탭바에서 홈 아이콘 눌렀을때 메인으로 화면 이동
-        ImageView image3_1 = (ImageView) findViewById(R.id.nowTapHomeIconCategory);
-        image3_1.setOnClickListener(new View.OnClickListener() {
+        ImageButton imagebutton2 = findViewById(R.id.tapHomeIconCategoryFeed1);
+        imagebutton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategoryMainActivity.this, MainActivity.class);
@@ -47,8 +48,8 @@ public class CategoryMainActivity extends AppCompatActivity {
         });
 
         // 탭바에서 커뮤니티 아이콘 눌렀을때 커뮤니티로 화면 이동
-        ImageView image3_2 = (ImageView) findViewById(R.id.tapCommunityIconCategory);
-        image3_2.setOnClickListener(new View.OnClickListener() {
+        ImageButton imagebutton3 = findViewById(R.id.tapCommunityIconCategoryFeed1);
+        imagebutton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategoryMainActivity.this, CommunityActivity.class);
@@ -57,8 +58,8 @@ public class CategoryMainActivity extends AppCompatActivity {
         });
 
         // 탭바에서 병원 아이콘 눌렀을때 병원으로 화면 이동
-        ImageView image3_3 = (ImageView) findViewById(R.id.tapHostpitalIconCategory);
-        image3_3.setOnClickListener(new View.OnClickListener() {
+        ImageButton imagebutton4 = findViewById(R.id.tapHostpitalIconCategoryFeed1);
+        imagebutton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategoryMainActivity.this, HospitalActivity.class);
@@ -67,8 +68,8 @@ public class CategoryMainActivity extends AppCompatActivity {
         });
 
         // 탭바에서 내 정보 아이콘 눌렀을때 내 정보로 화면 이동
-        ImageView image3_4 = (ImageView) findViewById(R.id.tapMypageIconCategory);
-        image3_4.setOnClickListener(new View.OnClickListener() {
+        ImageButton imagebutton5 = findViewById(R.id.tapMypageIconCategoryFeed1);
+        imagebutton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategoryMainActivity.this, MyPageActivity.class);

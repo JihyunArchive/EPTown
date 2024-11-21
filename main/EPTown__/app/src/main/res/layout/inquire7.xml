@@ -4,13 +4,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <!-- 문의 -->
     <TextView
-        android:id="@+id/review"
+        android:id="@+id/inquire"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -22,13 +21,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 뒤로가기 버튼 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/btnCategoryFeed1Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="23dp"
         android:src="@drawable/ic_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,7 +42,7 @@
         android:text="내 문의 내역"
         android:textSize="14sp"
         android:textStyle="bold"
-        android:textColor="#B3B3B3"
+        android:textColor="#F59701"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -60,7 +60,6 @@
         android:text="문의하기"
         android:textSize="14sp"
         android:textStyle="bold"
-        android:textColor="#F59701"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -89,375 +88,435 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <!-- 상품1 -->
-    <ImageView
-        android:id="@+id/catImageOne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="137dp"
-        android:src="@drawable/image_cat"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- 리뷰1 이름-->
+    <!-- 첫 번째 문의 -->
+    <!-- 서비스 문의 -->
     <TextView
-        android:id="@+id/productOneName"
+        android:id="@+id/inquiryWriterOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="157dp"
-        android:text="이나바 캣 챠오 츄르 참치 14g*40p"
+        android:text="서비스 문의"
+        android:textColor="@color/black"
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@id/catImageOne"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:includeFontPadding="false" />
 
-    <!-- 리뷰1 가격 -->
+    <!-- 문의 날짜 -->
     <TextView
-        android:id="@+id/productOnePrice"
+        android:id="@+id/inquiryCreatedOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="180dp"
-        android:text="1개 (14,400원)"
+        android:text="|   2024.09.01"
         android:textColor="#A1A9AD"
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@id/catImageOne"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="152dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:includeFontPadding="false" />
 
-
-    <!-- 문의 유형 -->
+    <!-- 답변 상태 -->
     <TextView
-        android:id="@+id/inquiryType"
+        android:id="@+id/condition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="247dp"
-        android:text="문의 유형"
-        android:textColor="#33363F"
+        android:text="미답변"
+        android:textColor="#585858"
+        android:textSize="10sp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:includeFontPadding="false" />
+
+    <!-- 문의 제목 -->
+    <TextView
+        android:id="@+id/inquiryTitleOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="메인화면에서 배너가 안 보여요"
+        android:textColor="@color/black"
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- 입력창 -->
-    <ImageView
-        android:id="@+id/enterBoxOne"
-        android:layout_width="254dp"
-        android:layout_height="34dp"
-        android:src="@drawable/ic_profile_administration_box"
-        android:layout_marginTop="274dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/inquiryWriterOne"
+        android:includeFontPadding="false" />
 
-    <!-- 상품 -->
-    <TextView
-        android:id="@+id/nameEnter"
+    <!-- 오른쪽 더보기 닫기 아이콘 -->
+    <ImageButton
+        android:id="@+id/inquirySeeMoreIconOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="상품"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_inquiry_top_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryCreatedOne"/>
+
+    <!-- 문의 더보기 배경 사각형 -->
+    <ImageView
+        android:id="@+id/inquirySeeMoreBarOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/bar_inquiry_see_more"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryTitleOne" />
+
+    <!-- 문의 텍스트 -->
+    <TextView
+        android:id="@+id/inquirySeeMoreTextOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="어플 들어오면 메인화면에서 배너가 안 보여요.."
         android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
         android:layout_marginStart="15dp"
-        app:layout_constraintStart_toStartOf="@id/enterBoxOne"
-        app:layout_constraintTop_toTopOf="@id/enterBoxOne"
-        app:layout_constraintBottom_toBottomOf="@id/enterBoxOne" />
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarOne"
+        app:layout_constraintTop_toTopOf="@id/inquirySeeMoreBarOne" />
 
-    <!-- 선택 화살표 -->
+    <!-- 문의 구분바 -->
     <ImageView
-        android:id="@+id/underArrow"
-        android:layout_width="wrap_content"
+        android:id="@+id/itemDetailDeliveryDivideBarOne"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_under_arrow"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintEnd_toEndOf="@id/enterBoxOne"
-        app:layout_constraintTop_toTopOf="@id/enterBoxOne"
-        app:layout_constraintBottom_toBottomOf="@id/enterBoxOne" />
-
-    <!-- 환불/교환/취소 관련 문의 설명 -->
-    <TextView
-        android:id="@+id/explain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="환불/교환/취소 관련 문의는 주문/배송 내역에서 등록해주세요."
-        android:textSize="9sp"
-        android:textColor="#8A8F9C"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/enterBoxOne" />
-
-    <!-- 문의 상품 옵션 -->
-    <TextView
-        android:id="@+id/inquiryProductOption"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="25dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="343dp"
-        android:text="문의 상품 옵션"
-        android:textColor="#33363F"
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreBarOne"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 두 번째 문의 -->
+    <!-- 배송 문의 -->
+    <TextView
+        android:id="@+id/inquiryWriterTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="배송 문의"
+        android:textColor="@color/black"
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- 입력창 -->
-    <ImageView
-        android:id="@+id/enterBoxTwo"
-        android:layout_width="254dp"
-        android:layout_height="34dp"
-        android:src="@drawable/ic_profile_administration_box"
-        android:layout_marginTop="370dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/itemDetailDeliveryDivideBarOne"
+        android:includeFontPadding="false" />
 
-    <!-- 가격 -->
+    <!-- 문의 날짜 -->
     <TextView
-        android:id="@+id/optionChoice"
+        android:id="@+id/inquiryCreatedTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1개 (14,400원)"
-        android:textSize="11sp"
-        android:textColor="#565C65"
-        android:layout_marginStart="15dp"
-        app:layout_constraintStart_toStartOf="@id/enterBoxTwo"
-        app:layout_constraintTop_toTopOf="@id/enterBoxTwo"
-        app:layout_constraintBottom_toBottomOf="@id/enterBoxTwo" />
-
-    <!-- 선택 화살표 -->
-    <ImageView
-        android:id="@+id/underArrowTwo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_under_arrow"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintEnd_toEndOf="@id/enterBoxTwo"
-        app:layout_constraintTop_toTopOf="@id/enterBoxTwo"
-        app:layout_constraintBottom_toBottomOf="@id/enterBoxTwo" />
-
-    <!-- 제목 -->
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="429dp"
-        android:text="제목"
-        android:textColor="#33363F"
+        android:text="|   2024.09.01"
+        android:textColor="#A1A9AD"
         android:textSize="12sp"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="22dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/itemDetailDeliveryDivideBarOne"
+        android:includeFontPadding="false" />
 
-    <!-- 입력창 -->
-    <ImageView
-        android:id="@+id/enterBoxThree"
-        android:layout_width="254dp"
-        android:layout_height="34dp"
-        android:src="@drawable/ic_profile_administration_box"
-        android:layout_marginTop="456dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <!-- 20자 이내로 입력해 주세요 -->
+    <!-- 답변 상태 -->
     <TextView
-        android:id="@+id/titleInformation"
+        android:id="@+id/conditionTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="답변 완료"
+        android:textColor="#585858"
+        android:textSize="10sp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/itemDetailDeliveryDivideBarOne"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:includeFontPadding="false" />
+
+    <!-- 문의 제목 -->
+    <TextView
+        android:id="@+id/inquiryTitleTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘 주문했는데 언제 배송 시작하나요?"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryWriterTwo"
+        android:includeFontPadding="false" />
+
+    <!-- 오른쪽 더보기 열기 아이콘 -->
+    <ImageButton
+        android:id="@+id/inquirySeeMoreIconTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_inquiry_under_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryCreatedTwo"/>
+
+    <!-- 문의 더보기 배경 사각형 -->
+    <ImageView
+        android:id="@+id/inquirySeeMoreBarTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/bar_inquiry_see_more"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryTitleTwo"
+        android:visibility="gone"/>
+
+    <!-- 문의 텍스트 -->
+    <TextView
+        android:id="@+id/inquirySeeMoreTextTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="오늘 주문했는데 언제 배송 시작하나요?"
         android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
         android:layout_marginStart="15dp"
-        app:layout_constraintStart_toStartOf="@id/enterBoxThree"
-        app:layout_constraintTop_toTopOf="@id/enterBoxThree"
-        app:layout_constraintBottom_toBottomOf="@id/enterBoxThree" />
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarTwo"
+        app:layout_constraintTop_toTopOf="@id/inquirySeeMoreBarTwo"
+        android:visibility="gone"/>
 
-    <!-- 내용 -->
-    <TextView
-        android:id="@+id/content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="515dp"
-        android:text="내용"
-        android:textColor="#33363F"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- 입력창 -->
+    <!-- 문의 구분바 -->
     <ImageView
-        android:id="@+id/enterBoxFour"
-        android:layout_width="320dp"
-        android:layout_height="85dp"
-        android:src="@drawable/ic_profile_administration_box"
-        android:layout_marginTop="542dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <!-- 이 상품 재입고 예정있나요?? 궁금합니다. -->
-    <TextView
-        android:id="@+id/contentInformation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="이 상품 재입고 예정있나요?? 궁금합니다."
-        android:textSize="11sp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="7dp"
-        app:layout_constraintStart_toStartOf="@id/enterBoxFour"
-        app:layout_constraintTop_toTopOf="@id/enterBoxFour"/>
-
-    <!-- 유의사항 -->
-    <TextView
-        android:id="@+id/note"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="647dp"
-        android:text="유의사항"
-        android:textColor="#33363F"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- 게시물 내용 -->
-    <TextView
-        android:id="@+id/communityOneContent"
+        android:id="@+id/itemDetailDeliveryDivideBarTwo"
         android:layout_width="370dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="25dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="674dp"
-        android:text="· 욕설, 비방, 거래 글, 분쟁 유발, 명예훼손, 허위 사실 유포, 타 쇼핑몰 언급, 광고성 등의 부적절한 게시글은 금지합니다.\n· 주문번호, 연락처, 계좌번호 등의 개인 정보 관련 내용은 공개되지 않도록 유의부탁드리며, 개인 정보 노출로 인한 피해는 에펫타운이 책임지지 않습니다."
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreBarTwo"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- 화면 회색으로 만들기 -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#80000000"
-        android:layout_gravity="center" />
-
-    <!-- 취소/등록 하얀 사각형 배경 -->
-    <ImageView
-        android:id="@+id/buyBar"
+    <!-- 세 번째 문의 -->
+    <!-- 배송 문의 -->
+    <TextView
+        android:id="@+id/inquiryWriterThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/bar_buy_fix"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="배송 문의"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/itemDetailDeliveryDivideBarTwo"
+        android:includeFontPadding="false" />
 
-    <!-- 취소 버튼 -->
-    <ImageView
-        android:id="@+id/cancelButton"
+    <!-- 문의 날짜 -->
+    <TextView
+        android:id="@+id/inquiryCreatedThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_inquire_cancel"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="43dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <!-- 등록 버튼 -->
-    <ImageView
-        android:id="@+id/registrationButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_inquire_registration"
-        android:layout_marginBottom="10dp"
-        android:layout_marginEnd="43dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <!-- 수량변경 하얀 사각형 배경 -->
-    <ImageView
-        android:id="@+id/changeBox"
-        android:layout_width="match_parent"
-        android:layout_height="279dp"
-        android:src="@drawable/ic_cart_box"
-        android:layout_marginBottom="65dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <!-- 수량변경 하얀 회색 막대 -->
-    <ImageView
-        android:id="@+id/grayStick"
-        android:layout_width="60dp"
-        android:layout_height="5dp"
-        android:src="@drawable/ic_cart_gray"
+        android:text="|   2024.09.01"
+        android:textColor="#A1A9AD"
+        android:textSize="12sp"
+        android:layout_marginStart="77dp"
         android:layout_marginTop="22dp"
-        app:layout_constraintTop_toTopOf="@id/changeBox"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <!-- 문의 유형 -->
-    <TextView
-        android:id="@+id/inquiryTypeTwo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="문의 유형"
-        android:textSize="16sp"
-        android:layout_marginTop="48dp"
-        android:layout_marginStart="30dp"
-        app:layout_constraintTop_toTopOf="@id/changeBox"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemDetailDeliveryDivideBarTwo"
         android:includeFontPadding="false" />
 
-    <!-- 상품 -->
+    <!-- 답변 상태 -->
     <TextView
-        android:id="@+id/product"
+        android:id="@+id/conditionThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="상품"
-        android:textSize="14sp"
-        android:layout_marginTop="92dp"
-        android:layout_marginStart="30dp"
-        app:layout_constraintTop_toTopOf="@id/changeBox"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="답변 완료"
+        android:textColor="#585858"
+        android:textSize="10sp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/itemDetailDeliveryDivideBarTwo"
+        app:layout_constraintEnd_toEndOf="parent"
         android:includeFontPadding="false" />
 
-    <!-- 서비스 -->
+    <!-- 문의 제목 -->
     <TextView
-        android:id="@+id/service"
+        android:id="@+id/inquiryTitleThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="132dp"
-        android:includeFontPadding="false"
-        android:text="서비스"
-        android:textSize="14sp"
+        android:text="오늘 주문했는데 언제 배송 시작하나요?"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/changeBox" />
-
-    <!-- 주문 -->
-    <TextView
-        android:id="@+id/order"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="주문"
-        android:textSize="14sp"
-        android:layout_marginTop="172dp"
-        android:layout_marginStart="30dp"
-        app:layout_constraintTop_toTopOf="@id/changeBox"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryWriterThree"
         android:includeFontPadding="false" />
 
-    <!-- 배송 -->
-    <TextView
-        android:id="@+id/delivery"
+    <!-- 오른쪽 더보기 열기 아이콘 -->
+    <ImageButton
+        android:id="@+id/inquirySeeMoreIconThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="배송"
-        android:textSize="14sp"
-        android:layout_marginTop="212dp"
-        android:layout_marginStart="30dp"
-        app:layout_constraintTop_toTopOf="@id/changeBox"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_inquiry_under_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryCreatedThree" />
+
+    <!-- 문의 더보기 배경 사각형 -->
+    <ImageView
+        android:id="@+id/inquirySeeMoreBarThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/bar_inquiry_see_more"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryTitleThree"
+        android:visibility="gone"/>
+
+    <!-- 문의 텍스트 -->
+    <TextView
+        android:id="@+id/inquirySeeMoreTextThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘 주문했는데 언제 배송 시작하나요?"
+        android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarThree"
+        app:layout_constraintTop_toTopOf="@id/inquirySeeMoreBarThree"
+        android:visibility="gone"/>
+
+    <!-- 문의 구분바 -->
+    <ImageView
+        android:id="@+id/itemDetailDeliveryDivideBarThree"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreBarThree"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 네 번째 문의 -->
+    <!-- 배송 문의 -->
+    <TextView
+        android:id="@+id/inquiryWriterFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="배송 문의"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemDetailDeliveryDivideBarThree"
         android:includeFontPadding="false" />
 
+    <!-- 문의 날짜 -->
+    <TextView
+        android:id="@+id/inquiryCreatedFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|   2024.09.01"
+        android:textColor="#A1A9AD"
+        android:textSize="12sp"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemDetailDeliveryDivideBarThree"
+        android:includeFontPadding="false" />
 
+    <!-- 답변 상태 -->
+    <TextView
+        android:id="@+id/conditionFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="답변 완료"
+        android:textColor="#585858"
+        android:textSize="10sp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/itemDetailDeliveryDivideBarThree"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:includeFontPadding="false" />
+
+    <!-- 문의 제목 -->
+    <TextView
+        android:id="@+id/inquiryTitleFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘 주문했는데 언제 배송 시작하나요?"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryWriterFour"
+        android:includeFontPadding="false" />
+
+    <!-- 오른쪽 더보기 열기 아이콘 -->
+    <ImageButton
+        android:id="@+id/inquirySeeMoreIconFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_inquiry_under_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryCreatedFour" />
+
+    <!-- 문의 더보기 배경 사각형 -->
+    <ImageView
+        android:id="@+id/inquirySeeMoreBarFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/bar_inquiry_see_more"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryTitleFour"
+        android:visibility="gone"/>
+
+    <!-- 문의 텍스트 -->
+    <TextView
+        android:id="@+id/inquirySeeMoreTextFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘 주문했는데 언제 배송 시작하나요?"
+        android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarFour"
+        app:layout_constraintTop_toTopOf="@id/inquirySeeMoreBarFour"
+        android:visibility="gone"/>
+
+    <!-- 문의 구분바 -->
+    <ImageView
+        android:id="@+id/itemDetailDeliveryDivideBarFour"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreBarFour"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 

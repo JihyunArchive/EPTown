@@ -22,15 +22,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 뒤로가기 버튼 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/btnCategoryFeed1Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="23dp"
         android:src="@drawable/ic_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"  />
 
     <!-- 주문 내역 아래수평선 -->
     <View
@@ -56,13 +57,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 더보기 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/arrowOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="89dp"
         android:src="@drawable/ic_right_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -238,13 +240,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 더보기2 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/arrowTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="397dp"
         android:src="@drawable/ic_right_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

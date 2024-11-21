@@ -19,46 +19,50 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 왼쪽 뒤로가기 아이콘 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/itemDetailsBackIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/ic_left_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintTop_toBottomOf="@id/itemDetailsFixBar" />
 
     <!-- 오른쪽 카트 아이콘 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/cartIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:src="@drawable/ic_cart"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/itemDetailsBackIcon"
         app:layout_constraintTop_toBottomOf="@id/itemDetailsFixBar" />
 
     <!-- 카트 아이콘 왼쪽에 위치한 알림 아이콘 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/reminderIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:src="@drawable/ic_reminder"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toStartOf="@id/cartIcon"
         app:layout_constraintTop_toTopOf="@id/itemDetailsBackIcon"
-        app:layout_constraintTop_toBottomOf="@id/itemDetailsFixBar"/>
+        app:layout_constraintTop_toBottomOf="@id/itemDetailsFixBar" />
 
     <!-- 알림 아이콘 왼쪽에 위치한 홈 아이콘 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/homeIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="13dp"
         android:src="@drawable/ic_item_details_home"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toStartOf="@id/reminderIcon"
         app:layout_constraintTop_toTopOf="@id/itemDetailsBackIcon"
         app:layout_constraintTop_toBottomOf="@id/itemDetailsFixBar" />
@@ -242,13 +246,16 @@
                 app:layout_constraintStart_toEndOf="@id/freeDelivery" />
 
             <!-- 쿠폰받기 -->
-            <ImageView
+            <Button
                 android:id="@+id/getCoupon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="78dp"
+                android:layout_height="23dp"
+                android:text="쿠폰받기"
+                android:textSize="12dp"
+                android:textColor="#FFFFFF"
                 android:layout_marginTop="110dp"
                 android:layout_marginEnd="20dp"
-                android:src="@drawable/ic_get_coupon"
+                android:background="@drawable/btn_review_higher_receive_coupon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/itemName"/>
 

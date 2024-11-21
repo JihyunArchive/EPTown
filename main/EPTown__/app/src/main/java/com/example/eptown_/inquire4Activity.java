@@ -1,8 +1,12 @@
 package com.example.eptown_;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,10 +21,31 @@ public class inquire4Activity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.inquire4);
 
+        // 뒤로가기 클릭시 마이페이지로 화면 이동
+        ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
+        imagebutton.setOnClickListener(view -> {
+            Intent intent = new Intent(inquire4Activity.this, MyPageActivity.class);
+            startActivity(intent);
+        });
+
+        // 문의하기 텍스트 클릭시 inquire5로 화면 이동
+        TextView textview = findViewById(R.id.writeReview);
+        textview.setOnClickListener(view -> {
+            Intent intent = new Intent(inquire4Activity.this, inquire5Activity.class);
+            startActivity(intent);
+        });
+
         // 필요한 뷰들을 찾음
-        ImageView inquirySeeMoreIconOne = findViewById(R.id.inquirySeeMoreIconOne);
+        ImageButton inquirySeeMoreIconOne = findViewById(R.id.inquirySeeMoreIconOne);
         View inquirySeeMoreBarOne = findViewById(R.id.inquirySeeMoreBarOne);
         View inquirySeeMoreTextOne = findViewById(R.id.inquirySeeMoreTextOne);
+        ImageButton inquirySeeMoreIconTwo = findViewById(R.id.inquirySeeMoreIconTwo);
+        View inquirySeeMoreBarTwo = findViewById(R.id.inquirySeeMoreBarTwo);
+        View inquirySeeMoreTextTwo = findViewById(R.id.inquirySeeMoreTextTwo);
+        ImageButton inquirySeeMoreIconThree = findViewById(R.id.inquirySeeMoreIconThree);
+        View inquirySeeMoreBarThree = findViewById(R.id.inquirySeeMoreBarThree);
+        View inquirySeeMoreTextThree = findViewById(R.id.inquirySeeMoreTextThree);
+
 
         // 기본 및 클릭 시 변경할 아이콘 리소스
         int defaultIconResource = R.drawable.ic_inquiry_top_arrow;
@@ -42,5 +67,40 @@ public class inquire4Activity extends AppCompatActivity {
             // 상태를 반전
             isExpanded = !isExpanded;
         });
+
+        // inquirySeeMoreIconTwo 클릭 리스너 추가
+        inquirySeeMoreIconTwo.setOnClickListener(v -> {
+            if (isExpanded) {
+                // 원상복귀 상태로 설정
+                inquirySeeMoreIconTwo.setImageResource(defaultIconResource);
+                inquirySeeMoreBarTwo.setVisibility(View.VISIBLE);
+                inquirySeeMoreTextTwo.setVisibility(View.VISIBLE);
+            } else {
+                // 확장 상태로 설정
+                inquirySeeMoreIconTwo.setImageResource(clickedIconResource);
+                inquirySeeMoreBarTwo.setVisibility(View.GONE);
+                inquirySeeMoreTextTwo.setVisibility(View.GONE);
+            }
+            // 상태를 반전
+            isExpanded = !isExpanded;
+        });
+
+        // inquirySeeMoreIconThree 클릭 리스너 추가
+        inquirySeeMoreIconThree.setOnClickListener(v -> {
+            if (isExpanded) {
+                // 원상복귀 상태로 설정
+                inquirySeeMoreIconThree.setImageResource(defaultIconResource);
+                inquirySeeMoreBarThree.setVisibility(View.VISIBLE);
+                inquirySeeMoreTextThree.setVisibility(View.VISIBLE);
+            } else {
+                // 확장 상태로 설정
+                inquirySeeMoreIconThree.setImageResource(clickedIconResource);
+                inquirySeeMoreBarThree.setVisibility(View.GONE);
+                inquirySeeMoreTextThree.setVisibility(View.GONE);
+            }
+            // 상태를 반전
+            isExpanded = !isExpanded;
+        });
     }
 }
+

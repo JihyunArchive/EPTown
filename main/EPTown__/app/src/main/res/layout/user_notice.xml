@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 공지사항 -->
+    <TextView
+        android:id="@+id/notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="공지사항"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 뒤로가기 버튼 -->
+    <ImageButton
+        android:id="@+id/btnCategoryFeed1Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="23dp"
+        android:src="@drawable/ic_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 공지사항 아래 통 밑줄 -->
+    <View
+        android:id="@+id/firstHorizon"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="18dp"
+        android:background="#E7E7E7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notice"
+        tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <!-- 첫 번째 공지 -->
+    <!-- 공지 제목 -->
+    <TextView
+        android:id="@+id/inquiryWriterOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09월 17일 정기 업데이트 예정"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:includeFontPadding="false" />
+
+    <!-- 공지 날짜 -->
+    <TextView
+        android:id="@+id/inquiryCreatedOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|   2024.09.01"
+        android:textColor="#A1A9AD"
+        android:textSize="12sp"
+        android:layout_marginStart="185dp"
+        android:layout_marginTop="31dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:includeFontPadding="false" />
+
+    <!-- 오른쪽 더보기 닫기 아이콘 -->
+    <ImageButton
+        android:id="@+id/inquirySeeMoreIconOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="37dp"
+        android:src="@drawable/ic_inquiry_top_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 공지 더보기 배경 사각형 -->
+    <ImageView
+        android:id="@+id/inquirySeeMoreBarOne"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_user_notice_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryWriterOne" />
+
+    <!-- 공지 텍스트 -->
+    <TextView
+        android:id="@+id/inquirySeeMoreTextOne"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:text="안녕하세요, 에펫타운 회원 여러분!\n다가오는 09월 17일 화요일에 어플 정기 업데이트가 진행될 예정입니다.\n아래 시간 참고하셔서 에펫타운 사용에 참고해주시길 합니다. "
+        android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarOne"
+        app:layout_constraintTop_toTopOf="@id/inquirySeeMoreBarOne" />
+
+    <TextView
+        android:id="@+id/inquirySeeMoreTextTwo"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:text="시간 : 05:00 ~ 06:00"
+        android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarOne"
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreTextOne" />
+
+    <!-- 공지 구분바 -->
+    <ImageView
+        android:id="@+id/itemDetailDeliveryDivideBarOne"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreBarOne"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 두 번째 공지 -->
+    <!-- 공지 제목 -->
+    <TextView
+        android:id="@+id/inquiryWriterTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09월 17일 정기 업데이트 예정"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemDetailDeliveryDivideBarOne"
+        android:includeFontPadding="false" />
+
+    <!-- 공지 날짜 -->
+    <TextView
+        android:id="@+id/inquiryCreatedTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|   2024.09.01"
+        android:textColor="#A1A9AD"
+        android:textSize="12sp"
+        android:layout_marginStart="185dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/itemDetailDeliveryDivideBarOne"
+        android:includeFontPadding="false" />
+
+    <!-- 오른쪽 더보기 닫기 아이콘 -->
+    <ImageButton
+        android:id="@+id/inquirySeeMoreIconTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/ic_inquiry_under_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/itemDetailDeliveryDivideBarOne" />
+
+    <!-- 공지 더보기 배경 사각형 -->
+    <ImageView
+        android:id="@+id/inquirySeeMoreBarTwo"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_user_notice_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryWriterTwo"
+        android:visibility="gone"/>
+
+    <!-- 공지 텍스트 -->
+    <TextView
+        android:id="@+id/inquirySeeMoreTextThree"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:text="안녕하세요, 에펫타운 회원 여러분!\n다가오는 09월 17일 화요일에 어플 정기 업데이트가 진행될 예정입니다.\n아래 시간 참고하셔서 에펫타운 사용에 참고해주시길 합니다. "
+        android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarTwo"
+        app:layout_constraintTop_toTopOf="@id/inquirySeeMoreBarTwo"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/inquirySeeMoreTextFour"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:text="시간 : 05:00 ~ 06:00"
+        android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarTwo"
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreTextThree"
+        android:visibility="gone"/>
+
+    <!-- 공지 구분바 -->
+    <ImageView
+        android:id="@+id/itemDetailDeliveryDivideBarTwo"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreBarTwo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 세 번째 공지 -->
+    <!-- 공지 제목 -->
+    <TextView
+        android:id="@+id/inquiryWriterThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09월 17일 정기 업데이트 예정"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemDetailDeliveryDivideBarTwo"
+        android:includeFontPadding="false" />
+
+    <!-- 공지 날짜 -->
+    <TextView
+        android:id="@+id/inquiryCreatedThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|   2024.09.01"
+        android:textColor="#A1A9AD"
+        android:textSize="12sp"
+        android:layout_marginStart="185dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/itemDetailDeliveryDivideBarTwo"
+        android:includeFontPadding="false" />
+
+    <!-- 오른쪽 더보기 닫기 아이콘 -->
+    <ImageButton
+        android:id="@+id/inquirySeeMoreIconThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/ic_inquiry_under_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/itemDetailDeliveryDivideBarTwo" />
+
+    <!-- 공지 더보기 배경 사각형 -->
+    <ImageView
+        android:id="@+id/inquirySeeMoreBarThree"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_user_notice_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryWriterThree"
+        android:visibility="gone"/>
+
+    <!-- 공지 텍스트 -->
+    <TextView
+        android:id="@+id/inquirySeeMoreTextFive"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:text="안녕하세요, 에펫타운 회원 여러분!\n다가오는 09월 17일 화요일에 어플 정기 업데이트가 진행될 예정입니다.\n아래 시간 참고하셔서 에펫타운 사용에 참고해주시길 합니다. "
+        android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarThree"
+        app:layout_constraintTop_toTopOf="@id/inquirySeeMoreBarThree"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/inquirySeeMoreTextSix"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:text="시간 : 05:00 ~ 06:00"
+        android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarThree"
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreTextFive"
+        android:visibility="gone"/>
+
+    <!-- 공지 구분바 -->
+    <ImageView
+        android:id="@+id/itemDetailDeliveryDivideBarThree"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreBarThree"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 네 번째 공지 -->
+    <!-- 공지 제목 -->
+    <TextView
+        android:id="@+id/inquiryWriterFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09월 17일 정기 업데이트 예정"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemDetailDeliveryDivideBarThree"
+        android:includeFontPadding="false" />
+
+    <!-- 공지 날짜 -->
+    <TextView
+        android:id="@+id/inquiryCreatedFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|   2024.09.01"
+        android:textColor="#A1A9AD"
+        android:textSize="12sp"
+        android:layout_marginStart="185dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/itemDetailDeliveryDivideBarThree"
+        android:includeFontPadding="false" />
+
+    <!-- 오른쪽 더보기 닫기 아이콘 -->
+    <ImageButton
+        android:id="@+id/inquirySeeMoreIconFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/ic_inquiry_under_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/itemDetailDeliveryDivideBarThree" />
+
+    <!-- 공지 더보기 배경 사각형 -->
+    <ImageView
+        android:id="@+id/inquirySeeMoreBarFour"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_user_notice_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryWriterFour"
+        android:visibility="gone"/>
+
+    <!-- 공지 텍스트 -->
+    <TextView
+        android:id="@+id/inquirySeeMoreTextSeven"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:text="안녕하세요, 에펫타운 회원 여러분!\n다가오는 09월 17일 화요일에 어플 정기 업데이트가 진행될 예정입니다.\n아래 시간 참고하셔서 에펫타운 사용에 참고해주시길 합니다. "
+        android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarFour"
+        app:layout_constraintTop_toTopOf="@id/inquirySeeMoreBarFour"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/inquirySeeMoreTextEight"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:text="시간 : 05:00 ~ 06:00"
+        android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarFour"
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreTextSeven"
+        android:visibility="gone"/>
+
+    <!-- 공지 구분바 -->
+    <ImageView
+        android:id="@+id/itemDetailDeliveryDivideBarFour"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreBarFour"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 다섯 번째 공지 -->
+    <!-- 공지 제목 -->
+    <TextView
+        android:id="@+id/inquiryWriterFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09월 17일 정기 업데이트 예정"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemDetailDeliveryDivideBarFour"
+        android:includeFontPadding="false" />
+
+    <!-- 공지 날짜 -->
+    <TextView
+        android:id="@+id/inquiryCreatedFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|   2024.09.01"
+        android:textColor="#A1A9AD"
+        android:textSize="12sp"
+        android:layout_marginStart="185dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/itemDetailDeliveryDivideBarFour"
+        android:includeFontPadding="false" />
+
+    <!-- 오른쪽 더보기 닫기 아이콘 -->
+    <ImageButton
+        android:id="@+id/inquirySeeMoreIconFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/ic_inquiry_under_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/itemDetailDeliveryDivideBarFour" />
+
+    <!-- 공지 더보기 배경 사각형 -->
+    <ImageView
+        android:id="@+id/inquirySeeMoreBarFive"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_user_notice_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryWriterFive"
+        android:visibility="gone"/>
+
+    <!-- 공지 텍스트 -->
+    <TextView
+        android:id="@+id/inquirySeeMoreTextNine"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:text="안녕하세요, 에펫타운 회원 여러분!\n다가오는 09월 17일 화요일에 어플 정기 업데이트가 진행될 예정입니다.\n아래 시간 참고하셔서 에펫타운 사용에 참고해주시길 합니다. "
+        android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarFive"
+        app:layout_constraintTop_toTopOf="@id/inquirySeeMoreBarFive"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/inquirySeeMoreTextTen"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:text="시간 : 05:00 ~ 06:00"
+        android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarFive"
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreTextNine"
+        android:visibility="gone"/>
+
+    <!-- 공지 구분바 -->
+    <ImageView
+        android:id="@+id/itemDetailDeliveryDivideBarFive"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreBarFive"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 여섯 번째 공지 -->
+    <!-- 공지 제목 -->
+    <TextView
+        android:id="@+id/inquiryWriterSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09월 17일 정기 업데이트 예정"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemDetailDeliveryDivideBarFive"
+        android:includeFontPadding="false" />
+
+    <!-- 공지 날짜 -->
+    <TextView
+        android:id="@+id/inquiryCreatedSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|   2024.09.01"
+        android:textColor="#A1A9AD"
+        android:textSize="12sp"
+        android:layout_marginStart="185dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/itemDetailDeliveryDivideBarFive"
+        android:includeFontPadding="false" />
+
+    <!-- 오른쪽 더보기 닫기 아이콘 -->
+    <ImageButton
+        android:id="@+id/inquirySeeMoreIconSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/ic_inquiry_under_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/itemDetailDeliveryDivideBarFive" />
+
+    <!-- 공지 더보기 배경 사각형 -->
+    <ImageView
+        android:id="@+id/inquirySeeMoreBarSix"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_user_notice_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inquiryWriterSix"
+        android:visibility="gone"/>
+
+    <!-- 공지 텍스트 -->
+    <TextView
+        android:id="@+id/inquirySeeMoreTextEleven"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:text="안녕하세요, 에펫타운 회원 여러분!\n다가오는 09월 17일 화요일에 어플 정기 업데이트가 진행될 예정입니다.\n아래 시간 참고하셔서 에펫타운 사용에 참고해주시길 합니다. "
+        android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarSix"
+        app:layout_constraintTop_toTopOf="@id/inquirySeeMoreBarSix"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/inquirySeeMoreTextTwelve"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:text="시간 : 05:00 ~ 06:00"
+        android:textSize="11sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/inquirySeeMoreBarSix"
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreTextEleven"
+        android:visibility="gone"/>
+
+    <!-- 공지 구분바 -->
+    <ImageView
+        android:id="@+id/itemDetailDeliveryDivideBarSix"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_item_detail_delivery_divide"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/inquirySeeMoreBarSix"
+        app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

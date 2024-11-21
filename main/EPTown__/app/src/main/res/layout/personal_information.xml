@@ -9,13 +9,14 @@
     android:layout_height="match_parent">
 
     <!-- 나가기 버튼 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/btnLoginBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/ic_left_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,19 +44,19 @@
             android:layout_height="match_parent">
 
             <!-- 이름 입력칸 -->
-            <EditText
+            <TextView
                 android:id="@+id/zipCodeSpaces"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="정여진"
+                android:textColor="#A1A9AD"
+                android:textSize="12sp"
                 android:layout_marginStart="34dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginEnd="34dp"
-                android:background="@null"
-                android:hint="정여진"
-                android:textSize="12sp"
-                android:textColorHint="#A1A9AD"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"  />
+                app:layout_constraintTop_toTopOf="parent"
+                android:includeFontPadding="false" />
+
 
             <!-- 이름 입력줄 -->
             <View
@@ -70,19 +71,18 @@
                 tools:ignore="MissingConstraints" />
 
             <!-- 아이디 입력칸 -->
-            <EditText
+            <TextView
                 android:id="@+id/addressSpaces"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="yeojin565"
+                android:textColor="#A1A9AD"
+                android:textSize="12sp"
                 android:layout_marginStart="34dp"
                 android:layout_marginTop="82dp"
-                android:layout_marginEnd="34dp"
-                android:background="@null"
-                android:hint="yeojin565"
-                android:textSize="12sp"
-                android:textColorHint="#A1A9AD"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"  />
+                app:layout_constraintTop_toTopOf="parent"
+                android:includeFontPadding="false" />
 
             <!-- 아이디 입력줄 -->
             <View
@@ -396,19 +396,18 @@
                 tools:ignore="MissingConstraints" />
 
             <!-- 생년월일 입력칸 -->
-            <EditText
+            <TextView
                 android:id="@+id/birthdayEnter"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="2004-11-12"
+                android:textColor="#A1A9AD"
+                android:textSize="12sp"
                 android:layout_marginStart="34dp"
                 android:layout_marginTop="640dp"
-                android:layout_marginEnd="34dp"
-                android:background="@null"
-                android:hint="2004-11-12"
-                android:textSize="12sp"
-                android:textColorHint="#A1A9AD"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"  />
+                app:layout_constraintTop_toTopOf="parent"
+                android:includeFontPadding="false" />
 
             <!-- 생년월일 입력줄 -->
             <View
@@ -423,19 +422,18 @@
                 tools:ignore="MissingConstraints" />
 
             <!-- 성별 입력칸 -->
-            <EditText
+            <TextView
                 android:id="@+id/genderEnter"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="여성"
+                android:textColor="#A1A9AD"
+                android:textSize="12sp"
                 android:layout_marginStart="34dp"
                 android:layout_marginTop="702dp"
-                android:layout_marginEnd="34dp"
-                android:background="@null"
-                android:hint="여성"
-                android:textSize="12sp"
-                android:textColorHint="#A1A9AD"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"  />
+                app:layout_constraintTop_toTopOf="parent"
+                android:includeFontPadding="false" />
 
             <!-- 성별 입력줄 -->
             <View
@@ -445,38 +443,14 @@
                 android:layout_marginTop="733dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
+                android:layout_marginBottom="100dp"
                 android:background="#D2D5D6"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 tools:ignore="MissingConstraints" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-    <!-- 회원정보 수정하고나서 뜨는 창 -->
-    <ImageView
-        android:id="@+id/registerBox"
-        android:layout_width="230dp"
-        android:layout_height="30dp"
-        android:src="@drawable/ic_community_register_box"
-        android:layout_marginBottom="87dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"/>
-
-    <!-- 회원정보가 수정되었습니다 -->
-    <TextView
-        android:id="@+id/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="회원정보가 수정되었습니다"
-        android:textSize="10dp"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="@id/registerBox"
-        app:layout_constraintStart_toStartOf="@id/registerBox"
-        app:layout_constraintTop_toTopOf="@id/registerBox"
-        app:layout_constraintBottom_toBottomOf="@id/registerBox"
-        android:visibility="gone"/>
 
     <!-- 수정하기 하얀 사각형 배경 -->
     <ImageView

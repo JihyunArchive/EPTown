@@ -20,27 +20,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <!-- 뒤로가기 버튼 -->
-    <ImageButton
-        android:id="@+id/btnOrderPayBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="23dp"
-        android:background="@drawable/ic_arrow"
+    <View
+        android:id="@+id/secondHorizon"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="60dp"
+        android:background="#F5F6F7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <!-- 홈으로 가기 버튼 -->
-    <ImageView
+    <ImageButton
         android:id="@+id/homeButton"
-        android:layout_width="22dp"
-        android:layout_height="22dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="20dp"
+        android:src="@drawable/ic_item_details_home"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_item_details_home" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <!-- 결제 완료 안내 -->
     <TextView
@@ -228,7 +228,7 @@
 
     <!-- 주문상품.배송지 사이 수평선 -->
     <View
-        android:id="@+id/secondHorizon"
+        android:id="@+id/secondHorizonTwo"
         android:layout_width="match_parent"
         android:layout_height="10dp"
         android:layout_marginTop="428dp"
@@ -253,21 +253,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
-    <!-- 배송지 수정 화살표 -->
-    <ImageView
-        android:id="@+id/rightArrowOne"
-        android:layout_width="7dp"
-        android:layout_height="12dp"
-        android:layout_marginStart="356dp"
-        android:layout_marginTop="469dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@id/deliveryAddress"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_right_arrow" />
-
 
     <!-- 고객 이름 -->
     <TextView
