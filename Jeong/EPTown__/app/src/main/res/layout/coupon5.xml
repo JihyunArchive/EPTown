@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="true">
+
+    <!-- 쿠폰 -->
+    <TextView
+        android:id="@+id/inquire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="쿠폰"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 왼쪽 뒤로가기 아이콘 -->
+    <ImageButton
+        android:id="@+id/btnCategoryFeed1Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 작성한 리뷰, 리뷰 쓰기 아래 통 밑줄 -->
+    <View
+        android:id="@+id/firstHorizon"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="60dp"
+        android:background="#E7E7E7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!-- 체크됨 -->
+    <ImageButton
+        android:id="@+id/checked"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="108dp"
+        android:src="@drawable/ic_checked_circle"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 할인 퍼센트 -->
+    <TextView
+        android:id="@+id/couponDiscountOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30%"
+        android:textColor="@color/orange"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="105dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰명 -->
+    <TextView
+        android:id="@+id/couponNameOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[ 추석 선물 ] 간식 30% 쿠폰"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountOne"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰설명 -->
+    <TextView
+        android:id="@+id/couponTextOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50,000원 이상 구매 시 최대 15,000원 할인"
+        android:textColor="#9E9E9E"
+        android:textSize="13sp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@id/couponNameOne"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 유효기간 -->
+    <ImageView
+        android:id="@+id/firstExpiration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/ic_coupon_expriation"
+        app:layout_constraintTop_toBottomOf="@id/couponTextOne"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 체크 안됨 -->
+    <ImageButton
+        android:id="@+id/unchecked"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="242dp"
+        android:src="@drawable/ic_uncolor_rect"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 할인 퍼센트 -->
+    <TextView
+        android:id="@+id/couponDiscountTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30%"
+        android:textColor="#CCCCCC"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="239dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰명 -->
+    <TextView
+        android:id="@+id/couponNameTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[ 추석 선물 ] 간식 30% 쿠폰"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountTwo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 쿠폰설명 -->
+    <TextView
+        android:id="@+id/couponTextTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50,000원 이상 구매 시 최대 15,000원 할인"
+        android:textColor="#9E9E9E"
+        android:textSize="13sp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@id/couponNameTwo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 유효기간 -->
+    <ImageView
+        android:id="@+id/secondExpiration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/ic_coupon_expriation"
+        app:layout_constraintTop_toBottomOf="@id/couponTextTwo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 취소/등록 하얀 사각형 배경 -->
+    <ImageView
+        android:id="@+id/buyBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_buy_fix"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 적용하기 버튼 -->
+    <Button
+        android:id="@+id/buyFixButton"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:text="적용하기"
+        android:textSize="15dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_coupon3_receive"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- 뒤로가기 버튼 -->
+    <ImageButton
+        android:id="@+id/btnCategoryFeed1Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="23dp"
+        android:src="@drawable/ic_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 상품1 -->
+    <ImageView
+        android:id="@+id/catImageOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/image_cat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 리뷰1 이름-->
+    <TextView
+        android:id="@+id/productOneName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="100dp"
+        android:text="이나바 캣 챠오 츄르 참치 14g*40p"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/catImageOne"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 리뷰1 가격 -->
+    <TextView
+        android:id="@+id/productOnePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="123dp"
+        android:text="1개 (14,400원)"
+        android:textColor="#A1A9AD"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/catImageOne"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- 문의 유형 -->
+    <TextView
+        android:id="@+id/inquiryType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="190dp"
+        android:text="문의 유형"
+        android:textColor="#33363F"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 입력창 -->
+    <ImageView
+        android:id="@+id/enterBoxOne"
+        android:layout_width="254dp"
+        android:layout_height="34dp"
+        android:src="@drawable/ic_profile_administration_box"
+        android:layout_marginTop="217dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 문의유형을 선택해 주세요 -->
+    <TextView
+        android:id="@+id/nameEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="문의유형을 선택해 주세요"
+        android:textSize="11sp"
+        android:textColor="#565C65"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="@id/enterBoxOne"
+        app:layout_constraintTop_toTopOf="@id/enterBoxOne"
+        app:layout_constraintBottom_toBottomOf="@id/enterBoxOne" />
+
+    <!-- 선택 화살표 -->
+    <ImageButton
+        android:id="@+id/underArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/ic_under_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="@id/enterBoxOne"
+        app:layout_constraintTop_toTopOf="@id/enterBoxOne"
+        app:layout_constraintBottom_toBottomOf="@id/enterBoxOne"/>
+
+
+    <!-- 환불/교환/취소 관련 문의 설명 -->
+    <TextView
+        android:id="@+id/explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="환불/교환/취소 관련 문의는 주문/배송 내역에서 등록해주세요."
+        android:textSize="9sp"
+        android:textColor="#8A8F9C"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enterBoxOne" />
+
+    <!-- 문의 상품 옵션 -->
+    <TextView
+        android:id="@+id/inquiryProductOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="286dp"
+        android:text="문의 상품 옵션"
+        android:textColor="#33363F"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 입력창 -->
+    <ImageView
+        android:id="@+id/enterBoxTwo"
+        android:layout_width="254dp"
+        android:layout_height="34dp"
+        android:src="@drawable/ic_profile_administration_box"
+        android:layout_marginTop="313dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 옵션을 선택해주세요 -->
+    <TextView
+        android:id="@+id/optionChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="옵션을 선택해주세요"
+        android:textSize="11sp"
+        android:textColor="#565C65"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="@id/enterBoxTwo"
+        app:layout_constraintTop_toTopOf="@id/enterBoxTwo"
+        app:layout_constraintBottom_toBottomOf="@id/enterBoxTwo" />
+
+    <!-- 선택 화살표 -->
+    <ImageButton
+        android:id="@+id/underArrowTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/ic_under_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="@id/enterBoxTwo"
+        app:layout_constraintTop_toTopOf="@id/enterBoxTwo"
+        app:layout_constraintBottom_toBottomOf="@id/enterBoxTwo"/>
+
+    <!-- 제목 -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="372dp"
+        android:text="제목"
+        android:textColor="#33363F"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 입력창 -->
+    <ImageView
+        android:id="@+id/enterBoxThree"
+        android:layout_width="254dp"
+        android:layout_height="34dp"
+        android:src="@drawable/ic_profile_administration_box"
+        android:layout_marginTop="399dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 20자 이내로 입력해 주세요 -->
+    <EditText
+        android:id="@+id/titleInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="20자 이내로 입력해 주세요"
+        android:textSize="11sp"
+        android:textColorHint="#565C65"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="150dp"
+        android:background="@null"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@id/enterBoxThree"
+        app:layout_constraintTop_toTopOf="@id/enterBoxThree"
+        app:layout_constraintBottom_toBottomOf="@id/enterBoxThree"  />
+
+    <!-- 내용 -->
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="458dp"
+        android:text="내용"
+        android:textColor="#33363F"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 입력창 -->
+    <ImageView
+        android:id="@+id/enterBoxFour"
+        android:layout_width="320dp"
+        android:layout_height="85dp"
+        android:src="@drawable/ic_profile_administration_box"
+        android:layout_marginTop="485dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 문의할 내용을 입력해 주세요 -->
+    <EditText
+        android:id="@+id/contentInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="문의할 내용을 입력해 주세요"
+        android:textSize="11sp"
+        android:textColorHint="#565C65"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="80dp"
+        android:background="@null"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@id/enterBoxFour"
+        app:layout_constraintTop_toTopOf="@id/enterBoxFour"/>
+
+    <!-- 유의사항 -->
+    <TextView
+        android:id="@+id/note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="597dp"
+        android:text="유의사항"
+        android:textColor="#33363F"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 게시물 내용 -->
+    <TextView
+        android:id="@+id/communityOneContent"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="624dp"
+        android:text="· 욕설, 비방, 거래 글, 분쟁 유발, 명예훼손, 허위 사실 유포, 타 쇼핑몰 언급, 광고성 등의 부적절한 게시글은 금지합니다.\n· 주문번호, 연락처, 계좌번호 등의 개인 정보 관련 내용은 공개되지 않도록 유의부탁드리며, 개인 정보 노출로 인한 피해는 에펫타운이 책임지지 않습니다."
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 취소/등록 하얀 사각형 배경 -->
+    <ImageView
+        android:id="@+id/buyBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_buy_fix"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 취소 버튼 -->
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="158dp"
+        android:layout_height="35dp"
+        android:text="취소"
+        android:textSize="13dp"
+        android:textColor="#8A8A8E"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="43dp"
+        android:background="@drawable/btn_inquire_cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- 등록 버튼 -->
+    <Button
+        android:id="@+id/registrationButton"
+        android:layout_width="158dp"
+        android:layout_height="35dp"
+        android:text="등록"
+        android:textSize="13dp"
+        android:textColor="#8A8A8E"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="43dp"
+        android:background="@drawable/btn_inquire_check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 등록 버튼 검은색 -->
+    <Button
+        android:id="@+id/registrationButtonColor"
+        android:layout_width="158dp"
+        android:layout_height="35dp"
+        android:text="등록"
+        android:textSize="13dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="43dp"
+        android:background="@drawable/btn_inquire_check_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 화면 회색으로 만들기 -->
+    <View
+        android:id="@+id/grayScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <!-- 취소/등록 하얀 사각형 배경 -->
+    <ImageView
+        android:id="@+id/buyBarTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar_buy_fix"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/cancelButtonTwo"
+        android:layout_width="158dp"
+        android:layout_height="35dp"
+        android:text="취소"
+        android:textSize="13dp"
+        android:textColor="#8A8A8E"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="43dp"
+        android:background="@drawable/btn_inquire_cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 등록 버튼 -->
+    <Button
+        android:id="@+id/registrationButtonTwo"
+        android:layout_width="158dp"
+        android:layout_height="35dp"
+        android:text="등록"
+        android:textSize="13dp"
+        android:textColor="#8A8A8E"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="43dp"
+        android:background="@drawable/btn_inquire_check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 수량변경 하얀 사각형 배경 -->
+    <ImageView
+        android:id="@+id/changeBox"
+        android:layout_width="match_parent"
+        android:layout_height="279dp"
+        android:src="@drawable/ic_cart_box"
+        android:layout_marginBottom="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 수량변경 하얀 회색 막대 -->
+    <ImageView
+        android:id="@+id/grayStick"
+        android:layout_width="60dp"
+        android:layout_height="5dp"
+        android:src="@drawable/ic_cart_gray"
+        android:layout_marginTop="22dp"
+        app:layout_constraintTop_toTopOf="@id/changeBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 문의 유형 -->
+    <TextView
+        android:id="@+id/inquiryTypeTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="문의 유형"
+        android:textSize="16sp"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@id/changeBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:includeFontPadding="false"
+        android:visibility="gone"/>
+
+    <!-- 상품 -->
+    <TextView
+        android:id="@+id/product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상품"
+        android:textSize="14sp"
+        android:layout_marginTop="92dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@id/changeBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:includeFontPadding="false"
+        android:visibility="gone" />
+
+    <!-- 서비스 -->
+    <TextView
+        android:id="@+id/service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="132dp"
+        android:includeFontPadding="false"
+        android:text="서비스"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/changeBox"
+        android:visibility="gone"/>
+
+    <!-- 주문 -->
+    <TextView
+        android:id="@+id/order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="주문"
+        android:textSize="14sp"
+        android:layout_marginTop="172dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@id/changeBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:includeFontPadding="false"
+        android:visibility="gone" />
+
+    <!-- 배송 -->
+    <TextView
+        android:id="@+id/delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="배송"
+        android:textSize="14sp"
+        android:layout_marginTop="212dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@id/changeBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:includeFontPadding="false"
+        android:visibility="gone"/>
+
+    <!-- 수량변경 하얀 사각형 배경 -->
+    <ImageView
+        android:id="@+id/changeBoxTwo"
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:src="@drawable/ic_cart_box"
+        android:layout_marginBottom="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 수량변경 하얀 회색 막대 -->
+    <ImageView
+        android:id="@+id/grayStickTwo"
+        android:layout_width="60dp"
+        android:layout_height="5dp"
+        android:src="@drawable/ic_cart_gray"
+        android:layout_marginTop="22dp"
+        app:layout_constraintTop_toTopOf="@id/changeBoxTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 문의 상품옵션 -->
+    <TextView
+        android:id="@+id/inquiryProductType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="문의 상품옵션"
+        android:textSize="16sp"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@id/changeBoxTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:includeFontPadding="false"
+        android:visibility="gone"/>
+
+    <!-- 가격 -->
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1개 (14,400원)"
+        android:textSize="14sp"
+        android:layout_marginTop="92dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@id/changeBoxTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:includeFontPadding="false"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

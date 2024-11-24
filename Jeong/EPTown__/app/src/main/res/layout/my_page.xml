@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 내 정보 텍스트 -->
+            <TextView
+                android:id="@+id/tvMyInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내 정보"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <!-- 아이콘들을 오른쪽 정렬 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <!-- 알림 아이콘 -->
+                <ImageButton
+                    android:id="@+id/reminderIconMyPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_bell"
+                    android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+                <!-- 장바구니 아이콘 -->
+                <ImageButton
+                    android:id="@+id/cartIconMyPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_basket"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- 인사말 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"> <!-- 텍스트와 이미지가 수평으로 나란히 정렬 -->
+
+            <!-- 텍스트 뷰 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="최연주님 안녕하세요!"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- 화살표 이미지 뷰 -->
+            <ImageView
+                android:id="@+id/rightArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_right" /> <!-- 화살표를 텍스트 바로 옆에 배치, 약간의 여백 추가 -->
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:padding="8dp"
+            android:background="@drawable/ic_rounded_shape"> <!-- 둥근 사각형 배경 -->
+
+            <!-- 아이콘과 텍스트: 첫 번째 항목 -->
+            <LinearLayout
+                android:id="@+id/order"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_3d_box"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="주문·배송"
+                    android:textSize="13sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="보기"
+                    android:textSize="12sp"
+                    android:textColor="#F59701"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- 첫 번째와 두 번째 항목 사이의 선 -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#CCCCCC" /> <!-- 중간 구분선 -->
+
+            <!-- 두 번째 항목 -->
+            <LinearLayout
+                android:id="@+id/review"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chat"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="리뷰"
+                    android:textSize="13sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textSize="12sp"
+                    android:textColor="#F59701"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- 두 번째와 세 번째 항목 사이의 선 -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#CCCCCC" />
+
+            <!-- 세 번째 항목 -->
+            <LinearLayout
+                android:id="@+id/inquiry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_message"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="문의"
+                    android:textSize="13sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="12sp"
+                    android:textColor="#F59701"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- 세 번째와 네 번째 항목 사이의 선 -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#CCCCCC" />
+
+            <!-- 네 번째 항목 -->
+            <LinearLayout
+                android:id="@+id/cupon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_ticket_use"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="쿠폰"
+                    android:textSize="13sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12"
+                    android:textSize="12sp"
+                    android:textColor="#F59701"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#DCDCDC"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp" />
+
+        <!-- 내 정보 관리하기 -->
+        <TextView
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내 정보 관리하기"
+            android:textSize="11sp"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/editInformation"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="개인정보수정"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/petProfile"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="반려동물 프로필 관리"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/healthInformation"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="건강 정보 관리"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#DCDCDC"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp" />
+
+        <!-- 에펫타운 -->
+        <TextView
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="에펫타운"
+            android:textSize="11sp"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/hospitalMyPage"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="병원"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/communityMyPage"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="커뮤니티"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#DCDCDC"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp" />
+
+        <!-- 로그아웃, 회원탈퇴 -->
+        <TextView
+            android:id="@+id/logout"
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그아웃"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/deleteAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_marginTop="30dp"
+            android:text="회원탈퇴"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <!-- 탭바 배경 하얀색 사각형 -->
+    <ImageView
+        android:id="@+id/mainTapFixBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/bar_tap_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 탭바 홈 배경 하얀색 사각형 -->
+    <ImageView
+        android:id="@+id/homeRectangleBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="0dp"
+        android:src="@drawable/bar_tap_regtangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 홈 아이콘 -->
+    <ImageButton
+        android:id="@+id/tapHomeIconCategoryFeed1"
+        android:layout_width="27dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="13dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_home"
+        app:layout_constraintStart_toStartOf="@id/homeRectangleBar"
+        app:layout_constraintTop_toTopOf="@id/homeRectangleBar" />
+
+    <!-- 홈 텍스트 -->
+    <TextView
+        android:id="@+id/nowTapHomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="홈"
+        android:textSize="10sp"
+        android:textColor="#B9BEC1"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toStartOf="@id/homeRectangleBar"
+        app:layout_constraintTop_toBottomOf="@id/tapHomeIconCategoryFeed1" />
+
+    <!-- 탭바 커뮤니티 배경 하얀색 사각형 -->
+    <ImageView
+        android:id="@+id/communityRectangleBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="0dp"
+        android:src="@drawable/bar_tap_regtangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/homeRectangleBar" />
+
+    <!-- 커뮤니티 아이콘 -->
+    <ImageButton
+        android:id="@+id/tapCommunityIconCategoryFeed1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/ic_community"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="@id/communityRectangleBar"
+        app:layout_constraintTop_toTopOf="@id/communityRectangleBar" />
+
+    <!-- 커뮤니티 텍스트 -->
+    <TextView
+        android:id="@+id/tapCommunityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="커뮤니티"
+        android:textSize="10sp"
+        android:textColor="#B9BEC1"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/communityRectangleBar"
+        app:layout_constraintTop_toBottomOf="@id/tapCommunityIconCategoryFeed1" />
+
+    <!-- 탭바 카테고리 배경 하얀색 사각형 -->
+    <ImageView
+        android:id="@+id/categoryRectangleBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="0dp"
+        android:src="@drawable/bar_tap_regtangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/communityRectangleBar" />
+
+    <!-- 카테고리 아이콘 -->
+    <ImageButton
+        android:id="@+id/tapCategoryIconCategoryFeed1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_category"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="@id/categoryRectangleBar"
+        app:layout_constraintTop_toTopOf="@id/categoryRectangleBar" />
+
+    <!-- 카테고리 텍스트 -->
+    <TextView
+        android:id="@+id/tapCategoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="카테고리"
+        android:textSize="10sp"
+        android:textColor="#B9BEC1"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="@id/categoryRectangleBar"
+        app:layout_constraintTop_toBottomOf="@id/tapCategoryIconCategoryFeed1" />
+
+    <!-- 탭바 병원 배경 하얀색 사각형 -->
+    <ImageView
+        android:id="@+id/hospitalRectangleBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="0dp"
+        android:src="@drawable/bar_tap_regtangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/categoryRectangleBar" />
+
+    <!-- 병원 아이콘 -->
+    <ImageButton
+        android:id="@+id/tapHostpitalIconCategoryFeed1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/ic_hospital"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="@id/hospitalRectangleBar"
+        app:layout_constraintTop_toTopOf="@id/hospitalRectangleBar" />
+
+    <!-- 병원 텍스트 -->
+    <TextView
+        android:id="@+id/tapHostpitalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="병원"
+        android:textSize="10sp"
+        android:textColor="#B9BEC1"
+        android:layout_marginStart="33.5dp"
+        android:layout_marginTop="3.5dp"
+        app:layout_constraintStart_toStartOf="@id/hospitalRectangleBar"
+        app:layout_constraintTop_toBottomOf="@id/tapHostpitalIconCategoryFeed1" />
+
+    <!-- 탭바 내 정보 배경 하얀색 사각형 -->
+    <ImageView
+        android:id="@+id/mypageRectangleBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="0dp"
+        android:src="@drawable/bar_tap_regtangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/hospitalRectangleBar" />
+
+    <!-- 내 정보 아이콘 -->
+    <ImageButton
+        android:id="@+id/tapMypageIconCategoryFeed1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/ic_tap_mypage"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="@id/mypageRectangleBar"
+        app:layout_constraintTop_toTopOf="@id/mypageRectangleBar" />
+
+    <!-- 내 정보 텍스트 -->
+    <TextView
+        android:id="@+id/tapMypageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내 정보"
+        android:textSize="10sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="2.5dp"
+        app:layout_constraintStart_toStartOf="@id/mypageRectangleBar"
+        app:layout_constraintTop_toBottomOf="@id/tapMypageIconCategoryFeed1" />
+
+    <!-- 화면 회색으로 만들기 -->
+    <View
+        android:id="@+id/grayScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <!-- 삭제 상자 -->
+    <ImageView
+        android:id="@+id/deleteBox"
+        android:layout_width="280dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_community_delte_box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- 회원 탈퇴 여부 -->
+    <TextView
+        android:id="@+id/deleteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="정말로 회원탈퇴를 하시겠습니까?"
+        android:textSize="12sp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintTop_toTopOf="@id/deleteBox"
+        app:layout_constraintStart_toStartOf="@id/deleteBox"
+        app:layout_constraintEnd_toEndOf="@id/deleteBox"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <!-- 취소버튼 -->
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="104dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/btn_my_page_cancel"
+        android:text="취소"
+        android:textSize="11dp"
+        app:layout_constraintStart_toStartOf="@id/deleteBox"
+        app:layout_constraintTop_toTopOf="@id/deleteBox"
+        android:visibility="gone"/>
+
+    <!-- 확인버튼 -->
+    <Button
+        android:id="@+id/check"
+        android:layout_width="105dp"
+        android:layout_height="25dp"
+        android:text="확인"
+        android:textSize="11dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/btn_my_page_check"
+        app:layout_constraintTop_toTopOf="@id/deleteBox"
+        app:layout_constraintEnd_toEndOf="@id/deleteBox"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
