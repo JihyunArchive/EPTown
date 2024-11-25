@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,32 +29,6 @@
                 android:textStyle="bold"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true" />
-
-            <!-- 아이콘들을 오른쪽 정렬 -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true">
-
-                <!-- 알림 아이콘 -->
-                <ImageButton
-                    android:id="@+id/reminderIconMyPage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_bell"
-                    android:layout_marginEnd="16dp"
-                    android:background="?attr/selectableItemBackgroundBorderless" />
-
-                <!-- 장바구니 아이콘 -->
-                <ImageButton
-                    android:id="@+id/cartIconMyPage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_basket"
-                    android:background="?attr/selectableItemBackgroundBorderless"/>
-            </LinearLayout>
         </RelativeLayout>
 
         <!-- 인사말 -->
@@ -72,14 +47,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <!-- 화살표 이미지 뷰 -->
-            <ImageView
-                android:id="@+id/rightArrow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/ic_right" /> <!-- 화살표를 텍스트 바로 옆에 배치, 약간의 여백 추가 -->
+
         </LinearLayout>
 
 
@@ -254,20 +222,11 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/petProfile"
+            android:id="@+id/petAdministration"
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="반려동물 프로필 관리"
-            android:textSize="15sp"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/healthInformation"
-            android:layout_marginTop="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="건강 정보 관리"
+            android:text="반려동물 관리"
             android:textSize="15sp"
             android:textStyle="bold"/>
 
@@ -315,19 +274,10 @@
             android:layout_marginStart="0dp"
             android:layout_marginEnd="0dp" />
 
-        <!--  공지사항, 로그아웃, 회원탈퇴 -->
-        <TextView
-            android:id="@+id/notice"
-            android:layout_marginTop="25dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="공지사항"
-            android:textSize="15sp"
-            android:textStyle="bold"/>
-
+        <!-- 로그아웃, 회원탈퇴 -->
         <TextView
             android:id="@+id/logout"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="로그아웃"

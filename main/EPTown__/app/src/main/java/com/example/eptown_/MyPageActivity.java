@@ -68,20 +68,6 @@ public class MyPageActivity extends AppCompatActivity {
             // 여기에 필요한 코드를 추가
         });
 
-        // 알림 아이콘 누르면 알림으로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.reminderIconMyPage);
-        imagebutton.setOnClickListener(view -> {
-            Intent intent = new Intent(MyPageActivity.this, NoticeActivity.class);
-            startActivity(intent);
-        });
-
-        // 장바구니 아이콘 누르면 장바구니로 화면 이동
-        ImageButton imagebutton1 = findViewById(R.id.cartIconMyPage);
-        imagebutton1.setOnClickListener(view -> {
-            Intent intent = new Intent(MyPageActivity.this, CartActivity.class);
-            startActivity(intent);
-        });
-
         // 개인정보 수정 텍스트 누르면 personal_information로 화면 이동
         TextView textview = findViewById(R.id.editInformation);
         textview.setOnClickListener(view -> {
@@ -89,17 +75,10 @@ public class MyPageActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // 반려동물 프로필 관리 텍스트 누르면 profile_adminstration로 화면 이동
-        TextView textview1 = findViewById(R.id.petProfile);
-        textview1.setOnClickListener(view -> {
-            Intent intent = new Intent(MyPageActivity.this, profile_administrationActivity.class);
-            startActivity(intent);
-        });
-
         // 건강 정보 관리 텍스트 누르면 health_information로 화면 이동
-        TextView textview2 = findViewById(R.id.healthInformation);
+        TextView textview2 = findViewById(R.id.petAdministration);
         textview2.setOnClickListener(view -> {
-            Intent intent = new Intent(MyPageActivity.this, health_informationActivity.class);
+            Intent intent = new Intent(MyPageActivity.this, PetAdministration.class);
             startActivity(intent);
         });
 
@@ -117,24 +96,10 @@ public class MyPageActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // 회원탈퇴 텍스트 누르면  mypage_no_login 화면 이동
-        TextView textview5 = findViewById(R.id.communityMyPage);
-        textview5.setOnClickListener(view -> {
-            Intent intent = new Intent(MyPageActivity.this, mypage_no_loginActivity.class);
-            startActivity(intent);
-        });
-
         // 로그아웃 텍스트 누르면  mypage_no_login 화면 이동
         TextView textview6 = findViewById(R.id.logout);
         textview6.setOnClickListener(view -> {
             Intent intent = new Intent(MyPageActivity.this, mypage_no_loginActivity.class);
-            startActivity(intent);
-        });
-
-        // 공지사항 텍스트 누르면  user_notice 화면 이동
-        TextView textview7 = findViewById(R.id.notice);
-        textview7.setOnClickListener(view -> {
-            Intent intent = new Intent(MyPageActivity.this, user_noticeActivity.class);
             startActivity(intent);
         });
 

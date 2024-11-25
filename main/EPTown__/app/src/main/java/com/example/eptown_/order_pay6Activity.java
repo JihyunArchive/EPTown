@@ -27,10 +27,10 @@ public class order_pay6Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order_pay6);
 
-        // 뒤로가기 눌렀을때 order5으로 이동
+        // 뒤로가기 눌렀을때 order_details로 이동
         ImageButton imagebutton = findViewById(R.id.btnOrderPayBack);
         imagebutton.setOnClickListener(view -> {
-            Intent intent = new Intent(order_pay6Activity.this, order_pay5Activity.class);
+            Intent intent = new Intent(order_pay6Activity.this, order_detailsActivity.class);
             startActivity(intent);
         });
 

@@ -6,7 +6,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <!-- 뒤로가기 버튼 -->
     <ImageButton
@@ -81,12 +82,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <!-- 반려동물 이름 -->
+    <!-- 문의유형을 선택해 주세요 -->
     <TextView
         android:id="@+id/nameEnter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="플목이"
+        android:text="문의유형을 선택해 주세요"
         android:textSize="11sp"
         android:textColor="#565C65"
         android:layout_marginStart="15dp"
@@ -194,17 +195,20 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <!-- 20자 이내로 입력해 주세요 -->
-    <TextView
+    <EditText
         android:id="@+id/titleInformation"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="20자 이내로 입력해 주세요"
+        android:hint="20자 이내로 입력해 주세요"
         android:textSize="11sp"
-        android:textColor="#565C65"
-        android:layout_marginStart="15dp"
+        android:textColorHint="#565C65"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="150dp"
+        android:background="@null"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="@id/enterBoxThree"
         app:layout_constraintTop_toTopOf="@id/enterBoxThree"
-        app:layout_constraintBottom_toBottomOf="@id/enterBoxThree" />
+        app:layout_constraintBottom_toBottomOf="@id/enterBoxThree"  />
 
     <!-- 내용 -->
     <TextView
@@ -231,15 +235,18 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <!-- 문의할 내용을 입력해 주세요 -->
-    <TextView
+    <EditText
         android:id="@+id/contentInformation"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="문의할 내용을 입력해 주세요"
+        android:hint="문의할 내용을 입력해 주세요"
         android:textSize="11sp"
-        android:textColor="#565C65"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="7dp"
+        android:textColorHint="#565C65"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="80dp"
+        android:background="@null"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="@id/enterBoxFour"
         app:layout_constraintTop_toTopOf="@id/enterBoxFour"/>
 
@@ -305,6 +312,21 @@
         android:background="@drawable/btn_inquire_check"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 등록 버튼 검은색 -->
+    <Button
+        android:id="@+id/registrationButtonColor"
+        android:layout_width="158dp"
+        android:layout_height="35dp"
+        android:text="등록"
+        android:textSize="13dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="43dp"
+        android:background="@drawable/btn_inquire_check_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
 
     <!-- 화면 회색으로 만들기 -->
     <View

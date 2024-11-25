@@ -29,10 +29,6 @@ public class review_register extends AppCompatActivity {
     private ImageButton cameraButton;
     private ImageView imageCat;
 
-    // 기존 레이아웃을 감싸는 ScrollView 선언
-    private ScrollView scrollView;
-    private LinearLayout mainLayout;  // 기존 레이아웃
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +41,7 @@ public class review_register extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // 뒤로가기 눌렀을때 메인으로 이동
+        // 리뷰쓰기 눌렀을때 메인으로 이동
         TextView textview = findViewById(R.id.writtenReview);
         textview.setOnClickListener(view -> {
             Intent intent = new Intent(review_register.this, review_writtenActivity.class);
@@ -79,17 +75,16 @@ public class review_register extends AppCompatActivity {
         cameraButton = findViewById(R.id.camera);  // cameraButton 초기화
         imageCat = findViewById(R.id.imageCat);  // imageCat 초기화
 
-        // ScrollView와 기존 레이아웃 초기화
-        scrollView = findViewById(R.id.scrollView);  // ScrollView 객체 초기화
-        mainLayout = findViewById(R.id.main);  // 기존 레이아웃 초기화
-
-        // 사진 올리는 버튼에 클릭 리스너 설정
+        // 카메라 버튼 클릭 리스너 설정
         cameraButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 기존 화면 숨기고 ScrollView 보이기
-                mainLayout.setVisibility(View.GONE);  // 기존 레이아웃 숨기기
-                scrollView.setVisibility(View.VISIBLE); // ScrollView 보이기
+                // 이미지 뷰의 visibility 속성을 변경하여 표시
+                if (imageCat.getVisibility() == View.GONE) {
+                    imageCat.setVisibility(View.VISIBLE); // 이미지 보이게 설정
+                } else {
+                    imageCat.setVisibility(View.GONE); // 다시 클릭하면 숨기기
+                }
             }
         });
     }

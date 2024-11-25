@@ -111,25 +111,7 @@ public class CategoryFeed4Activity extends AppCompatActivity {
             }
         });
 
-        // 검색 아이콘 눌렀을때 검색으로 화면 이동
-        ImageButton imagebutton6 = findViewById(R.id.search);
-        imagebutton6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CategoryFeed4Activity.this,SearchActivity.class);
-                startActivity(intent);
-            }
-        });
 
-        // 장바구니 눌렀을때 장바구니로 화면 이동
-        ImageButton imagebutton7 = findViewById(R.id.cart);
-        imagebutton7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CategoryFeed4Activity.this,CartActivity.class);
-                startActivity(intent);
-            }
-        });
 
         // 첫번째 상품 누르면 itemDetail로 화면 이동
         LinearLayout layout = findViewById(R.id.userRecommendedItemOne);

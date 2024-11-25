@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
             <!-- 뒤로가기 버튼 -->
             <ImageButton
@@ -71,140 +72,75 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints" />
 
-            <View
-                android:id="@+id/colorRect"
-                android:layout_width="42dp"
-                android:layout_height="23dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="94dp"
-                android:background="@drawable/ic_color_rect"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+    <!-- 전체 -->
+    <Button
+        android:id="@+id/colorRect"
+        android:layout_width="42dp"
+        android:layout_height="23dp"
+        android:text="전체"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="93dp"
+        android:background="@drawable/btn_search_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-            <!-- 전체 -->
-            <TextView
-                android:id="@+id/totalTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="91dp"
-                android:text="전체"
-                android:textColor="#FFFFFF"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@id/colorRect"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.005" />
+    <!-- 인기순 -->
+    <Button
+        android:id="@+id/uncolorRectOne"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:text="인기순"
+        android:textSize="12sp"
+        android:textColor="#A1A9AD"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="93dp"
+        android:background="@drawable/btn_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  />
 
-            <View
-                android:id="@+id/uncolorRectOne"
-                android:layout_width="50dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="75dp"
-                android:layout_marginTop="93dp"
-                android:background="@drawable/ic_uncolor_rect"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+    <!-- 평점순 -->
+    <Button
+        android:id="@+id/uncolorRectTwo"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:text="평점순"
+        android:textSize="12sp"
+        android:textColor="#A1A9AD"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="93dp"
+        android:background="@drawable/btn_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  />
 
-            <!-- 인기순 -->
-            <TextView
-                android:id="@+id/popular"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="91dp"
-                android:text="인기순"
-                android:textColor="#A1A9AD"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@id/uncolorRectOne"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.005" />
+    <!-- 가격 높은 순 -->
+    <Button
+        android:id="@+id/uncolorRectThree"
+        android:layout_width="78dp"
+        android:layout_height="25dp"
+        android:text="가격 높은 순"
+        android:textSize="12sp"
+        android:textColor="#A1A9AD"
+        android:layout_marginStart="201dp"
+        android:layout_marginTop="93dp"
+        android:background="@drawable/btn_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  />
 
-            <View
-                android:id="@+id/uncolorRectTwo"
-                android:layout_width="50dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="138dp"
-                android:layout_marginTop="93dp"
-                android:background="@drawable/ic_uncolor_rect"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 평점순 -->
-            <TextView
-                android:id="@+id/star"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="9dp"
-                android:layout_marginTop="91dp"
-                android:text="평점순"
-                android:textColor="#A1A9AD"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@id/uncolorRectTwo"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.005" />
-
-            <View
-                android:id="@+id/uncolorRectThree"
-                android:layout_width="78dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="201dp"
-                android:layout_marginTop="93dp"
-                android:background="@drawable/ic_uncolor_rect"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- 가격 높은 순 -->
-            <TextView
-                android:id="@+id/higherPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="91dp"
-                android:text="가격 높은 순"
-                android:textColor="#A1A9AD"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@id/uncolorRectThree"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.005" />
-
-            <!-- 가격 낮은 순 -->
-            <View
-                android:id="@+id/uncolorRectFour"
-                android:layout_width="78dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="292dp"
-                android:layout_marginTop="93dp"
-                android:background="@drawable/ic_uncolor_rect"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/lowerPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="91dp"
-                android:text="가격 낮은 순"
-                android:textColor="#A1A9AD"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@id/uncolorRectFour"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.005" />
+    <!-- 가격 낮은 순 -->
+    <Button
+        android:id="@+id/uncolorRectFour"
+        android:layout_width="78dp"
+        android:layout_height="25dp"
+        android:text="가격 낮은 순"
+        android:textSize="12sp"
+        android:textColor="#A1A9AD"
+        android:layout_marginStart="292dp"
+        android:layout_marginTop="93dp"
+        android:background="@drawable/btn_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  />
 
     <ScrollView
         android:layout_width="match_parent"

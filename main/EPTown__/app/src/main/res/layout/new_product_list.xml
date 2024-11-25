@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 유저 추천 상품 리스트 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+        <!-- 상품 리스트를 위한 GridLayout -->
+        <GridLayout
+            android:id="@+id/userRecommendedItemsGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp" >
+
+            <!-- 첫 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="10dp"
+                android:gravity="start">
+
+                <!-- 상품 이미지 -->
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_main_recommended_item_1"
+                    android:background="@drawable/ic_rounded_image"
+                    android:clipToOutline="true" />
+
+                <!-- 상품명 -->
+                <TextView
+                    android:id="@+id/productName"
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:text="[NEW신상]블루버팔로 독 연어 어덜트 5.8KG"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:gravity="start" />
+
+                <!-- 원가 + 원 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <!-- 원가 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="92,800"
+                        android:textColor="@color/black"
+                        android:textFontWeight="900"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+
+                    <!-- 원 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="원"
+                        android:textColor="@color/black"
+                        android:textFontWeight="300"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+                </LinearLayout>
+
+                <!-- 평점과 텍스트를 위한 LinearLayout -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start"
+                    android:layout_marginTop="3dp">
+
+                    <!-- 평점 별 svg 5개 -->
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+
+                    <!-- 평점 옆에 텍스트 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(135)"
+                        android:textSize="8.5sp"
+                        android:textColor="#A1A9AD"
+                        android:includeFontPadding="false"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- 두 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="10dp"
+                android:gravity="start">
+
+                <!-- 상품 이미지 -->
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_new2"
+                    android:background="@drawable/ic_rounded_image"
+                    android:clipToOutline="true" />
+
+                <!-- 상품명 -->
+                <TextView
+                    android:id="@+id/productNameTwo"
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:text="[NEW신상]로얄캐닌 독 미니 인도어 시니어 500g"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:gravity="start" />
+
+                <!-- 원가 + 원 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <!-- 원가 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9,800"
+                        android:textColor="@color/black"
+                        android:textFontWeight="900"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+
+                    <!-- 원 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="원"
+                        android:textColor="@color/black"
+                        android:textFontWeight="300"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+                </LinearLayout>
+
+                <!-- 평점과 텍스트를 위한 LinearLayout -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start"
+                    android:layout_marginTop="3dp">
+
+                    <!-- 평점 별 svg 5개 -->
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+
+                    <!-- 평점 옆에 텍스트 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(1,814)"
+                        android:textSize="8.5sp"
+                        android:textColor="#A1A9AD"
+                        android:includeFontPadding="false"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 세 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="start">
+
+                <!-- 상품 이미지 -->
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_new3"
+                    android:background="@drawable/ic_rounded_image"
+                    android:clipToOutline="true" />
+
+                <!-- 상품명 -->
+                <TextView
+                    android:id="@+id/productNameThree"
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:text="[NEW신상]아카나 독 와일드 코스트 레시피 2kg"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:gravity="start" />
+
+                <!-- 원가 + 원 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <!-- 원가 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="34,000"
+                        android:textColor="@color/black"
+                        android:textFontWeight="900"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+
+                    <!-- 원 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="원"
+                        android:textColor="@color/black"
+                        android:textFontWeight="300"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+                </LinearLayout>
+
+                <!-- 평점과 텍스트를 위한 LinearLayout -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start"
+                    android:layout_marginTop="3dp">
+
+                    <!-- 평점 별 svg 5개 -->
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+
+                    <!-- 평점 옆에 텍스트 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(34)"
+                        android:textSize="8.5sp"
+                        android:textColor="#A1A9AD"
+                        android:includeFontPadding="false"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 네 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="start"
+                android:layout_marginTop="35dp">
+
+                <!-- 상품 이미지 -->
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_new4"
+                    android:background="@drawable/ic_rounded_image"
+                    android:clipToOutline="true" />
+
+                <!-- 상품명 -->
+                <TextView
+                    android:id="@+id/productNameFour"
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:text="[NEW신상]로얄캐닌 독 엑스스몰 에이징 12+1, 5kg"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:gravity="start" />
+
+                <!-- 원가 + 원 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <!-- 원가 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="26,500"
+                        android:textColor="@color/black"
+                        android:textFontWeight="900"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+
+                    <!-- 원 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="원"
+                        android:textColor="@color/black"
+                        android:textFontWeight="300"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+                </LinearLayout>
+
+                <!-- 평점과 텍스트를 위한 LinearLayout -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start"
+                    android:layout_marginTop="3dp">
+
+                    <!-- 평점 별 svg 5개 -->
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+
+                    <!-- 평점 옆에 텍스트 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(1)"
+                        android:textSize="8.5sp"
+                        android:textColor="#A1A9AD"
+                        android:includeFontPadding="false"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 다섯 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="start">
+
+                <!-- 상품 이미지 -->
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_new5"
+                    android:background="@drawable/ic_rounded_image"
+                    android:clipToOutline="true" />
+
+                <!-- 상품명 -->
+                <TextView
+                    android:id="@+id/productNameFive"
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:text="[NEW신상]아카나 독 퍼피 레시피 2kg"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:gravity="start" />
+
+                <!-- 원가 + 원 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <!-- 원가 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="35,000"
+                        android:textColor="@color/black"
+                        android:textFontWeight="900"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+
+                    <!-- 원 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="원"
+                        android:textColor="@color/black"
+                        android:textFontWeight="300"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+                </LinearLayout>
+
+                <!-- 평점과 텍스트를 위한 LinearLayout -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start"
+                    android:layout_marginTop="3dp">
+
+                    <!-- 평점 별 svg 5개 -->
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+
+                    <!-- 평점 옆에 텍스트 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(29)"
+                        android:textSize="8.5sp"
+                        android:textColor="#A1A9AD"
+                        android:includeFontPadding="false"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 여섯 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="35dp"
+                android:gravity="start">
+
+                <!-- 상품 이미지 -->
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_new6"
+                    android:background="@drawable/ic_rounded_image"
+                    android:clipToOutline="true" />
+
+                <!-- 상품명 -->
+                <TextView
+                    android:id="@+id/productNameSix"
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:text="[NEW신상]펫슐랭 독 대관령 자연황태 황태,단호박 80g"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:gravity="start" />
+
+                <!-- 원가 + 원 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <!-- 원가 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4,000"
+                        android:textColor="@color/black"
+                        android:textFontWeight="900"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+
+                    <!-- 원 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="원"
+                        android:textColor="@color/black"
+                        android:textFontWeight="300"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+                </LinearLayout>
+
+                <!-- 평점과 텍스트를 위한 LinearLayout -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start"
+                    android:layout_marginTop="3dp">
+
+                    <!-- 평점 별 svg 5개 -->
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+
+                    <!-- 평점 옆에 텍스트 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(30)"
+                        android:textSize="8.5sp"
+                        android:textColor="#A1A9AD"
+                        android:includeFontPadding="false"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 일곱 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="start">
+
+                <!-- 상품 이미지 -->
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_new7"
+                    android:background="@drawable/ic_rounded_image"
+                    android:clipToOutline="true" />
+
+                <!-- 상품명 -->
+                <TextView
+                    android:id="@+id/productNameSeven"
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:text="[NEW신상]누터스가든 덴탈껌 브러싱츄 100개입 개별포장"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:gravity="start" />
+
+                <!-- 원가 + 원 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <!-- 원가 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="28,900"
+                        android:textColor="@color/black"
+                        android:textFontWeight="900"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+
+                    <!-- 원 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="원"
+                        android:textColor="@color/black"
+                        android:textFontWeight="300"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 여덟 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemEight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="start">
+
+                <!-- 상품 이미지 -->
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_new8"
+                    android:background="@drawable/ic_rounded_image"
+                    android:clipToOutline="true" />
+
+                <!-- 상품명 -->
+                <TextView
+                    android:id="@+id/productNameEight"
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:text="[NEW신상]바잇미 뉴 미니 테니스공 장난감"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:gravity="start" />
+
+                <!-- 원가 + 원 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <!-- 원가 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7,900"
+                        android:textColor="@color/black"
+                        android:textFontWeight="900"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+
+                    <!-- 원 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="원"
+                        android:textColor="@color/black"
+                        android:textFontWeight="300"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 아홉 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemNine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="35dp"
+                android:gravity="start">
+
+                <!-- 상품 이미지 -->
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_new9"
+                    android:background="@drawable/ic_rounded_image"
+                    android:clipToOutline="true" />
+
+                <!-- 상품명 -->
+                <TextView
+                    android:id="@+id/productNameNine"
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:text="[NEW신상]이츠독 디즈니 베이비 프렌즈 엔젤 하네스 미키/미니 S-L
+"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:gravity="start" />
+
+                <!-- 원가 + 원 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <!-- 원가 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="33,000"
+                        android:textColor="@color/black"
+                        android:textFontWeight="900"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+
+                    <!-- 원 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="원"
+                        android:textColor="@color/black"
+                        android:textFontWeight="300"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+                </LinearLayout>
+            </LinearLayout>
+        </GridLayout>
+
+
+
+</LinearLayout>

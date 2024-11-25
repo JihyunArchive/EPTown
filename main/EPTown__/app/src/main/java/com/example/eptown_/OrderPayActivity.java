@@ -21,13 +21,6 @@ public class OrderPayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order_pay);
 
-        // 뒤로가기 눌렀을때 메인으로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnOrderPayBack);
-        imagebutton.setOnClickListener(view -> {
-            Intent intent = new Intent(OrderPayActivity.this, MainActivity.class);
-            startActivity(intent);
-        });
-
         // 적용하려는 쿠폰 선택했을때 coupon5로 화면 이동
         ImageButton imagebutton1 = findViewById(R.id.rightArrowTwo);
         imagebutton1.setOnClickListener(view -> {
@@ -97,14 +90,20 @@ public class OrderPayActivity extends AppCompatActivity {
             deleteBox.setVisibility(View.VISIBLE);
             deleteText.setVisibility(View.VISIBLE);
 
-            // 3초 후 숨기기
+            // 3초 후 숨기고 MainActivity로 이동
             new Handler().postDelayed(() -> {
                 grayScreen.setVisibility(View.GONE);
                 grayScreen.setClickable(false); // 클릭 이벤트 차단 해제
                 deleteBox.setVisibility(View.GONE);
                 deleteText.setVisibility(View.GONE);
+
+                // MainActivity로 화면 이동
+                Intent intent = new Intent(OrderPayActivity.this, ItemDetails.class);
+                startActivity(intent);
+                finish(); // 현재 액티비티 종료 (선택적)
             }, 3000);
         });
+
 
         // 수량 변경 관련 UI 참조
         View grayScreenTwo = findViewById(R.id.grayScreenTwo);

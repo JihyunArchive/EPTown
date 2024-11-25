@@ -3,6 +3,7 @@ package com.example.eptown_;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -82,6 +83,46 @@ public class SearchDetailsActivity extends AppCompatActivity {
         layout.setOnClickListener(view -> {
             Intent intent = new Intent(SearchDetailsActivity.this, ItemDetails.class);
             startActivity(intent);
+        });
+
+        // 인기순 버튼 눌렀을때 SearchDetailPopular로 화면 이동
+        Button button = findViewById(R.id.uncolorRectOne);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SearchDetailsActivity.this, SearchDetailsPopularityActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 평점순 버튼 눌렀을때 SearchDetailsReview로 화면 이동
+        Button button1 = findViewById(R.id.uncolorRectTwo);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SearchDetailsActivity.this, SearchDetailsReviewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 가격 높은 순 버튼 눌렀을때 SearchDetailshigher로 화면 이동
+        Button button2 = findViewById(R.id.uncolorRectThree);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SearchDetailsActivity.this, SearchDetailshigherActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 가격 낮은 순 버튼 눌렀을때 SearchDetailslower로 화면 이동
+        Button button3 = findViewById(R.id.uncolorRectFour);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SearchDetailsActivity.this, SearchDetailslowerActivity.class);
+                startActivity(intent);
+            }
         });
     }
 }

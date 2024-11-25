@@ -103,7 +103,7 @@ public class ItemDetailsInquiry extends AppCompatActivity {
             }
         });
 
-        // 상품 정보 텍스트 눌렀을때 상품 상세로 화면 이동
+        // 문의하기 텍스트 눌렀을때 inquire10으로 화면 이동
         TextView textview2 = findViewById(R.id.inquiryText);
         textview2.setOnClickListener(new View.OnClickListener() {
             @Override

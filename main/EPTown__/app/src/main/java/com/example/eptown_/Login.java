@@ -63,4 +63,11 @@ public class Login extends AppCompatActivity {
             }
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        // 추가 로직이 필요하다면 여기서 처리한 후 액티비티를 종료합니다
+        super.onBackPressed(); // 액티비티를 종료하고 이전 화면으로 돌아갑니다
+    }
 }
+

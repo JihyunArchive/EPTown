@@ -20,6 +20,7 @@ public class inquire10Activity extends AppCompatActivity {
     private View grayScreen;
     private View buyBarTwo, changeBox, grayStick, changeBoxTwo, grayStickTwo;
     private Button cancelButtonTwo, registrationButtonTwo, registrationButtonThree;
+    private Button registrationButton, registrationButtonColor; // 등록 버튼 추가
     private TextView inquiryTypeTwo, product, service, order, delivery, nameEnter, inquiryProductType, productPrice;
     private TextView lastSelectedTextView; // 마지막으로 선택된 TextView를 추적하는 변수
     private TextView optionChoice; // optionChoice TextView
@@ -41,9 +42,9 @@ public class inquire10Activity extends AppCompatActivity {
             }
         });
 
-        // 등록 버튼 클릭시 inquire4로 화면 이동
-        Button button = findViewById(R.id.registrationButton);
-        button.setOnClickListener(view -> {
+        // 등록 버튼 클릭시 inquire7로 화면 이동
+        registrationButtonColor = findViewById(R.id.registrationButtonColor);
+        registrationButtonColor.setOnClickListener(view -> {
             Intent intent = new Intent(inquire10Activity.this, inquire7Activity.class);
             startActivity(intent);
         });
@@ -56,8 +57,8 @@ public class inquire10Activity extends AppCompatActivity {
         });
 
         // EditText 초기화
-        EditText nameInput = findViewById(R.id.titleInformation);
-        EditText idInput = findViewById(R.id.contentInformation);
+        EditText titleInformation = findViewById(R.id.titleInformation);
+        EditText contentInformation = findViewById(R.id.contentInformation);
 
         // 뷰 초기화
         ImageButton underArrow = findViewById(R.id.underArrow);
@@ -79,8 +80,6 @@ public class inquire10Activity extends AppCompatActivity {
         inquiryProductType = findViewById(R.id.inquiryProductType);
         productPrice = findViewById(R.id.productPrice);
         optionChoice = findViewById(R.id.optionChoice);
-        registrationButtonThree = findViewById(R.id.registrationButtonThree); // 확인 버튼 초기화
-        contentInformation = findViewById(R.id.contentInformation); // EditText 초기화
 
         // TextView 클릭 리스너 설정
         setupTextViewClickListener(product);
@@ -99,28 +98,31 @@ public class inquire10Activity extends AppCompatActivity {
         // 회색 화면 클릭 시 UI 숨기기
         grayScreen.setOnClickListener(v -> hideAllUI());
 
-        // EditText의 텍스트 변경을 감지하는 리스너 추가
+        // EditText에 TextWatcher 추가
+        registrationButton = findViewById(R.id.registrationButton);
         contentInformation.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {
-                // 변경 전에 실행되는 코드 (필요시 사용할 수 있음)
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // 입력 변경 전 처리 (필요 없다면 생략 가능)
             }
 
             @Override
-            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-                // 텍스트가 변경될 때마다 호출
-                if (charSequence.length() > 0) {
-                    // 텍스트가 비어 있지 않으면 버튼을 보이게 함
-                    registrationButtonThree.setVisibility(View.VISIBLE);
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // 글자 입력 상태에 따라 버튼 전환
+                if (s.toString().trim().isEmpty()) {
+                    // 입력이 비어있으면 회색 버튼 표시
+                    registrationButton.setVisibility(View.VISIBLE);
+                    registrationButtonColor.setVisibility(View.GONE);
                 } else {
-                    // 텍스트가 비어 있으면 버튼을 숨김
-                    registrationButtonThree.setVisibility(View.GONE);
+                    // 입력이 있으면 검은색 버튼 표시
+                    registrationButton.setVisibility(View.GONE);
+                    registrationButtonColor.setVisibility(View.VISIBLE);
                 }
             }
 
             @Override
-            public void afterTextChanged(Editable editable) {
-                // 텍스트가 변경된 후 실행되는 코드 (필요시 사용할 수 있음)
+            public void afterTextChanged(Editable s) {
+                // 입력 변경 후 처리 (필요 없다면 생략 가능)
             }
         });
     }

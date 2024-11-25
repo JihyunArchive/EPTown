@@ -34,6 +34,7 @@ public class review_modify extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(review_modify.this, review_writtenActivity.class);
+                intent.putExtra("toastMessage", "리뷰가 수정되었습니다."); // 메시지를 전달
                 startActivity(intent);
             }
         });

@@ -5,7 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <!-- 용품 타이틀 -->
     <TextView
@@ -30,32 +31,6 @@
         android:src="@drawable/ic_arrow"
         android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- 검색 아이콘 -->
-    <ImageButton
-        android:id="@+id/search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="316dp"
-        android:layout_marginTop="23dp"
-        android:src="@drawable/ic_search"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        app:layout_constraintStart_toStartOf="@id/btnCategoryFeed1Back"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <!-- 장바구니 아이콘 -->
-    <ImageButton
-        android:id="@+id/cart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="20dp"
-        android:src="@drawable/ic_cart"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@id/btnCategoryFeed1Back"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 전체 -->

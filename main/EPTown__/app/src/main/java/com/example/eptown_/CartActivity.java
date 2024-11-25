@@ -12,10 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 public class CartActivity extends AppCompatActivity {
 
     private ImageButton uncheckRectOne, colorRectOne, colorRectTwo, uncheckRectTwo, uncheckRectThree, btnMinus, btnPlus;
-    private View grayScreen, priceBar;
-    private ImageView changeBox, grayStick, grayBox, amount, deleteBox;
-    private TextView productPriceTwo, theLargest, number, totalPriceTwo, deleteText, deleteProduct, totalAmount, totalPriceThree;
-    private Button rectBoxOne, rectBoxTwo, cancel, check;
+    private View grayScreen, priceBar, secondHorizon;
+    private ImageView changeBox, grayStick, grayBox, amount, deleteBox, buyBarTwo, productOneImage;
+    private TextView productPriceTwo, theLargest, number, totalPriceTwo, deleteText, deleteProduct, totalAmount, totalPriceThree, productOneName, productOne, productOnePrice, originalPrice, productOneNowPrice;
+    private Button rectBoxOne, rectBoxTwo, cancel, check, buyFixButtonTwo;
 
     private boolean isChecked = false;
 
@@ -35,9 +35,19 @@ public class CartActivity extends AppCompatActivity {
             }
         });
 
-        // 구매하기 눌렀을때 주문/결제로 화면 이동
-        Button button = findViewById(R.id.buyFixButton);
+        // 변경하기 버튼 눌렀을때 주문/결제로 화면 이동
+        Button button = findViewById(R.id.buyFixButtonTwo);
         button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CartActivity.this, OrderPayActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 구매하기 버튼 눌렀을때 주문/결제로 화면 이동
+        Button button1 = findViewById(R.id.buyFixButton);
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CartActivity.this, OrderPayActivity.class);
@@ -63,6 +73,8 @@ public class CartActivity extends AppCompatActivity {
         theLargest = findViewById(R.id.theLargest);
         number = findViewById(R.id.number);
         totalPriceTwo = findViewById(R.id.totalPriceTwo);
+        buyBarTwo = findViewById(R.id.buyBarTwo);
+        buyFixButtonTwo = findViewById(R.id.buyFixButtonTwo);
 
         rectBoxOne = findViewById(R.id.rectBoxOne);
         rectBoxTwo = findViewById(R.id.rectBoxTwo);
@@ -76,11 +88,19 @@ public class CartActivity extends AppCompatActivity {
         totalAmount = findViewById(R.id.totalAmount);
         totalPriceThree = findViewById(R.id.totalPriceThree);
 
+        colorRectOne = findViewById(R.id.colorRectOne);
+        productOne = findViewById(R.id.productOne);
+        colorRectTwo = findViewById(R.id.colorRectTwo);
+        productOneImage = findViewById(R.id.productOneImage);
+        productOneName = findViewById(R.id.productOneName);
+        productOnePrice = findViewById(R.id.productOnePrice);
+        originalPrice = findViewById(R.id.originalPrice);
+        productOneNowPrice = findViewById(R.id.productOneNowPrice);
+        rectBoxOne = findViewById(R.id.rectBoxOne);
+        secondHorizon = findViewById(R.id.secondHorizon);
+
         // 클릭 리스너 설정
         setupRectBoxClickListener(rectBoxOne, rectBoxTwo);
-
-        // 회색 화면 클릭 시 숨김
-        setupGrayScreenClickListener();
 
         // 각 버튼을 findViewById로 연결
         uncheckRectOne = findViewById(R.id.uncheckRectOne);
@@ -106,6 +126,14 @@ public class CartActivity extends AppCompatActivity {
 
         // uncheckRectThree와 uncheckRectTwo를 동시에 토글하는 기능 설정
         setupUncheckRectThreeToggle();
+
+        deleteProduct.setOnClickListener(v -> showDeleteUI());
+
+        // 회색 화면 클릭 시 신고 UI를 숨김
+        grayScreen.setOnClickListener(v -> hideReportUI());
+
+        // 확인 버튼 클릭 시 신고 UI를 숨김
+        check.setOnClickListener(v -> hideReporTwotUI());
     }
 
     // 단일 버튼에 대한 토글 기능 설정
@@ -216,55 +244,10 @@ public class CartActivity extends AppCompatActivity {
         });
     }
 
-    private void setupRectBoxClickListener(View... rectBoxes) {
-        for (View rectBox : rectBoxes) {
-            rectBox.setOnClickListener(v -> {
-                toggleVisibility(
-                        grayScreen, changeBox, grayStick, grayBox,
-                        productPriceTwo, amount, btnMinus, btnPlus, theLargest, number, totalPriceTwo,
-                        priceBar, totalAmount, totalPriceThree
-                );
-                applyBlurEffect(true, rectBoxOne, rectBoxTwo); // 블러 처리
-            });
-        }
-    }
-
-    private void setupGrayScreenClickListener() {
-        grayScreen.setOnClickListener(v -> {
-            toggleVisibility(grayScreen, changeBox, grayStick, grayBox, productPriceTwo, amount, btnMinus, btnPlus, theLargest, number, totalPriceTwo, priceBar, totalAmount, totalPriceThree);
-            applyBlurEffect(false, rectBoxOne, rectBoxTwo); // 블러 해제
-        });
-    }
-
     private void toggleVisibility(View... views) {
         for (View view : views) {
             view.setVisibility(view.getVisibility() == View.VISIBLE ? View.INVISIBLE : View.VISIBLE);
         }
-    }
-
-    private void applyBlurEffect(boolean shouldBlur, View... views) {
-        for (View view : views) {
-            view.setAlpha(shouldBlur ? 0.5f : 1.0f); // 블러 효과를 50%로 설정
-        }
-
-        deleteProduct.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Show the delete confirmation UI
-                grayScreen.setVisibility(View.VISIBLE);
-                deleteBox.setVisibility(View.VISIBLE);
-                deleteText.setVisibility(View.VISIBLE);
-                cancel.setVisibility(View.VISIBLE);
-                check.setVisibility(View.VISIBLE);
-            }
-
-            private void setupGrayScreenClickListener() {
-                grayScreen.setOnClickListener(v -> {
-                    toggleVisibility(grayScreen, deleteBox, deleteText, cancel, check);
-                    applyBlurEffect(false, rectBoxOne, rectBoxTwo); // 블러 해제
-                });
-            }
-        });
 
         // 뷰 요소를 찾기
         btnPlus = findViewById(R.id.btnPlus);
@@ -308,6 +291,73 @@ public class CartActivity extends AppCompatActivity {
             // 아무 동작도 하지 않음, 화면 사라지지 않도록
         });
 
+        // deleteBox 클릭 시 화면이 사라지지 않도록 하기 위한 리스너
+        deleteBox.setOnClickListener(v -> {
+            // 아무 동작도 하지 않음, 화면 사라지지 않도록
+        });
+
+    }
+
+    private void showDeleteUI() {
+        grayScreen.setVisibility(View.VISIBLE);
+        deleteBox.setVisibility(View.VISIBLE);
+        deleteText.setVisibility(View.VISIBLE);
+        cancel.setVisibility(View.VISIBLE);
+        check.setVisibility(View.VISIBLE);
+    }
+
+    private void hideReportUI() {
+        grayScreen.setVisibility(View.GONE);
+        deleteBox.setVisibility(View.GONE);
+        deleteText.setVisibility(View.GONE);
+        cancel.setVisibility(View.GONE);
+        check.setVisibility(View.GONE);
+        grayScreen.setVisibility(View.GONE);
+        changeBox.setVisibility(View.GONE);
+        grayStick.setVisibility(View.GONE);
+        grayBox.setVisibility(View.GONE);
+        productPriceTwo.setVisibility(View.GONE);
+        amount.setVisibility(View.GONE);
+        btnMinus.setVisibility(View.GONE);
+        btnPlus.setVisibility(View.GONE);
+        theLargest.setVisibility(View.GONE);
+        number.setVisibility(View.GONE);
+        totalPriceTwo.setVisibility(View.GONE);
+        priceBar.setVisibility(View.GONE);
+        totalAmount.setVisibility(View.GONE);
+        totalPriceThree.setVisibility(View.GONE);
+        buyBarTwo.setVisibility(View.GONE);
+        buyFixButtonTwo.setVisibility(View.GONE);
+    }
+
+    private void hideReporTwotUI() {
+        colorRectOne.setVisibility(View.GONE);
+        productOne.setVisibility(View.GONE);
+        colorRectTwo.setVisibility(View.GONE);
+        productOneImage.setVisibility(View.GONE);
+        productOneName.setVisibility(View.GONE);
+        productOnePrice.setVisibility(View.GONE);
+        originalPrice.setVisibility(View.GONE);
+        productOneNowPrice.setVisibility(View.GONE);
+        rectBoxOne.setVisibility(View.GONE);
+        secondHorizon.setVisibility(View.GONE);
+        grayScreen.setVisibility(View.GONE);
+        deleteBox.setVisibility(View.GONE);
+        deleteText.setVisibility(View.GONE);
+        cancel.setVisibility(View.GONE);
+        check.setVisibility(View.GONE);
+    }
+
+    private void setupRectBoxClickListener(View... rectBoxes) {
+        for (View rectBox : rectBoxes) {
+            rectBox.setOnClickListener(v -> {
+                toggleVisibility(
+                        grayScreen, changeBox, grayStick, grayBox,
+                        productPriceTwo, amount, btnMinus, btnPlus, theLargest, number, totalPriceTwo,
+                        priceBar, totalAmount, totalPriceThree, buyBarTwo, buyFixButtonTwo
+                );
+            });
+        }
     }
 }
 

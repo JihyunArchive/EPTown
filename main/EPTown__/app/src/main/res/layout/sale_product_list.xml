@@ -1,0 +1,1209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 유저 추천 상품 리스트 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- 상품 리스트를 위한 GridLayout -->
+        <GridLayout
+            android:id="@+id/userRecommendedItemsGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp" >
+
+            <!-- 첫 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="10dp"
+                android:gravity="start">
+
+            <!-- 상품 이미지 -->
+            <ImageView
+                android:layout_width="118dp"
+                android:layout_height="118dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/image_main_recommended_item_11"
+                android:background="@drawable/ic_rounded_image"
+                android:clipToOutline="true" />
+
+            <!-- 상품명 -->
+            <TextView
+                android:layout_width="118dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:text="네츄럴코어 독 하루유산균 혼합 12p"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <!-- 가격 텍스트 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <!-- 할인 전 가격 -->
+                <TextView
+                    android:id="@+id/costPriceSeven"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5,500원"
+                    android:textColor="#A1A9AD"
+                    android:textSize="10sp"
+                    android:includeFontPadding="false"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="2dp"/>
+
+
+                <!-- 할인 퍼센트 / 할인된 가격 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- 할인 퍼센트 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="16%"
+                        android:textColor="#F10000"
+                        android:textFontWeight="900"
+                        android:textSize="13sp"
+                        android:layout_marginEnd="7dp"
+                        android:includeFontPadding="false" />
+
+                    <!-- 할인된 가격 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4,600"
+                        android:textColor="@color/black"
+                        android:textFontWeight="900"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false" />
+
+                    <!-- 원 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="원"
+                        android:textColor="@color/black"
+                        android:textFontWeight="300"
+                        android:textSize="13sp"
+                        android:includeFontPadding="false"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 평점과 텍스트를 위한 LinearLayout -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="start"
+                android:layout_marginTop="3dp">
+
+                <!-- 평점 별 svg 5개 -->
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/ic_star" />
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/ic_star" />
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/ic_star" />
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/ic_star" />
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/ic_no_star" />
+
+                <!-- 평점 옆에 텍스트 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(9838)"
+                    android:textSize="8.5sp"
+                    android:textColor="#A1A9AD"
+                    android:includeFontPadding="false"
+                    android:layout_marginStart="5dp"/>
+            </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- 두 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="10dp"
+                android:gravity="start">
+
+                <!-- 상품 이미지 -->
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_main_recommended_item_2"
+                    android:background="@drawable/ic_rounded_image"
+                    android:clipToOutline="true" />
+
+                <!-- 상품명 -->
+                <TextView
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:text="이나바 캣 챠오 츄르 참치 버라이어트 14g * 40p"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+
+                <!-- 가격 텍스트 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <!-- 할인 전 가격 -->
+                    <TextView
+                        android:id="@+id/costPriceOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="40,000원"
+                        android:textColor="#A1A9AD"
+                        android:textSize="10sp"
+                        android:includeFontPadding="false"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="2dp"/>
+
+
+                    <!-- 할인 퍼센트 / 할인된 가격 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- 할인 퍼센트 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="50%"
+                            android:textColor="#F10000"
+                            android:textFontWeight="900"
+                            android:textSize="13sp"
+                            android:layout_marginEnd="7dp"
+                            android:includeFontPadding="false" />
+
+                        <!-- 할인된 가격 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20,000"
+                            android:textColor="@color/black"
+                            android:textFontWeight="900"
+                            android:textSize="13sp"
+                            android:includeFontPadding="false" />
+
+                        <!-- 원 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textFontWeight="300"
+                            android:textSize="13sp"
+                            android:includeFontPadding="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 평점과 텍스트를 위한 LinearLayout -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start"
+                    android:layout_marginTop="3dp">
+
+                    <!-- 평점 별 svg 5개 -->
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+
+                    <!-- 평점 옆에 텍스트 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(1715)"
+                        android:textSize="8.5sp"
+                        android:textColor="#A1A9AD"
+                        android:includeFontPadding="false"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 세 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="start">
+
+                <!-- 상품 이미지 -->
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_main_recommended_item_3"
+                    android:background="@drawable/ic_rounded_image"
+                    android:clipToOutline="true" />
+
+                <!-- 상품명 -->
+                <TextView
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:text="[최저가 도전] 인트라젠 영양제 위장 &amp; 면역 50p"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+
+                <!-- 가격 텍스트 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <!-- 할인 전 가격 -->
+                    <TextView
+                        android:id="@+id/costPriceTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="18,000원"
+                        android:textColor="#A1A9AD"
+                        android:textSize="10sp"
+                        android:includeFontPadding="false"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <!-- 할인 퍼센트 / 할인된 가격 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- 할인 퍼센트 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20%"
+                            android:textColor="#F10000"
+                            android:textFontWeight="900"
+                            android:textSize="13sp"
+                            android:layout_marginEnd="7dp"
+                            android:includeFontPadding="false" />
+
+                        <!-- 할인된 가격 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="14,400"
+                            android:textColor="@color/black"
+                            android:textFontWeight="900"
+                            android:textSize="13sp"
+                            android:includeFontPadding="false" />
+
+                        <!-- 원 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textFontWeight="300"
+                            android:textSize="13sp"
+                            android:includeFontPadding="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 평점과 텍스트를 위한 LinearLayout -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start"
+                    android:layout_marginTop="3dp">
+
+                    <!-- 평점 별 svg 5개 -->
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_no_star" />
+
+                    <!-- 평점 옆에 텍스트 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(5524)"
+                        android:textSize="8.5sp"
+                        android:textColor="#A1A9AD"
+                        android:includeFontPadding="false"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+
+                <!-- 최저가 도전 svg -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_lowest_price"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <!-- 네 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="start"
+                android:layout_marginTop="35dp">
+
+                <!-- 상품 이미지 -->
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_main_recommended_item_4"
+                    android:background="@drawable/ic_rounded_image"
+                    android:clipToOutline="true" />
+
+                <!-- 상품명 -->
+                <TextView
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:text="[대용량] 촉촉트릿 for cat 초미니트릿 북어 120g"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+
+                <!-- 가격 텍스트 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <!-- 할인 전 가격 -->
+                    <TextView
+                        android:id="@+id/costPriceThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25,000원"
+                        android:textColor="#A1A9AD"
+                        android:textSize="10sp"
+                        android:includeFontPadding="false"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <!-- 할인 퍼센트 / 할인된 가격 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- 할인 퍼센트 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="25%"
+                            android:textColor="#F10000"
+                            android:textFontWeight="900"
+                            android:textSize="13sp"
+                            android:layout_marginEnd="7dp"
+                            android:includeFontPadding="false" />
+
+                        <!-- 할인된 가격 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="18,750"
+                            android:textColor="@color/black"
+                            android:textFontWeight="900"
+                            android:textSize="13sp"
+                            android:includeFontPadding="false" />
+
+                        <!-- 원 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textFontWeight="300"
+                            android:textSize="13sp"
+                            android:includeFontPadding="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 평점과 텍스트를 위한 LinearLayout -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start"
+                    android:layout_marginTop="3dp">
+
+                    <!-- 평점 별 svg 5개 -->
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+
+                    <!-- 평점 옆에 텍스트 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(312)"
+                        android:textSize="8.5sp"
+                        android:textColor="#A1A9AD"
+                        android:includeFontPadding="false"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+
+                <!-- 최저가 도전 svg -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_lowest_price"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <!-- 다섯 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="start">
+
+                <!-- 상품 이미지 -->
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_main_recommended_item_5"
+                    android:background="@drawable/ic_rounded_image"
+                    android:clipToOutline="true" />
+
+                <!-- 상품명 -->
+                <TextView
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:text="알모네이쳐 캣 대서양참치 캔 70g"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+
+                <!-- 가격 텍스트 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <!-- 할인 전 가격 -->
+                    <TextView
+                        android:id="@+id/costPriceFour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2,600원"
+                        android:textColor="#A1A9AD"
+                        android:textSize="10sp"
+                        android:includeFontPadding="false"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="2dp"/>
+
+
+                    <!-- 할인 퍼센트 / 할인된 가격 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- 할인 퍼센트 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10%"
+                            android:textColor="#F10000"
+                            android:textFontWeight="900"
+                            android:textSize="13sp"
+                            android:layout_marginEnd="7dp"
+                            android:includeFontPadding="false" />
+
+                        <!-- 할인된 가격 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2,340"
+                            android:textColor="@color/black"
+                            android:textFontWeight="900"
+                            android:textSize="13sp"
+                            android:includeFontPadding="false" />
+
+                        <!-- 원 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textFontWeight="300"
+                            android:textSize="13sp"
+                            android:includeFontPadding="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 평점과 텍스트를 위한 LinearLayout -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start"
+                    android:layout_marginTop="3dp">
+
+                    <!-- 평점 별 svg 5개 -->
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+
+                    <!-- 평점 옆에 텍스트 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(20)"
+                        android:textSize="8.5sp"
+                        android:textColor="#A1A9AD"
+                        android:includeFontPadding="false"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 여섯 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="35dp"
+                android:gravity="start">
+
+                <!-- 상품 이미지 -->
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_main_recommended_item_12"
+                    android:background="@drawable/ic_rounded_image"
+                    android:clipToOutline="true" />
+
+                <!-- 상품명 -->
+                <TextView
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:text="포켄스 덴티페어리 독 디스펜서 초소형견용 SS 124p"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+
+                <!-- 가격 텍스트 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <!-- 할인 전 가격 -->
+                    <TextView
+                        android:id="@+id/costPriceEight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="34,200원"
+                        android:textColor="#A1A9AD"
+                        android:textSize="10sp"
+                        android:includeFontPadding="false"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <!-- 할인 퍼센트 / 할인된 가격 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- 할인 퍼센트 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9%"
+                            android:textColor="#F10000"
+                            android:textFontWeight="900"
+                            android:textSize="13sp"
+                            android:layout_marginEnd="7dp"
+                            android:includeFontPadding="false" />
+
+                        <!-- 할인된 가격 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="32,900"
+                            android:textColor="@color/black"
+                            android:textFontWeight="900"
+                            android:textSize="13sp"
+                            android:includeFontPadding="false" />
+
+                        <!-- 원 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textFontWeight="300"
+                            android:textSize="13sp"
+                            android:includeFontPadding="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 평점과 텍스트를 위한 LinearLayout -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start"
+                    android:layout_marginTop="3dp">
+
+                    <!-- 평점 별 svg 5개 -->
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+
+                    <!-- 평점 옆에 텍스트 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(2044)"
+                        android:textSize="8.5sp"
+                        android:textColor="#A1A9AD"
+                        android:includeFontPadding="false"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 일곱 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="start">
+
+                <!-- 상품 이미지 -->
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_sale"
+                    android:background="@drawable/ic_rounded_image"
+                    android:clipToOutline="true" />
+
+                <!-- 상품명 -->
+                <TextView
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:text="시적 독 쇠고기, 달걀 1세이하 캔 100g"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:gravity="start" />
+
+                <!-- 가격 텍스트 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <!-- 할인 전 가격 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2,200원"
+                        android:textColor="#A1A9AD"
+                        android:textSize="10sp"
+                        android:includeFontPadding="false"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="2dp"/>
+
+
+                    <!-- 할인 퍼센트 / 할인된 가격 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- 할인 퍼센트 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="14%"
+                            android:textColor="#F10000"
+                            android:textFontWeight="900"
+                            android:textSize="13sp"
+                            android:layout_marginEnd="7dp"
+                            android:includeFontPadding="false" />
+
+                        <!-- 할인된 가격 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1,890"
+                            android:textColor="@color/black"
+                            android:textFontWeight="900"
+                            android:textSize="13sp"
+                            android:includeFontPadding="false" />
+
+                        <!-- 원 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textFontWeight="300"
+                            android:textSize="13sp"
+                            android:includeFontPadding="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 평점과 텍스트를 위한 LinearLayout -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start"
+                    android:layout_marginTop="3dp">
+
+                    <!-- 평점 별 svg 5개 -->
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+
+                    <!-- 평점 옆에 텍스트 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(20)"
+                        android:textSize="8.5sp"
+                        android:textColor="#A1A9AD"
+                        android:includeFontPadding="false"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 여덟 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemEight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="start">
+
+                <!-- 상품 이미지 -->
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_main_recommended_item_8"
+                    android:background="@drawable/ic_rounded_image"
+                    android:clipToOutline="true" />
+
+                <!-- 상품명 -->
+                <TextView
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:text="로얄캐닌 캣 인도어 4kg 변냄새 감소"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+
+                <!-- 가격 텍스트 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <!-- 할인 전 가격 -->
+                    <TextView
+                        android:id="@+id/costPriceFive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="62,500원"
+                        android:textColor="#A1A9AD"
+                        android:textSize="10sp"
+                        android:includeFontPadding="false"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="2dp"/>
+
+
+                    <!-- 할인 퍼센트 / 할인된 가격 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- 할인 퍼센트 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10%"
+                            android:textColor="#F10000"
+                            android:textFontWeight="900"
+                            android:textSize="13sp"
+                            android:layout_marginEnd="7dp"
+                            android:includeFontPadding="false" />
+
+                        <!-- 할인된 가격 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="56,250"
+                            android:textColor="@color/black"
+                            android:textFontWeight="900"
+                            android:textSize="13sp"
+                            android:includeFontPadding="false" />
+
+                        <!-- 원 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textFontWeight="300"
+                            android:textSize="13sp"
+                            android:includeFontPadding="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 평점과 텍스트를 위한 LinearLayout -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start"
+                    android:layout_marginTop="3dp">
+
+                    <!-- 평점 별 svg 5개 -->
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_no_star" />
+
+                    <!-- 평점 옆에 텍스트 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(1715)"
+                        android:textSize="8.5sp"
+                        android:textColor="#A1A9AD"
+                        android:includeFontPadding="false"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 아홉 번째 상품 -->
+            <LinearLayout
+                android:id="@+id/userRecommendedItemNine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="35dp"
+                android:gravity="start">
+
+                <!-- 상품 이미지 -->
+                <ImageView
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_main_recommended_item_9"
+                    android:background="@drawable/ic_rounded_image"
+                    android:clipToOutline="true" />
+
+                <!-- 상품명 -->
+                <TextView
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:text="그리니즈 캣 필라인 덴탈 트릿 닭고기맛 130g"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+
+                <!-- 가격 텍스트 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <!-- 할인 전 가격 -->
+                    <TextView
+                        android:id="@+id/costPriceSix"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9,800원"
+                        android:textColor="#A1A9AD"
+                        android:textSize="10sp"
+                        android:includeFontPadding="false"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <!-- 할인 퍼센트 / 할인된 가격 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- 할인 퍼센트 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9%"
+                            android:textColor="#F10000"
+                            android:textFontWeight="900"
+                            android:textSize="13sp"
+                            android:layout_marginEnd="7dp"
+                            android:includeFontPadding="false" />
+
+                        <!-- 할인된 가격 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="8,900"
+                            android:textColor="@color/black"
+                            android:textFontWeight="900"
+                            android:textSize="13sp"
+                            android:includeFontPadding="false" />
+
+                        <!-- 원 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="원"
+                            android:textColor="@color/black"
+                            android:textFontWeight="300"
+                            android:textSize="13sp"
+                            android:includeFontPadding="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 평점과 텍스트를 위한 LinearLayout -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start"
+                    android:layout_marginTop="3dp">
+
+                    <!-- 평점 별 svg 5개 -->
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_star" />
+
+                    <!-- 평점 옆에 텍스트 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(78)"
+                        android:textSize="8.5sp"
+                        android:textColor="#A1A9AD"
+                        android:includeFontPadding="false"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </GridLayout>
+    </ScrollView>
+
+
+</LinearLayout>

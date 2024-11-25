@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <!-- 주문/결제 -->
     <TextView
@@ -171,7 +172,7 @@
                 app:layout_constraintStart_toStartOf="@id/catImageOne"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <!-- 배송정보 버튼 -->
+            <!-- 배송정보 버튼
             <Button
                 android:id="@+id/deliveryInformation"
                 android:layout_width="179dp"
@@ -183,21 +184,22 @@
                 android:layout_marginStart="20dp"
                 android:background="@drawable/btn_order_pay6_refund"
                 app:layout_constraintTop_toTopOf="@id/catImageOne"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent" />-->
 
             <!-- 환불요청 버튼 -->
             <Button
                 android:id="@+id/refundButton"
-                android:layout_width="179dp"
+                android:layout_width="80dp"
                 android:layout_height="25dp"
-                android:text="환불요청"
-                android:textSize="11dp"
-                android:textColor="#8A8A8E"
-                android:layout_marginTop="95dp"
+                android:layout_marginTop="60dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/btn_order_pay6_refund"
-                app:layout_constraintTop_toTopOf="@id/catImageOne"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:stateListAnimator="@null"
+                android:text="환불요청"
+                android:textColor="#8A8A8E"
+                android:textSize="11dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/catImageOne" />
 
             <!-- 상품2 -->
             <ImageView
@@ -286,28 +288,15 @@
                 app:layout_constraintStart_toStartOf="@id/catImageTwo"
                 app:layout_constraintTop_toTopOf="@id/refundButton" />
 
-            <!-- 배송정보 버튼 -->
-            <Button
-                android:id="@+id/deliveryInformationTwo"
-                android:layout_width="179dp"
-                android:layout_height="25dp"
-                android:text="배송정보"
-                android:textSize="11dp"
-                android:textColor="#8A8A8E"
-                android:layout_marginTop="95dp"
-                android:layout_marginStart="20dp"
-                android:background="@drawable/btn_order_pay6_refund"
-                app:layout_constraintTop_toTopOf="@id/catImageTwo"
-                app:layout_constraintStart_toStartOf="parent" />
-
             <!-- 환불요청 버튼 -->
             <Button
                 android:id="@+id/refundButtonTwo"
-                android:layout_width="179dp"
+                android:layout_width="80dp"
                 android:layout_height="25dp"
                 android:text="환불요청"
                 android:textSize="11dp"
                 android:textColor="#8A8A8E"
+                android:stateListAnimator="@null"
                 android:layout_marginTop="95dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/btn_order_pay6_refund"

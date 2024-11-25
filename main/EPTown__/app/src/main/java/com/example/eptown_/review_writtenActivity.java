@@ -130,8 +130,11 @@ public class review_writtenActivity extends AppCompatActivity {
             }
         });
 
-        // 화면 이동 후 '리뷰가 수정되었습니다.' 메시지를 표시하는 코드 추가
-        showCustomToast("리뷰가 수정되었습니다.");
+        // 화면 이동 후 '리뷰가 수정되었습니다.' 메시지 표시
+        String toastMessage = getIntent().getStringExtra("toastMessage");
+        if (toastMessage != null && !toastMessage.isEmpty()) {
+            showCustomToast(toastMessage);
+        }
     }
 
     // 커스텀 토스트 메시지 표시
@@ -157,3 +160,4 @@ public class review_writtenActivity extends AppCompatActivity {
         return (int) (dp * density);
     }
 }
+

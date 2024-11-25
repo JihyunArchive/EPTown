@@ -19,7 +19,7 @@ public class community2Activity extends AppCompatActivity {
     private static final String DEFAULT_TEXT_COLOR = "#000000";
     private static final String SELECTED_TEXT_COLOR = "#F59701";
 
-    private TextView choiceOne, choiceTwo, choiceThree, choiceFour, declare, register, deleteText;
+    private TextView choiceOne, choiceTwo, choiceThree, choiceFour, declare, register, deleteText, post, userNameFour, reportButtonFour, chatFour;
     private View grayScreen;
     private ImageView deleteBoxTwo, registerBox, deleteBox;
     private Button cancelTwo, checkTwo, cancel, check;
@@ -69,6 +69,19 @@ public class community2Activity extends AppCompatActivity {
         // 회색 화면 클릭 시 신고 UI를 숨김
         grayScreen.setOnClickListener(v -> hideReportUI());
 
+        // "게시" 버튼 클릭 리스너 추가
+        findViewById(R.id.post).setOnClickListener(v -> {
+                    // chatThree 사라지게 설정
+                    findViewById(R.id.chatThree).setVisibility(View.GONE);
+
+            // chatFour와 관련된 UI 나타나게 설정
+            findViewById(R.id.fivetHorizon).setVisibility(View.VISIBLE);
+            findViewById(R.id.chatFive).setVisibility(View.VISIBLE);
+            findViewById(R.id.userNameFour).setVisibility(View.VISIBLE);
+            findViewById(R.id.reportButtonFour).setVisibility(View.VISIBLE);
+            findViewById(R.id.chatFour).setVisibility(View.VISIBLE);
+        });
+
         // 취소 버튼 클릭 시 UI 원상복구
         cancel.setOnClickListener(v -> resetUI());
         cancelTwo.setOnClickListener(v -> resetUI());
@@ -106,6 +119,9 @@ public class community2Activity extends AppCompatActivity {
         deleteBox = findViewById(R.id.deleteBox);
         deleteText = findViewById(R.id.deleteText);
         deleteButton = findViewById(R.id.deleteButton);
+        userNameFour = findViewById(R.id.userNameFour);
+        reportButtonFour = findViewById(R.id.reportButtonFour);
+        chatFour = findViewById(R.id.chatFour);
     }
 
     private void resetUI() {

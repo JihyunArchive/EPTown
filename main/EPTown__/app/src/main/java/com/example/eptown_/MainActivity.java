@@ -156,6 +156,41 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, ItemDetails.class);
             startActivity(intent);
         });
+
+        // 사료 누르면 사료로 화면 이동
+        LinearLayout layout1 = findViewById(R.id.categoryFood);
+        layout1.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, CategoryFeed1Activity.class);
+            startActivity(intent);
+        });
+
+        // 간식 누르면 간식으로 화면 이동
+        LinearLayout layout2 = findViewById(R.id.categorySnack);
+        layout2.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, CategorySnack1Activity.class);
+            startActivity(intent);
+        });
+
+        // 용품 상품 누르면 용품으로 화면 이동
+        LinearLayout layout3 = findViewById(R.id.categoryItem);
+        layout3.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, CategoryProduct1Activity.class);
+            startActivity(intent);
+        });
+
+        // 할인 상품 누르면 용품으로 화면 이동
+        LinearLayout layout4 = findViewById(R.id.categoryDiscount);
+        layout4.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, SaleProductActivity.class);
+            startActivity(intent);
+        });
+
+        // 새로운 상품 누르면 용품으로 화면 이동
+        LinearLayout layout5 = findViewById(R.id.categoryNew);
+        layout5.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, NewProductActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void updateBannerOrderText() {

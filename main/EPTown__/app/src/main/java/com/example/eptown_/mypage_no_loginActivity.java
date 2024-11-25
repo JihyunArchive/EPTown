@@ -9,9 +9,6 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class mypage_no_loginActivity extends AppCompatActivity {
 
@@ -31,13 +28,6 @@ public class mypage_no_loginActivity extends AppCompatActivity {
             }
         });
 
-        // 알림 아이콘 누르면 알림으로 화면 이동
-        ImageButton imagebutton1 = findViewById(R.id.reminderIconMyPage);
-        imagebutton1.setOnClickListener(view -> {
-            Intent intent = new Intent(mypage_no_loginActivity.this, notice3Activity.class);
-            startActivity(intent);
-        });
-
         // 개인정보 수정 텍스트 누르면 login으로 화면 이동
         TextView textview = findViewById(R.id.editInformation);
         textview.setOnClickListener(view -> {
@@ -45,7 +35,7 @@ public class mypage_no_loginActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // 반려동물 프로필 관리 텍스트 누르면 login으로화면 이동
+        // 반려동물 프로필 관리 텍스트 누르면 login으로 화면 이동
         TextView textview1 = findViewById(R.id.petProfile);
         textview1.setOnClickListener(view -> {
             Intent intent = new Intent(mypage_no_loginActivity.this, Login.class);
@@ -70,6 +60,13 @@ public class mypage_no_loginActivity extends AppCompatActivity {
         TextView textview4 = findViewById(R.id.communityMyPage);
         textview4.setOnClickListener(view -> {
             Intent intent = new Intent(mypage_no_loginActivity.this, CommunityActivity.class);
+            startActivity(intent);
+        });
+
+        // 로그인 및 회원가입 텍스트 누르면 로그인으로 화면 이동
+        TextView textview5 = findViewById(R.id.loginAndJoin);
+        textview5.setOnClickListener(view -> {
+            Intent intent = new Intent(mypage_no_loginActivity.this, Login.class);
             startActivity(intent);
         });
 

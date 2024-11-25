@@ -8,9 +8,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -166,7 +163,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_category_1" /> <!-- SVG 아이콘 파일 -->
+                        android:src="@drawable/ic_sale_product" /> <!-- SVG 아이콘 파일 -->
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -246,9 +243,9 @@
                         android:layout_marginTop="5dp"/>
                 </LinearLayout>
 
-                <!-- 더보기 -->
+                <!-- 새로운 상품 -->
                 <LinearLayout
-                    android:id="@+id/categoryPlus"
+                    android:id="@+id/categoryNew"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -256,13 +253,13 @@
 
                     <ImageView
                         android:layout_width="47dp"
-                        android:layout_height="47dp"
-                        android:src="@drawable/ic_category_5" /> <!-- SVG 아이콘 파일 -->
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/image_new" /> <!-- SVG 아이콘 파일 -->
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="더보기"
+                        android:text="새로운 상품"
                         android:textSize="10sp"
                         android:textColor="#242628"
                         android:layout_marginTop="5dp"/>

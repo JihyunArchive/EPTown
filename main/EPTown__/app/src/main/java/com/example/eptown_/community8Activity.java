@@ -25,7 +25,7 @@ public class community8Activity extends AppCompatActivity {
         });
 
         // 게시하고 확인버튼 눌렀을때 커뮤니티로 이동
-        Button button = (Button) findViewById(R.id.check);
+        Button button = findViewById(R.id.checkButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,7 +43,7 @@ public class community8Activity extends AppCompatActivity {
         ImageView deleteBox = findViewById(R.id.deleteBox);
         TextView deleteText = findViewById(R.id.deleteText);
         Button cancelButton = findViewById(R.id.cancel);  // Button
-        Button checkButton = findViewById(R.id.check);  // Button
+        Button checkButton = findViewById(R.id.checkButton);  // Button
 
         // 버튼 객체 선언 (이전 코드에서 button 변수 선언 누락)
         Button postButton = findViewById(R.id.btnPost);  // Button
@@ -75,19 +75,6 @@ public class community8Activity extends AppCompatActivity {
             deleteText.setVisibility(View.GONE);
             cancelButton.setVisibility(View.GONE);
             checkButton.setVisibility(View.GONE);
-        });
-
-        // 확인 버튼 클릭 시 삭제 처리 후 화면 복구 (예시로 추가한 코드)
-        checkButton.setOnClickListener(v -> {
-            // 삭제 처리 후 UI 변경
-            grayScreen.setVisibility(View.GONE);
-            deleteBox.setVisibility(View.GONE);
-            deleteText.setVisibility(View.GONE);
-            cancelButton.setVisibility(View.GONE);
-            checkButton.setVisibility(View.GONE);
-
-            // 삭제 완료 후 UI
-            // (여기서 삭제 완료 메시지나 동작을 처리하면 됩니다)
         });
 
         // 회색 배경 클릭 시 화면이 사라지게 하기

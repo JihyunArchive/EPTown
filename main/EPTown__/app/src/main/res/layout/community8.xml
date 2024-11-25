@@ -6,7 +6,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <!-- 나가기 버튼 -->
     <ImageButton
@@ -169,7 +170,7 @@
 
     <!-- 확인버튼 -->
     <Button
-        android:id="@+id/check"
+        android:id="@+id/checkButton"
         android:layout_width="105dp"
         android:layout_height="25dp"
         android:text="확인"

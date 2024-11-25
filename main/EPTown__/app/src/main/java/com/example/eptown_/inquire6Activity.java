@@ -33,12 +33,9 @@ public class inquire6Activity extends AppCompatActivity {
 
         // 뒤로가기 눌렀을때 메인으로 화면 이동
         ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
-        imagebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(inquire6Activity.this, inquire5Activity.class);
-                startActivity(intent);
-            }
+        imagebutton.setOnClickListener(view -> {
+            Intent intent = new Intent(inquire6Activity.this, inquire5Activity.class);
+            startActivity(intent);
         });
 
         // 내 문의 내역 텍스트 클릭시 inquire4로 화면 이동
@@ -48,8 +45,8 @@ public class inquire6Activity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // 등록 버튼 클릭시 inquire4로 화면 이동
-        Button button = findViewById(R.id.registrationButton);
+        // 등록 버튼 클릭시 inquire7로 화면 이동
+        Button button = findViewById(R.id.registrationButtonColor);
         button.setOnClickListener(view -> {
             Intent intent = new Intent(inquire6Activity.this, inquire7Activity.class);
             startActivity(intent);
@@ -63,8 +60,45 @@ public class inquire6Activity extends AppCompatActivity {
         });
 
         // EditText 초기화
-        EditText nameInput = findViewById(R.id.titleInformation);
-        EditText idInput = findViewById(R.id.contentInformation);
+        EditText titleInformation = findViewById(R.id.titleInformation);
+        EditText contentInformation = findViewById(R.id.contentInformation);
+
+        // 텍스트 입력에 따른 버튼 상태 변경
+        contentInformation.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // 텍스트 변경 전 처리
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // 텍스트 변경 중 처리
+                Button registrationButton = findViewById(R.id.registrationButton);
+                Button registrationButtonColor = findViewById(R.id.registrationButtonColor);
+
+                if (s.toString().trim().isEmpty()) {
+                    // 텍스트가 비어있으면 기본 등록 버튼 표시
+                    registrationButton.setVisibility(View.VISIBLE);
+                    registrationButtonColor.setVisibility(View.GONE);
+                } else {
+                    // 텍스트가 있으면 검은색 등록 버튼 표시
+                    registrationButton.setVisibility(View.GONE);
+                    registrationButtonColor.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // 텍스트 변경 후 처리
+            }
+        });
+
+        // 검은색 등록 버튼 클릭 시 동작
+        Button registrationButtonColor = findViewById(R.id.registrationButtonColor);
+        registrationButtonColor.setOnClickListener(view -> {
+            Intent intent = new Intent(inquire6Activity.this, inquire7Activity.class);
+            startActivity(intent);
+        });
 
         // 뷰 초기화
         ImageButton underArrow = findViewById(R.id.underArrow);
@@ -87,7 +121,6 @@ public class inquire6Activity extends AppCompatActivity {
         productPrice = findViewById(R.id.productPrice);
         optionChoice = findViewById(R.id.optionChoice);
         registrationButtonThree = findViewById(R.id.registrationButtonThree); // 확인 버튼 초기화
-        contentInformation = findViewById(R.id.contentInformation); // EditText 초기화
 
         // TextView 클릭 리스너 설정
         setupTextViewClickListener(product);
@@ -105,31 +138,6 @@ public class inquire6Activity extends AppCompatActivity {
 
         // 회색 화면 클릭 시 UI 숨기기
         grayScreen.setOnClickListener(v -> hideAllUI());
-
-        // EditText의 텍스트 변경을 감지하는 리스너 추가
-        contentInformation.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {
-                // 변경 전에 실행되는 코드 (필요시 사용할 수 있음)
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-                // 텍스트가 변경될 때마다 호출
-                if (charSequence.length() > 0) {
-                    // 텍스트가 비어 있지 않으면 버튼을 보이게 함
-                    registrationButtonThree.setVisibility(View.VISIBLE);
-                } else {
-                    // 텍스트가 비어 있으면 버튼을 숨김
-                    registrationButtonThree.setVisibility(View.GONE);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                // 텍스트가 변경된 후 실행되는 코드 (필요시 사용할 수 있음)
-            }
-        });
     }
 
     // TextView 클릭 리스너 설정 메서드
@@ -144,7 +152,7 @@ public class inquire6Activity extends AppCompatActivity {
             textView.setTextColor(Color.parseColor("#FFA500")); // 주황색으로 설정
             lastSelectedTextView = textView;
 
-            // 옵션 선택에 대한 텍스트 설정 (옵션을 선택해달라는 안내 텍스트)
+            // 옵션 선택에 대한 텍스트 설정
             if (textView == inquiryProductType || textView == productPrice) {
                 optionChoice.setText(textView.getText()); // optionChoice에만 설정
             } else {
@@ -177,7 +185,7 @@ public class inquire6Activity extends AppCompatActivity {
 
     // 두 번째 UI 표시 메서드
     private void showUIForSecondSet() {
-        grayScreen.setVisibility(View.VISIBLE);  // 회색 화면을 표시
+        grayScreen.setVisibility(View.VISIBLE); // 회색 화면 표시
         changeBoxTwo.setVisibility(View.VISIBLE);
         grayStickTwo.setVisibility(View.VISIBLE);
         inquiryProductType.setVisibility(View.VISIBLE);

@@ -68,7 +68,7 @@ public class HospitalActivity extends AppCompatActivity {
         });
 
         // 탭바에서 내 정보 눌렀을때 내 정보로 화면 이동
-        ImageButton imagebutton5 = findViewById(R.id.tapHostpitalIconCategoryFeed1);
+        ImageButton imagebutton5 = findViewById(R.id.tapMypageIconCategoryFeed1);
         imagebutton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
