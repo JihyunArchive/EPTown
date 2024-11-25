@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- 동그라미 주황색 배경 -->
+  <item>
+    <shape android:shape="oval">
+      <solid android:color="@android:color/holo_orange_light" /> <!-- 주황색 배경 -->
+    </shape>
+  </item>
+
+  <!-- 아이콘 설정 -->
+  <item>
+    <bitmap
+        android:gravity="center"
+        android:src="@mipmap/splash"
+        android:antialias="true" />
+  </item>
+</layer-list>
