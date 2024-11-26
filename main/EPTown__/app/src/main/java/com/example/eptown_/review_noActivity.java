@@ -17,16 +17,6 @@ public class review_noActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.review_no);
 
-        // 뒤로가기 눌렀을때 마이페이지로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
-        imagebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(review_noActivity.this, MyPageActivity.class);
-                startActivity(intent);
-            }
-        });
-
         // 리뷰쓰기 텍스트 눌렀을때 review5로 화면 이동
         TextView textView = findViewById(R.id.writeReview);
         textView.setOnClickListener(new View.OnClickListener() {
@@ -36,5 +26,20 @@ public class review_noActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ImageButton btnBack = findViewById(R.id.btnCategoryFeed1Back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
     }
-}
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
+    }
+    }

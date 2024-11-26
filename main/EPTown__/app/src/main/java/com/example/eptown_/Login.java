@@ -9,6 +9,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -43,6 +44,22 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        ImageButton btnBack = findViewById(R.id.getCouponBackIcon);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
+
+
         // 상태바 및 네비게이션 바 배경을 흰색으로, 아이콘 색상을 검정으로 설정 (API 21 이상)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
@@ -62,12 +79,6 @@ public class Login extends AppCompatActivity {
                 );
             }
         }
-    }
-
-    @Override
-    public void onBackPressed() {
-        // 추가 로직이 필요하다면 여기서 처리한 후 액티비티를 종료합니다
-        super.onBackPressed(); // 액티비티를 종료하고 이전 화면으로 돌아갑니다
     }
 }
 

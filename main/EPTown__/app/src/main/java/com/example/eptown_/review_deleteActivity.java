@@ -23,16 +23,6 @@ public class review_deleteActivity extends AppCompatActivity {
         // 리뷰가 등록되었음을 알리는 토스트 메시지
         showCustomToast("리뷰가 삭제되었습니다.");
 
-        // 뒤로가기 눌렀을때 마이페이지로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
-        imagebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(review_deleteActivity.this, MyPageActivity.class);
-                startActivity(intent);
-            }
-        });
-
         // 리뷰쓰기 텍스트 눌렀을때 review_register 화면 이동
         TextView textview = findViewById(R.id.writeReview);
         textview.setOnClickListener(new View.OnClickListener() {
@@ -82,6 +72,22 @@ public class review_deleteActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ImageButton btnBack = findViewById(R.id.btnCategoryFeed1Back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
+
     }
 
     // 커스텀 토스트 메시지 표시

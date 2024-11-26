@@ -19,14 +19,19 @@ public class notice3Activity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.notice3);
 
-        // 뒤로가기 눌렀을때 메인으로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnNoticeBack);
-        imagebutton.setOnClickListener(new View.OnClickListener() {
+        ImageButton btnBack = findViewById(R.id.btnNoticeBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(notice3Activity.this, MainActivity.class);
-                startActivity(intent);
+                // onBackPressed() 메서드 호출
+                onBackPressed();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
     }
 }

@@ -2,6 +2,7 @@ package com.example.eptown_;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
@@ -18,13 +19,6 @@ public class inquire3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.inquire3);
-
-        // 뒤로가기 버튼 클릭시 메인으로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.itemDetailsBackIcon);
-        imagebutton.setOnClickListener(view -> {
-            Intent intent = new Intent(inquire3Activity.this, MainActivity.class);
-            startActivity(intent);
-        });
 
         // 홈 아이콘 클릭시 메인으로 화면 이동
         ImageButton imagebutton1 = findViewById(R.id.homeIcon);
@@ -60,5 +54,20 @@ public class inquire3Activity extends AppCompatActivity {
             Intent intent = new Intent(inquire3Activity.this, OrderPayActivity.class);
             startActivity(intent);
         });
+
+        ImageButton btnBack = findViewById(R.id.itemDetailsBackIcon);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
     }
 }

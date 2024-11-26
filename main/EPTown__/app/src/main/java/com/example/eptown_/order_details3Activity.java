@@ -20,13 +20,6 @@ public class order_details3Activity extends AppCompatActivity {
 
         EditText titleInput = findViewById(R.id.contentInformation);
 
-        // 뒤로가기 버튼 누르면 주문상세로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
-        imagebutton.setOnClickListener(view -> {
-                Intent intent = new Intent(order_details3Activity.this, order_pay6Activity.class);
-                startActivity(intent);
-        });
-
         // 접수하기 눌렀을때 주문상세로 화면 이동
         Button button = findViewById(R.id.buyFixButton);
         button.setOnClickListener(new View.OnClickListener() {
@@ -37,5 +30,19 @@ public class order_details3Activity extends AppCompatActivity {
             }
         });
 
+        ImageButton btnBack = findViewById(R.id.btnCategoryFeed1Back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
     }
 }

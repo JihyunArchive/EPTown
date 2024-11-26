@@ -27,16 +27,6 @@ public class HospitalActivity extends AppCompatActivity {
             }
         });
 
-        // 뒤로가기 눌렀을때 메인으로 화면 이동
-        ImageButton imagebutton1 = findViewById(R.id.btnHospitalBack);
-        imagebutton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HospitalActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
         // 탭바에서 홈 아이콘 눌렀으로 메인으로 화면 이동
         ImageButton imagebutton2 = findViewById(R.id.tapHomeIconCategoryFeed1);
         imagebutton2.setOnClickListener(new View.OnClickListener() {

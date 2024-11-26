@@ -21,16 +21,6 @@ public class inquire5Activity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.inquire5);
 
-        // 뒤로가기 눌렀을때 메인으로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
-        imagebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(inquire5Activity.this, inquire4Activity.class);
-                startActivity(intent);
-            }
-        });
-
         // 문의하기 눌렀을때 inquire6로 화면 이동
         Button button = findViewById(R.id.btnInquire);
         button.setOnClickListener(new View.OnClickListener() {
@@ -67,5 +57,20 @@ public class inquire5Activity extends AppCompatActivity {
             // checked 상태 -> unchecked 상태로 변경
             button.setImageResource(uncheckedResId);
         }
+
+        ImageButton btnBack = findViewById(R.id.btnCategoryFeed1Back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
     }
 }

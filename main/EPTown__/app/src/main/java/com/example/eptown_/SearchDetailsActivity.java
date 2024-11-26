@@ -13,18 +13,100 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SearchDetailsActivity extends AppCompatActivity {
+
+    private Button colorRect, uncolorRect, uncolorRectOne, colorRectOne, uncolorRectTwo, colorRectTwo, uncolorRectThree, colorRectThree, uncolorRectFour, colorRectFour;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_details);
 
-        // 뒤로가기 눌렀을때 검색으로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnSearchDetailsBack);
-        imagebutton.setOnClickListener(new View.OnClickListener() {
+        colorRect = findViewById(R.id.colorRect);
+        uncolorRect = findViewById(R.id.uncolorRect);
+        uncolorRectOne = findViewById(R.id.uncolorRectOne);
+        colorRectOne = findViewById(R.id.colorRectOne);
+        uncolorRectTwo = findViewById(R.id.uncolorRectTwo);
+        colorRectTwo = findViewById(R.id.colorRectTwo);
+        uncolorRectThree = findViewById(R.id.uncolorRectThree);
+        colorRectThree = findViewById(R.id.colorRectThree);
+        uncolorRectFour = findViewById(R.id.uncolorRectFour);
+        colorRectFour = findViewById(R.id.colorRectFour);
+
+        // 전체 클릭 시 동작 설정
+        uncolorRect.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SearchDetailsActivity.this, SearchActivity.class);
-                startActivity(intent);
+            public void onClick (View v){
+                colorRect.setVisibility(View.VISIBLE);
+
+                uncolorRect.setVisibility(View.GONE);
+                colorRectOne.setVisibility(View.GONE);
+                colorRectTwo.setVisibility(View.GONE);
+                colorRectThree.setVisibility(View.GONE);
+                colorRectFour.setVisibility(View.GONE);;
+            }
+        });
+
+        // 인기순 클릭 시 동작 설정
+        uncolorRectOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                uncolorRect.setVisibility(View.VISIBLE);
+                colorRectOne.setVisibility(View.VISIBLE);
+                uncolorRectTwo.setVisibility(View.VISIBLE);
+                uncolorRectThree.setVisibility(View.VISIBLE);;
+                uncolorRectFour.setVisibility(View.VISIBLE);
+
+                colorRectTwo.setVisibility(View.GONE);
+                colorRectThree.setVisibility(View.GONE);
+                colorRectFour.setVisibility(View.GONE);
+            }
+        });
+
+        // 평점순 클릭 시 동작 설정
+        uncolorRectTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                uncolorRect.setVisibility(View.VISIBLE);
+                uncolorRectOne.setVisibility(View.VISIBLE);
+                colorRectTwo.setVisibility(View.VISIBLE);
+                uncolorRectThree.setVisibility(View.VISIBLE);
+                uncolorRectFour.setVisibility(View.VISIBLE);
+
+                colorRectOne.setVisibility(View.GONE);
+                colorRectThree.setVisibility(View.GONE);
+                colorRectFour.setVisibility(View.GONE);
+            }
+        });
+
+        // 가격 높은 순 클릭 시 동작 설정
+        uncolorRectThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                uncolorRect.setVisibility(View.VISIBLE);
+                uncolorRectOne.setVisibility(View.VISIBLE);
+                uncolorRectTwo.setVisibility(View.VISIBLE);
+                colorRectThree.setVisibility(View.VISIBLE);
+                uncolorRectFour.setVisibility(View.VISIBLE);
+
+                colorRectOne.setVisibility(View.GONE);
+                colorRectTwo.setVisibility(View.GONE);
+                colorRectFour.setVisibility(View.GONE);
+            }
+        });
+
+        // 가격 낮은 순 클릭 시 동작 설정
+        uncolorRectFour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                uncolorRect.setVisibility(View.VISIBLE);
+                uncolorRectOne.setVisibility(View.VISIBLE);
+                uncolorRectTwo.setVisibility(View.VISIBLE);
+                uncolorRectThree.setVisibility(View.VISIBLE);
+                colorRectFour.setVisibility(View.VISIBLE);
+
+                colorRectOne.setVisibility(View.GONE);
+                colorRectTwo.setVisibility(View.GONE);
+                colorRectThree.setVisibility(View.GONE);
             }
         });
 
@@ -85,44 +167,23 @@ public class SearchDetailsActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // 인기순 버튼 눌렀을때 SearchDetailPopular로 화면 이동
-        Button button = findViewById(R.id.uncolorRectOne);
-        button.setOnClickListener(new View.OnClickListener() {
+        ImageButton btnBack = findViewById(R.id.btnSearchDetailsBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SearchDetailsActivity.this, SearchDetailsPopularityActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // 평점순 버튼 눌렀을때 SearchDetailsReview로 화면 이동
-        Button button1 = findViewById(R.id.uncolorRectTwo);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SearchDetailsActivity.this, SearchDetailsReviewActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // 가격 높은 순 버튼 눌렀을때 SearchDetailshigher로 화면 이동
-        Button button2 = findViewById(R.id.uncolorRectThree);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SearchDetailsActivity.this, SearchDetailshigherActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // 가격 낮은 순 버튼 눌렀을때 SearchDetailslower로 화면 이동
-        Button button3 = findViewById(R.id.uncolorRectFour);
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SearchDetailsActivity.this, SearchDetailslowerActivity.class);
-                startActivity(intent);
+                // onBackPressed() 메서드 호출
+                onBackPressed();
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
+    }
 }
+
+
+
+

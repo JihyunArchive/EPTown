@@ -5,8 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
+    android:layout_height="match_parent">
 
     <!-- 간식 타이틀 -->
     <TextView
@@ -247,11 +246,11 @@
         android:id="@+id/tapHomeIconCategoryFeed1"
         android:layout_width="28dp"
         android:layout_height="28dp"
-        android:layout_marginStart="28dp"
         android:layout_marginTop="13dp"
         android:src="@drawable/ic_home"
         android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="@id/homeRectangleBar"
+        app:layout_constraintEnd_toEndOf="@id/homeRectangleBar"
         app:layout_constraintTop_toTopOf="@id/homeRectangleBar" />
 
     <!-- 홈 텍스트 -->
@@ -262,10 +261,10 @@
         android:text="홈"
         android:textSize="10sp"
         android:textColor="#B9BEC1"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintStart_toStartOf="@id/homeRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/tapHomeIconCategoryFeed1" />
+        app:layout_constraintEnd_toEndOf="@id/homeRectangleBar"
+        app:layout_constraintBottom_toBottomOf="@id/homeRectangleBar" />
 
     <!-- 탭바 커뮤니티 배경 하얀색 사각형 -->
     <ImageView
@@ -283,11 +282,11 @@
         android:id="@+id/tapCommunityIconCategoryFeed1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="14dp"
         android:src="@drawable/ic_community"
         android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="@id/communityRectangleBar"
+        app:layout_constraintEnd_toEndOf="@id/communityRectangleBar"
         app:layout_constraintTop_toTopOf="@id/communityRectangleBar" />
 
     <!-- 커뮤니티 텍스트 -->
@@ -298,10 +297,10 @@
         android:text="커뮤니티"
         android:textSize="10sp"
         android:textColor="#B9BEC1"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintStart_toStartOf="@id/communityRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/tapCommunityIconCategoryFeed1" />
+        app:layout_constraintEnd_toEndOf="@id/communityRectangleBar"
+        app:layout_constraintBottom_toBottomOf="@id/communityRectangleBar" />
 
     <!-- 탭바 카테고리 배경 하얀색 사각형 -->
     <ImageView
@@ -319,11 +318,11 @@
         android:id="@+id/tapCategoryIconCategoryFeed1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/ic_tap_category"
         android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="@id/categoryRectangleBar"
+        app:layout_constraintEnd_toEndOf="@id/categoryRectangleBar"
         app:layout_constraintTop_toTopOf="@id/categoryRectangleBar" />
 
     <!-- 카테고리 텍스트 -->
@@ -334,10 +333,10 @@
         android:text="카테고리"
         android:textSize="10sp"
         android:textColor="@color/black"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintStart_toStartOf="@id/categoryRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/tapCategoryIconCategoryFeed1" />
+        app:layout_constraintEnd_toEndOf="@id/categoryRectangleBar"
+        app:layout_constraintBottom_toBottomOf="@id/categoryRectangleBar" />
 
     <!-- 탭바 병원 배경 하얀색 사각형 -->
     <ImageView
@@ -355,11 +354,11 @@
         android:id="@+id/tapHostpitalIconCategoryFeed1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="14dp"
         android:src="@drawable/ic_hospital"
         android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="@id/hospitalRectangleBar"
+        app:layout_constraintEnd_toEndOf="@id/hospitalRectangleBar"
         app:layout_constraintTop_toTopOf="@id/hospitalRectangleBar" />
 
     <!-- 병원 텍스트 -->
@@ -370,10 +369,10 @@
         android:text="병원"
         android:textSize="10sp"
         android:textColor="#B9BEC1"
-        android:layout_marginStart="33.5dp"
-        android:layout_marginTop="3.5dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintStart_toStartOf="@id/hospitalRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/tapHostpitalIconCategoryFeed1" />
+        app:layout_constraintEnd_toEndOf="@id/hospitalRectangleBar"
+        app:layout_constraintBottom_toBottomOf="@id/hospitalRectangleBar" />
 
     <!-- 탭바 내 정보 배경 하얀색 사각형 -->
     <ImageView
@@ -391,11 +390,11 @@
         android:id="@+id/tapMypageIconCategoryFeed1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="14dp"
         android:src="@drawable/ic_mypage"
         android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintStart_toStartOf="@id/mypageRectangleBar"
+        app:layout_constraintEnd_toEndOf="@id/mypageRectangleBar"
         app:layout_constraintTop_toTopOf="@id/mypageRectangleBar" />
 
     <!-- 내 정보 텍스트 -->
@@ -406,9 +405,9 @@
         android:text="내 정보"
         android:textSize="10sp"
         android:textColor="#B9BEC1"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="2.5dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintStart_toStartOf="@id/mypageRectangleBar"
-        app:layout_constraintTop_toBottomOf="@id/tapMypageIconCategoryFeed1" />
+        app:layout_constraintEnd_toEndOf="@id/mypageRectangleBar"
+        app:layout_constraintBottom_toBottomOf="@id/mypageRectangleBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,16 +24,6 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
 
-        // 뒤로가기 눌렀을때 메인으로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnSearchBack);
-        imagebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SearchActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
         // 검색 아이콘 눌렀을때 검색 디테일로 화면 이동
         ImageButton imagebutton1 = findViewById(R.id.searchIcon);
         imagebutton1.setOnClickListener(new View.OnClickListener() {
@@ -93,6 +83,21 @@ public class SearchActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ImageButton btnBack = findViewById(R.id.btnSearchBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
     }
 
 }

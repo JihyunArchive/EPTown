@@ -18,15 +18,22 @@ public class coupon3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.coupon3);
 
-        // 뒤로가기 눌렀을때 상품상세로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
-        imagebutton.setOnClickListener(new View.OnClickListener() {
+        // 뒤로가기 버튼 (btnCategoryFeed1Back)
+        ImageButton btnBack = findViewById(R.id.btnCategoryFeed1Back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(coupon3Activity.this, ItemDetails.class);
-                startActivity(intent);
+                // onBackPressed() 메서드 호출
+                onBackPressed();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
+
 
         // 버튼 참조
         Button buyFixButton = findViewById(R.id.buyFixButton);

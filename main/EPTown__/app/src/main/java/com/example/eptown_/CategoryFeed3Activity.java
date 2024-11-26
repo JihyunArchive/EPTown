@@ -118,5 +118,21 @@ public class CategoryFeed3Activity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        // 뒤로가기 버튼 (btnCategoryFeed1Back)
+        ImageButton btnBack = findViewById(R.id.btnCategoryFeed1Back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed () {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
     }
 }
+

@@ -26,16 +26,6 @@ public class ItemDetailsReview extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.item_details_review);
 
-        // 뒤로가기 눌렀을때 메인화면으로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.itemDetailsBackIcon);
-        imagebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ItemDetailsReview.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
         // 홈 아이콘 눌렀을때 메인화면으로 화면 이동
         ImageButton imagebutton1 = findViewById(R.id.homeIcon);
         imagebutton1.setOnClickListener(new View.OnClickListener() {
@@ -105,6 +95,21 @@ public class ItemDetailsReview extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ImageButton btnBack = findViewById(R.id.itemDetailsBackIcon);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
 
         // 상태바 및 네비게이션 바 설정
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

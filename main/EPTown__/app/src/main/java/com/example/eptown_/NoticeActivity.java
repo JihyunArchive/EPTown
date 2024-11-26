@@ -18,15 +18,20 @@ public class NoticeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.notice);
 
-        // 뒤로가기 눌렀을때 메인으로 화면 이동
-        ImageButton imagebutton1 = findViewById(R.id.btnNoticeBack);
-        imagebutton1.setOnClickListener(new View.OnClickListener() {
+        ImageButton btnBack = findViewById(R.id.btnNoticeBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NoticeActivity.this, MainActivity.class);
-                startActivity(intent);
+                // onBackPressed() 메서드 호출
+                onBackPressed();
             }
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
+    }
 }
+

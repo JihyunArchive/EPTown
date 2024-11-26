@@ -20,16 +20,6 @@ public class CategoryFeed4Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.category_feed4);
 
-        // 뒤로가기 눌렀을때 메인으로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
-        imagebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CategoryFeed4Activity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
         //모든 연령 눌렀을때 카테고리 사료1로 화면 이동
         TextView textFeed1 = findViewById(R.id.allAge);
         textFeed1.setOnClickListener(new View.OnClickListener() {
@@ -120,5 +110,20 @@ public class CategoryFeed4Activity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        // 뒤로가기 버튼 (btnCategoryFeed1Back)
+        ImageButton btnBack = findViewById(R.id.btnCategoryFeed1Back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed () {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
     }
 }

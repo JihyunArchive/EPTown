@@ -34,13 +34,6 @@ public class review_register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.review_register);
 
-        // 뒤로가기 눌렀을때 메인으로 이동
-        ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
-        imagebutton.setOnClickListener(view -> {
-            Intent intent = new Intent(review_register.this, review_writtenActivity.class);
-            startActivity(intent);
-        });
-
         // 리뷰쓰기 눌렀을때 메인으로 이동
         TextView textview = findViewById(R.id.writtenReview);
         textview.setOnClickListener(view -> {
@@ -54,6 +47,21 @@ public class review_register extends AppCompatActivity {
             Intent intent = new Intent(review_register.this, review_addActivity.class);
             startActivity(intent);
         });
+
+        ImageButton btnBack = findViewById(R.id.btnCategoryFeed1Back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
 
         EditText contentInformation = findViewById(R.id.contentInformation);
 

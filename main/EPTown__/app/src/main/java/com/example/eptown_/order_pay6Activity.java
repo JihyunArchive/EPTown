@@ -27,13 +27,6 @@ public class order_pay6Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order_pay6);
 
-        // 뒤로가기 눌렀을때 order_details로 이동
-        ImageButton imagebutton = findViewById(R.id.btnOrderPayBack);
-        imagebutton.setOnClickListener(view -> {
-            Intent intent = new Intent(order_pay6Activity.this, order_detailsActivity.class);
-            startActivity(intent);
-        });
-
         // 환불요청1 눌렀을때 order_details3로 이동
         Button button = findViewById(R.id.refundButton);
         button.setOnClickListener(new View.OnClickListener() {
@@ -113,5 +106,20 @@ public class order_pay6Activity extends AppCompatActivity {
         changeBox.setOnClickListener(v -> {
             // 아무 동작도 하지 않음, 화면 사라지지 않도록
         });
+
+        ImageButton btnBack = findViewById(R.id.btnOrderPayBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
     }
 }

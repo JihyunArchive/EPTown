@@ -18,14 +18,20 @@ public class HospitalDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hospital_detail);
 
-        // 뒤로가기 눌렀을때 병원으로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnHospitalDetailBack);
-        imagebutton.setOnClickListener(new View.OnClickListener() {
+        ImageButton btnBack = findViewById(R.id.btnHospitalDetailBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HospitalDetailsActivity.this, HospitalActivity.class);
-                startActivity(intent);
+                // onBackPressed() 메서드 호출
+                onBackPressed();
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
+    }
 }
+

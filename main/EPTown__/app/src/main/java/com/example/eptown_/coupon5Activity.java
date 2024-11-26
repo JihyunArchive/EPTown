@@ -2,6 +2,7 @@ package com.example.eptown_;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -59,5 +60,21 @@ public class coupon5Activity extends AppCompatActivity {
             // 상태 반전
             isCheckedChecked = !isCheckedChecked;
         });
+
+        // 뒤로가기 버튼 (btnCategoryFeed1Back)
+        ImageButton btnBack = findViewById(R.id.btnCategoryFeed1Back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed () {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
     }
 }

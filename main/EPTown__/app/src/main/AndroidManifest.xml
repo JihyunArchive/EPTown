@@ -312,22 +312,6 @@
                 android:name=".ItemDetails"
                 android:exported="true"/>
 
-            <activity
-                android:name=".SearchDetailshigherActivity"
-                android:exported="true" />
-
-            <activity
-                android:name=".SearchDetailslowerActivity"
-                android:exported="true" />
-
-            <activity
-                android:name=".SearchDetailsPopularityActivity"
-                android:exported="true" />
-
-            <activity
-                android:name=".SearchDetailsReviewActivity"
-                android:exported="true" />
-
         <activity
             android:name=".CommunityAddActivity"
             android:exported="true" />

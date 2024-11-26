@@ -25,12 +25,6 @@ public class personal_informationActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.personal_information);
 
-        // 뒤로가기 버튼 누르면 마이페이지로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnLoginBack);
-        imagebutton.setOnClickListener(view -> {
-            Intent intent = new Intent(personal_informationActivity.this, MyPageActivity.class);
-            startActivity(intent);
-        });
 
         // 수정하기 버튼 누르면 마이페이지로 화면 이동
         Button button = findViewById(R.id.buyFixButton);
@@ -38,6 +32,21 @@ public class personal_informationActivity extends AppCompatActivity {
             Intent intent = new Intent(personal_informationActivity.this, MyPageActivity.class);
             startActivity(intent);
         });
+
+        ImageButton btnBack = findViewById(R.id.btnLoginBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
 
         // EditText 뷰들을 찾음
         EditText addressDetailSpaces = findViewById(R.id.addressDetailSpaces);

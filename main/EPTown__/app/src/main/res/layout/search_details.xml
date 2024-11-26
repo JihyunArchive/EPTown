@@ -83,8 +83,25 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="93dp"
         android:background="@drawable/btn_search_color"
+        android:stateListAnimator="@null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 선택안한 전체 -->
+    <Button
+        android:id="@+id/uncolorRect"
+        android:layout_width="42dp"
+        android:layout_height="23dp"
+        android:text="전체"
+        android:textSize="12sp"
+        android:textColor="#A1A9AD"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="93dp"
+        android:background="@drawable/btn_search"
+        android:stateListAnimator="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
 
     <!-- 인기순 -->
     <Button
@@ -97,8 +114,25 @@
         android:layout_marginStart="75dp"
         android:layout_marginTop="93dp"
         android:background="@drawable/btn_search"
+        android:stateListAnimator="@null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"  />
+
+    <!-- 선택한 인기순 -->
+    <Button
+        android:id="@+id/colorRectOne"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:text="인기순"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="93dp"
+        android:background="@drawable/btn_search_color"
+        android:stateListAnimator="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
 
     <!-- 평점순 -->
     <Button
@@ -111,8 +145,25 @@
         android:layout_marginStart="138dp"
         android:layout_marginTop="93dp"
         android:background="@drawable/btn_search"
+        android:stateListAnimator="@null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"  />
+
+    <!-- 선택한 평점순 -->
+    <Button
+        android:id="@+id/colorRectTwo"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:text="평점순"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="93dp"
+        android:background="@drawable/btn_search_color"
+        android:stateListAnimator="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
 
     <!-- 가격 높은 순 -->
     <Button
@@ -125,8 +176,25 @@
         android:layout_marginStart="201dp"
         android:layout_marginTop="93dp"
         android:background="@drawable/btn_search"
+        android:stateListAnimator="@null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"  />
+
+    <!-- 선택한 가격 높은 순 -->
+    <Button
+        android:id="@+id/colorRectThree"
+        android:layout_width="78dp"
+        android:layout_height="25dp"
+        android:text="가격 높은 순"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginStart="201dp"
+        android:layout_marginTop="93dp"
+        android:background="@drawable/btn_search_color"
+        android:stateListAnimator="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
 
     <!-- 가격 낮은 순 -->
     <Button
@@ -139,8 +207,25 @@
         android:layout_marginStart="292dp"
         android:layout_marginTop="93dp"
         android:background="@drawable/btn_search"
+        android:stateListAnimator="@null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"  />
+
+    <!-- 선택한 가격 낮은 순 -->
+    <Button
+        android:id="@+id/colorRectFour"
+        android:layout_width="78dp"
+        android:layout_height="25dp"
+        android:text="가격 낮은 순"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginStart="292dp"
+        android:layout_marginTop="93dp"
+        android:background="@drawable/btn_search_color"
+        android:stateListAnimator="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
 
     <ScrollView
         android:layout_width="match_parent"

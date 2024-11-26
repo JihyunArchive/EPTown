@@ -178,17 +178,24 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // 할인 상품 누르면 용품으로 화면 이동
-        LinearLayout layout4 = findViewById(R.id.categoryDiscount);
+        // 신상 누르면 신상 상품으로 화면 이동
+        LinearLayout layout4 = findViewById(R.id.newProduct);
         layout4.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, NewProductActivity.class);
+            startActivity(intent);
+        });
+
+        // 크리스마스 할인특가 누르면 할인특가 상품으로 화면 이동
+        LinearLayout layout5 = findViewById(R.id.christmasSale);
+        layout5.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, SaleProductActivity.class);
             startActivity(intent);
         });
 
-        // 새로운 상품 누르면 용품으로 화면 이동
-        LinearLayout layout5 = findViewById(R.id.categoryNew);
-        layout5.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, NewProductActivity.class);
+        // 배너 누르면 할인특가 상품으로 화면 이동
+        androidx.viewpager2.widget.ViewPager2 androidx = findViewById(R.id.bannerImg);
+        androidx.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, SaleProductActivity.class);
             startActivity(intent);
         });
     }

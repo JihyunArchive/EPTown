@@ -20,16 +20,6 @@ public class CategorySnack1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.category_snack1);
 
-        // 뒤로가기 눌렀을때 메인으로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
-        imagebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CategorySnack1Activity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
         //수제간식 눌렀을때 카테고리 간식2로 화면 이동
         TextView textSnack1 = findViewById(R.id.handSnack);
         textSnack1.setOnClickListener(new View.OnClickListener() {
@@ -146,5 +136,21 @@ public class CategorySnack1Activity extends AppCompatActivity {
             Intent intent = new Intent(CategorySnack1Activity.this, ItemDetails.class);
             startActivity(intent);
         });
+
+        // 뒤로가기 버튼 (btnCategoryFeed1Back)
+        ImageButton btnBack = findViewById(R.id.btnCategoryFeed1Back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed () {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
     }
 }

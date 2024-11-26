@@ -21,13 +21,6 @@ public class inquire4Activity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.inquire4);
 
-        // 뒤로가기 클릭시 마이페이지로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
-        imagebutton.setOnClickListener(view -> {
-            Intent intent = new Intent(inquire4Activity.this, MyPageActivity.class);
-            startActivity(intent);
-        });
-
         // 문의하기 텍스트 클릭시 inquire5로 화면 이동
         TextView textview = findViewById(R.id.writeReview);
         textview.setOnClickListener(view -> {
@@ -101,6 +94,21 @@ public class inquire4Activity extends AppCompatActivity {
             // 상태를 반전
             isExpanded = !isExpanded;
         });
+
+        ImageButton btnBack = findViewById(R.id.btnCategoryFeed1Back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
     }
 }
 

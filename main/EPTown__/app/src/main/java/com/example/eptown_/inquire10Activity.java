@@ -32,16 +32,6 @@ public class inquire10Activity extends AppCompatActivity {
         EdgeToEdge.enable(this); // EdgeToEdge 설정
         setContentView(R.layout.inquire10); // 레이아웃 설정
 
-        // 뒤로가기 눌렀을때 itemdetailsinquiry로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
-        imagebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(inquire10Activity.this, ItemDetailsInquiry.class);
-                startActivity(intent);
-            }
-        });
-
         // 등록 버튼 클릭시 inquire7로 화면 이동
         registrationButtonColor = findViewById(R.id.registrationButtonColor);
         registrationButtonColor.setOnClickListener(view -> {
@@ -125,6 +115,21 @@ public class inquire10Activity extends AppCompatActivity {
                 // 입력 변경 후 처리 (필요 없다면 생략 가능)
             }
         });
+
+        ImageButton btnBack = findViewById(R.id.btnCategoryFeed1Back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
     }
 
     // TextView 클릭 리스너 설정 메서드

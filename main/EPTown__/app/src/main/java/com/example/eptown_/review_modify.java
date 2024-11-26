@@ -18,16 +18,6 @@ public class review_modify extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.review_modify);
 
-        // 뒤로가기 눌렀을때 리뷰로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
-        imagebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(review_modify.this, review_writtenActivity.class);
-                startActivity(intent);
-            }
-        });
-
         // 수정하기 버튼 눌렀을때 리뷰로 화면 이동
         Button button = findViewById(R.id.buyFixButton);
         button.setOnClickListener(new View.OnClickListener() {
@@ -39,7 +29,20 @@ public class review_modify extends AppCompatActivity {
             }
         });
 
-        EditText content = findViewById(R.id.content);
-
+        ImageButton btnBack = findViewById(R.id.btnCategoryFeed1Back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
 }
+        EditText content = findViewById(R.id.content);
+    }

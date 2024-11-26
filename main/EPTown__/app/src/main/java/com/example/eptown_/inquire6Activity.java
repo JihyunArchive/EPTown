@@ -31,13 +31,6 @@ public class inquire6Activity extends AppCompatActivity {
         EdgeToEdge.enable(this); // EdgeToEdge 설정
         setContentView(R.layout.inquire6); // 레이아웃 설정
 
-        // 뒤로가기 눌렀을때 메인으로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
-        imagebutton.setOnClickListener(view -> {
-            Intent intent = new Intent(inquire6Activity.this, inquire5Activity.class);
-            startActivity(intent);
-        });
-
         // 내 문의 내역 텍스트 클릭시 inquire4로 화면 이동
         TextView textview = findViewById(R.id.writtenReview);
         textview.setOnClickListener(view -> {
@@ -138,6 +131,21 @@ public class inquire6Activity extends AppCompatActivity {
 
         // 회색 화면 클릭 시 UI 숨기기
         grayScreen.setOnClickListener(v -> hideAllUI());
+
+        ImageButton btnBack = findViewById(R.id.btnCategoryFeed1Back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
     }
 
     // TextView 클릭 리스너 설정 메서드

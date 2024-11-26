@@ -16,22 +16,27 @@ public class SaleProductActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sale_product);
 
-        // 뒤로가기 눌렀을때 메인으로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
-        imagebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SaleProductActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
         // 첫번째 상품 누르면 itemDetail로 화면 이동
         LinearLayout layout = findViewById(R.id.userRecommendedItemOne);
         layout.setOnClickListener(view -> {
             Intent intent = new Intent(SaleProductActivity.this, ItemDetails.class);
             startActivity(intent);
         });
+
+        ImageButton btnBack = findViewById(R.id.btnCategoryFeed1Back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
 
     }
 }

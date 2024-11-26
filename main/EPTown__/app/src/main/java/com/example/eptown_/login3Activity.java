@@ -50,19 +50,27 @@ public class login3Activity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {}
         });
 
-        // 뒤로가기 버튼
-        ImageButton imageButton = findViewById(R.id.btnLoginBack);
-        imageButton.setOnClickListener(view -> {
-            Intent intent = new Intent(login3Activity.this, login1Activity.class);
-            startActivity(intent);
-        });
-
         // 회원가입 버튼
         Button joinButton = findViewById(R.id.btnJoin);
         joinButton.setOnClickListener(view -> {
             Intent intent = new Intent(login3Activity.this, Login.class);
             startActivity(intent);
         });
+
+        ImageButton btnBack = findViewById(R.id.btnLoginBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
 
         // 성별 선택 박스 관련 UI 참조
         ImageButton underArrow = findViewById(R.id.underArrow);

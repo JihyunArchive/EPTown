@@ -30,13 +30,6 @@ public class community2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.community2);
 
-        // 뒤로가기 눌렀을 때 커뮤니티로 이동
-        ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
-        imagebutton.setOnClickListener(view -> {
-            Intent intent = new Intent(community2Activity.this, CommunityActivity.class);
-            startActivity(intent);
-        });
-
         // 탭바 버튼 설정
         ImageButton imagebutton1 = findViewById(R.id.tapHomeIconCategoryFeed1);
         imagebutton1.setOnClickListener(view -> startActivity(new Intent(this, MainActivity.class)));
@@ -102,6 +95,22 @@ public class community2Activity extends AppCompatActivity {
         choiceTwo.setOnClickListener(v -> toggleColor(choiceTwo));
         choiceThree.setOnClickListener(v -> toggleColor(choiceThree));
         choiceFour.setOnClickListener(v -> toggleColor(choiceFour));
+
+        // 뒤로가기 버튼 (btnCategoryFeed1Back)
+        ImageButton btnBack = findViewById(R.id.btnCategoryFeed1Back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed () {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
     }
 
     private void initializeUI() {

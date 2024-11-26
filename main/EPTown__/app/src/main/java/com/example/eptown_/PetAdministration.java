@@ -39,16 +39,6 @@ public class PetAdministration extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.pet_administration);
 
-        // 뒤로가기 버튼 눌렀을 때 mypage로 화면 이동
-        ImageButton imagebutton = findViewById(R.id.btnCategoryFeed1Back);
-        imagebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(PetAdministration.this, MyPageActivity.class);
-                startActivity(intent);
-            }
-        });
-
         name = findViewById(R.id.name);
         nameEnter = findViewById(R.id.nameEnter);
         birthday = findViewById(R.id.birthday);
@@ -613,7 +603,19 @@ public class PetAdministration extends AppCompatActivity {
             }
         });
 
+        ImageButton btnBack = findViewById(R.id.btnCategoryFeed1Back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // onBackPressed() 메서드 호출
+                onBackPressed();
+            }
+        });
+    }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed(); // 바로 이전 화면으로 이동
+        finish(); // 현재 액티비티 종료
     }
 }
