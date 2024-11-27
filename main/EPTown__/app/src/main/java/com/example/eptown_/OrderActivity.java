@@ -21,10 +21,17 @@ public class OrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order);
 
-        // 적용하려는 쿠폰 선택했을때 coupon5로 화면 이동
-        ImageButton imagebutton1 = findViewById(R.id.rightArrowTwo);
-        imagebutton1.setOnClickListener(view -> {
-            Intent intent = new Intent(OrderActivity.this, CouponChoice.class);
+        // 적용하려는 쿠폰 선택했을때 couponChoice로 화면 이동
+        ImageButton imagebutton = findViewById(R.id.rightArrowTwo);
+        imagebutton.setOnClickListener(view -> {
+            Intent intent = new Intent(OrderActivity.this, CouponChoiceActivity.class);
+            startActivity(intent);
+        });
+
+        // 적용하기 텍스트 선택했을때 couponChoice로 화면 이동
+        TextView textview = findViewById(R.id.apply);
+        textview.setOnClickListener(view -> {
+            Intent intent = new Intent(OrderActivity.this, CouponChoiceActivity.class);
             startActivity(intent);
         });
 
@@ -104,81 +111,8 @@ public class OrderActivity extends AppCompatActivity {
             }, 3000);
         });
 
-
-        // 수량 변경 관련 UI 참조
-        View grayScreenTwo = findViewById(R.id.grayScreenTwo);
-        ImageView changeBox = findViewById(R.id.changeBox);
-        ImageView arrow = findViewById(R.id.arrow);
-
         // 구매하기 버튼 참조
         View purchaseButton = findViewById(R.id.buyFixButton); // 구매하기 버튼 참조
-
-        // rightArrowOne 버튼 참조
-        ImageView rightArrowOne = findViewById(R.id.rightArrowOne);
-
-        // 클릭 이벤트 - 수량 변경 UI 표시
-        rightArrowOne.setOnClickListener(view -> {
-            grayScreenTwo.setVisibility(View.VISIBLE);
-            grayScreenTwo.setClickable(true); // 터치 이벤트 차단
-            changeBox.setVisibility(View.VISIBLE);
-            arrow.setVisibility(View.VISIBLE);
-
-            // 다른 관련 요소들 모두 VISIBLE 설정
-            findViewById(R.id.inquiryTypeTwo).setVisibility(View.VISIBLE);
-            findViewById(R.id.zipCode).setVisibility(View.VISIBLE);
-            findViewById(R.id.zipCodeBox).setVisibility(View.VISIBLE);
-            findViewById(R.id.zipCodeContent).setVisibility(View.VISIBLE);
-            findViewById(R.id.verificationTransmit).setVisibility(View.VISIBLE);
-            findViewById(R.id.address).setVisibility(View.VISIBLE);
-            findViewById(R.id.addressBox).setVisibility(View.VISIBLE);
-            findViewById(R.id.addressContent).setVisibility(View.VISIBLE);
-            findViewById(R.id.addressDetail).setVisibility(View.VISIBLE);
-            findViewById(R.id.addressDetailBox).setVisibility(View.VISIBLE);
-            findViewById(R.id.addressDetailContent).setVisibility(View.VISIBLE);
-            findViewById(R.id.deliveryAddressTwo).setVisibility(View.VISIBLE);
-            findViewById(R.id.deliveryAddressTwoBox).setVisibility(View.VISIBLE);
-            findViewById(R.id.deliveryAddressContent).setVisibility(View.VISIBLE);
-            findViewById(R.id.recipient).setVisibility(View.VISIBLE);
-            findViewById(R.id.recipientBox).setVisibility(View.VISIBLE);
-            findViewById(R.id.reciptientContent).setVisibility(View.VISIBLE);
-            findViewById(R.id.phoneNumber).setVisibility(View.VISIBLE);
-            findViewById(R.id.numberBox).setVisibility(View.VISIBLE);
-            findViewById(R.id.numberContent).setVisibility(View.VISIBLE);
-            findViewById(R.id.choiceButton).setVisibility(View.VISIBLE);
-            findViewById(R.id.basicDeliveryAddress).setVisibility(View.VISIBLE);
-        });
-
-        // arrow 클릭 이벤트 - 수량 변경 UI 숨기기
-        arrow.setOnClickListener(view -> {
-            grayScreenTwo.setVisibility(View.GONE);
-            grayScreenTwo.setClickable(false); // 클릭 이벤트 차단 해제
-            changeBox.setVisibility(View.GONE);
-            arrow.setVisibility(View.GONE);
-
-            // 다른 관련 요소들 모두 GONE 설정
-            findViewById(R.id.inquiryTypeTwo).setVisibility(View.GONE);
-            findViewById(R.id.zipCode).setVisibility(View.GONE);
-            findViewById(R.id.zipCodeBox).setVisibility(View.GONE);
-            findViewById(R.id.zipCodeContent).setVisibility(View.GONE);
-            findViewById(R.id.verificationTransmit).setVisibility(View.GONE);
-            findViewById(R.id.address).setVisibility(View.GONE);
-            findViewById(R.id.addressBox).setVisibility(View.GONE);
-            findViewById(R.id.addressContent).setVisibility(View.GONE);
-            findViewById(R.id.addressDetail).setVisibility(View.GONE);
-            findViewById(R.id.addressDetailBox).setVisibility(View.GONE);
-            findViewById(R.id.addressDetailContent).setVisibility(View.GONE);
-            findViewById(R.id.deliveryAddressTwo).setVisibility(View.GONE);
-            findViewById(R.id.deliveryAddressTwoBox).setVisibility(View.GONE);
-            findViewById(R.id.deliveryAddressContent).setVisibility(View.GONE);
-            findViewById(R.id.recipient).setVisibility(View.GONE);
-            findViewById(R.id.recipientBox).setVisibility(View.GONE);
-            findViewById(R.id.reciptientContent).setVisibility(View.GONE);
-            findViewById(R.id.phoneNumber).setVisibility(View.GONE);
-            findViewById(R.id.numberBox).setVisibility(View.GONE);
-            findViewById(R.id.numberContent).setVisibility(View.GONE);
-            findViewById(R.id.choiceButton).setVisibility(View.GONE);
-            findViewById(R.id.basicDeliveryAddress).setVisibility(View.GONE);
-        });
 
         // underArrow 버튼 및 관련 요소 참조
         ImageButton underArrow = findViewById(R.id.underArrow);

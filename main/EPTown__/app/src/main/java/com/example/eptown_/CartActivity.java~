@@ -35,6 +35,16 @@ public class CartActivity extends AppCompatActivity {
             }
         });
 
+        // 변경하기 버튼 눌렀을때 주문/결제로 화면 이동
+        Button button = findViewById(R.id.buyFixButtonTwo);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CartActivity.this, OrderActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // 구매하기 버튼 눌렀을때 주문/결제로 화면 이동
         Button button1 = findViewById(R.id.buyFixButton);
         button1.setOnClickListener(new View.OnClickListener() {
@@ -123,10 +133,7 @@ public class CartActivity extends AppCompatActivity {
         grayScreen.setOnClickListener(v -> hideReportUI());
 
         // 확인 버튼 클릭 시 신고 UI를 숨김
-        check.setOnClickListener(v -> hideReportTwoUI());
-
-        // 확인 버튼 클릭 시 신고 UI를 숨김
-        buyFixButtonTwo.setOnClickListener(v -> hideReportThreeUI());
+        check.setOnClickListener(v -> hideReporTwotUI());
     }
 
     // 단일 버튼에 대한 토글 기능 설정
@@ -365,9 +372,10 @@ public class CartActivity extends AppCompatActivity {
         totalPriceThree.setVisibility(View.GONE);
         buyBarTwo.setVisibility(View.GONE);
         buyFixButtonTwo.setVisibility(View.GONE);
+
     }
 
-    private void hideReportTwoUI() {
+    private void hideReporTwotUI() {
         colorRectOne.setVisibility(View.GONE);
         productOne.setVisibility(View.GONE);
         colorRectTwo.setVisibility(View.GONE);
@@ -383,25 +391,6 @@ public class CartActivity extends AppCompatActivity {
         deleteText.setVisibility(View.GONE);
         cancel.setVisibility(View.GONE);
         check.setVisibility(View.GONE);
-    }
-
-    private void hideReportThreeUI() {
-        grayScreen.setVisibility(View.GONE);
-        changeBox.setVisibility(View.GONE);
-        grayStick.setVisibility(View.GONE);
-        grayBox.setVisibility(View.GONE);
-        productPriceTwo.setVisibility(View.GONE);
-        amount.setVisibility(View.GONE);
-        btnMinus.setVisibility(View.GONE);
-        btnPlus.setVisibility(View.GONE);
-        theLargest.setVisibility(View.GONE);
-        number.setVisibility(View.GONE);
-        totalPriceTwo.setVisibility(View.GONE);
-        priceBar.setVisibility(View.GONE);
-        totalAmount.setVisibility(View.GONE);
-        totalPriceThree.setVisibility(View.GONE);
-        buyBarTwo.setVisibility(View.GONE);
-        buyFixButtonTwo.setVisibility(View.GONE);
     }
 
     private void setupRectBoxClickListener(View... rectBoxes) {

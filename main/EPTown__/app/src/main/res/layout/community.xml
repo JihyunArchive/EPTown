@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/firstHorizon"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="60dp"
+        android:background="#E7E7E7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <LinearLayout
         android:id="@+id/headerLayout"
@@ -13,40 +22,42 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-                <!-- 커뮤니티 헤더 텍스트 -->
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="커뮤니티"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+            <!-- 커뮤니티 헤더 텍스트 -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="커뮤니티"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
     </LinearLayout>
 
     <ScrollView
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:fillViewport="true"
-        android:layout_marginBottom="40dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="78dp"
         android:layout_marginEnd="20dp"
-        app:layout_constraintTop_toBottomOf="@id/headerLayout"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="40dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/headerLayout">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,24 +74,24 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="1dp">
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="최연주"
                         android:textSize="14sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=" | 오늘 11:05"
-                        android:textSize="12sp"
                         android:layout_marginStart="4dp"
+                        android:text=" | 오늘 11:05"
                         android:textColor="#AEB2BA"
-                        android:textStyle="bold"/>
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <!-- 제목 부분 -->
@@ -88,252 +99,253 @@
                     android:id="@+id/communityOneTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="돌고돌아 정착한 포징이가 제일 좋아하는 가방"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="8dp"/>
+                    android:textStyle="bold" />
 
                 <!-- 내용 부분 -->
                 <TextView
                     android:id="@+id/communityOneContent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="우연히 에펫타운에서 보고 산 가방이에요. 바깥도 구경하고 안에는 쿠션도 옵션값 없이 포함된 가격으로 너무 좋아요!! 가격 구성 다 잡는 가방 추천드립니다!!"
-                    android:textSize="14sp"
-                    android:layout_marginTop="10dp"/>
+                    android:textSize="14sp" />
 
                 <ImageView
                     android:id="@+id/communityOneImage"
                     android:layout_width="match_parent"
                     android:layout_height="270dp"
-                    android:src="@drawable/image_dog"
+                    android:layout_marginTop="20dp"
                     android:scaleType="centerCrop"
-                    android:layout_marginTop="20dp"/>
+                    android:src="@drawable/image_dog" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginBottom="8dp"
-                    android:gravity="start">
+                    android:gravity="start"
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:id="@+id/commentOneIcon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_comment"
-                        android:layout_marginTop="15dp"/>
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/ic_comment" />
 
                     <!-- 오른쪽으로 이동하기 위한 여백 추가 -->
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"/> <!-- 여백을 추가하여 오른쪽으로 밀기 -->
+                        android:layout_weight="1" /> <!-- 여백을 추가하여 오른쪽으로 밀기 -->
 
                     <TextView
                         android:id="@+id/reportOne"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="|  신고"
-                        android:textSize="12sp"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="15dp"
-                        android:textColor="#AEB2BA"/>
+                        android:text="|  신고"
+                        android:textColor="#AEB2BA"
+                        android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="8dp"
-                    android:background="#E4E4E4"
-                    android:layout_marginTop="15dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="15dp"
+                android:background="#E4E4E4" />
 
 
-                <!-- 두 번째 게시글 -->
+            <!-- 두 번째 게시글 -->
+            <LinearLayout
+                android:id="@+id/secondCommunity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
                 <LinearLayout
-                    android:id="@+id/secondCommunity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="최연주"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text=" | 오늘 11:05"
+                        android:textColor="#AEB2BA"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- 제목 부분 -->
+                <TextView
+                    android:id="@+id/communityTwoTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="돌고돌아 정착한 포징이가 제일 좋아하는 가방"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- 내용 부분 -->
+                <TextView
+                    android:id="@+id/communityTwoContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="우연히 에펫타운에서 보고 산 가방이에요. 바깥도 구경하고 안에는 쿠션도 옵션값 없이 포함된 가격으로 너무 좋아요!! 가격 구성 다 잡는 가방 추천드립니다!!"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/communityTwoImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_dog" />
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="25dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="최연주"
-                            android:textSize="14sp"
-                            android:textStyle="bold"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" | 오늘 11:05"
-                            android:textSize="12sp"
-                            android:layout_marginStart="4dp"
-                            android:textColor="#AEB2BA"
-                            android:textStyle="bold"/>
-                    </LinearLayout>
-
-                    <!-- 제목 부분 -->
-                    <TextView
-                        android:id="@+id/communityTwoTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="돌고돌아 정착한 포징이가 제일 좋아하는 가방"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:layout_marginTop="8dp"/>
-
-                    <!-- 내용 부분 -->
-                    <TextView
-                        android:id="@+id/communityTwoContent"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="우연히 에펫타운에서 보고 산 가방이에요. 바깥도 구경하고 안에는 쿠션도 옵션값 없이 포함된 가격으로 너무 좋아요!! 가격 구성 다 잡는 가방 추천드립니다!!"
-                        android:textSize="14sp"
-                        android:layout_marginTop="10dp"/>
+                    android:layout_marginBottom="8dp"
+                    android:gravity="start"
+                    android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/communityTwoImage"
-                        android:layout_width="match_parent"
-                        android:layout_height="270dp"
-                        android:src="@drawable/image_dog"
-                        android:scaleType="centerCrop"
-                        android:layout_marginTop="20dp"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="8dp"
-                        android:gravity="start">
-
-                        <ImageView
-                            android:id="@+id/commentTwoIcon"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_comment"
-                            android:layout_marginTop="15dp"/>
-
-                        <!-- 오른쪽으로 이동하기 위한 여백 추가 -->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"/> <!-- 여백을 추가하여 오른쪽으로 밀기 -->
-
-                        <TextView
-                            android:id="@+id/reportTwo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="|  신고"
-                            android:textSize="12sp"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="15dp"
-                            android:textColor="#AEB2BA"/>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="8dp"
-                    android:background="#E4E4E4"
-                    android:layout_marginTop="15dp"/>
-
-
-                <!-- 세 번째 게시글 -->
-                <LinearLayout
-                    android:id="@+id/thirdCommunity"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <LinearLayout
+                        android:id="@+id/commentTwoIcon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="25dp">
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/ic_comment" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="최연주"
-                            android:textSize="14sp"
-                            android:textStyle="bold"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" | 오늘 11:05"
-                            android:textSize="12sp"
-                            android:layout_marginStart="4dp"
-                            android:textColor="#AEB2BA"
-                            android:textStyle="bold"/>
-                    </LinearLayout>
-
-                    <!-- 제목 부분 -->
+                    <!-- 오른쪽으로 이동하기 위한 여백 추가 -->
                     <TextView
-                        android:id="@+id/communityThreeTitle"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="돌고돌아 정착한 포징이가 제일 좋아하는 가방"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:layout_marginTop="8dp"/>
+                        android:layout_weight="1" /> <!-- 여백을 추가하여 오른쪽으로 밀기 -->
 
-                    <!-- 내용 부분 -->
                     <TextView
-                        android:id="@+id/communityThreeContent"
+                        android:id="@+id/reportTwo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="우연히 에펫타운에서 보고 산 가방이에요. 바깥도 구경하고 안에는 쿠션도 옵션값 없이 포함된 가격으로 너무 좋아요!! 가격 구성 다 잡는 가방 추천드립니다!!"
-                        android:textSize="14sp"
-                        android:layout_marginTop="10dp"/>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="8dp"
-                        android:gravity="start">
-
-                        <ImageView
-                            android:id="@+id/commentThreeIcon"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_comment"
-                            android:layout_marginTop="15dp"/>
-
-                        <!-- 오른쪽으로 이동하기 위한 여백 추가 -->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"/> <!-- 여백을 추가하여 오른쪽으로 밀기 -->
-
-                        <TextView
-                            android:id="@+id/reportThree"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="|  신고"
-                            android:textSize="12sp"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="15dp"
-                            android:textColor="#AEB2BA"/>
-                    </LinearLayout>
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="15dp"
+                        android:text="|  신고"
+                        android:textColor="#AEB2BA"
+                        android:textSize="12sp" />
                 </LinearLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="8dp"
-                    android:background="#E4E4E4"
-                    android:layout_marginTop="15dp"/>
             </LinearLayout>
 
-</ScrollView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="15dp"
+                android:background="#E4E4E4" />
+
+
+            <!-- 세 번째 게시글 -->
+            <LinearLayout
+                android:id="@+id/thirdCommunity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="최연주"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text=" | 오늘 11:05"
+                        android:textColor="#AEB2BA"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- 제목 부분 -->
+                <TextView
+                    android:id="@+id/communityThreeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="돌고돌아 정착한 포징이가 제일 좋아하는 가방"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- 내용 부분 -->
+                <TextView
+                    android:id="@+id/communityThreeContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="우연히 에펫타운에서 보고 산 가방이에요. 바깥도 구경하고 안에는 쿠션도 옵션값 없이 포함된 가격으로 너무 좋아요!! 가격 구성 다 잡는 가방 추천드립니다!!"
+                    android:textSize="14sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/commentThreeIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/ic_comment" />
+
+                    <!-- 오른쪽으로 이동하기 위한 여백 추가 -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" /> <!-- 여백을 추가하여 오른쪽으로 밀기 -->
+
+                    <TextView
+                        android:id="@+id/reportThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="15dp"
+                        android:text="|  신고"
+                        android:textColor="#AEB2BA"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="15dp"
+                android:background="#E4E4E4" />
+        </LinearLayout>
+
+    </ScrollView>
 
     <!-- 글쓰기 아이콘 -->
     <ImageButton
@@ -342,12 +354,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="678dp"
         android:layout_marginEnd="20dp"
-        android:src="@drawable/ic_writing"
         android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_writing"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 탭바 배경 하얀색 사각형 -->
     <ImageView
@@ -357,16 +369,16 @@
         android:layout_marginTop="0dp"
         android:src="@drawable/bar_tap_bg"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- 탭바 홈 배경 하얀색 사각형 -->
     <ImageView
         android:id="@+id/homeRectangleBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -377,10 +389,10 @@
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:layout_marginTop="13dp"
-        android:src="@drawable/ic_home"
         android:background="?attr/selectableItemBackgroundBorderless"
-        app:layout_constraintStart_toStartOf="@id/homeRectangleBar"
+        android:src="@drawable/ic_home"
         app:layout_constraintEnd_toEndOf="@id/homeRectangleBar"
+        app:layout_constraintStart_toStartOf="@id/homeRectangleBar"
         app:layout_constraintTop_toTopOf="@id/homeRectangleBar" />
 
     <!-- 홈 텍스트 -->
@@ -388,21 +400,21 @@
         android:id="@+id/nowTapHomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="홈"
-        android:textSize="10sp"
-        android:textColor="#B9BEC1"
         android:layout_marginBottom="10dp"
-        app:layout_constraintStart_toStartOf="@id/homeRectangleBar"
+        android:text="홈"
+        android:textColor="#B9BEC1"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/homeRectangleBar"
         app:layout_constraintEnd_toEndOf="@id/homeRectangleBar"
-        app:layout_constraintBottom_toBottomOf="@id/homeRectangleBar" />
+        app:layout_constraintStart_toStartOf="@id/homeRectangleBar" />
 
     <!-- 탭바 커뮤니티 배경 하얀색 사각형 -->
     <ImageView
         android:id="@+id/communityRectangleBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/homeRectangleBar" />
@@ -413,10 +425,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
-        android:src="@drawable/ic_tap_community"
         android:background="?attr/selectableItemBackgroundBorderless"
-        app:layout_constraintStart_toStartOf="@id/communityRectangleBar"
+        android:src="@drawable/ic_tap_community"
         app:layout_constraintEnd_toEndOf="@id/communityRectangleBar"
+        app:layout_constraintStart_toStartOf="@id/communityRectangleBar"
         app:layout_constraintTop_toTopOf="@id/communityRectangleBar" />
 
     <!-- 커뮤니티 텍스트 -->
@@ -424,21 +436,21 @@
         android:id="@+id/tapCommunityText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="커뮤니티"
-        android:textSize="10sp"
-        android:textColor="@color/black"
         android:layout_marginBottom="10dp"
-        app:layout_constraintStart_toStartOf="@id/communityRectangleBar"
+        android:text="커뮤니티"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/communityRectangleBar"
         app:layout_constraintEnd_toEndOf="@id/communityRectangleBar"
-        app:layout_constraintBottom_toBottomOf="@id/communityRectangleBar" />
+        app:layout_constraintStart_toStartOf="@id/communityRectangleBar" />
 
     <!-- 탭바 카테고리 배경 하얀색 사각형 -->
     <ImageView
         android:id="@+id/categoryRectangleBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/communityRectangleBar" />
@@ -449,10 +461,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:src="@drawable/ic_category"
         android:background="?attr/selectableItemBackgroundBorderless"
-        app:layout_constraintStart_toStartOf="@id/categoryRectangleBar"
+        android:src="@drawable/ic_category"
         app:layout_constraintEnd_toEndOf="@id/categoryRectangleBar"
+        app:layout_constraintStart_toStartOf="@id/categoryRectangleBar"
         app:layout_constraintTop_toTopOf="@id/categoryRectangleBar" />
 
     <!-- 카테고리 텍스트 -->
@@ -460,21 +472,21 @@
         android:id="@+id/tapCategoryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="카테고리"
-        android:textSize="10sp"
-        android:textColor="#B9BEC1"
         android:layout_marginBottom="10dp"
-        app:layout_constraintStart_toStartOf="@id/categoryRectangleBar"
+        android:text="카테고리"
+        android:textColor="#B9BEC1"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/categoryRectangleBar"
         app:layout_constraintEnd_toEndOf="@id/categoryRectangleBar"
-        app:layout_constraintBottom_toBottomOf="@id/categoryRectangleBar" />
+        app:layout_constraintStart_toStartOf="@id/categoryRectangleBar" />
 
     <!-- 탭바 병원 배경 하얀색 사각형 -->
     <ImageView
         android:id="@+id/hospitalRectangleBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/categoryRectangleBar" />
@@ -485,10 +497,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
-        android:src="@drawable/ic_hospital"
         android:background="?attr/selectableItemBackgroundBorderless"
-        app:layout_constraintStart_toStartOf="@id/hospitalRectangleBar"
+        android:src="@drawable/ic_hospital"
         app:layout_constraintEnd_toEndOf="@id/hospitalRectangleBar"
+        app:layout_constraintStart_toStartOf="@id/hospitalRectangleBar"
         app:layout_constraintTop_toTopOf="@id/hospitalRectangleBar" />
 
     <!-- 병원 텍스트 -->
@@ -496,21 +508,21 @@
         android:id="@+id/tapHostpitalText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="병원"
-        android:textSize="10sp"
-        android:textColor="#B9BEC1"
         android:layout_marginBottom="10dp"
-        app:layout_constraintStart_toStartOf="@id/hospitalRectangleBar"
+        android:text="병원"
+        android:textColor="#B9BEC1"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/hospitalRectangleBar"
         app:layout_constraintEnd_toEndOf="@id/hospitalRectangleBar"
-        app:layout_constraintBottom_toBottomOf="@id/hospitalRectangleBar" />
+        app:layout_constraintStart_toStartOf="@id/hospitalRectangleBar" />
 
     <!-- 탭바 내 정보 배경 하얀색 사각형 -->
     <ImageView
         android:id="@+id/mypageRectangleBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
         android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
         android:src="@drawable/bar_tap_regtangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/hospitalRectangleBar" />
@@ -521,10 +533,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
-        android:src="@drawable/ic_mypage"
         android:background="?attr/selectableItemBackgroundBorderless"
-        app:layout_constraintStart_toStartOf="@id/mypageRectangleBar"
+        android:src="@drawable/ic_mypage"
         app:layout_constraintEnd_toEndOf="@id/mypageRectangleBar"
+        app:layout_constraintStart_toStartOf="@id/mypageRectangleBar"
         app:layout_constraintTop_toTopOf="@id/mypageRectangleBar" />
 
     <!-- 내 정보 텍스트 -->
@@ -532,13 +544,13 @@
         android:id="@+id/tapMypageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="내 정보"
-        android:textSize="10sp"
-        android:textColor="#B9BEC1"
         android:layout_marginBottom="10dp"
-        app:layout_constraintStart_toStartOf="@id/mypageRectangleBar"
+        android:text="내 정보"
+        android:textColor="#B9BEC1"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/mypageRectangleBar"
         app:layout_constraintEnd_toEndOf="@id/mypageRectangleBar"
-        app:layout_constraintBottom_toBottomOf="@id/mypageRectangleBar" />
+        app:layout_constraintStart_toStartOf="@id/mypageRectangleBar" />
 
 
     <!-- 화면 회색으로 만들기 -->
@@ -546,116 +558,116 @@
         android:id="@+id/grayScreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#80000000"
         android:layout_gravity="center"
-        android:visibility="gone"/>
+        android:background="#80000000"
+        android:visibility="gone" />
 
     <!-- 삭제 상자 -->
     <LinearLayout
         android:id="@+id/deleteBoxTwo"
         android:layout_width="280dp"
         android:layout_height="250dp"
-        android:orientation="vertical"
         android:background="@drawable/ic_community_delte_box"
+        android:orientation="vertical"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 신고 -->
     <TextView
         android:id="@+id/declare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
         android:text="신고"
         android:textSize="14sp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toTopOf="@id/deleteBoxTwo"
-        app:layout_constraintStart_toStartOf="@id/deleteBoxTwo"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@id/deleteBoxTwo"
-        android:gravity="center"
-        android:visibility="gone"/>
+        app:layout_constraintStart_toStartOf="@id/deleteBoxTwo"
+        app:layout_constraintTop_toTopOf="@id/deleteBoxTwo" />
 
     <!-- 선택지1 -->
     <TextView
         android:id="@+id/choiceOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="63dp"
         android:text="음란물 / 불건전한 만남 및 대화"
         android:textSize="14sp"
-        android:layout_marginTop="63dp"
-        android:layout_marginStart="30dp"
-        app:layout_constraintTop_toTopOf="@id/deleteBoxTwo"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@id/deleteBoxTwo"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toTopOf="@id/deleteBoxTwo" />
 
     <!-- 선택지2 -->
     <TextView
         android:id="@+id/choiceTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="92dp"
         android:text="욕설 / 비하"
         android:textSize="14sp"
-        android:layout_marginTop="92dp"
-        android:layout_marginStart="30dp"
-        app:layout_constraintTop_toTopOf="@id/deleteBoxTwo"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@id/deleteBoxTwo"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toTopOf="@id/deleteBoxTwo" />
 
     <!-- 선택지3 -->
     <TextView
         android:id="@+id/choiceThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="121dp"
         android:text="상업적 광고 및 판매"
         android:textSize="14sp"
-        android:layout_marginTop="121dp"
-        android:layout_marginStart="30dp"
-        app:layout_constraintTop_toTopOf="@id/deleteBoxTwo"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@id/deleteBoxTwo"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toTopOf="@id/deleteBoxTwo" />
 
     <!-- 선택지4 -->
     <TextView
         android:id="@+id/choiceFour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="150dp"
         android:text="기타"
         android:textSize="14sp"
-        android:layout_marginTop="150dp"
-        android:layout_marginStart="30dp"
-        app:layout_constraintTop_toTopOf="@id/deleteBoxTwo"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@id/deleteBoxTwo"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toTopOf="@id/deleteBoxTwo" />
 
     <!-- 취소버튼 -->
     <Button
         android:id="@+id/cancelTwo"
         android:layout_width="105dp"
         android:layout_height="25dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/btn_my_page_cancel"
         android:text="취소"
         android:textSize="11dp"
-        android:layout_marginBottom="30dp"
-        android:layout_marginStart="30dp"
-        android:background="@drawable/btn_my_page_cancel"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/deleteBoxTwo"
-        app:layout_constraintStart_toStartOf="@id/deleteBoxTwo"
-        android:visibility="gone"/>
+        app:layout_constraintStart_toStartOf="@id/deleteBoxTwo" />
 
     <!-- 확인버튼 -->
     <Button
         android:id="@+id/checkTwo"
         android:layout_width="105dp"
         android:layout_height="25dp"
-        android:text="확인"
-        android:textSize="11dp"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="30dp"
         android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/btn_my_page_check"
+        android:text="확인"
+        android:textColor="#FFFFFF"
+        android:textSize="11dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/deleteBoxTwo"
-        app:layout_constraintEnd_toEndOf="@id/deleteBoxTwo"
-        android:visibility="gone"/>
+        app:layout_constraintEnd_toEndOf="@id/deleteBoxTwo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

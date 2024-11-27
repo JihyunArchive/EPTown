@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CouponChoice extends AppCompatActivity {
+public class CouponChoiceActivity extends AppCompatActivity {
 
     // ImageButton 및 TextView 선언
     private ImageButton unchecked, checked;

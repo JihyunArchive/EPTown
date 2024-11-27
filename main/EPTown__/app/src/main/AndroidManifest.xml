@@ -200,7 +200,7 @@
                 android:exported="true"/>
 
             <activity
-                android:name=".CouponChoice"
+                android:name=".CouponChoiceActivity"
                 android:exported="true"/>
 
             <activity

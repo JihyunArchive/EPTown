@@ -61,6 +61,13 @@ public class OrderPayDetail extends AppCompatActivity {
             startActivity(intent);
         });
 
+        // 홈 버튼 눌렀을때 메인으로 이동
+        ImageButton imagebutton = findViewById(R.id.homeButton);
+        imagebutton.setOnClickListener(view -> {
+            Intent intent = new Intent(OrderPayDetail.this, MainActivity.class);
+            startActivity(intent);
+        });
+
         // 버튼과 뷰 연결
         ImageButton rightArrowOne = findViewById(R.id.rightArrowOne);
         grayScreen = findViewById(R.id.grayScreen);

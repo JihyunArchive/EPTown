@@ -2,6 +2,8 @@ package com.example.eptown_;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,96 +56,52 @@ public class ReviewRegister extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
+        // 카메라 버튼과 이미지 뷰 초기화
+        cameraButton = findViewById(R.id.camera);
+        imageCat = findViewById(R.id.imageCat);
+
+        // 카메라 버튼 클릭 시 ImageView 토글
+        cameraButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (imageCat.getVisibility() == View.GONE) {
+                    imageCat.setVisibility(View.VISIBLE); // 이미지 보이기
+                } else {
+                    imageCat.setVisibility(View.GONE); // 이미지 숨기기
+                }
+            }
+        });
+
+        // EditText 필터 설정
+        EditText contentInformationTwo = findViewById(R.id.contentInformationTwo);
+
+        // 숫자 한 글자만 입력 가능하도록 필터 설정
+        InputFilter inputFilter = new InputFilter() {
+            @Override
+            public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+                try {
+                    int input = Integer.parseInt(source.toString());
+                    if (input >= 1 && input <= 5 && dest.length() == 0) {
+                        return null; // 입력 허용 (한 글자만 허용)
+                    }
+                } catch (NumberFormatException e) {
+                    // 숫자가 아닐 경우 처리
+                }
+                return ""; // 입력 차단
+            }
+        };
+
+        // 글자 수 제한 필터 추가
+        InputFilter lengthFilter = new InputFilter.LengthFilter(1);
+
+        // 필터 적용
+        contentInformationTwo.setFilters(new InputFilter[]{inputFilter, lengthFilter});
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed(); // 바로 이전 화면으로 이동
         finish(); // 현재 액티비티 종료
-
-        EditText contentInformation = findViewById(R.id.contentInformation);
-
-        // 각 ImageButton 객체를 찾기
-        starOne = findViewById(R.id.starOne);
-        starTwo = findViewById(R.id.starTwo);
-        starThree = findViewById(R.id.starThree);
-        starFour = findViewById(R.id.starFour);
-        starFive = findViewById(R.id.starFive);  // starFive 찾기
-
-        // 각 별에 클릭 리스너 설정
-        setStarClickListener(starOne, 1);
-        setStarClickListener(starTwo, 2);
-        setStarClickListener(starThree, 3);
-        setStarClickListener(starFour, 4);
-        setStarClickListener(starFive, 5);  // starFive에 리스너 추가
-
-        // 사진 올리는 버튼과 이미지 뷰 객체 초기화
-        cameraButton = findViewById(R.id.camera);  // cameraButton 초기화
-        imageCat = findViewById(R.id.imageCat);  // imageCat 초기화
-
-        // 카메라 버튼 클릭 리스너 설정
-        cameraButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 이미지 뷰의 visibility 속성을 변경하여 표시
-                if (imageCat.getVisibility() == View.GONE) {
-                    imageCat.setVisibility(View.VISIBLE); // 이미지 보이게 설정
-                } else {
-                    imageCat.setVisibility(View.GONE); // 다시 클릭하면 숨기기
-                }
-            }
-        });
-    }
-
-    // 별 클릭 시 아이콘을 바꾸는 메서드
-    private void setStarClickListener(ImageButton star, int starIndex) {
-        star.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 클릭된 별의 상태를 확인하고 이미지 변경
-                switch (starIndex) {
-                    case 1:
-                        if (isStarOneActive) {
-                            star.setImageResource(R.drawable.ic_star_no); // 비활성화된 별
-                        } else {
-                            star.setImageResource(R.drawable.ic_star_color); // 활성화된 별
-                        }
-                        isStarOneActive = !isStarOneActive; // 상태 반전
-                        break;
-                    case 2:
-                        if (isStarTwoActive) {
-                            star.setImageResource(R.drawable.ic_star_no);
-                        } else {
-                            star.setImageResource(R.drawable.ic_star_color);
-                        }
-                        isStarTwoActive = !isStarTwoActive;
-                        break;
-                    case 3:
-                        if (isStarThreeActive) {
-                            star.setImageResource(R.drawable.ic_star_no);
-                        } else {
-                            star.setImageResource(R.drawable.ic_star_color);
-                        }
-                        isStarThreeActive = !isStarThreeActive;
-                        break;
-                    case 4:
-                        if (isStarFourActive) {
-                            star.setImageResource(R.drawable.ic_star_no);
-                        } else {
-                            star.setImageResource(R.drawable.ic_star_color);
-                        }
-                        isStarFourActive = !isStarFourActive;
-                        break;
-                    case 5:  // starFive 처리
-                        if (isStarFiveActive) {
-                            star.setImageResource(R.drawable.ic_star_no);
-                        } else {
-                            star.setImageResource(R.drawable.ic_star_color);
-                        }
-                        isStarFiveActive = !isStarFiveActive;  // 상태 반전
-                        break;
-                }
-            }
-        });
     }
 }

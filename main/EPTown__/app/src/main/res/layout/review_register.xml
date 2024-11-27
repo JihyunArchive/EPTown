@@ -150,66 +150,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- 별점 -->
-    <ImageButton
-        android:id="@+id/starOne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="263dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_star_color"
-        app:layout_constraintHorizontal_bias="0.0"
+    <!-- 입력창 -->
+    <ImageView
+        android:id="@+id/enterBoxFive"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="254dp"
+        android:src="@drawable/ic_profile_administration_box"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/starTwo"
-        android:layout_width="wrap_content"
+    <!-- 입력창 안 내용 -->
+    <EditText
+        android:id="@+id/contentInformationTwo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="78dp"
-        android:layout_marginTop="263dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_star_color"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/starThree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="105dp"
-        android:layout_marginTop="263dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_star_color"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/starFour"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="263dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_star_color"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/starFive"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="159dp"
-        android:layout_marginTop="263dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_star_no"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="38dp"
+        android:background="@null"
+        android:hint="상품을 1부터 5점까지 골라 평점을 매겨주세요"
+        android:textColor="#565C65"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="@id/enterBoxFive"
+        app:layout_constraintTop_toTopOf="@id/enterBoxFive"
+        app:layout_constraintBottom_toBottomOf="@id/enterBoxFive"/>
 
     <!-- 평점 아래 수평선-->
     <View
@@ -280,12 +245,12 @@
         android:layout_width="match_parent"
         android:layout_height="282dp"
         android:layout_marginStart="30dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="500dp"
+        android:layout_marginEnd="20dp"
         android:src="@drawable/image_review_cat"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 등록하기 하얀 사각형 배경 -->
     <ImageView
