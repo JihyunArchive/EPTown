@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -61,7 +60,7 @@ public class ItemDetailsReview extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ItemDetailsReview.this, coupon3Activity.class);
+                Intent intent = new Intent(ItemDetailsReview.this, CouponReceiveActivity.class);
                 startActivity(intent);
             }
         });
@@ -91,7 +90,7 @@ public class ItemDetailsReview extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ItemDetailsReview.this, OrderPayActivity.class);
+                Intent intent = new Intent(ItemDetailsReview.this, OrderActivity.class);
                 startActivity(intent);
             }
         });

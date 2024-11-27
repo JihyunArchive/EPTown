@@ -40,7 +40,7 @@ public class CartActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CartActivity.this, OrderPayActivity.class);
+                Intent intent = new Intent(CartActivity.this, OrderActivity.class);
                 startActivity(intent);
             }
         });
@@ -50,7 +50,7 @@ public class CartActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CartActivity.this, OrderPayActivity.class);
+                Intent intent = new Intent(CartActivity.this, OrderActivity.class);
                 startActivity(intent);
             }
         });

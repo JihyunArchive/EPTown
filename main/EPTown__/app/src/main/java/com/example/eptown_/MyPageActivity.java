@@ -57,7 +57,7 @@ public class MyPageActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MyPageActivity.this, mypage_no_loginActivity.class);
+                Intent intent = new Intent(MyPageActivity.this, MypageNoLoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -71,7 +71,7 @@ public class MyPageActivity extends AppCompatActivity {
         // 개인정보 수정 텍스트 누르면 personal_information로 화면 이동
         TextView textview = findViewById(R.id.editInformation);
         textview.setOnClickListener(view -> {
-            Intent intent = new Intent(MyPageActivity.this, personal_informationActivity.class);
+            Intent intent = new Intent(MyPageActivity.this, PersonalInformationActivity.class);
             startActivity(intent);
         });
 
@@ -99,7 +99,7 @@ public class MyPageActivity extends AppCompatActivity {
         // 로그아웃 텍스트 누르면  mypage_no_login 화면 이동
         TextView textview6 = findViewById(R.id.logout);
         textview6.setOnClickListener(view -> {
-            Intent intent = new Intent(MyPageActivity.this, mypage_no_loginActivity.class);
+            Intent intent = new Intent(MyPageActivity.this, MypageNoLoginActivity.class);
             startActivity(intent);
         });
 
@@ -136,7 +136,7 @@ public class MyPageActivity extends AppCompatActivity {
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MyPageActivity.this, order_detailsActivity.class);
+                Intent intent = new Intent(MyPageActivity.this, OrderDetailsActivity.class);
                 startActivity(intent);
             }
         });
@@ -146,7 +146,7 @@ public class MyPageActivity extends AppCompatActivity {
         layout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MyPageActivity.this, review_writtenActivity.class);
+                Intent intent = new Intent(MyPageActivity.this, ReviewWrittenActivity.class);
                 startActivity(intent);
             }
         });
@@ -156,7 +156,7 @@ public class MyPageActivity extends AppCompatActivity {
         layout2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MyPageActivity.this, inquire4Activity.class);
+                Intent intent = new Intent(MyPageActivity.this, InquireMyActivity.class);
                 startActivity(intent);
             }
         });
@@ -166,7 +166,7 @@ public class MyPageActivity extends AppCompatActivity {
         layout3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MyPageActivity.this, coupon1Activity.class);
+                Intent intent = new Intent(MyPageActivity.this, CouponActivity.class);
                 startActivity(intent);
             }
         });

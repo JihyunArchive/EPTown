@@ -7,21 +7,23 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ItemDetails extends AppCompatActivity {
+public class ReviewNoWritten extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.item_details);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.review_no_written);
 
-        // 홈 아이콘 눌렀을때 마이페이지로 화면 이동
+        // 홈 아이콘 눌렀을때 메인화면으로 화면 이동
         ImageButton imagebutton1 = findViewById(R.id.homeIcon);
         imagebutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ItemDetails.this, MyPageActivity.class);
+                Intent intent = new Intent(ReviewNoWritten.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -31,7 +33,7 @@ public class ItemDetails extends AppCompatActivity {
         imagebutton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ItemDetails.this, NoticeActivity.class);
+                Intent intent = new Intent(ReviewNoWritten.this, NoticeActivity.class);
                 startActivity(intent);
             }
         });
@@ -41,47 +43,47 @@ public class ItemDetails extends AppCompatActivity {
         imagebutton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ItemDetails.this, CartActivity.class);
+                Intent intent = new Intent(ReviewNoWritten.this, CartActivity.class);
                 startActivity(intent);
             }
         });
 
-        // 쿠폰받기 버튼 눌렀을때 coupon3로 화면 이동
+        // 쿠폰 받기 버튼 눌렀을때 쿠폰으로 화면 이동
         Button button = findViewById(R.id.getCoupon);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ItemDetails.this, CouponReceiveActivity.class);
+                Intent intent = new Intent(ReviewNoWritten.this, CouponReceiveActivity.class);
                 startActivity(intent);
             }
         });
 
-        // 리뷰 텍스트 눌렀을때 item_details_review로 화면 이동
-        TextView textview = findViewById(R.id.itemReviewTabText);
-        textview.setOnClickListener(new View.OnClickListener() {
+        // 상품 정보 텍스트 눌렀을때 상품 상세로 화면 이동
+        TextView textview1 = findViewById(R.id.itemInfoTabText);
+        textview1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ItemDetails.this, ItemDetailsReview.class);
+                Intent intent = new Intent(ReviewNoWritten.this, ItemDetails.class);
                 startActivity(intent);
             }
         });
 
         // 문의 텍스트 눌렀을때 item_details_inquiry로 화면 이동
-        TextView textview1 = findViewById(R.id.itemInquiryTabText);
-        textview1.setOnClickListener(new View.OnClickListener() {
+        TextView textview2 = findViewById(R.id.itemInquiryTabText);
+        textview2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ItemDetails.this, ItemDetailsInquiry.class);
+                Intent intent = new Intent(ReviewNoWritten.this, ItemDetailsInquiry.class);
                 startActivity(intent);
             }
         });
 
-        // 구매하기 버튼 눌렀을때 주문/결제 화면 이동
+        // 구매하기 버튼 눌렀을때 주문/결제로 화면 이동
         Button button1 = findViewById(R.id.buyFixButton);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ItemDetails.this, OrderActivity.class);
+                Intent intent = new Intent(ReviewNoWritten.this, OrderActivity.class);
                 startActivity(intent);
             }
         });
@@ -100,5 +102,6 @@ public class ItemDetails extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed(); // 바로 이전 화면으로 이동
         finish(); // 현재 액티비티 종료
+
     }
 }

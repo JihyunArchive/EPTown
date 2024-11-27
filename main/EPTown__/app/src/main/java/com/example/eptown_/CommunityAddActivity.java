@@ -34,7 +34,7 @@ public class CommunityAddActivity extends AppCompatActivity {
         // 메인화면에서 커뮤니티 아이콘 눌렀을때 커뮤니티로 화면 이동
         ImageButton imagebutton = findViewById(R.id.writing);
         imagebutton.setOnClickListener(view -> {
-            Intent intent = new Intent(CommunityAddActivity.this, community8Activity.class);
+            Intent intent = new Intent(CommunityAddActivity.this, CommunityPostActivity.class);
             startActivity(intent);
         });
 
@@ -69,28 +69,28 @@ public class CommunityAddActivity extends AppCompatActivity {
         // 게시물 눌렀을때 게시물 내용으로 이동
         LinearLayout layout = findViewById(R.id.firstCommunity);
         layout.setOnClickListener(view -> {
-            Intent intent = new Intent(CommunityAddActivity.this, community2Activity.class);
+            Intent intent = new Intent(CommunityAddActivity.this, CommunityContentActivity.class);
             startActivity(intent);
         });
 
         // 게시물 눌렀을때 게시물 내용으로 이동
         LinearLayout layout1 = findViewById(R.id.secondCommunity);
         layout1.setOnClickListener(view -> {
-            Intent intent = new Intent(CommunityAddActivity.this, community2Activity.class);
+            Intent intent = new Intent(CommunityAddActivity.this, CommunityContentActivity.class);
             startActivity(intent);
         });
 
         // 게시물 눌렀을때 게시물 내용으로 이동
         LinearLayout layout2 = findViewById(R.id.thirdCommunity);
         layout2.setOnClickListener(view -> {
-            Intent intent = new Intent(CommunityAddActivity.this, community2Activity.class);
+            Intent intent = new Intent(CommunityAddActivity.this, CommunityContentActivity.class);
             startActivity(intent);
         });
 
         // 게시물 눌렀을때 게시물 내용으로 이동
         LinearLayout layout3 = findViewById(R.id.fourCommunity);
         layout3.setOnClickListener(view -> {
-            Intent intent = new Intent(CommunityAddActivity.this, community2Activity.class);
+            Intent intent = new Intent(CommunityAddActivity.this, CommunityContentActivity.class);
             startActivity(intent);
         });
 
@@ -135,7 +135,7 @@ public class CommunityAddActivity extends AppCompatActivity {
 
     private void setupNavigationButtons() {
         // 탭 및 이동 버튼 초기화
-        findViewById(R.id.writing).setOnClickListener(view -> navigateTo(community8Activity.class));
+        findViewById(R.id.writing).setOnClickListener(view -> navigateTo(CommunityPostActivity.class));
         findViewById(R.id.btnCommunityBack).setOnClickListener(view -> navigateTo(MainActivity.class));
         findViewById(R.id.tapHomeIconCategoryFeed1).setOnClickListener(view -> navigateTo(MainActivity.class));
         findViewById(R.id.tapCommunityIconCategoryFeed1).setOnClickListener(view -> navigateTo(CategoryMainActivity.class));
@@ -143,10 +143,10 @@ public class CommunityAddActivity extends AppCompatActivity {
         findViewById(R.id.tapMypageIconCategoryFeed1).setOnClickListener(view -> navigateTo(MyPageActivity.class));
 
         // 게시물 클릭 시 이동
-        findViewById(R.id.firstCommunity).setOnClickListener(view -> navigateTo(community2Activity.class));
-        findViewById(R.id.secondCommunity).setOnClickListener(view -> navigateTo(community2Activity.class));
-        findViewById(R.id.thirdCommunity).setOnClickListener(view -> navigateTo(community2Activity.class));
-        findViewById(R.id.fourCommunity).setOnClickListener(view -> navigateTo(community2Activity.class));
+        findViewById(R.id.firstCommunity).setOnClickListener(view -> navigateTo(CommunityContentActivity.class));
+        findViewById(R.id.secondCommunity).setOnClickListener(view -> navigateTo(CommunityContentActivity.class));
+        findViewById(R.id.thirdCommunity).setOnClickListener(view -> navigateTo(CommunityContentActivity.class));
+        findViewById(R.id.fourCommunity).setOnClickListener(view -> navigateTo(CommunityContentActivity.class));
     }
 
     private void setupReportButtons() {

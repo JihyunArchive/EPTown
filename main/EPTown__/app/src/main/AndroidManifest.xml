@@ -26,13 +26,13 @@
 
         <!-- 로그인 -->
         <activity
-            android:name=".Login"
+            android:name=".LoginActivity"
             android:exported="true"/>
         <!-- 회원가입 -->
         <activity
-            android:name=".login1Activity"
+            android:name=".JoinMembershipActivity"
             android:exported="true"/>
-        <activity android:name=".login3Activity"
+        <activity android:name=".JoinMembershipDetailActivity"
             android:exported="true"/>
 
             <!-- 메인화면 -->
@@ -92,7 +92,7 @@
 
             <!-- 주문/결제 -->
             <activity
-                android:name=".OrderPayActivity"
+                android:name=".OrderActivity"
                 android:exported="true" />
 
             <!-- 카테고리 메인 -->
@@ -176,11 +176,11 @@
                 android:exported="true" />
 
             <activity
-                android:name=".community2Activity"
+                android:name=".CommunityContentActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".community8Activity"
+                android:name=".CommunityPostActivity"
                 android:exported="true"/>
 
             <activity
@@ -188,19 +188,19 @@
                 android:exported="true"/>
 
             <activity
-                android:name=".coupon1Activity"
+                android:name=".CouponActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".coupon2Activity"
+                android:name=".CouponNoActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".coupon3Activity"
+                android:name=".CouponReceiveActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".coupon5Activity"
+                android:name=".CouponChoice"
                 android:exported="true"/>
 
             <activity
@@ -208,104 +208,100 @@
                 android:exported="true"/>
 
             <activity
-                android:name=".inquire1Activity"
+                android:name=".InquireNoActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".inquire2Activity"
+                android:name=".InquireProductNoActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".inquire3Activity"
+                android:name=".InquireMyActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".inquire4Activity"
+                android:name=".InquireChoiceActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".inquire5Activity"
-                android:exported="true"/>
-
-            <activity
-                android:name=".inquire6Activity"
+                android:name=".InquireWriteActivity"
                 android:exported="true"/>
 
         <activity
-                android:name=".inquire7Activity"
+                android:name=".InquireAddActivity"
                 android:exported="true"/>
 
 
         <activity
-                android:name=".inquire10Activity"
+                android:name=".InquireActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".mypage_no_loginActivity"
+                android:name=".MypageNoLoginActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".notice2Activity"
+                android:name=".NoticeNotAvailableActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".notice3Activity"
+                android:name=".NoticeNoActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".order_detailsActivity"
+                android:name=".OrderDetailsActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".order_details3Activity"
+                android:name=".OrderDetailsRefundActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".order_pay5Activity"
+                android:name=".PayCompleteActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".order_pay6Activity"
+                android:name=".OrderPayDetail"
                 android:exported="true"/>
 
             <activity
-                android:name=".order_pay8Activity"
+                android:name=".OrderDetailRefund"
                 android:exported="true"/>
 
             <activity
-                android:name=".personal_informationActivity"
+                android:name=".PersonalInformationActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".review3Activity"
+                android:name=".ReviewNoWritten"
                 android:exported="true"/>
 
             <activity
-                android:name=".review_detail"
+                android:name=".ReviewDetail"
                 android:exported="true"/>
 
             <activity
-                android:name=".review_register"
+                android:name=".ReviewRegister"
                 android:exported="true"/>
 
             <activity
-                android:name=".review_modify"
+                android:name=".ReviewModify"
                 android:exported="true"/>
 
             <activity
-                android:name=".review_addActivity"
+                android:name=".ReviewAddActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".review_noActivity"
+                android:name=".ReviewNoActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".review_writtenActivity"
+                android:name=".ReviewWrittenActivity"
                 android:exported="true"/>
 
             <activity
-                android:name=".review_deleteActivity"
+                android:name=".ReviewDeleteActivity"
                 android:exported="true"/>
 
             <activity

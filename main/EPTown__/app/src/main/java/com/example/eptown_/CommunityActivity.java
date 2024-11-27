@@ -39,7 +39,7 @@ public class CommunityActivity extends AppCompatActivity {
         // 메인화면에서 커뮤니티 아이콘 눌렀을때 커뮤니티로 화면 이동
         ImageButton imagebutton = findViewById(R.id.writing);
         imagebutton.setOnClickListener(view -> {
-            Intent intent = new Intent(CommunityActivity.this, community8Activity.class);
+            Intent intent = new Intent(CommunityActivity.this, CommunityPostActivity.class);
             startActivity(intent);
         });
 
@@ -74,19 +74,19 @@ public class CommunityActivity extends AppCompatActivity {
         // 게시물 눌렀을때 게시물 내용으로 이동
         LinearLayout layout = findViewById(R.id.firstCommunity);
         layout.setOnClickListener(view -> {
-            Intent intent = new Intent(CommunityActivity.this, community2Activity.class);
+            Intent intent = new Intent(CommunityActivity.this, CommunityContentActivity.class);
             startActivity(intent);
         });
 
         LinearLayout layout1 = findViewById(R.id.secondCommunity);
         layout1.setOnClickListener(view -> {
-            Intent intent = new Intent(CommunityActivity.this, community2Activity.class);
+            Intent intent = new Intent(CommunityActivity.this, CommunityContentActivity.class);
             startActivity(intent);
         });
 
         LinearLayout layout2 = findViewById(R.id.thirdCommunity);
         layout2.setOnClickListener(view -> {
-            Intent intent = new Intent(CommunityActivity.this, community2Activity.class);
+            Intent intent = new Intent(CommunityActivity.this, CommunityContentActivity.class);
             startActivity(intent);
         });
 

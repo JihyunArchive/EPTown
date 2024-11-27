@@ -37,7 +37,7 @@ public class CommunityDeleteActivity extends AppCompatActivity {
         // 메인화면에서 커뮤니티 아이콘 눌렀을때 커뮤니티로 화면 이동
         ImageButton imagebutton = findViewById(R.id.writing);
         imagebutton.setOnClickListener(view -> {
-            Intent intent = new Intent(CommunityDeleteActivity.this, community8Activity.class);
+            Intent intent = new Intent(CommunityDeleteActivity.this, CommunityPostActivity.class);
             startActivity(intent);
         });
 
@@ -72,14 +72,14 @@ public class CommunityDeleteActivity extends AppCompatActivity {
         // 게시물 눌렀을때 게시물 내용으로 이동
         LinearLayout layout = findViewById(R.id.firstCommunity);
         layout.setOnClickListener(view -> {
-            Intent intent = new Intent(CommunityDeleteActivity.this, community2Activity.class);
+            Intent intent = new Intent(CommunityDeleteActivity.this, CommunityContentActivity.class);
             startActivity(intent);
         });
 
         // 게시물 눌렀을때 게시물 내용으로 이동
         LinearLayout layout1 = findViewById(R.id.secondCommunity);
         layout1.setOnClickListener(view -> {
-            Intent intent = new Intent(CommunityDeleteActivity.this, community2Activity.class);
+            Intent intent = new Intent(CommunityDeleteActivity.this, CommunityContentActivity.class);
             startActivity(intent);
         });
 
